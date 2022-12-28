@@ -1,0 +1,27 @@
+project:
+  type: book
+
+book:
+  title: "WaSHI Data Management Plan"
+  author: "Jadey Ryan, Leslie Michel, Dani Gelardi"
+  sidebar: 
+    search: true
+    logo: images/WSDALogo-Color-NoText.png
+  cover-image: images/WaSHI-color.jpg
+  chapters:
+    - index.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: 
+      - flatly
+      - style.scss
+    link-external-newwindow: true
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
