@@ -7,6 +7,5 @@ _book
 search_index.json
 libs
 _main.*
-images
 /.quarto/
 site_libs
