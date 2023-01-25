@@ -2,26 +2,41 @@ project:
   type: book
 
 book:
-  title: "WaSHI Data Management Plan"
-  author: "Jadey Ryan, Leslie Michel, Dani Gelardi"
+  title: Data Management Plan for Soils Data in the Washington Soil Health Initiative
+  subtitle: "2023"
+  author: Jadey Ryan, Leslie Michel, Dani Gelardi
   sidebar: 
     search: true
     logo: images/WSDALogo-Color-NoText.png
   cover-image: images/WaSHI-color.jpg
+  repo-url: https://github.com/WA-Department-of-Agriculture/washi-dmp
+  repo-actions: [issue]
+  
   chapters:
     - index.qmd
+    - infrastructure.qmd
+    - documentation.qmd
+    - quality.qmd
+    - preservation-version.qmd
+    - share.qmd
+    - code-guide.qmd
     - references.qmd
 
 bibliography: references.bib
+number-depth: 0
 
 format:
   html:
     theme: 
       - flatly
       - style.scss
+    toc-depth: 2
     link-external-newwindow: true
   pdf:
     documentclass: scrreprt
+  docx:
+    reference-doc: word-template.docx
+    toc-depth: 1
 
 editor: visual
 

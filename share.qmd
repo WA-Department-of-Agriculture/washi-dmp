@@ -1,0 +1,19 @@
+## Data sharing {#sec-sharing}
+
+### Public repositories
+
+-   GitHub
+-   Zenodo
+-   data.gov
+
+### Understand WaTech data categorization
+
+<https://watech.wa.gov/Categorizing-Data-State-Agency>
+
+### Maintain confidentiality {#sec-maintain-confidentiality}
+
+Anonymize and aggregate
+
+### Timeline
+
+When to share data (after publication?), how long to share data?

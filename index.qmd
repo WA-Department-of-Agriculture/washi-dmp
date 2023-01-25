@@ -1,9 +1,73 @@
-# Introduction {.unnumbered}
+# Overview {.unnumbered}
 
-This is a Quarto book.
+This chapter provides an overview of the data collected through the Washington Soil Health Initiative (WaSHI) and the Washington State Department of Agriculture's (WSDA) internal plan for managing it. The data management plan (DMP) presented here was adapted from the DMP for the R.J. Cook Agronomy Farm Long-term Agroecological Research Site [@carlson2021], U.S. Fish and Wildlife Service data management life cycle [@u.s.fishwildlifeservice2023], and Harvard Medical School Longwood Research Data Management DMP guidelines [@harvardmedicalschool2023].
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Subsequent chapters provide more technical details. This living document will be continually reviewed and improved based on lessons learned, new information, and collaborator feedback.
 
-```{r}
-1 + 1
-```
+## Introduction
+
+Through a long-term program called the State of the Soils Assessment, WaSHI collected hundreds of soil samples and management surveys from diverse regions and cropping systems to provide a data-based understanding of soil health in Washington. The goals of this project are to:
+
+1.  Assess baseline soil health in Washington
+2.  Understand how climate, crop type, and management impact soil health
+3.  Develop cost-effective ways for producers to assess their own soil health
+4.  Develop crop-specific decision-support tools
+
+::: columns
+::: {.column style="width: 40%"}
+Effective data management that follows FAIR (Findable, Accessible, Interoperable, Reusable) principles are essential for achieving these data-driven goals, while also optimizing the value of the data by supporting information sharing and innovation [@wilkinson2016]. Each step within the data life cycle requires careful intention to ensure transparency, quality, and integrity.
+:::
+
+::: {.column style="width: 5%"}
+:::
+
+::: {.column style="width: 55%"}
+[![Data life cycle](images/fws-data-lifecycle-graphic.png){fig-align="left" width="268"}](https://www.fws.gov/data/life-cycle)
+:::
+:::
+
+## Roles and responsibilities
+
+All WSDA personnel who will be interacting with WaSHI data must thoroughly review this overview chapter. Following chapters with technical details will be referenced when relevant to the staff's job duties.
+
+The Data Scientist is responsible for providing guidance to WaSHI staff and ensuring the implementation of the data management plan. The Data Scientist is also responsible for reviewing and updating this document annually and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the [GitHub repository](https://github.com/WA-Department-of-Agriculture/washi-dmp).
+
+## Expected data types
+
+Data generated from WaSHI can be non-digital or digital. Non-digital data, such as field forms, management surveys, and chain of custody forms, are manually recorded on paper forms. Digital data include tabular, spatial, and binary data, such as lab results, sample locations, and field photos. Non-conventional data also include code, algorithms, tools, and workflows.
+
+All expected data types are listed in @sec-expected-data.
+
+## Data formats and standards
+
+Digital data formats are human-readable and/or machine-readable. File formats for tabular data may include comma separated values (csv), tab separated values (tsv), Microsoft Excel open XML spreadsheet (xlsx), and portable document format (pdf). Spatial data formats include file geodatabases (gdb), vector shapefiles (zipped folder containing multiple file extensions), keyhole markup language (kml or kmz). Tabular data may also contain spatial data as longitude and latitude. Binary data include photos (jpeg, png, gif, tiff), videos (mp4), code (R, py, js), and object-oriented data files (Rdata, parquet, arrow).
+
+Rdata files are an example of a proprietary or application-specific data format that can only be opened using the R programming language or RStudio IDE. These types of files should only be saved in conjunction with a copy of the data in a non-proprietary and open-standard format, such as csv, to maintain accessibility for those who do not use R.
+
+Written documents and presentations are in formats including Microsoft Word and Powerpoint (docx and pptx), hypertext markup language (HTML), and pdf. Notebooks combine text with executable code to generate written documents and presentations in docx, pptx, HTML, or pdf formats. These notebooks are stored in formats depending on the programming language: a few examples include R markdown (rmd), Quarto (qmd), and Jupyter notebook (ipynb).
+
+All expected data types and their corresponding formats are listed in @sec-expected-data. See @sec-data-standards for details on data standards (i.e., site and sample ID schema, [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) date and time standard, and [ISO 19115](https://www.iso.org/standard/53798.html) geospatial metadata).
+
+## Data storage and preservation of access
+
+Paper forms must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.
+
+Digital data are stored in the WSDA Agency Files shared drive in the [Soil_Health_Initiative folder](Y:/NRAS/Soil_Health_Initiative/) according to the naming conventions and file organization described in @sec-naming-conventions-and-file-organization.
+
+## Data sharing and public access
+
+The State of the Soils Assessment relies on growers' willingness to volunteer their fields for sampling and participate in the required management survey. This willingness hinges on their trust in WSDA to protect their privacy. Only aggregated and anonymized results will be publicly available or shared.
+
+Procedures for anonymizing data are detailed in @sec-maintain-confidentiality. Aggregated and anonymized data will be publicly shared and preserved in WSDA's GitHub repository, as well as Zenodo to be assigned a Digital Object Identifier (DOI).
+
+### Data privacy statement
+
+> Data will be aggregated and reported in a way which mitigates personal identification of growers. Information will be used to understand broad impacts and characterize trends in soil health and production practices across regions. Results will not be reported in a way that makes individuals identifiable. Information collected in this survey may be subject to release in accordance with RCW 42.56 (Public Records Act).
+
+### Acknowledgement of WSDA support in publication
+
+When sharing data with an organization that plans to incorporate WSDA data in a publication, provide the following statement for them to include in their acknowledgements:
+
+> "Data was in part provided by the Natural Resources Assessment Section of the Washington State Department of Agriculture."
+
+If WSDA staff make [substantial scientific contributions](https://www.pnas.org/doi/10.1073/pnas.1715374115) to the manuscript, discuss the possibility of co-authorship credit.
