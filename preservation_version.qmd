@@ -1,18 +1,18 @@
 # Data preservation and versioning
 
-### Retention schedule
+## Retention schedule
 
-### Archive
+## Archive
 
 Non-code data should be archived in WSDA shared drive
 
-### Version with GitHub
+## Version with GitHub
 
 Code should be versioned and archived using GitHub
 
 Include helpful resources for how-to use
 
-### Staff turnover
+## Staff turnover
 
 -   WSDA GitHub Organization
 -   Zenodo

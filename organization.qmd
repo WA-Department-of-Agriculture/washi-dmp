@@ -1,0 +1,201 @@
+# Organization
+
+## Storage {#sec-storage}
+
+Non-digital data, such as paper forms, must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.
+
+All digital data are stored in the WSDA shared drives, and other locations listed below.
+
+**WSDA shared drives:**
+
+-   Agency files: [Y:\\NRAS\\Soil_Health_Initiative](Y:\NRAS\Soil_Health_Initiative)
+-   GIS: [K:\\NRAS\\Arc_Data\\Soil_Health](K:\NRAS\Arc_Data\Soil_Health) (requires permissions from IT)
+
+**Esri products and services:**
+
+-   ArcGIS Online [Soil Health - WSDA Internal Group](https://nras.maps.arcgis.com/home/group.html?id=17a60cfa644c4c60ab622fdd84500f8f#overview)
+-   WSDA GIS on-premise [ArcGIS REST Services Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS) (only Jadey, Perry, and Joel can publish to this server; Ed Thompson is the contact for getting access)
+
+**Database for lab results and management data:**
+
+-   WISKI, but very likely will migrate to SQL Server or a less water-focused database
+
+**GitHub organizations for code-based projects:**
+
+-   [WSDA](https://github.com/WA-Department-of-Agriculture)
+-   [WaSHI](https://github.com/WASoilHealth)
+
+**Microsoft Teams for data sharing between WSDA and WSU:**
+
+-   WSDA and WSU Teams WaSHI channels
+
+**Local workstations:**
+
+-   Should NOT be the only place data are stored!
+
+### Read-Only raw data {#sec-raw-data}
+
+Raw data, such as lab results from Soiltest or exports from ArcGIS Online, should be immediately set to `Read-Only`. Right click the file \> click on Properties \> check the `Read-Only` attribute box. The file should then be copied over to a `Working` folder for any processing or analyses. The final data set should be saved in a separate descriptively titled `Clean` folder. Keeping a `README.txt` to document your processing and analysis steps is good practice.
+
+## Naming conventions {#sec-naming-conventions-and-file-organization}
+
+When naming folders and files, we want consistent and clear names that are findable and understandabe by both humans and computers. From only a file name, we should immediately know what the file contains and which file is the most recent version.
+
+!["Documents" from Randall Munroe's xkcd](https://imgs.xkcd.com/comics/documents.png){width="200"}
+
+### Best practices
+
+#### Convey meaning with delimiters and capitalization
+
+Deliberately use underscores, hyphens, and uppercase letters so we can easily understand the contents and programmatically parse file and folder names.
+
+-   Use underscores to delineate metadata elements (i.e. name from version `Name_Version`).
+
+-   Use hyphens to separate parts of one metadata element (i.e. date `YYYY-MM-DD`).
+
+-   Different conventions may work better for different purposes (folder, file, variable name). See @sec-naming-guidelines for which conventions to use for different file sets.
+
+    -   **PascalCase**: capitalize the first letter of each word without spaces or delimiters.
+    -   **lowerCamelCase**: the first word is all lowercase and subsequent words have the first letter capitalized without spaces or delimiters.
+    -   **snake_case**: all lowercase with underscores separating words
+    -   **kebab-case**: all lowercase with hyphens separating words
+    -   **Train-Case**: each word begins with an uppercase letter with hyphens separating words
+
+Avoid spaces and special characters (only use underscores and hyphens). Characters like `/` `()` `!` `?` `%` `+` `"` `'` have special meaning to computers and can break file paths and URLs.
+
+#### Character length matters
+
+Computers are unable to read file paths and file names that surpass a certain character length. Be concise AND descriptive. Windows path limit is 260 characters.
+
+#### Group and sort files by name
+
+Consider how folders and files should be grouped and sorted. Put that piece of metadata in the beginning of the file name. For example, if we want all chain of custodies grouped by conservation district and then sorted by date, we would use `DistrictName_CoC_YYYY-MM-DD`, which looks like `Cowlitz_CoC_2023-05-01.pdf`. If we wanted them grouped by date, we would put the date at the beginning.
+
+![](images/cocs.png)
+
+#### Use version numbers
+
+If not using the date to version, or to keep multiple drafts from the same date, add version information to the end of the file name. Think about how many possible versions there could be. If there may be more than 10, use leading zeros before single digit numbers so the file name always has the same length. V1 through V15 will not sort the same way as V01 through V15. For example: `2023 SampleRequestForm_Lewis_V3` or `2023 SampleRequestForm_Lewis_V03`.
+
+#### Collaborating on files
+
+Add your initials at the end of the file name when "saving as" a file that multiple people are working on. This ensures a version is kept as a backup. Alternatively, use [Track Changes](https://support.microsoft.com/en-au/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a) if working in a MS Word document.
+
+### Naming guidelines {#sec-naming-guidelines}
+
+Many files and folders in our shared drive do not follow the above best practices or below naming conventions. We are learning and improving as we go. Going forward, please follow the conventions listed below.
+
++-----------------------------------------+--------------------------+---------------------------------+
+|                                         | Naming convention        | Examples                        |
++=========================================+==========================+=================================+
+| **Folders**                             | YYYY_PascalCase          | 2024_Sampling                   |
+|                                         |                          |                                 |
+|                                         | optional: year           | DataManagement                  |
++-----------------------------------------+--------------------------+---------------------------------+
+| **Dynamic files**                       | YYYY-MM-DD_PascalCase_V1 | 2023-11-15_SurveyPerennial.xlsx |
+|                                         |                          |                                 |
+| (include metadata in name)              |                          | 2023_WSDASoilHealth_V1.xlsx     |
+|                                         |                          |                                 |
+|                                         |                          | 2023_WADE-WaSHI-WaCSE_JR.pptx   |
++-----------------------------------------+--------------------------+---------------------------------+
+| **Static files**                        | snake_case               | washi_logo_no_background.png    |
++-----------------------------------------+--------------------------+---------------------------------+
+| **Domains**[^organization-1]            | kebab-case               | washi-dmp                       |
++-----------------------------------------+--------------------------+---------------------------------+
+| **Scripts and syntax**[^organization-2] | snake_case               | create_soils.R (script)         |
+|                                         |                          |                                 |
+|                                         | lowerCamelCase           | `washi_flextable` (function)    |
+|                                         |                          |                                 |
+|                                         |                          | `sampleId` (variable)           |
++-----------------------------------------+--------------------------+---------------------------------+
+
+: {.striped}
+
+[^organization-1]: Domains include RStudio project names and GitHub repositories since they become a URL. We use kebab-case because hyphens are better than underscores for URLs, [as recommended by Google](https://developers.google.com/search/docs/crawling-indexing/url-structure).
+
+[^organization-2]: See @sec-code-style-guide for the code style guide.
+
+## Folder structure
+
+We organize our folders into a hierarchical structure to clearly delineate segments of our projects, improve searchability, and ensure reproducibility across years.
+
+### Hierarchy
+
+We strive for a balance between a deep and shallow structure. If too shallow, there are too many files in one folder and they are hard to sort through. If too deep, we have to click too many times to get to a file and specific files can be difficult to find.
+
+`Y:\NRAS\Soil_Health_Initiative` is the parent folder for all WaSHI content.
+
+Within the `Sampling` sub-folder, we use a combination of **date-** (each year has its own sub-folder) and **categorical-** based (data set and documentation that span across years) folder structure .
+
+```         
+Y:\NRAS\Soil_Health_Initiative\Sampling
+├── _completeDataset
+├── 2019_SCBG
+├── 2021_Sampling
+├── 2022_PartnershipsInSoilHealth
+├── 2023_Sampling
+├── 2024_Sampling
+├── Maps
+├── Projects
+├── QAPP
+├── SOPs
+├── TrainingVideos
+├── ArchivedSampleInventory.xlsx
+├── EquipmentInventory.xlsx
+└──  SOSImpacts.xlsx
+```
+
+Within the `2023` sub-folder, we have sub-folders for planning, forms, data, and processes. This structure helps maintain a reproducible workflow year after year.
+
+```         
+Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling
+├── Applications
+├── CoCs
+├── Equipment
+├── FieldForms
+├── Forms
+├── GIS
+├── LabData
+├── Labels
+├── ManagementSurveys
+├── PublicDocs
+├── Purchases
+├── Reports
+├── SampleIDAssignments
+├── Scripts
+├── 2023_DataTracking.xlsx
+└── PostSeasonWrapUp_2023.docx
+```
+
+As mentioned in @sec-raw-data, it's good practice to maintain the raw data. We use additional sub-folders for the `LabData` folder. Everything in `Raw` has been set as `Read-Only`.
+
+```         
+Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling\LabData
+├── 2023_DataTemplateSoiltest.xlsx
+├── Clean
+├── QC
+├── Raw
+└── Working
+```
+
+`Soil_Health_Initative` \> `Sampling` \> `2023_Sampling` \> `LabData` \> `Clean` has five levels of nesting. We wouldn't want to add too many more levels before the hierarchy becomes difficult to manage.
+
+### Archive folders
+
+When too many drafts or versions begin to clutter a sub-folder, create a new folder with the structure `Archive_FileTitleOrDescription` and place the old drafts there. Leave the most current, accurate file in the main folder.
+
+For example, the final, current SOP is listed in the main folder and previous working drafts were moved to the `Archive_SOP` folder.
+
+```         
+Y:\NRAS\Soil_Health_Initiative\Sampling\SOPs\Sampling
+├── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring.docx
+├── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring_WEB.docx
+├── 923-NRAS-SoilHealthSOP.pdf
+├── 923-NRAS-SoilHealthSOP_WEB.pdf
+├── Archive_SOP
+│   ├── 2021
+│   ├── 2022
+│   ├── 2023
+│   │   ├── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring_LMedits.docx
+│   │   └── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring_LM_JRedits.docx
+```

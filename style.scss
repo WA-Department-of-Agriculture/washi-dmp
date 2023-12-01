@@ -1,9 +1,13 @@
 /*-- adapted from https://github.com/hadley/r4ds/blob/main/r4ds.scss --*/
 /*-- scss:defaults --*/
 
-$primary: #253E90 !default;
-$success: #419639 !default;
-$info: #52BDEC !default;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Fira+Code&family=Poppins:wght@400;700;900&display=swap');
+
+
+$primary: #023b2c !default;
+$success: #457d8c !default;
+$danger: #A60F2D !default;
+$info: #3E3D3D !default;
 $warning: #FCB040 !default;
 
 /* Headings ------------------------------------------------------ */
@@ -18,16 +22,44 @@ h4 { margin-top: 1.5em; font-size: 1.1rem; }
 h5 { margin-top: 1.5em; font-size: 1rem; }
 
 h1, h2, h3, h4, h5 {
+  font-family: "Lato";
+  color: $primary;
   line-height: 1.3;
 }
 
+/* Body ------------------------------------------------------ */
+p {
+    font-family: "Poppins";
+}
+
+a {
+  text-decoration-skip-ink: auto !important;
+  text-decoration-color: #ced4da !important;
+  text-decoration-thickness: 0.1em !important;
+}
+
+/* Code ------------------------------------------------------ */
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+    background-color: #dce2e1 !important;
+    padding: .2em;
+    color: $primary !important;
+    font-family: Fira Code, monospace;
+}
+
+/*
 .quarto-title-meta-heading {
   display: none;
 }
+*/
 
-.quarto-section-identifier {
-  color: #6C6C6C;
-  font-weight: normal;
+/* Table ------------------------------------------------ */
+.table-caption, caption {
+    color: #212529;
+    text-align: left !important;
+}
+
+b, strong {
+    font-weight: bold !important;
 }
 
 /* Code ------------------------------------------------ */
@@ -64,3 +96,4 @@ pre {
     color: #666;
   }
 }
+

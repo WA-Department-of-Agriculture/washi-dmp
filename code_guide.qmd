@@ -1,0 +1,15 @@
+# Code Style Guide {#sec-code-style-guide}
+
+## 
+
+Template snippet
+
+Section break snippet
+
+.R and .qmd file names
+
+function names
+
+argument names
+
+variable names
