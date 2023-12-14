@@ -37,7 +37,7 @@ On our shared drives, raw data such as lab results from Soiltest or exports from
 
 ![](images/read-only.png){fig-alt="Screenshot of the above directions to set files to Read-only on a Windows computer."}
 
-The file should then be copied over to a `Working` folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled `Clean` folder. Keeping a `README.txt` to document your processing and analysis steps is good practice, as discussed in @sec-readme.
+The file should then be copied over to a `Working` folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled `Clean` folder. Keeping a `readme`.txt` to document your processing and analysis steps is good practice, as discussed in @sec-readme.
 
 ## Version with GitHub
 
