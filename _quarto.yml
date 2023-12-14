@@ -4,6 +4,9 @@ project:
     port: 3434
     browser: true
 
+execute: 
+  freeze: auto
+
 book:
   title: Data Management Plan
   subtitle: "Washington Soil Health Initiative: State of the Soils Assessment"
