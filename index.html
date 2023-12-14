@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jadey Ryan">
-<meta name="author" content="Leslie Michel">
 <meta name="author" content="Dani Gelardi">
-<meta name="dcterms.date" content="2023-11-30">
+<meta name="dcterms.date" content="2023-12-13">
 
 <title>Data Management Plan</title>
 <style>
@@ -53,8 +52,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./formats.html" rel="next">
-<link href="./images/washi_circle.png" rel="icon" type="image/png">
+<link href="./data-management.html" rel="next">
+<link href="./images/washi-circle.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -112,7 +111,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/washi_logo.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./images/washi-logo.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Data Management Plan</a> 
@@ -137,50 +136,56 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./formats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formats and standards</span></span></a>
+  <a href="./data-management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">What is data management?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./formats-standards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Formats &amp; standards</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./naming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Naming conventions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./organization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Organization</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Storage</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data flows</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./quality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data quality</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./preservation_version.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data preservation and versioning</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data flows</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./share.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data sharing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data sharing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code_guide.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Style Guide</span></span></a>
+  <a href="./code-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Code Style Guide</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -201,21 +206,12 @@ div.csl-indent {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a>
   <ul class="collapse">
-  <li><a href="#what-is-data-management" id="toc-what-is-data-management" class="nav-link" data-scroll-target="#what-is-data-management"><span class="header-section-number">1.1</span> What is data management?</a></li>
-  <li><a href="#data-life-cycle" id="toc-data-life-cycle" class="nav-link" data-scroll-target="#data-life-cycle"><span class="header-section-number">1.2</span> Data life cycle</a></li>
-  <li><a href="#dmp-overview" id="toc-dmp-overview" class="nav-link" data-scroll-target="#dmp-overview"><span class="header-section-number">1.3</span> DMP overview</a>
-  <ul class="collapse">
-  <li><a href="#roles-and-responsibilities" id="toc-roles-and-responsibilities" class="nav-link" data-scroll-target="#roles-and-responsibilities">Roles and responsibilities</a></li>
-  </ul></li>
-  <li><a href="#data-sharing-and-public-access" id="toc-data-sharing-and-public-access" class="nav-link" data-scroll-target="#data-sharing-and-public-access"><span class="header-section-number">1.4</span> Data sharing and public access</a>
-  <ul class="collapse">
-  <li><a href="#data-privacy-statement" id="toc-data-privacy-statement" class="nav-link" data-scroll-target="#data-privacy-statement">Data privacy statement</a></li>
-  <li><a href="#acknowledging-washi-data-in-publications" id="toc-acknowledging-washi-data-in-publications" class="nav-link" data-scroll-target="#acknowledging-washi-data-in-publications">Acknowledging WaSHI data in publications</a></li>
-  </ul></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements"><span class="header-section-number">1.5</span> Acknowledgements</a></li>
+  <li><a href="#chapter-outline" id="toc-chapter-outline" class="nav-link" data-scroll-target="#chapter-outline"><span class="header-section-number">1.1</span> Chapter outline</a></li>
+  <li><a href="#roles-and-responsibilities" id="toc-roles-and-responsibilities" class="nav-link" data-scroll-target="#roles-and-responsibilities"><span class="header-section-number">1.2</span> Roles and responsibilities</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements"><span class="header-section-number">1.3</span> Acknowledgements</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/index.qmd" class="toc-action">View source</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -234,7 +230,6 @@ div.csl-indent {
     <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
              <p>Jadey Ryan </p>
-             <p>Leslie Michel </p>
              <p>Dani Gelardi </p>
           </div>
   </div>
@@ -242,7 +237,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 30, 2023</p>
+      <p class="date">December 13, 2023</p>
     </div>
   </div>
   
@@ -256,75 +251,10 @@ div.csl-indent {
 <h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
 <p>The <a href="https://washingtonsoilhealthinitiative.com/">Washington Soil Health Initiative</a> (WaSHI) is a partnership between the Washington State Department of Agriculture (WSDA), Washington State University (WSU), and the State Conservation Commission. WaSHI establishes a coordinated approach to healthy soil in Washington.</p>
 <p>To date, nearly 1,000 soil samples and management surveys across 50 different cropping systems have been collected as a part of the <a href="https://washingtonsoilhealthinitiative.com/state-of-the-soils/">state of the soils assessment</a> (SoSA). WSDA and WSU lead this project with support from staff, students, conservation districts, and agricultural professionals throughout Washington.</p>
-<p><img src="images/sosa_goals.png" class="img-fluid"></p>
-<section id="what-is-data-management" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-data-management"><span class="header-section-number">1.1</span> What is data management?</h2>
-<p>Effective data management involves properly documenting, storing, and sharing our data and the information we derive from the data. If the data aren’t useable by researchers, policymakers, or growers, the hours spent in the field collecting soil samples and the hours spent in the lab analyzing them may be wasted.</p>
-<p>The guidelines detailed in this DMP will help us achieve the above data-driven goals, while also optimizing the value of the data by supporting information sharing and innovation. Our data management strategies attempt to follow <strong>FAIR</strong> (<strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable) principles while also maintaining data privacy <span class="citation" data-cites="wilkinson2016">(<a href="references.html#ref-wilkinson2016" role="doc-biblioref">Wilkinson et al. 2016</a>)</span>.</p>
-</section>
-<section id="data-life-cycle" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="data-life-cycle"><span class="header-section-number">1.2</span> Data life cycle</h2>
-<div class="columns">
-<div class="column" style="width: 40%">
-<p>The U.S. Fish and Wildlife Service developed a great illustration of the data life cycle that shows the elements of data management and emphasizes the importance of data quality at every step <span class="citation" data-cites="u.s.fishwildlifeservice2023">(<a href="references.html#ref-u.s.fishwildlifeservice2023" role="doc-biblioref">U.S. Fish &amp; Wildlife Service 2023</a>)</span>. Each step within the data life cycle requires careful intention to ensure transparency, quality, and integrity.</p>
-</div><div class="column" style="width: 5%">
-
-</div><div class="column" style="width: 55%">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><a href="https://www.fws.gov/data/life-cycle"><img src="images/fws_data_lifecycle.png" class="img-fluid figure-img" width="268"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Our adaptation of this data life cycle is outlined below.</p>
-<table class="table">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 78%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_plan_3.png?itok=qfLmDr2I" class="img-fluid" width="100"></td>
-<td><p><strong>Plan</strong></p>
-<p>Each sampling year presents an opportunity to consider what worked and what could be improved from the previous year. Planning involves making decisions about data acquisition, management, and quality control. For example, each year we provide a spreadsheet template with our requested column headers to Soiltest lab to ensure the measurements are reported with correct units and in the format we use. Special projects that deviate from our standard operating procedures require additional planning.</p></td>
-</tr>
-<tr class="even">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_acquire_3.png?itok=oyw5uIlY" class="img-fluid" width="100"></td>
-<td><p><strong>Acquire</strong></p>
-<p>We acquire data by collecting and analyzing new samples, deriving new insights from existing data, or accepting data sets from collaborators.</p></td>
-</tr>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_maintain_3.png?itok=OHGYA3sl" class="img-fluid" width="100"></td>
-<td><p><strong>Maintain</strong></p>
-<p>Maintenance involves processing data for aggregation, analyses, and reporting. We create metadata that facilitates interpretation of the data and ensure the data are in a non-proprietary format that is accessible to our collaborators and future selves.</p></td>
-</tr>
-<tr class="even">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_access_3.png?itok=v7cjtSOH" class="img-fluid" width="100"></td>
-<td><p><strong>Access</strong></p>
-<p>Access refers to data storage, publication, and security. Raw and processed data with accompanying metadata should be stored, backed up, and available for information sharing with our partners. With PI approval, anonymized and aggregated data that does not compromise growers’ personally identifiable information (PII) should be made publicly available in a data repository or data product/decision-support tool.</p></td>
-</tr>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_evaluate_3.png?itok=epsQPcX1" class="img-fluid" width="100"></td>
-<td><p><strong>Evaluate</strong></p>
-<p>We evaluate data while processing and analyzing it to maximize accuracy and productivity, while minimizing costs associated with errors or tedious data cleaning labor. Evaluation workflows should be efficient, well-documented, and reproducible. Our evaluated data help us better understand how factors and management decisions impact soil health.</p></td>
-</tr>
-<tr class="even">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_archive_3.png?itok=8chNBA3G" class="img-fluid" width="100"></td>
-<td><p><strong>Archive</strong></p>
-<p>Properly archiving our results supports the long-term storage and usefulness of our data. While similar to the Access element of the life cycle, archiving focuses on preserving data for long-term/historical retention that aren’t needed for immediate access. For example, we archive each year’s raw data for long-term storage and set those files to <code>Read-Only</code>.</p></td>
-</tr>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/qa-qc_icon_3.png?itok=17L7s1tE" class="img-fluid" width="100"></td>
-<td><p><strong>Quality Assurance / Quality Control (QA/QC)</strong></p>
-<p>Data quality management prevents data defects that hinder our ability to apply data towards our science-based conservation efforts. Defects include incorrectly entered data, invalid data, and missing or lost data. QA/QC processes should be incorporated in every element of the data life cycle.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="dmp-overview" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="dmp-overview"><span class="header-section-number">1.3</span> DMP overview</h2>
-<p>This living document will be continually reviewed and improved based on lessons learned, new information, and collaborator feedback. Subsequent chapters provide more technical details.</p>
+<p><img src="images/sosa-goals.png" class="img-fluid"></p>
+<section id="chapter-outline" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="chapter-outline"><span class="header-section-number">1.1</span> Chapter outline</h2>
+<p><em>This Data Management Plan (DMP) is a living document will be continually reviewed and improved based on lessons learned, new information, and collaborator feedback.</em></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -335,14 +265,15 @@ Links to shared drive folders and files
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When viewing this DMP in the browser, hyperlinks to files and folders on our shared drive are not accessible in the browser. To open the file or folder, right-click on the hyperlink &gt; copy the path &gt; paste it into the search bar of the file explorer &gt; press <code>Enter</code> or click the arrow.</p>
-<p><img src="images/paste_file_path.png" class="img-fluid"></p>
+<p>When viewing this DMP in the browser, hyperlinks to files and folders on our shared drive are not accessible in the browser. Nothing will happen when clicking on the links. To open the file or folder, right-click on the hyperlink &gt; copy the path &gt; paste it into the search bar of the file explorer &gt; press <code>Enter</code> or click the arrow.</p>
+<p><img src="images/paste-file-path.png" class="img-fluid"></p>
 </div>
 </div>
-<section id="roles-and-responsibilities" class="level3">
-<h3 class="anchored" data-anchor-id="roles-and-responsibilities">Roles and responsibilities</h3>
+</section>
+<section id="roles-and-responsibilities" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="roles-and-responsibilities"><span class="header-section-number">1.2</span> Roles and responsibilities</h2>
 <p>All WaSHI personnel who will be interacting with SoSA data must familiarize themselves with the contents of this document. Following chapters with technical details will be referenced when relevant. If all collaborators are not consistently implementing this DMP, then the benefits of effective data management are lost.</p>
-<p>The WSDA Data Scientist, supported by the project Principal Investigators (PIs), is responsible for providing guidance to WaSHI staff working with SoSA data and ensuring the implementation of the DMP. The Data Scientist is also responsible for reviewing and updating this document annually and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the <a href="https://github.com/WA-Department-of-Agriculture/washi-dmp">GitHub repository</a>.</p>
+<p>The WSDA Data Scientist, supported by the project Principal Investigators (PIs), is responsible for providing guidance to WaSHI staff working with SoSA data and ensuring the implementation of the DMP. The Data Scientist is also responsible for reviewing and updating this document annually, and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the <a href="https://github.com/WA-Department-of-Agriculture/washi-dmp">GitHub repository</a>.</p>
 <table class="table">
 <caption>Current roles as of November 2023</caption>
 <thead>
@@ -376,28 +307,8 @@ Links to shared drive folders and files
 </tbody>
 </table>
 </section>
-</section>
-<section id="data-sharing-and-public-access" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="data-sharing-and-public-access"><span class="header-section-number">1.4</span> Data sharing and public access</h2>
-<p>SoSA relies on growers’ willingness to volunteer their fields for sampling and participate in the required management survey. Their willingness depends on their trust in WaSHI to protect their privacy. Only aggregated and anonymized results will be publicly available or shared. The below data privacy statement may be shared with potential participants:</p>
-<section id="data-privacy-statement" class="level3">
-<h3 class="anchored" data-anchor-id="data-privacy-statement">Data privacy statement</h3>
-<blockquote class="blockquote">
-<p>Data will be aggregated and reported in a way which mitigates personal identification of growers. Information will be used to understand broad impacts and characterize trends in soil health and production practices across regions. Results will not be reported in a way that makes individuals identifiable. Information collected in this survey may be subject to release in accordance with RCW 42.56 (Public Records Act).</p>
-</blockquote>
-<p>Procedures for anonymizing data are detailed in <a href="share.html#sec-maintain-confidentiality"><span>Section&nbsp;8.3</span></a>.</p>
-</section>
-<section id="acknowledging-washi-data-in-publications" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledging-washi-data-in-publications">Acknowledging WaSHI data in publications</h3>
-<p>All research partially or completely funded by WaSHI must include acknowledgements to the State of Washington. The following text should be included in all publications resulting from this funding:</p>
-<blockquote class="blockquote">
-<p>Data was in part provided by the Washington Soil Initiative, which is supported by the State of Washington and administered by the Washington State Department of Agriculture, Washington State Conservation Commission, and Washington State University.</p>
-</blockquote>
-<p>If WaSHI staff make <a href="https://www.pnas.org/doi/10.1073/pnas.1715374115">substantial scientific contributions</a> to the manuscript, discuss the possibility of co-authorship credit.</p>
-</section>
-</section>
-<section id="acknowledgements" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="acknowledgements"><span class="header-section-number">1.5</span> Acknowledgements</h2>
+<section id="acknowledgements" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="acknowledgements"><span class="header-section-number">1.3</span> Acknowledgements</h2>
 <p>This DMP was adapted from the R.J. Cook Agronomy Farm Long-term Agroecological Research Site DMP <span class="citation" data-cites="carlson2021">(<a href="references.html#ref-carlson2021" role="doc-biblioref">Carlson 2021</a>)</span>, U.S. Fish and Wildlife Service data management life cycle <span class="citation" data-cites="u.s.fishwildlifeservice2023">(<a href="references.html#ref-u.s.fishwildlifeservice2023" role="doc-biblioref">U.S. Fish &amp; Wildlife Service 2023</a>)</span>, Harvard Medical School Longwood Research Data Management DMP guidelines <span class="citation" data-cites="harvardmedicalschool2023">(<a href="references.html#ref-harvardmedicalschool2023" role="doc-biblioref">Harvard Medical School 2023</a>)</span>, and the Data Management in Large-Scale Education Research book <span class="citation" data-cites="lewis2023">(<a href="references.html#ref-lewis2023" role="doc-biblioref">Lewis 2023</a>)</span>.</p>
 
 
@@ -413,9 +324,6 @@ Lewis, Crystal. 2023. <em>Data Management in Large-Scale Education Research [in 
 </div>
 <div id="ref-u.s.fishwildlifeservice2023" class="csl-entry" role="listitem">
 U.S. Fish &amp; Wildlife Service. 2023. <span>“Data Management Life Cycle.”</span> <a href="https://www.fws.gov/data/life-cycle">https://www.fws.gov/data/life-cycle</a>.
-</div>
-<div id="ref-wilkinson2016" class="csl-entry" role="listitem">
-Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. <span>“The FAIR Guiding Principles for Scientific Data Management and Stewardship.”</span> <em>Scientific Data</em> 3 (1): 160018. <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
 </div>
 </div>
 </section>
@@ -673,8 +581,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./formats.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formats and standards</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./data-management.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">What is data management?</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

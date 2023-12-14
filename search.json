@@ -7,200 +7,179 @@
     "text": "1 Overview\nThe Washington Soil Health Initiative (WaSHI) is a partnership between the Washington State Department of Agriculture (WSDA), Washington State University (WSU), and the State Conservation Commission. WaSHI establishes a coordinated approach to healthy soil in Washington.\nTo date, nearly 1,000 soil samples and management surveys across 50 different cropping systems have been collected as a part of the state of the soils assessment (SoSA). WSDA and WSU lead this project with support from staff, students, conservation districts, and agricultural professionals throughout Washington."
   },
   {
-    "objectID": "index.html#what-is-data-management",
-    "href": "index.html#what-is-data-management",
+    "objectID": "index.html#chapter-outline",
+    "href": "index.html#chapter-outline",
     "title": "Data Management Plan",
-    "section": "1.1 What is data management?",
-    "text": "1.1 What is data management?\nEffective data management involves properly documenting, storing, and sharing our data and the information we derive from the data. If the data aren’t useable by researchers, policymakers, or growers, the hours spent in the field collecting soil samples and the hours spent in the lab analyzing them may be wasted.\nThe guidelines detailed in this DMP will help us achieve the above data-driven goals, while also optimizing the value of the data by supporting information sharing and innovation. Our data management strategies attempt to follow FAIR (Findable, Accessible, Interoperable, Reusable) principles while also maintaining data privacy (Wilkinson et al. 2016)."
+    "section": "1.1 Chapter outline",
+    "text": "1.1 Chapter outline\nThis Data Management Plan (DMP) is a living document will be continually reviewed and improved based on lessons learned, new information, and collaborator feedback.\n\n\n\n\n\n\nLinks to shared drive folders and files\n\n\n\nWhen viewing this DMP in the browser, hyperlinks to files and folders on our shared drive are not accessible in the browser. Nothing will happen when clicking on the links. To open the file or folder, right-click on the hyperlink &gt; copy the path &gt; paste it into the search bar of the file explorer &gt; press Enter or click the arrow."
   },
   {
-    "objectID": "index.html#data-life-cycle",
-    "href": "index.html#data-life-cycle",
+    "objectID": "index.html#roles-and-responsibilities",
+    "href": "index.html#roles-and-responsibilities",
     "title": "Data Management Plan",
-    "section": "1.2 Data life cycle",
-    "text": "1.2 Data life cycle\n\n\nThe U.S. Fish and Wildlife Service developed a great illustration of the data life cycle that shows the elements of data management and emphasizes the importance of data quality at every step (U.S. Fish & Wildlife Service 2023). Each step within the data life cycle requires careful intention to ensure transparency, quality, and integrity.\n\n\n\n\n\n\n\n\n\n\nOur adaptation of this data life cycle is outlined below.\n\n\n\n\n\n\n\n\nPlan\nEach sampling year presents an opportunity to consider what worked and what could be improved from the previous year. Planning involves making decisions about data acquisition, management, and quality control. For example, each year we provide a spreadsheet template with our requested column headers to Soiltest lab to ensure the measurements are reported with correct units and in the format we use. Special projects that deviate from our standard operating procedures require additional planning.\n\n\n\nAcquire\nWe acquire data by collecting and analyzing new samples, deriving new insights from existing data, or accepting data sets from collaborators.\n\n\n\nMaintain\nMaintenance involves processing data for aggregation, analyses, and reporting. We create metadata that facilitates interpretation of the data and ensure the data are in a non-proprietary format that is accessible to our collaborators and future selves.\n\n\n\nAccess\nAccess refers to data storage, publication, and security. Raw and processed data with accompanying metadata should be stored, backed up, and available for information sharing with our partners. With PI approval, anonymized and aggregated data that does not compromise growers’ personally identifiable information (PII) should be made publicly available in a data repository or data product/decision-support tool.\n\n\n\nEvaluate\nWe evaluate data while processing and analyzing it to maximize accuracy and productivity, while minimizing costs associated with errors or tedious data cleaning labor. Evaluation workflows should be efficient, well-documented, and reproducible. Our evaluated data help us better understand how factors and management decisions impact soil health.\n\n\n\nArchive\nProperly archiving our results supports the long-term storage and usefulness of our data. While similar to the Access element of the life cycle, archiving focuses on preserving data for long-term/historical retention that aren’t needed for immediate access. For example, we archive each year’s raw data for long-term storage and set those files to Read-Only.\n\n\n\nQuality Assurance / Quality Control (QA/QC)\nData quality management prevents data defects that hinder our ability to apply data towards our science-based conservation efforts. Defects include incorrectly entered data, invalid data, and missing or lost data. QA/QC processes should be incorporated in every element of the data life cycle."
-  },
-  {
-    "objectID": "index.html#dmp-overview",
-    "href": "index.html#dmp-overview",
-    "title": "Data Management Plan",
-    "section": "1.3 DMP overview",
-    "text": "1.3 DMP overview\nThis living document will be continually reviewed and improved based on lessons learned, new information, and collaborator feedback. Subsequent chapters provide more technical details.\n\n\n\n\n\n\nLinks to shared drive folders and files\n\n\n\nWhen viewing this DMP in the browser, hyperlinks to files and folders on our shared drive are not accessible in the browser. To open the file or folder, right-click on the hyperlink &gt; copy the path &gt; paste it into the search bar of the file explorer &gt; press Enter or click the arrow.\n\n\n\n\nRoles and responsibilities\nAll WaSHI personnel who will be interacting with SoSA data must familiarize themselves with the contents of this document. Following chapters with technical details will be referenced when relevant. If all collaborators are not consistently implementing this DMP, then the benefits of effective data management are lost.\nThe WSDA Data Scientist, supported by the project Principal Investigators (PIs), is responsible for providing guidance to WaSHI staff working with SoSA data and ensuring the implementation of the DMP. The Data Scientist is also responsible for reviewing and updating this document annually and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the GitHub repository.\n\nCurrent roles as of November 2023\n\n\nRole\nAffiliation\nName\n\n\n\n\nData Scientist\nWSDA\nJadey Ryan\n\n\nCo-PI\nWSDA\nDani Gelardi\n\n\nCo-PI\nWSU\nDeirdre Griffin LaHue\n\n\nData Stewards\nWaSHI personnel"
-  },
-  {
-    "objectID": "index.html#data-sharing-and-public-access",
-    "href": "index.html#data-sharing-and-public-access",
-    "title": "Data Management Plan",
-    "section": "1.4 Data sharing and public access",
-    "text": "1.4 Data sharing and public access\nSoSA relies on growers’ willingness to volunteer their fields for sampling and participate in the required management survey. Their willingness depends on their trust in WaSHI to protect their privacy. Only aggregated and anonymized results will be publicly available or shared. The below data privacy statement may be shared with potential participants:\n\nData privacy statement\n\nData will be aggregated and reported in a way which mitigates personal identification of growers. Information will be used to understand broad impacts and characterize trends in soil health and production practices across regions. Results will not be reported in a way that makes individuals identifiable. Information collected in this survey may be subject to release in accordance with RCW 42.56 (Public Records Act).\n\nProcedures for anonymizing data are detailed in Section 8.3.\n\n\nAcknowledging WaSHI data in publications\nAll research partially or completely funded by WaSHI must include acknowledgements to the State of Washington. The following text should be included in all publications resulting from this funding:\n\nData was in part provided by the Washington Soil Initiative, which is supported by the State of Washington and administered by the Washington State Department of Agriculture, Washington State Conservation Commission, and Washington State University.\n\nIf WaSHI staff make substantial scientific contributions to the manuscript, discuss the possibility of co-authorship credit."
+    "section": "1.2 Roles and responsibilities",
+    "text": "1.2 Roles and responsibilities\nAll WaSHI personnel who will be interacting with SoSA data must familiarize themselves with the contents of this document. Following chapters with technical details will be referenced when relevant. If all collaborators are not consistently implementing this DMP, then the benefits of effective data management are lost.\nThe WSDA Data Scientist, supported by the project Principal Investigators (PIs), is responsible for providing guidance to WaSHI staff working with SoSA data and ensuring the implementation of the DMP. The Data Scientist is also responsible for reviewing and updating this document annually, and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the GitHub repository.\n\nCurrent roles as of November 2023\n\n\nRole\nAffiliation\nName\n\n\n\n\nData Scientist\nWSDA\nJadey Ryan\n\n\nCo-PI\nWSDA\nDani Gelardi\n\n\nCo-PI\nWSU\nDeirdre Griffin LaHue\n\n\nData Stewards\nWaSHI personnel"
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "Data Management Plan",
-    "section": "1.5 Acknowledgements",
-    "text": "1.5 Acknowledgements\nThis DMP was adapted from the R.J. Cook Agronomy Farm Long-term Agroecological Research Site DMP (Carlson 2021), U.S. Fish and Wildlife Service data management life cycle (U.S. Fish & Wildlife Service 2023), Harvard Medical School Longwood Research Data Management DMP guidelines (Harvard Medical School 2023), and the Data Management in Large-Scale Education Research book (Lewis 2023).\n\n\n\n\nCarlson, Bryan. 2021. “Data Management Plan for the R.J. Cook Agronomy Farm Long-Term Agroecological Research Site.”\n\n\nHarvard Medical School. 2023. “Data Management Plans.” https://datamanagement.hms.harvard.edu/plan-design/data-management-plans.\n\n\nLewis, Crystal. 2023. Data Management in Large-Scale Education Research [in Preparation]. https://datamgmtinedresearch.com/.\n\n\nU.S. Fish & Wildlife Service. 2023. “Data Management Life Cycle.” https://www.fws.gov/data/life-cycle.\n\n\nWilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. “The FAIR Guiding Principles for Scientific Data Management and Stewardship.” Scientific Data 3 (1): 160018. https://doi.org/10.1038/sdata.2016.18."
+    "section": "1.3 Acknowledgements",
+    "text": "1.3 Acknowledgements\nThis DMP was adapted from the R.J. Cook Agronomy Farm Long-term Agroecological Research Site DMP (Carlson 2021), U.S. Fish and Wildlife Service data management life cycle (U.S. Fish & Wildlife Service 2023), Harvard Medical School Longwood Research Data Management DMP guidelines (Harvard Medical School 2023), and the Data Management in Large-Scale Education Research book (Lewis 2023).\n\n\n\n\nCarlson, Bryan. 2021. “Data Management Plan for the R.J. Cook Agronomy Farm Long-Term Agroecological Research Site.”\n\n\nHarvard Medical School. 2023. “Data Management Plans.” https://datamanagement.hms.harvard.edu/plan-design/data-management-plans.\n\n\nLewis, Crystal. 2023. Data Management in Large-Scale Education Research [in Preparation]. https://datamgmtinedresearch.com/.\n\n\nU.S. Fish & Wildlife Service. 2023. “Data Management Life Cycle.” https://www.fws.gov/data/life-cycle."
   },
   {
-    "objectID": "formats.html#data-formats",
-    "href": "formats.html#data-formats",
-    "title": "2  Formats and standards",
-    "section": "2.1 Data formats",
-    "text": "2.1 Data formats\nData generated from or integrated into WaSHI can be non-digital or digital.\n\nNon-digital data\nNon-digital data, such as field forms, management surveys, and chain of custody forms, are manually recorded on paper forms. Paper forms must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.\n\n\nDigital data\nDigital data include tabular, spatial, and binary data, such as lab results, sample locations, and field photos. Non-conventional data also include code, algorithms, tools, and workflows.\nTabular data include comma separated values (csv), tab separated values (tsv), Microsoft Excel open XML spreadsheet (xlsx), and portable document format (pdf).\nSpatial data include file geodatabases (gdb), vector shapefiles (zipped folder containing multiple file extensions), keyhole markup language (kml or kmz). Tabular data may also contain spatial data as longitude and latitude.\nBinary data include photos (jpeg, png, gif, tiff), videos (mp4), code (R, py, js), and object-oriented data files (RDS, Rdata, parquet, arrow).\nProprietary data formats include Microsoft Excel, Word, and Powerpoint files (xlsx, docx, pptx). RDS and Rdata files are an example of an application-specific data format that can only be opened using the R programming language or RStudio IDE. These types of files should be saved in conjunction with a copy of the data in a non-proprietary and open-standard format, such as csv, to maintain accessibility for those who do not have Microsoft Office or do not use R.\nWritten documents and presentations are in formats including Microsoft Word and Powerpoint (docx and pptx), hypertext markup language (HTML), and pdf.\nNotebooks combine text with executable code to generate written documents and presentations in docx, pptx, HTML, or pdf formats. These notebooks are stored in formats depending on the programming language: a few examples include R markdown (rmd), Quarto (qmd), and Jupyter notebook (ipynb).\nThe list below is not exhaustive and will continue to grow as additional useful data sources are discovered.\n\n\n\n\nType\nSource\nFormats\n\n\n\n\nLab results\nProvided by the lab analyzing the soil sample, principal investigator of a study, or grower\ncsv, xlsx, pdf, xml, json, RDS, RData\n\n\nManagement surveys\nCollected through interviews with grower\ncsv, xlsx, RDS, RData, paper form (to be digitized)\n\n\nField forms\nCompleted in the field during/immediately after sampling\npdf, paper form (to be digitized), csv, xlsx\n\n\nSample locations\nIdentified prior to sampling and may be edited during sampling using ArcGIS Online, Collector, Field Maps or Google Maps\nArcGIS feature layer, shp, kmz, csv, xlsx\n\n\nChain of custody forms\nCompleted prior to shipping or dropping off samples\npdf, paper form (to be digitized)\n\n\nClimate data\nOSU PRISM, NOAA, Esri Living Atlas\ncsv, shp, netCDF, tiff, gdb\n\n\nSoil data\nNRCS Web Soil Survey, NRCS WA gSSURGO\ngdb, accdb\n\n\nStrata classification\nProvided by Soil Health Institute in 2021 as a lyr file\nlyr\n\n\nImages\nLogos, icons, photos taken in the field\njpeg, png, gif, tiff, svg\n\n\nVideos\nRecordings of meetings, training videos\nmp4\n\n\nDocuments\nReports, manuscripts, SOP, QAPP, factsheets, brochures\ndocx, txt, html, pdf\n\n\nPresentations\nPowerpoints, slide decks\npptx, html, pdf\n\n\nCode\nScripts for wrangling, processing, analyzing data; markdown for producing documents and presentations; style sheets for html outputs\nR, py, ipynb, js, yml, rmd, qmd, css, scss"
+    "objectID": "data-management.html#data-life-cycle",
+    "href": "data-management.html#data-life-cycle",
+    "title": "2  What is data management?",
+    "section": "2.1 Data life cycle",
+    "text": "2.1 Data life cycle\n\n\nThe U.S. Fish and Wildlife Service developed a great graphic to explain the elements of the data life cycle and emphasize the importance of data quality at every step (U.S. Fish & Wildlife Service 2023). Each step within the data life cycle requires careful intention to ensure transparency, quality, and integrity.\n\n\n\n\n\n\n\n\n\n\nOur adaptation of this data life cycle is outlined below.\n\n\n\n\n\n\n\n\nPlan\nEach sampling year presents an opportunity to consider what worked and what could be improved from the previous year. Planning involves making decisions about data acquisition, management, and quality control. For example, each year we provide a spreadsheet template with our requested column headers to Soiltest lab to ensure the measurements are reported with correct units and in the format we use. Special projects that deviate from our standard operating procedures require additional planning.\n\n\n\nAcquire\nWe acquire data by collecting and analyzing new samples, deriving new insights from existing data, or accepting datasets from collaborators. |\n\n\n\nMaintain\nMaintenance involves processing data for aggregation, analyses, and reporting. We create metadata that facilitates interpretation of the data and ensure the data are in a non-proprietary format that is accessible to our collaborators and future selves.\n\n\n\nAccess\nAccess refers to data storage, publication, and security. Raw and processed data with accompanying metadata should be stored, backed up, and available for information sharing with our partners. With PI approval, anonymized and aggregated data that does not compromise growers’ personally identifiable information (PII) should be made publicly available in a data repository or data product/decision-support tool.\n\n\n\nEvaluate\nWe evaluate data while processing and analyzing it to maximize accuracy and productivity, while minimizing costs associated with errors or tedious data cleaning labor. Evaluation workflows should be efficient, well-documented, and reproducible. Our evaluated data help us better understand how factors and management decisions impact soil health.\n\n\n\nArchive\nProperly archiving our results supports the long-term storage and usefulness of our data. While similar to the Access element of the life cycle, archiving focuses on preserving data for long-term/historical retention that aren’t needed for immediate access. For example, we archive each year’s raw data for long-term storage and set those files to Read-Only.\n\n\n\nQuality Assurance / Quality Control (QA/QC)\nData quality management prevents data defects that hinder our ability to apply data towards our science-based conservation efforts. Defects include incorrectly entered data, invalid data, and missing or lost data. QA/QC processes should be incorporated in every element of the data life cycle.\n\n\n\nThe following chapters describe our internal processes and standards to follow throughout each step in the data life cycle.\n\n\n\n\nU.S. Fish & Wildlife Service. 2023. “Data Management Life Cycle.” https://www.fws.gov/data/life-cycle.\n\n\nWilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. “The FAIR Guiding Principles for Scientific Data Management and Stewardship.” Scientific Data 3 (1): 160018. https://doi.org/10.1038/sdata.2016.18."
   },
   {
-    "objectID": "formats.html#sec-data-standards",
-    "href": "formats.html#sec-data-standards",
-    "title": "2  Formats and standards",
-    "section": "2.2 Data standards",
-    "text": "2.2 Data standards\nDate will be expressed as YYYY-MM-DD according to the ISO 8601 standard.\nDate with time will be expressed as YYYY-MM-DDTHH:MM:SSZ.\n\nT separates date from time. The Z indicates the date-time is using the Universal Time Coordinated (UTC) with no offset.\nPacific Standard Time (PST) has a UTC-8:00 offset and Pacific Daylight Time (PDT) has a UTC-7:00 offset and would be expressed as YYYY-MM-DDTHH:MM:SS-8:00. The Z has been replaced with the offset.\nExample: 2023-11-28T14:55:56-08:00.\n\n\n\n\n\"ISO 8601\" from Randall Munroe's xkcd\n\n\nGeospatial data will be accompanied by metadata that abides by the ISO 19115 standard by following Esri’s documentation when working in ArcGIS Pro. Metadata contains information about the identification, the extent, the quality, the spatial and temporal schema, spatial reference, and distribution of digital geographic data.\nCode will follow the style guide in Chapter 9."
+    "objectID": "formats-standards.html#data-formats",
+    "href": "formats-standards.html#data-formats",
+    "title": "3  Formats & standards",
+    "section": "3.1 Data formats",
+    "text": "3.1 Data formats\nData generated from or integrated into WaSHI can be non-digital or digital.\n\nNon-digital data\nNon-digital data, such as field forms, management surveys, and chain of custody forms, are manually recorded on paper forms. Paper forms must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.\n\n\nDigital data\nDigital data include tabular, spatial, and binary data, such as lab results, sample locations, and field photos. Non-conventional data also include code, algorithms, tools, and workflows.\nTabular data include comma separated values (csv), tab separated values (tsv), Microsoft Excel open XML spreadsheet (xlsx), and portable document format (pdf).\nSpatial data include file geodatabases (gdb), vector shapefiles (zipped folder containing multiple file extensions), keyhole markup language (kml or kmz). Tabular data may also contain spatial data as longitude and latitude.\nBinary data include photos (jpeg, png, gif, tiff), videos (mp4), code (R, py, js), and object-oriented data files (RDS, Rdata, parquet, arrow).\nProprietary data formats include Microsoft Excel, Word, and Powerpoint files (xlsx, docx, pptx). RDS and Rdata files are an example of an application-specific data format that can only be opened using the R programming language or RStudio IDE. These types of files should be saved in conjunction with a copy of the data in a non-proprietary and open-standard format, such as csv, to maintain accessibility for those who do not have Microsoft Office or do not use R.\nWritten documents and presentations are in formats including Microsoft Word and Powerpoint (docx and pptx), hypertext markup language (HTML), and pdf.\nNotebooks combine text with executable code to generate written documents and presentations in docx, pptx, HTML, or pdf formats. These notebooks are stored in formats depending on the programming language: a few examples include R markdown (rmd), Quarto (qmd), and Jupyter notebook (ipynb).\nThe list below is not exhaustive and will continue to grow as additional useful data sources are discovered.\n\n\n\n\nType\nSource\nFormats\n\n\n\n\nLab results\nProvided by the lab analyzing the soil sample, principal investigator of a study, or grower\ncsv, xlsx, pdf, xml, json, RDS, RData\n\n\nManagement surveys\nCollected through interviews with grower\ncsv, xlsx, RDS, RData, paper form (to be digitized)\n\n\nField forms\nCompleted in the field during/immediately after sampling\npdf, paper form (to be digitized), csv, xlsx\n\n\nSample locations\nIdentified prior to sampling and may be edited during sampling using ArcGIS Online, Collector, Field Maps or Google Maps\nArcGIS feature layer, shp, kmz, csv, xlsx\n\n\nChain of custody forms\nCompleted prior to shipping or dropping off samples\npdf, paper form (to be digitized)\n\n\nClimate data\nOSU PRISM, NOAA, Esri Living Atlas\ncsv, shp, netCDF, tiff, gdb\n\n\nSoil data\nNRCS Web Soil Survey, NRCS WA gSSURGO\ngdb, accdb\n\n\nStrata classification\nProvided by Soil Health Institute in 2021 as a lyr file\nlyr\n\n\nImages\nLogos, icons, photos taken in the field\njpeg, png, gif, tiff, svg\n\n\nVideos\nRecordings of meetings, training videos\nmp4\n\n\nDocuments\nReports, manuscripts, SOP, QAPP, factsheets, brochures\ndocx, txt, html, pdf\n\n\nPresentations\nPowerpoints, slide decks\npptx, html, pdf\n\n\nCode\nScripts for wrangling, processing, analyzing data; markdown for producing documents and presentations; style sheets for html outputs\nR, py, ipynb, js, yml, rmd, qmd, css, scss"
   },
   {
-    "objectID": "organization.html#sec-storage",
-    "href": "organization.html#sec-storage",
-    "title": "3  Organization",
-    "section": "3.1 Storage",
-    "text": "3.1 Storage\nNon-digital data, such as paper forms, must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.\nAll digital data are stored in the WSDA shared drives, and other locations listed below.\nWSDA shared drives:\n\nAgency files: Y:\\NRAS\\Soil_Health_Initiative\nGIS: K:\\NRAS\\Arc_Data\\Soil_Health (requires permissions from IT)\n\nEsri products and services:\n\nArcGIS Online Soil Health - WSDA Internal Group\nWSDA GIS on-premise ArcGIS REST Services Directory (only Jadey, Perry, and Joel can publish to this server; Ed Thompson is the contact for getting access)\n\nDatabase for lab results and management data:\n\nWISKI, but very likely will migrate to SQL Server or a less water-focused database\n\nGitHub organizations for code-based projects:\n\nWSDA\nWaSHI\n\nMicrosoft Teams for data sharing between WSDA and WSU:\n\nWSDA and WSU Teams WaSHI channels\n\nLocal workstations:\n\nShould NOT be the only place data are stored!\n\n\nRead-Only raw data\nRaw data, such as lab results from Soiltest or exports from ArcGIS Online, should be immediately set to Read-Only. Right click the file &gt; click on Properties &gt; check the Read-Only attribute box. The file should then be copied over to a Working folder for any processing or analyses. The final data set should be saved in a separate descriptively titled Clean folder. Keeping a README.txt to document your processing and analysis steps is good practice."
+    "objectID": "formats-standards.html#sec-data-standards",
+    "href": "formats-standards.html#sec-data-standards",
+    "title": "3  Formats & standards",
+    "section": "3.2 Data standards",
+    "text": "3.2 Data standards\nDate will be expressed as YYYY-MM-DD according to the ISO 8601 standard.\nDate with time will be expressed as YYYY-MM-DDTHH:MM:SSZ.\n\nT separates date from time. The Z indicates the date-time is using the Universal Time Coordinated (UTC) with no offset.\nPacific Standard Time (PST) has a UTC-8:00 offset and Pacific Daylight Time (PDT) has a UTC-7:00 offset and would be expressed as YYYY-MM-DDTHH:MM:SS-8:00. The Z has been replaced with the offset.\nExample: 2023-11-28T14:55:56-08:00.\n\n\n\n\n\"ISO 8601\" from Randall Munroe's xkcd\n\n\nGeospatial data will be accompanied by metadata that abides by the ISO 19115 standard by following Esri’s documentation when working in ArcGIS Pro. Metadata contains information about the identification, the extent, the quality, the spatial and temporal schema, spatial reference, and distribution of digital geographic data.\nCode will follow the style guide in Chapter 10."
   },
   {
-    "objectID": "organization.html#sec-naming-conventions-and-file-organization",
-    "href": "organization.html#sec-naming-conventions-and-file-organization",
-    "title": "3  Organization",
-    "section": "3.2 Naming conventions",
-    "text": "3.2 Naming conventions\nWhen naming folders and files, we want consistent and clear names that are findable and understandabe by both humans and computers. From only a file name, we should immediately know what the file contains and which file is the most recent version.\n\n\n\n“Documents” from Randall Munroe’s xkcd\n\n\n\nBest practices\n\nConvey meaning with delimiters and capitalization\nDeliberately use underscores, hyphens, and uppercase letters so we can easily understand the contents and programmatically parse file and folder names.\n\nUse underscores to delineate metadata elements (i.e. name from version Name_Version).\nUse hyphens to separate parts of one metadata element (i.e. date YYYY-MM-DD).\nDifferent conventions may work better for different purposes (folder, file, variable name). See Section 3.2.2 for which conventions to use for different file sets.\n\nPascalCase: capitalize the first letter of each word without spaces or delimiters.\nlowerCamelCase: the first word is all lowercase and subsequent words have the first letter capitalized without spaces or delimiters.\nsnake_case: all lowercase with underscores separating words\nkebab-case: all lowercase with hyphens separating words\nTrain-Case: each word begins with an uppercase letter with hyphens separating words\n\n\nAvoid spaces and special characters (only use underscores and hyphens). Characters like / () ! ? % + \" ' have special meaning to computers and can break file paths and URLs.\n\n\nCharacter length matters\nComputers are unable to read file paths and file names that surpass a certain character length. Be concise AND descriptive. Windows path limit is 260 characters.\n\n\nGroup and sort files by name\nConsider how folders and files should be grouped and sorted. Put that piece of metadata in the beginning of the file name. For example, if we want all chain of custodies grouped by conservation district and then sorted by date, we would use DistrictName_CoC_YYYY-MM-DD, which looks like Cowlitz_CoC_2023-05-01.pdf. If we wanted them grouped by date, we would put the date at the beginning.\n\n\n\nUse version numbers\nIf not using the date to version, or to keep multiple drafts from the same date, add version information to the end of the file name. Think about how many possible versions there could be. If there may be more than 10, use leading zeros before single digit numbers so the file name always has the same length. V1 through V15 will not sort the same way as V01 through V15. For example: 2023 SampleRequestForm_Lewis_V3 or 2023 SampleRequestForm_Lewis_V03.\n\n\nCollaborating on files\nAdd your initials at the end of the file name when “saving as” a file that multiple people are working on. This ensures a version is kept as a backup. Alternatively, use Track Changes if working in a MS Word document.\n\n\n\nNaming guidelines\nMany files and folders in our shared drive do not follow the above best practices or below naming conventions. We are learning and improving as we go. Going forward, please follow the conventions listed below.\n\n\n\n\n\nNaming convention\nExamples\n\n\n\n\nFolders\nYYYY_PascalCase\noptional: year\n2024_Sampling\nDataManagement\n\n\nDynamic files\n(include metadata in name)\nYYYY-MM-DD_PascalCase_V1\n2023-11-15_SurveyPerennial.xlsx\n2023_WSDASoilHealth_V1.xlsx\n2023_WADE-WaSHI-WaCSE_JR.pptx\n\n\nStatic files\nsnake_case\nwashi_logo_no_background.png\n\n\nDomains1\nkebab-case\nwashi-dmp\n\n\nScripts and syntax2\nsnake_case\nlowerCamelCase\ncreate_soils.R (script)\nwashi_flextable (function)\nsampleId (variable)"
-  },
-  {
-    "objectID": "organization.html#folder-structure",
-    "href": "organization.html#folder-structure",
-    "title": "3  Organization",
-    "section": "3.3 Folder structure",
-    "text": "3.3 Folder structure\nWe organize our folders into a hierarchical structure to clearly delineate segments of our projects, improve searchability, and ensure reproducibility across years.\n\nHierarchy\nWe strive for a balance between a deep and shallow structure. If too shallow, there are too many files in one folder and they are hard to sort through. If too deep, we have to click too many times to get to a file and specific files can be difficult to find.\nY:\\NRAS\\Soil_Health_Initiative is the parent folder for all WaSHI content.\nWithin the Sampling sub-folder, we use a combination of date- (each year has its own sub-folder) and categorical- based (data set and documentation that span across years) folder structure .\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\n├── _completeDataset\n├── 2019_SCBG\n├── 2021_Sampling\n├── 2022_PartnershipsInSoilHealth\n├── 2023_Sampling\n├── 2024_Sampling\n├── Maps\n├── Projects\n├── QAPP\n├── SOPs\n├── TrainingVideos\n├── ArchivedSampleInventory.xlsx\n├── EquipmentInventory.xlsx\n└──  SOSImpacts.xlsx\nWithin the 2023 sub-folder, we have sub-folders for planning, forms, data, and processes. This structure helps maintain a reproducible workflow year after year.\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\\2023_Sampling\n├── Applications\n├── CoCs\n├── Equipment\n├── FieldForms\n├── Forms\n├── GIS\n├── LabData\n├── Labels\n├── ManagementSurveys\n├── PublicDocs\n├── Purchases\n├── Reports\n├── SampleIDAssignments\n├── Scripts\n├── 2023_DataTracking.xlsx\n└── PostSeasonWrapUp_2023.docx\nAs mentioned in Section 3.1.1, it’s good practice to maintain the raw data. We use additional sub-folders for the LabData folder. Everything in Raw has been set as Read-Only.\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\\2023_Sampling\\LabData\n├── 2023_DataTemplateSoiltest.xlsx\n├── Clean\n├── QC\n├── Raw\n└── Working\nSoil_Health_Initative &gt; Sampling &gt; 2023_Sampling &gt; LabData &gt; Clean has five levels of nesting. We wouldn’t want to add too many more levels before the hierarchy becomes difficult to manage.\n\n\nArchive folders\nWhen too many drafts or versions begin to clutter a sub-folder, create a new folder with the structure Archive_FileTitleOrDescription and place the old drafts there. Leave the most current, accurate file in the main folder.\nFor example, the final, current SOP is listed in the main folder and previous working drafts were moved to the Archive_SOP folder.\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\\SOPs\\Sampling\n├── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring.docx\n├── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring_WEB.docx\n├── 923-NRAS-SoilHealthSOP.pdf\n├── 923-NRAS-SoilHealthSOP_WEB.pdf\n├── Archive_SOP\n│   ├── 2021\n│   ├── 2022\n│   ├── 2023\n│   │   ├── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring_LMedits.docx\n│   │   └── 2023_WSDA_NRAS_SOP_Soil_Health_Monitoring_LM_JRedits.docx"
-  },
-  {
-    "objectID": "organization.html#footnotes",
-    "href": "organization.html#footnotes",
-    "title": "3  Organization",
+    "objectID": "naming.html#footnotes",
+    "href": "naming.html#footnotes",
+    "title": "4  Naming conventions",
     "section": "",
-    "text": "Domains include RStudio project names and GitHub repositories since they become a URL. We use kebab-case because hyphens are better than underscores for URLs, as recommended by Google.↩︎\nSee Chapter 9 for the code style guide.↩︎"
+    "text": "Code files include anything that gets pushed to GitHub where it becomes a URL. Google recommends kebab-case because hyphens are better than underscores for URLs.↩︎\nSee Chapter 10 for the code style guide.↩︎"
   },
   {
-    "objectID": "documentation.html#metadata",
-    "href": "documentation.html#metadata",
-    "title": "4  Documentation",
-    "section": "4.1 Metadata",
-    "text": "4.1 Metadata"
+    "objectID": "organization.html",
+    "href": "organization.html",
+    "title": "5  Organization",
+    "section": "",
+    "text": "We organize our folders into a hierarchical structure to clearly delineate segments of our projects, improve searchability, and ensure reproducibility across years.\n\nFolder Structure\nWe strive for a balance between a deep and shallow structure. If too shallow, there are too many files in one folder and they are hard to sort through. If too deep, we have to click too many times to get to a file and specific files can be difficult to find.\nY:\\NRAS\\Soil_Health_Initiative is the parent folder for all WaSHI content.\nWithin the Sampling sub-folder, we use a combination of date- (each year has its own sub-folder) and categorical- based (dataset and documentation that span across years) folder structures.\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\n├── _completeDataset\n├── 2019_SCBG\n├── 2021_Sampling\n├── 2022_PartnershipsInSoilHealth\n├── 2023_Sampling\n├── 2024_Sampling\n├── Maps\n├── Projects\n├── QAPP\n├── SOPs\n├── TrainingVideos\n├── ArchivedSampleInventory.xlsx\n├── EquipmentInventory.xlsx\n└── SOSImpacts.xlsx\nWithin the each year sub-folder, we have sub-sub-folders for planning, forms, data, and processes. This structure helps maintain a reproducible workflow year after year. See the 2023_Sampling for an example:\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\\2023_Sampling\n├── Applications\n├── CoCs\n├── Equipment\n├── FieldForms\n├── Forms\n├── GIS\n├── LabData\n├── Labels\n├── ManagementSurveys\n├── PublicDocs\n├── Purchases\n├── Reports\n├── SampleIDAssignments\n├── Scripts\n├── 2023_DataTracking.xlsx\n└── PostSeasonWrapUp_2023.docx\nAs mentioned in Section 6.1, it’s good practice to maintain the raw data. We use additional sub-folders for the LabData folder. Everything in Raw has been set as Read-Only.\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\\2023_Sampling\\LabData\n├── 2023_DataTemplateSoiltest.xlsx\n├── Clean\n├── QC\n├── Raw\n└── Working\nSoil_Health_Initative &gt; Sampling &gt; 2023_Sampling &gt; LabData &gt; Clean already has five levels of nesting. We wouldn’t want to add any many more levels or the hierarchy becomes difficult to manage.\n\n\nArchive folders\nWhen too many drafts or versions begin to clutter a sub-folder, create a new folder with the naming convention of Archive_FolderDescription. Place the old drafts there. Leave the most current, accurate file in the main folder.\nFor example, the most recent sample labels for each conservation district are listed in the top level CompletedLabels folder, and previous working drafts were moved to the Archive_Labels folder.\nY:\\NRAS\\Soil_Health_Initiative\\Sampling\\2023_Sampling\\Labels\\CompletedLabels\n├── Archive_Labels\n│   ├── CowlitzCounty_Labels.docx\n│   ├── FerryCD_Labels.docx\n│   ├── LewisCD_Labels.docx\n│   └── StevensCD_Labels.docx\n├── CowlitzCounty_Labels_V2.docx\n├── FerryCD_Labels_V2.docx\n├── KittitasCD_Labels.docx\n├── LewisCD_Labels_V2.docx\n├── ...\n└── WallaWallaCD_Labels.docx"
   },
   {
-    "objectID": "documentation.html#data-dictionary",
-    "href": "documentation.html#data-dictionary",
-    "title": "4  Documentation",
-    "section": "4.2 Data dictionary",
-    "text": "4.2 Data dictionary"
+    "objectID": "storage.html#sec-raw-data",
+    "href": "storage.html#sec-raw-data",
+    "title": "6  Storage",
+    "section": "6.1 Read-only raw data",
+    "text": "6.1 Read-only raw data\nOn our shared drives, raw data such as lab results from Soiltest or exports from ArcGIS Online, should be immediately set to Read-only. Right click the file &gt; click on Properties &gt; check the Read-only attribute box.\n\nThe file should then be copied over to a Working folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled Clean folder. Keeping a README.txt to document your processing and analysis steps is good practice, as discussed in Section 7.2.1."
+  },
+  {
+    "objectID": "storage.html#version-with-github",
+    "href": "storage.html#version-with-github",
+    "title": "6  Storage",
+    "section": "6.2 Version with GitHub",
+    "text": "6.2 Version with GitHub\nCode should be versioned and archived using GitHub\nInclude helpful resources for how-to use"
+  },
+  {
+    "objectID": "storage.html#staff-turnover",
+    "href": "storage.html#staff-turnover",
+    "title": "6  Storage",
+    "section": "6.3 Staff turnover",
+    "text": "6.3 Staff turnover\n\nWSDA GitHub Organization\nZenodo\nDatabase credentials"
+  },
+  {
+    "objectID": "documentation.html#project-level",
+    "href": "documentation.html#project-level",
+    "title": "7  Documentation",
+    "section": "7.1 Project-level",
+    "text": "7.1 Project-level\nProject-level documentation includes all descriptive information about the SoSA dataset, as well as planning decisions and process documentation.\n\nQuality assurance project plan (QAPP)\nThe QAPP is the highest level of project documentation and covers everything from the project description, personnel roles and responsibilities, project timelines, data and measurement quality objectives, study design, and overviews of field, laboratory, and quality control.\nOurs can be found in Y:\\NRAS\\Soil_Health_Initiative\\Sampling\\QAPP, though it needs to be updated.\n\n\nStandard operating procedures (SOP)\nSOPs provide detailed instructions for field, lab, or data processing procedures and decision making processes.\nAll sampling related SOPs can be found in Y:\\NRAS\\Soil_Health_Initiative\\Sampling\\SOPs.\n\nSoSA sampling\nThe purpose of this SOP is to specify the procedures for a typical site visit in which soil sampling is conducted to measure physical, chemical, and biological soil health indicators. Procedures include equipment preparation prior to sampling, best practices for filling out field forms, the selection of sampling locations, sampling protocols, sample handling and storage, and submitting samples to the lab. This SOP serves to ensure data quality by creating audit trails and enabling verification that data are present, complete, and accurate. Additionally, this SOP will be used to maintain consistent sample collection procedures throughout the state for WSDA employees and partners.\n\n\nQuality control / quality assurance (QA/QC)\nThis SOP outlines the process for screening sample metadata and lab results for completeness, consistency, and quality. Procedures involve subject matter expertise, investigation, communication with sampling teams and labs, algorithmic quality control, and tagging sample results with quality codes (as shown in the below table). Data are then integrated into the statewide database according to a SOP not yet authored.\n\n\n\n\n\n\n\n\n\nCode\nTag\nDescription\nInclusion in analyses\n\n\n0\nExcellent\nMet lab’s and WSDA’s QC criteria\nYes\n\n\n100\nEstimate\nInterpolated missing value\nYes\n\n\n110\nDerived\nDerived from an estimated value\nYes\n\n\n120\nSuspect\nZ-score is ≥ |3|\nYes\n\n\n130\nCalculated ND\nCalculated value using at least one ND\nYes\n\n\n140\nNon-detect\nBelow the method detection limit\nNo\n\n\n160\nPoor\nDid not meet lab’s QC criteria\nNo\n\n\n180\nOutlier\nOutlier, designated by soil scientist\nNo\n\n\n200\nUnknown\nExternal dataset\nYes\n\n\n\n\n\nSOPs we don’t have (yet)\n\nassigning sample, producer, field IDs\ndata cleaning\ndata integration into database\ndata storage\nexternal data integration"
+  },
+  {
+    "objectID": "documentation.html#dataset-level",
+    "href": "documentation.html#dataset-level",
+    "title": "7  Documentation",
+    "section": "7.2 Dataset-level",
+    "text": "7.2 Dataset-level\nDataset-level documentation applies to lab results, sample locations, grower information, and management data. This documentation includes information about what each dataset contains, how they are related, potential issues to be aware of, and any alterations made to the data.\n\nREADME\n\n\nChangelog"
+  },
+  {
+    "objectID": "documentation.html#variable-level",
+    "href": "documentation.html#variable-level",
+    "title": "7  Documentation",
+    "section": "7.3 Variable-level",
+    "text": "7.3 Variable-level\n\nMetadata\n\n\nData dictionary\n\n\nCodebook"
+  },
+  {
+    "objectID": "documentation.html#sec-external-data",
+    "href": "documentation.html#sec-external-data",
+    "title": "7  Documentation",
+    "section": "7.4 External data",
+    "text": "7.4 External data\nRate data quality\nMaintain metadata\nStandards for accepting data\nParameters for what we will or won’t use (soils data with management metadata only)\nList example places to look"
   },
   {
     "objectID": "flow.html#project-structure",
     "href": "flow.html#project-structure",
-    "title": "5  Data flows",
-    "section": "5.1 Project structure",
-    "text": "5.1 Project structure"
+    "title": "8  Data flows",
+    "section": "8.1 Project structure",
+    "text": "8.1 Project structure"
   },
   {
     "objectID": "flow.html#original-data",
     "href": "flow.html#original-data",
-    "title": "5  Data flows",
-    "section": "5.2 Original data",
-    "text": "5.2 Original data"
+    "title": "8  Data flows",
+    "section": "8.2 Original data",
+    "text": "8.2 Original data"
   },
   {
     "objectID": "flow.html#working-data",
     "href": "flow.html#working-data",
-    "title": "5  Data flows",
-    "section": "5.3 Working data",
-    "text": "5.3 Working data"
+    "title": "8  Data flows",
+    "section": "8.3 Working data",
+    "text": "8.3 Working data"
   },
   {
     "objectID": "flow.html#clean-data",
     "href": "flow.html#clean-data",
-    "title": "5  Data flows",
-    "section": "5.4 Clean data",
-    "text": "5.4 Clean data"
+    "title": "8  Data flows",
+    "section": "8.4 Clean data",
+    "text": "8.4 Clean data"
   },
   {
-    "objectID": "quality.html#sec-quality-assurance-and-quality-control",
-    "href": "quality.html#sec-quality-assurance-and-quality-control",
-    "title": "6  Data quality",
-    "section": "6.1 Quality assurance and quality control",
-    "text": "6.1 Quality assurance and quality control\nLink to QC SOP\nQC Codes"
-  },
-  {
-    "objectID": "quality.html#sec-external-data-sources",
-    "href": "quality.html#sec-external-data-sources",
-    "title": "6  Data quality",
-    "section": "6.2 External Data Sources",
-    "text": "6.2 External Data Sources\nRate data quality\nMaintain metadata\nStandards for accepting data\nParameters for what we will or won’t use (soils data with management metadata only)\nList example places to look"
-  },
-  {
-    "objectID": "preservation_version.html#retention-schedule",
-    "href": "preservation_version.html#retention-schedule",
-    "title": "7  Data preservation and versioning",
-    "section": "7.1 Retention schedule",
-    "text": "7.1 Retention schedule"
-  },
-  {
-    "objectID": "preservation_version.html#archive",
-    "href": "preservation_version.html#archive",
-    "title": "7  Data preservation and versioning",
-    "section": "7.2 Archive",
-    "text": "7.2 Archive\nNon-code data should be archived in WSDA shared drive"
-  },
-  {
-    "objectID": "preservation_version.html#version-with-github",
-    "href": "preservation_version.html#version-with-github",
-    "title": "7  Data preservation and versioning",
-    "section": "7.3 Version with GitHub",
-    "text": "7.3 Version with GitHub\nCode should be versioned and archived using GitHub\nInclude helpful resources for how-to use"
-  },
-  {
-    "objectID": "preservation_version.html#staff-turnover",
-    "href": "preservation_version.html#staff-turnover",
-    "title": "7  Data preservation and versioning",
-    "section": "7.4 Staff turnover",
-    "text": "7.4 Staff turnover\n\nWSDA GitHub Organization\nZenodo\nDatabase credentials"
+    "objectID": "share.html#data-sharing-and-public-access",
+    "href": "share.html#data-sharing-and-public-access",
+    "title": "9  Data sharing",
+    "section": "9.1 Data sharing and public access",
+    "text": "9.1 Data sharing and public access\nSoSA relies on growers’ willingness to volunteer their fields for sampling and participate in the required management survey. Their willingness depends on their trust in WaSHI to protect their privacy. Only aggregated and anonymized results will be publicly available or shared. The below data privacy statement may be shared with potential participants:\n\nData privacy statement\n\nData will be aggregated and reported in a way which mitigates personal identification of growers. Information will be used to understand broad impacts and characterize trends in soil health and production practices across regions. Results will not be reported in a way that makes individuals identifiable. Information collected in this survey may be subject to release in accordance with RCW 42.56 (Public Records Act).\n\nProcedures for anonymizing data are detailed in Section 9.4.\n\n\nAcknowledging WaSHI data in publications\nAll research partially or completely funded by WaSHI must include acknowledgements to the State of Washington. The following text should be included in all publications resulting from this funding:\n\nData was in part provided by the Washington Soil Initiative, which is supported by the State of Washington and administered by the Washington State Department of Agriculture, Washington State Conservation Commission, and Washington State University.\n\nIf WaSHI staff make substantial scientific contributions to the manuscript, discuss the possibility of co-authorship credit."
   },
   {
     "objectID": "share.html#public-repositories",
     "href": "share.html#public-repositories",
-    "title": "8  Data sharing",
-    "section": "8.1 Public repositories",
-    "text": "8.1 Public repositories\n\nGitHub\nZenodo\ndata.gov"
+    "title": "9  Data sharing",
+    "section": "9.2 Public repositories",
+    "text": "9.2 Public repositories\n\nGitHub\nZenodo\ndata.gov"
   },
   {
     "objectID": "share.html#understand-watech-data-categorization",
     "href": "share.html#understand-watech-data-categorization",
-    "title": "8  Data sharing",
-    "section": "8.2 Understand WaTech data categorization",
-    "text": "8.2 Understand WaTech data categorization\nhttps://watech.wa.gov/Categorizing-Data-State-Agency"
+    "title": "9  Data sharing",
+    "section": "9.3 Understand WaTech data categorization",
+    "text": "9.3 Understand WaTech data categorization\nhttps://watech.wa.gov/Categorizing-Data-State-Agency"
   },
   {
     "objectID": "share.html#sec-maintain-confidentiality",
     "href": "share.html#sec-maintain-confidentiality",
-    "title": "8  Data sharing",
-    "section": "8.3 Maintain confidentiality",
-    "text": "8.3 Maintain confidentiality\nAnonymize and aggregate"
+    "title": "9  Data sharing",
+    "section": "9.4 Maintain confidentiality",
+    "text": "9.4 Maintain confidentiality\nAnonymize and aggregate"
   },
   {
     "objectID": "share.html#timeline",
     "href": "share.html#timeline",
-    "title": "8  Data sharing",
-    "section": "8.4 Timeline",
-    "text": "8.4 Timeline\nWhen to share data (after publication?), how long to share data?"
+    "title": "9  Data sharing",
+    "section": "9.5 Timeline",
+    "text": "9.5 Timeline\nWhen to share data (after publication?), how long to share data?"
   },
   {
-    "objectID": "code_guide.html#section",
-    "href": "code_guide.html#section",
-    "title": "9  Code Style Guide",
-    "section": "9.1 ",
-    "text": "9.1 \nTemplate snippet\nSection break snippet\n.R and .qmd file names\nfunction names\nargument names\nvariable names"
+    "objectID": "code-guide.html#section",
+    "href": "code-guide.html#section",
+    "title": "10  Code Style Guide",
+    "section": "10.1 ",
+    "text": "10.1 \nTemplate snippet\nSection break snippet\n.R and .qmd file names\nfunction names\nargument names\nvariable names\nhttps://indrajeetpatil.github.io/second-hardest-cs-thing/"
   },
   {
     "objectID": "references.html",
