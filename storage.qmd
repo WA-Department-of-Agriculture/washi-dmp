@@ -1,0 +1,52 @@
+# Storage {#sec-storage}
+
+Non-digital data, such as paper forms, must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.
+
+All digital data are stored in the WSDA shared drives, and other locations listed below.
+
+**WSDA shared drives:**
+
+-   Agency files: [Y:\\NRAS\\Soil_Health_Initiative](Y:\NRAS\Soil_Health_Initiative)
+-   GIS: [K:\\NRAS\\Arc_Data\\Soil_Health](K:\NRAS\Arc_Data\Soil_Health) (access requires permissions from IT)
+
+**Esri products and services:**
+
+-   ArcGIS Online [Soil Health - WSDA Internal Group](https://nras.maps.arcgis.com/home/group.html?id=17a60cfa644c4c60ab622fdd84500f8f#overview)
+-   WSDA GIS on-premise [ArcGIS REST Services Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS) (only Jadey, Perry, and Joel can publish to this server; Ed Thompson is the contact for getting access)
+
+**Database for lab results and management data:**
+
+-   WISKI, but very likely will migrate to SQL Server or a less water-focused database
+
+**GitHub organizations for code-based projects:**
+
+-   [WSDA](https://github.com/WA-Department-of-Agriculture)
+-   [WaSHI](https://github.com/WASoilHealth)
+
+**Microsoft Teams for data sharing between WSDA and WSU:**
+
+-   WSDA and WSU Teams WaSHI channels
+
+**Local workstations:**
+
+-   Should NOT be the only place data are stored!
+
+## Read-only raw data {#sec-raw-data}
+
+On our shared drives, raw data such as lab results from Soiltest or exports from ArcGIS Online, should be immediately set to `Read-only`. Right click the file \> click on Properties \> check the `Read-only` attribute box. 
+
+![](images/read-only.png){fig-alt="Screenshot of the above directions to set files to Read-only on a Windows computer."}
+
+The file should then be copied over to a `Working` folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled `Clean` folder. Keeping a `README.txt` to document your processing and analysis steps is good practice, as discussed in @sec-readme.
+
+## Version with GitHub
+
+Code should be versioned and archived using GitHub
+
+Include helpful resources for how-to use
+
+## Staff turnover
+
+-   WSDA GitHub Organization
+-   Zenodo
+-   Database credentials

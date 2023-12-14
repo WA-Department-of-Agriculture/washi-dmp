@@ -1,0 +1,128 @@
+## Naming conventions {#sec-naming}
+
+When naming folders and files, we want consistent and clear names that are findable and understandabe by both humans and computers. From only a file name, we should immediately know what the file contains and which file is the most recent version.
+
+!["Documents" from Randall Munroe's xkcd](https://imgs.xkcd.com/comics/documents.png){width="250"}
+
+### Best practices
+
+#### Convey meaning with delimiters and capitalization
+
+Deliberately use underscores, hyphens, and uppercase letters so we can easily understand the contents and programmatically parse file and folder names.
+
+-   Use underscores to delineate metadata elements (i.e. name from version `Name_Version`).
+
+-   Use hyphens to separate parts of one metadata element (i.e. date `YYYY-MM-DD`).
+
+-   Different conventions may work better for different purposes (folder, file, variable name). See @sec-naming-guidelines for which conventions to use for different file sets.
+
+    -   **UpperCamelCase**: capitalize the first letter of each word without spaces or delimiters.
+    -   **lowerCamelCase**: the first word is all lowercase and subsequent words have the first letter capitalized without spaces or delimiters.
+    -   **snake_case**: all lowercase with underscores separating words
+    -   **kebab-case**: all lowercase with hyphens separating words
+
+Avoid spaces and special characters (only use underscores and hyphens). Characters like `/` `()` `!` `?` `%` `+` `"` `'` have special meaning to computers and can break file paths and URLs.
+
+[![Artwork by \@allison_horst](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172){fig-alt="Cartoon representations of common cases in coding. A snake screams \"SCREAMING_SNAKE_CASE\" into the face of a camel (wearing ear muffs) with \"camelCase\" written along its back. Vegetables on a skewer spell out \"kebab-case\" (words on a skewer). A mellow, happy looking snake has text \"snake_case\" along it." width="500"}](https://allisonhorst.com/everything-else)
+
+#### Character length matters
+
+Computers are unable to read file paths and file names that surpass a certain character length. Be concise AND descriptive. Windows path limit is 260 characters.
+
+#### Express date 'back to front'
+
+Remember to express date 'back to front' of `YYYY-MM-DD` according to the [ISO 8601 standard](https://www.iso.org/iso-8601-date-and-time-format.html). This maintains the chronological order of records when they are sorted alphanumerically.
+
++----------------------------------+------------------------+
+| ✅ Do this                       | ❌ Don't do this       |
++==================================+========================+
+| 2020-05-28_Agenda.pdf            | 2-14-2023_Agenda.pdf   |
++----------------------------------+------------------------+
+| 2023-01-01_Agenda.pdf            | 2023-Jan-1_Agenda.pdf  |
++----------------------------------+------------------------+
+| 2023-02-14_Agenda.pdf            | Dec052020_Agenda.pdf   |
++----------------------------------+------------------------+
+| 2023-12-05_Agenda.pdf            | May-28-2020_Agenda.pdf |
++----------------------------------+------------------------+
+
+#### Group and sort files by name
+
+Consider how folders and files should be grouped and sorted. Put that piece of metadata in the beginning of the file name.
+
++---------------------------------+---------------------------------+
+| Sort by district                | Sort by date                    |
++=================================+=================================+
+| Cowlitz_CoC_2023-05-01.pdf      | 2023-05-01_Cowlitz_CoC.pdf      |
++---------------------------------+---------------------------------+
+| Cowlitz_CoC_2023-05-23.pdf      | 2023-05-01_Cowlitz_Tracking.pdf |
++---------------------------------+---------------------------------+
+| Cowlitz_Tracking_2023-05-01.pdf | 2023-05-09_FerryCD_Tracking.pdf |
++---------------------------------+---------------------------------+
+| FerryCD_CoC_2023-05-10.pdf      | 2023-05-10_FerryCD_CoC.pdf      |
++---------------------------------+---------------------------------+
+| FerryCD_CoC_2023-05-17.pdf      | 2023-05-17_FerryCD_CoC.pdf      |
++---------------------------------+---------------------------------+
+| FerryCD_CoC_2023-06-06.pdf      | 2023-05-23_Cowlitz_CoC.pdf      |
++---------------------------------+---------------------------------+
+| FerryCD_Tracking_2023-05-09.pdf | 2023-06-06_FerryCD_CoC.pdf      |
++---------------------------------+---------------------------------+
+
+#### Use version numbers
+
+If not using the date to version, or to keep multiple drafts from the same date, add version information to the end of the file name. Think about how many possible versions there could be. If there may be more than 10, use leading zeros before single digit numbers so the file name always has the same length. V1 through V15 will not sort the same way as V01 through V15.
+
++----------------------------------+-----------------------+
+| ✅ Do this                       | ❌ Don't do this      |
++==================================+=======================+
+| SOP_V01.pdf                      | SOP_V1.pdf            |
++----------------------------------+-----------------------+
+| SOP_V02.pdf                      | SOP_V10.pdf           |
++----------------------------------+-----------------------+
+| ... \[V03 - V09\]                | SOP_V11.pdf           |
++----------------------------------+-----------------------+
+| SOP_V10.pdf                      | SOP_V2.pdf            |
++----------------------------------+-----------------------+
+| SOP_V11.pdf                      | ... \[V3 - V9\]       |
++----------------------------------+-----------------------+
+
+#### Collaborating on files
+
+Add your initials at the end of the file name when "saving as" a file that multiple people are working on (i.e., `2024_SOP_SoilHealthMonitoring_LM_JR.docx`). This ensures a version is kept as a backup. Alternatively, use [Track Changes](https://support.microsoft.com/en-au/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a) if working in a MS Word document.
+
+### Naming guidelines {#sec-naming-guidelines}
+
+*Many files and folders in our shared drive do not follow the above best practices or below naming conventions. We are learning and improving as we go.* Going forward, please follow the conventions listed below.
+
+These are guidelines and naming things is hard, so try your best. If you're not sure how to name a folder or file, talk with Jadey. If you're adding a bunch of files that came from somewhere else, ask Jadey to help you organize and bulk rename them.
+
++---------------------------+-------------------+-------------------------------------+
+|                           | Naming convention | Examples                            |
++===========================+===================+=====================================+
+| **Folders**               | UpperCamelCase    | 2024_Sampling                       |
+|                           |                   |                                     |
+|                           |                   | DataManagement                      |
++---------------------------+-------------------+-------------------------------------+
+| **Versioned files**       | UpperCamelCase    | 2023-11-15_SurveyPerennial.xlsx     |
+|                           |                   |                                     |
+|                           |                   | RecordsManagement_V01.docx          |
+|                           |                   |                                     |
+|                           |                   | PendOreilleCD_CoC_2023-06-05.pdf    |
++---------------------------+-------------------+-------------------------------------+
+| **Non-versioned files**   | kebab-case        | washi-logo-color.png                |
++---------------------------+-------------------+-------------------------------------+
+| **Code files**[^naming-1] | kebab-case        | washi-dmp.Rproj                     |
+|                           |                   |                                     |
+|                           |                   | 01_load-metadata.R                  |
+|                           |                   |                                     |
+|                           |                   | 2024_producer-report.qmd            |
++---------------------------+-------------------+-------------------------------------+
+| **Syntax**[^naming-2]     | snake_case        | `assign_quality_codes()` (function) |
+|                           |                   |                                     |
+|                           | lowerCamelCase    | `sampleId` (variable)               |
++---------------------------+-------------------+-------------------------------------+
+
+: In addition to these case naming conventions, use underscores to separate different metadata groups (date_name_version) and hyphens to separate parts of a date (YYYY-MM-DD) or the parts of the same metadata group. {.striped}
+
+[^naming-1]: Code files include anything that gets pushed to GitHub where it becomes a URL. [Google recommends kebab-case](https://developers.google.com/search/docs/crawling-indexing/url-structure) because hyphens are better than underscores for URLs.
+
+[^naming-2]: See @sec-code-style-guide for the code style guide.

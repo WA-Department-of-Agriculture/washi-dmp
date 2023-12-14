@@ -8,25 +8,26 @@ book:
   title: Data Management Plan
   subtitle: "Washington Soil Health Initiative: State of the Soils Assessment"
   date: last-modified
-  author: [Jadey Ryan, Leslie Michel, Dani Gelardi]
+  author: [Jadey Ryan, Dani Gelardi]
   sidebar: 
     search: true
-    logo: images/washi_logo.jpg
-  favicon: images/washi_circle.png
+    logo: images/washi-logo.jpg
+  favicon: images/washi-circle.png
   downloads: [docx]
   repo-url: https://github.com/WA-Department-of-Agriculture/washi-dmp
-  repo-actions: [issue]
+  repo-actions: [source]
   
   chapters:
     - index.qmd
-    - formats.qmd
+    - data-management.qmd
+    - formats-standards.qmd
+    - naming.qmd
     - organization.qmd
+    - storage.qmd
     - documentation.qmd
     - flow.qmd
-    - quality.qmd
-    - preservation_version.qmd
     - share.qmd
-    - code_guide.qmd
+    - code-guide.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -42,5 +43,5 @@ format:
     toc-depth: 3
     link-external-newwindow: true
   docx:
-    reference-doc: word_template.docx
+    reference-doc: word-template.docx
     toc-depth: 2

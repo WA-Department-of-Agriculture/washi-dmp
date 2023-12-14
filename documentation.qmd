@@ -1,5 +1,90 @@
 # Documentation
 
-## Metadata
+Documentation is the process of recording all aspects of project design, sampling, lab analysis, data cleaning, data analyses, data quality control and assurances procedures, and development of decision-support tools. Seem familiar? All of these aspects are also part of our data life cycle. We document our data throughout the life cycle to:
 
-## Data dictionary
+-   standardize our procedures
+-   enable reproducibility
+-   establish credibility
+-   ensure others (including our future selves) use and interpret data correctly
+-   provide searchability
+
+*All documentation (including this document) should be updated (and versioned) as procedures change and lessons are learned.*
+
+Samples collected by WSDA for the SoSA should follow the procedures and standards described in the below documentation. 
+
+External data must have at least the documentation outlined in @sec-external-data to be integrated into the SoSA dataset.
+
+## Project-level
+
+Project-level documentation includes all descriptive information about the SoSA dataset, as well as planning decisions and process documentation.
+
+### Quality assurance project plan (QAPP)
+
+The QAPP is the highest level of project documentation and covers everything from the project description, personnel roles and responsibilities, project timelines, data and measurement quality objectives, study design, and overviews of field, laboratory, and quality control.
+
+Ours can be found in [Y:\\NRAS\\Soil_Health_Initiative\\Sampling\\QAPP](Y:\NRAS\Soil_Health_Initiative\Sampling\QAPP), though it needs to be updated.
+
+### Standard operating procedures (SOP)
+
+SOPs provide detailed instructions for field, lab, or data processing procedures and decision making processes.
+
+All sampling related SOPs can be found in [Y:\\NRAS\\Soil_Health_Initiative\\Sampling\\SOPs](Y:\NRAS\Soil_Health_Initiative\Sampling\SOPs).
+
+#### SoSA sampling
+
+The purpose of this SOP is to specify the procedures for a typical site visit in which soil sampling is conducted to measure physical, chemical, and biological soil health indicators. Procedures include equipment preparation prior to sampling, best practices for filling out field forms, the selection of sampling locations, sampling protocols, sample handling and storage, and submitting samples to the lab. This SOP serves to ensure data quality by creating audit trails and enabling verification that data are present, complete, and accurate. Additionally, this SOP will be used to maintain consistent sample collection procedures throughout the state for WSDA employees and partners.
+
+#### Quality control / quality assurance (QA/QC)
+
+This SOP outlines the process for screening sample metadata and lab results for completeness, consistency, and quality. Procedures involve subject matter expertise, investigation, communication with sampling teams and labs, algorithmic quality control, and tagging sample results with quality codes (as shown in the below table). Data are then integrated into the statewide database according to a SOP not yet authored.
+
+|          |               |                                        |                           |
+|------|----------------|------------------------------------|------------------|
+| **Code** | **Tag**       | **Description**                        | **Inclusion in analyses** |
+| **0**    | Excellent     | Met lab's and WSDA's QC criteria       | Yes                       |
+| **100**  | Estimate      | Interpolated missing value             | Yes                       |
+| **110**  | Derived       | Derived from an estimated value        | Yes                       |
+| **120**  | Suspect       | Z-score is ≥ \|3\|                     | Yes                       |
+| **130**  | Calculated ND | Calculated value using at least one ND | Yes                       |
+| **140**  | Non-detect    | Below the method detection limit       | No                        |
+| **160**  | Poor          | Did not meet lab's QC criteria         | No                        |
+| **180**  | Outlier       | Outlier, designated by soil scientist  | No                        |
+| **200**  | Unknown       | External dataset                       | Yes                       |
+
+#### SOPs we don't have (yet)
+
+-   assigning sample, producer, field IDs
+-   data cleaning
+-   data integration into database
+-   data storage
+-   external data integration
+
+## Dataset-level
+
+Dataset-level documentation applies to lab results, sample locations, grower information, and management data. This documentation includes information about what each dataset contains, how they are related, potential issues to be aware of, and any alterations made to the data.
+
+### README {#sec-readme}
+
+
+
+### Changelog
+
+## Variable-level
+
+### Metadata
+
+### Data dictionary
+
+### Codebook
+
+## External data {#sec-external-data}
+
+Rate data quality
+
+Maintain metadata
+
+Standards for accepting data
+
+Parameters for what we will or won't use (soils data with management metadata only)
+
+List example places to look
