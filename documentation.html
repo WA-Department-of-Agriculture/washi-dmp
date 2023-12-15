@@ -190,12 +190,11 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#dataset-level" id="toc-dataset-level" class="nav-link" data-scroll-target="#dataset-level"><span class="header-section-number">7.2</span> Dataset-level</a>
   <ul class="collapse">
-  <li><a href="#sec-readme" id="toc-sec-readme" class="nav-link" data-scroll-target="#sec-readme">README</a></li>
+  <li><a href="#sec-readme" id="toc-sec-readme" class="nav-link" data-scroll-target="#sec-readme">Readme</a></li>
   <li><a href="#changelog" id="toc-changelog" class="nav-link" data-scroll-target="#changelog">Changelog</a></li>
   </ul></li>
   <li><a href="#variable-level" id="toc-variable-level" class="nav-link" data-scroll-target="#variable-level"><span class="header-section-number">7.3</span> Variable-level</a>
   <ul class="collapse">
-  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata">Metadata</a></li>
   <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data dictionary</a></li>
   <li><a href="#codebook" id="toc-codebook" class="nav-link" data-scroll-target="#codebook">Codebook</a></li>
   </ul></li>
@@ -236,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
 <p>External data must have at least the documentation outlined in <a href="#sec-external-data"><span>Section&nbsp;7.4</span></a> to be integrated into the SoSA dataset.</p>
 <section id="project-level" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="project-level"><span class="header-section-number">7.1</span> Project-level</h2>
-<p>Project-level documentation includes all descriptive information about the SoSA dataset, as well as planning decisions and process documentation.</p>
+<p>Project-level documentation includes all descriptive information about the SoSA dataset, as well as planning decisions and process documentation. Documentation includes quality assurance project plans (QAPP), standard operating procedures (SOP), and other high-level documents (i.e., request for proposals, applications, meeting agendas/notes, etc.).</p>
 <section id="quality-assurance-project-plan-qapp" class="level3">
 <h3 class="anchored" data-anchor-id="quality-assurance-project-plan-qapp">Quality assurance project plan (QAPP)</h3>
 <p>The QAPP is the highest level of project documentation and covers everything from the project description, personnel roles and responsibilities, project timelines, data and measurement quality objectives, study design, and overviews of field, laboratory, and quality control.</p>
@@ -253,69 +252,76 @@ ul.task-list li input[type="checkbox"] {
 <section id="quality-control-quality-assurance-qaqc" class="level4">
 <h4 class="anchored" data-anchor-id="quality-control-quality-assurance-qaqc">Quality control / quality assurance (QA/QC)</h4>
 <p>This SOP outlines the process for screening sample metadata and lab results for completeness, consistency, and quality. Procedures involve subject matter expertise, investigation, communication with sampling teams and labs, algorithmic quality control, and tagging sample results with quality codes (as shown in the below table). Data are then integrated into the statewide database according to a SOP not yet authored.</p>
-<table class="table">
+<details>
+<summary>
+View the quality codes
+</summary>
+<table class="table-striped table">
+<caption></caption>
 <colgroup>
-<col style="width: 7%">
-<col style="width: 21%">
-<col style="width: 47%">
-<col style="width: 23%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 39%">
+<col style="width: 27%">
 </colgroup>
+<thead>
+<tr class="header">
+<th><strong>Code</strong></th>
+<th><strong>Tag</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Inclusion in analyses</strong></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td><strong>Code</strong></td>
-<td><strong>Tag</strong></td>
-<td><strong>Description</strong></td>
-<td><strong>Inclusion in analyses</strong></td>
-</tr>
-<tr class="even">
 <td><strong>0</strong></td>
 <td>Excellent</td>
 <td>Met lab’s and WSDA’s QC criteria</td>
 <td>Yes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>100</strong></td>
 <td>Estimate</td>
 <td>Interpolated missing value</td>
 <td>Yes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>110</strong></td>
 <td>Derived</td>
 <td>Derived from an estimated value</td>
 <td>Yes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>120</strong></td>
 <td>Suspect</td>
 <td>Z-score is ≥ |3|</td>
 <td>Yes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>130</strong></td>
 <td>Calculated ND</td>
 <td>Calculated value using at least one ND</td>
 <td>Yes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>140</strong></td>
 <td>Non-detect</td>
 <td>Below the method detection limit</td>
 <td>No</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>160</strong></td>
 <td>Poor</td>
 <td>Did not meet lab’s QC criteria</td>
 <td>No</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>180</strong></td>
 <td>Outlier</td>
 <td>Outlier, designated by soil scientist</td>
 <td>No</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>200</strong></td>
 <td>Unknown</td>
 <td>External dataset</td>
@@ -323,6 +329,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</details>
 </section>
 <section id="sops-we-dont-have-yet" class="level4">
 <h4 class="anchored" data-anchor-id="sops-we-dont-have-yet">SOPs we don’t have (yet)</h4>
@@ -338,24 +345,227 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dataset-level" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="dataset-level"><span class="header-section-number">7.2</span> Dataset-level</h2>
-<p>Dataset-level documentation applies to lab results, sample locations, grower information, and management data. This documentation includes information about what each dataset contains, how they are related, potential issues to be aware of, and any alterations made to the data.</p>
+<p>Dataset-level documentation applies to lab results, sample locations, grower information, and management data. We use readmes and changelogs to document what each dataset contains, how they are related, potential issues to be aware of, and any alterations made to the data.</p>
 <section id="sec-readme" class="level3">
-<h3 class="anchored" data-anchor-id="sec-readme">README</h3>
+<h3 class="anchored" data-anchor-id="sec-readme">Readme</h3>
+<p><code>readme</code> files are plain text documents that contain information about the files in a folder, explanation of versioning, and instructions/metadata for data packages. These files are saved as <code>.txt</code>, not as MS Word documents that take longer to open and can only be opened on computers with Microsoft installed.</p>
+<section id="describe-contents-of-folder" class="level4">
+<h4 class="anchored" data-anchor-id="describe-contents-of-folder">Describe contents of folder</h4>
+<p>For example, the <code>_completeDataset</code> folder contains a <a href="Y:\NRAS\Soil_Health_Initiative\Sampling_completeDataset\readme.txt">readme.txt</a> that describes each of the files’ structure, contents, and other pertinent information, such as the data source (i.e.&nbsp;PRISM mean annual precipitation and temperature are 30-year normals from 1991-2020 at 800 m resolution).</p>
+<details>
+<summary>
+View the example
+</summary>
+<pre><code>2020-2023_labResults_wide has one sample per row with each measurement as a separate column.
+
+2020-2023_labResults_long has one result per row with columns for sample identification, measurement name, result value, quality code, and lab.
+This spreadsheet also contains a second tab that describes the quality codes.
+
+2020-2023_sampleLocations has the coordinates, PRISM mean annual precipitation and mean annual temperature (800 m resolution, 30-year normals, 1991-2020), and SHI strata.
+
+dataDictionary lists each variable with its short name (variable name without units), description, indicator type (chemical, physical, biological), unit (if applicable), label, and data type.
+This spreadsheet also contains a second tab that describes the variables in the sampleLocations spreadsheet.
+
+scbg_producerId_recode lists all SCBG fields with original SCBG assigned producer ID and new WSDA producer ID
+
+allFarmInfo lists all participating farm names, producer names, producer IDs, field names, field IDs, and county
+
+exampleData.csv contains 100 random samples that have been anonymized with fake sampleIDs, county, farm, producer, and field names. WSU SCBG samples are excluded, as are the 0-6in to 6-12in WSDA samples.</code></pre>
+</details>
+</section>
+<section id="explain-versions" class="level4">
+<h4 class="anchored" data-anchor-id="explain-versions">Explain versions</h4>
+<p>Another example is the <a href="Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling\LabData\Raw\readme.txt">readme.txt</a> in the <code>2023_Sampling</code> &gt; <code>LabData</code> &gt; <code>Raw</code> folder, which explains why there are two different versions of the lab results and where to find additional information.</p>
+<details>
+<summary>
+View the example
+</summary>
+<pre><code>2023-08-21
+2023_WSDASoilHealth_v1.xlsx has errors. See email for details.
+'          'v2.xlsx still has some errors, that are cleaned up in the R scripts.</code></pre>
+</details>
+</section>
+<section id="provide-instructions" class="level4">
+<h4 class="anchored" data-anchor-id="provide-instructions">Provide instructions</h4>
+<p>An example of a <a href="https://app.box.com/s/jl714sbos0jus6mr9zesqsfpv718j783">readme.txt</a> that provides instructions on how to use the folder contents can be found in the <a href="https://app.box.com/s/4d6xg8q5dr1cjjoxver0g3h35d3s3bao">ArcGIS soil sample points box.com folder</a> that is shared with outside partners.</p>
+<details>
+<summary>
+View the example
+</summary>
+<pre><code>Template for Soil Sample Points ArcGIS
+
+2023-06-01
+
+Jadey Ryan | Washington State Department of Agriculture (WSDA)
+jryan@agr.wa.gov
+
+Purpose:
+To provide a template for ESRI ArcGIS data entry and management for soil sampling projects.
+
+Folder contents:
+- README.txt describes the folder contents and provides general instructions.
+- Template_SoilSamplePoints.aprx is an ArcGIS Project File should allow you to open the project in ArcGIS Pro.
+- Template_SoilSamplePoints.gdb is a file geodatabase, which you can open in ArcGIS Pro or ArcGIS Online.
+- crop_domain.csv provides WSDA approved crop types to use in ArcGIS 'Table to Domain' geoprocessing tool. We highly recommend using attribute domains, which are rules to enforce data integrity by limiting the field type and choices of an attribute field.
+- 923_NRAS_SoilHealthSOP_WEB.pdf is WSDA's Standard Operating Procedure for soil sampling. The appendices contain instructions for the GIS workflow of soil sampling.
+- /Screenshots/Feature_Layer_Offline_Editing.png shows the checkboxes required for editing.
+- /Screenshots/Configure_Forms.png shows where to click within a Web Map to open the Field Maps form editor.
+- /Screenshots/Table_to_Domain.png is an example of how to use the 'Table to Domain' geoprocessing tool with the crop_domain.csv.
+- /Screenshots/FieldMapsForm_*.png are examples of the Field Maps form structure, which can be created in ArcGIS Online.
+- WaSHI_SoilSeries_REST_Service is an internet shortcut to the URL for the Washington clipped soil series, originating from NRCS gSSURGO. When compositing multiple samples together from one field, we recommend keeping all sample points within one soil series to reduce variability in the composite samples.
+- The other folders (Index, GpMessages, ImportLog, .backups) are part of the ArcGIS Pro project and can be ignored.
+
+Instructions:
+1. Open Template_SoilSamplePoints.aprx.
+2. Update attribute fields and domains to work with your project.
+3. Update symbology, labels, visibility scale, popups, etc. The symbology of the sample points currently defaults to red when the 'Show/Hide Field Form' attribute is still 'Hide' or 'NULL'. When the sampler collects the sample and changes this attribute to 'Show', the point will turn yellow to indicate the sample has been collected.
+4. Share as Feature Layer and create a Web Map to allow others access to this map.
+5. Open the map in ArcGIS Online and click on 'Forms' in the right toolbar to configure your Field Maps form.
+6. Use the /Screenshots/FieldMapsForm_*.pngs as a guide, but adapt the field form structure to suit your project.
+
+Offline Areas:
+- If you anticipate needing to sample without cellular service or wifi access: 1) Open the hosted feature layer, 2) Click 'Settings' 3) Confirm 'Enable Sync' is turned on.
+- If you need the Soil Series layer, you will need to configure two separate Web Maps: one with and one without. This is because the WaSHI_SoilSeries_REST_Service is not allowed in Web Maps with 'Enable Sync' turned on. 
+- Alternatively, you can create your own Soil Series layer and host it as a feature layer in your own organization.
+
+Resources:
+- WSDA Soil Health YouTube channel: https://www.youtube.com/playlist?list=PL0pB20prk7Ni1daEYiEEXSWy8CfwO34FC
+- WSDA WaSHI_SoilSeries MapServer: https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS/WaSHI_SoilSeries/MapServer
+- Introduction to attribute domains: https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/overview/an-overview-of-attribute-domains.htm
+- Introducing smart forms in ArcGIS Field Maps: https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/introducing-arcgis-smart-forms/</code></pre>
+</details>
+</section>
 </section>
 <section id="changelog" class="level3">
 <h3 class="anchored" data-anchor-id="changelog">Changelog</h3>
+<p>Changelogs are also simple and concise plain text documents saved in a folder alongside data files to document any changes to the dataset.</p>
+<p>At the bare minimum, the <code>changelog.txt</code> should contain:</p>
+<ul>
+<li>date of modification</li>
+<li>initials of who made the changes</li>
+<li>description of the changes</li>
+</ul>
+<details>
+<summary>
+View the example
+</summary>
+<pre><code>Contents of changelog.txt in _completeDataset folder:
+
+2022-12-15 JR standardized texture classes (title case, no extra white space) and converted texture, county, and crop to factor types.
+2023-01-03 JR corrected error in 2022 WSDA bulk density measurements in 2022-11-01_soiltestData_manualCleanup.xlsx.
+2023-03-02 JR recoded SCBG producer IDs to match WSDA format and cleaned up farm/producer names and IDs. See new scbg_producerId_recode.csv for list.
+2023-03-07 JR corrected Okanogan producer and field names (Devany, Townsend).
+2023-03-21 JR corrected cropType "Fallow, Idle" to "Fallow" and 2021 SCBG "Pea" samples to "Pea, Dry", updated Crop Group column. Updated results and sample locations spreadsheets.
+2023-07-13 JR added labID to labResults datasets and updated dataDictionary accordingly. 
+2023-08-21 JR added 2023 data and updated dataDictionary sample_locations tab.
+2023-08-27 JR corrected SCBG pulse samples crop from "Pea" to "Pea, Dry".
+2023-08-30 JR added an anonymized dataset (100 samples from 2022-2023).
+2023-09-05 JR added labID to 2023 results.
+2023-09-06 JR added sampling organization column to make impact tracking easier. Fixed merge issue that was causing the loss of some producer IDs. Add "County" to relevant CD names.
+2023-11-14 JR switched from .RData to .RDS file type so users can assign a new name when loading the data into R with `data_wide &lt;- readRDS("2020-2023_labResults_wide.RDS")`.
+2023-11-14 JR added sampling dates and depths to all 877 samples. See addSampleDepthsDates for R script. 
+2023-12-08 JR corrected CropGroup from Fallow to Cereal Grain for samples with CropType of Fallow, Wheat in 2020-2023_sampleLocations.csv.</code></pre>
+</details>
 </section>
 </section>
 <section id="variable-level" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="variable-level"><span class="header-section-number">7.3</span> Variable-level</h2>
-<section id="metadata" class="level3">
-<h3 class="anchored" data-anchor-id="metadata">Metadata</h3>
-</section>
+<p>Variable-level documentation includes data dictionaries and code books, which are often talked about interchangeably. However, we’ll refer to the <em>data dictionary</em> as a tabular collection of names, definitions, and attributes about the variables in a dataset created (ideally) in the planning phase of the project before data are collected. In contrast, <em>codebooks</em> provide descriptive, variable-level information and univariate summary statistics to allow users to understand the contents of a dataset without opening it. The codebook is created or updated after data are collected, cleaned, and validated.</p>
 <section id="data-dictionary" class="level3">
 <h3 class="anchored" data-anchor-id="data-dictionary">Data dictionary</h3>
+<p>In a data dictionary, each row is a different variable and each column is a different attribute of that variable. With a data dictionary, any user should be able to properly interpret each variable in our data.</p>
+<p>Our <a href="Y:\NRAS\Soil_Health_Initiative\Sampling_completeDataset\dataDictionary.xlsx">dataDictionary.xlsx</a> in the <a href="Y:\NRAS\Soil_Health_Initiative\Sampling_completeDataset">_completeDataset folder</a> contains two tabs (<code>labResults</code> and <code>sampleLocations</code>) that describe the attributes of each variable.</p>
+<details>
+<summary>
+View the <code>sampleLocations</code> dictionary
+</summary>
+<table class="table-striped table">
+<caption></caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 52%">
+<col style="width: 18%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>variable</th>
+<th>description</th>
+<th>unit</th>
+<th>dataType</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>year</td>
+<td>Year the sample was collected</td>
+<td></td>
+<td>Numeric</td>
+</tr>
+<tr class="even">
+<td>county</td>
+<td>County of the sampled field</td>
+<td></td>
+<td>Character</td>
+</tr>
+<tr class="odd">
+<td>sampleId</td>
+<td>Sample identification code</td>
+<td></td>
+<td>Character</td>
+</tr>
+<tr class="even">
+<td>cropGroup</td>
+<td>Crop group of the sampled field</td>
+<td></td>
+<td>Character</td>
+</tr>
+<tr class="odd">
+<td>cropType</td>
+<td>Crop type of the sampled field</td>
+<td></td>
+<td>Character</td>
+</tr>
+<tr class="even">
+<td>stratum</td>
+<td>Soil Health Institute stratum</td>
+<td></td>
+<td>Character</td>
+</tr>
+<tr class="odd">
+<td>MAP_mm.year</td>
+<td><p>OSU PRISM mean annual precipitation</p>
+<p>30-year normals (1991-2020) at 800 m resolution</p></td>
+<td>mm/year</td>
+<td>Numeric</td>
+</tr>
+<tr class="even">
+<td>MAT_c</td>
+<td><p>OSU PRISM mean annual temperature</p>
+<p>30-year normals (1991-2020) at 800 m resolution</p></td>
+<td>degrees C</td>
+<td>Numeric</td>
+</tr>
+<tr class="odd">
+<td>longitude</td>
+<td>Longitude of sample point, WGS84</td>
+<td>decimal degrees</td>
+<td>Numeric</td>
+</tr>
+<tr class="even">
+<td>latitude</td>
+<td>Latitude of sample point, WGS84</td>
+<td>decimal degrees</td>
+<td>Numeric</td>
+</tr>
+</tbody>
+</table>
+</details>
 </section>
 <section id="codebook" class="level3">
 <h3 class="anchored" data-anchor-id="codebook">Codebook</h3>
+<p>Codebooks provide more information (i.e., existing values/ranges and summary statistics) than the data dictionary and can be used to understand a very high-level summary of the processed data. There are many R packages that generate codebooks; however, we have not implemented this type of documentation for our project yet.</p>
+<p>Crystal Lewis gave the lightning talk <a href="https://github.com/Cghlewis/codebook-pkg-comparison"><em>A Comparison of Packages to Generate Codebooks</em></a>. I’d like to generate a codebook for our dataset once it lives in a database.</p>
 </section>
 </section>
 <section id="sec-external-data" class="level2" data-number="7.4">
