@@ -14,7 +14,9 @@ To date, nearly 1,000 soil samples and management surveys across 50 different cr
 ::: callout-important
 ## Links to shared drive folders and files
 
-When viewing this DMP in the browser, hyperlinks to files and folders on our shared drive are not accessible in the browser. Nothing will happen when clicking on the links. To open the file or folder, right-click on the hyperlink \> copy the path \> paste it into the search bar of the file explorer \> press `Enter` or click the arrow.
+This DMP is best viewed in Google Chrome since the browser can open local file links using the [Enable local file links extension](chrome://extensions/?id=nikfmfgobenbhmocjaaboihbeocackld) that should automatically be enabled by our organization.
+
+When viewing this DMP in Microsoft Edge, hyperlinks to files and folders on our shared drive are not accessible in the browser. Nothing will happen when clicking on the links. To open the file or folder, right-click on the hyperlink \> copy the path \> paste it into the search bar of the file explorer \> press `Enter` or click the arrow.
 
 ![](images/paste-file-path.png)
 :::

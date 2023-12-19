@@ -288,16 +288,27 @@ Our [dataDictionary.xlsx](Y:\NRAS\Soil_Health_Initiative\Sampling_completeDatase
 
 Codebooks provide more information (i.e., existing values/ranges and summary statistics) than the data dictionary and can be used to understand a very high-level summary of the processed data. There are many R packages that generate codebooks; however, we have not implemented this type of documentation for our project yet.
 
-Crystal Lewis gave the lightning talk [*A Comparison of Packages to Generate Codebooks*](https://github.com/Cghlewis/codebook-pkg-comparison). I'd like to generate a codebook for our dataset once it lives in a database.
+Crystal Lewis gave the lightning talk [*A Comparison of Packages to Generate Codebooks*](https://github.com/Cghlewis/codebook-pkg-comparison). I'd like to generate codebooks for our datasets once they live in a database.
 
 ## External data {#sec-external-data}
 
-Rate data quality
+External data refers to any data not directly collected by WSDA or trained partners (e.g., WSU or conservation districts) that follow our SOPs. These can include other studies pre-dating WaSHI, special soil health surveys, or publicly available datasets. 
 
-Maintain metadata
+The Data Scientist and Senior Soil Scientist will decide whether to integrate an external dataset case by case by considering the below questions:
 
-Standards for accepting data
+-   Who collected the soil samples?
+-   What field procedures were used and how were they documented?
+-   Who analyzed the soil samples? With which methods and QA/QC procedures?
+-   Do the lab results have accompanying metadata and management data?
+    -   Farm, producer and field info[^1]
+    -   Sampling date
+    -   Sampling depth
+    -   Latitude and longitude
+    -   Production system (current crop, crop rotation, etc.)
+    -   Tillage, livestock grazing, irrigation, soil fertility and amendments, conservation practices, etc.
 
-Parameters for what we will or won't use (soils data with management metadata only)
+[^1]: Enough farm, producer and field info to distinguish unique farmers and fields and assign IDs to. This info doesn't need to be personally identifiable information.
 
-List example places to look
+Generally, the external data should **1)** be well documented, **2)** be collected and analyzed by reputable scientists and labs; and **3)** have adequate accompanying metadata and management data to facilitate interpretation of the results.
+
+Some publicly available datasets to consider are listed in [Y:\\NRAS\\Soil_Health_Initiative\\DataSources](Y:\\NRAS\\Soil_Health_Initiative\\DataSources).
