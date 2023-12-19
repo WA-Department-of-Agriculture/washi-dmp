@@ -296,16 +296,18 @@ External data refers to any data not directly collected by WSDA or trained partn
 
 The Data Scientist and Senior Soil Scientist will decide whether to integrate an external dataset case by case by considering the below questions:
 
+-   How does the study design fit into SoSA goals?
 -   Who collected the soil samples?
 -   What field procedures were used and how were they documented?
 -   Who analyzed the soil samples? With which methods and QA/QC procedures?
--   Do the lab results have accompanying metadata and management data?
+-   Which pieces of metadata and management data accompany the lab results?
     -   Farm, producer and field info[^1]
     -   Sampling date
     -   Sampling depth
     -   Latitude and longitude
     -   Production system (current crop, crop rotation, etc.)
     -   Tillage, livestock grazing, irrigation, soil fertility and amendments, conservation practices, etc.
+-   Is there a data dictionary or codebook to describe the variables and measurements, units, missing values, etc.?
 
 [^1]: Enough farm, producer and field info to distinguish unique farmers and fields and assign IDs to. This info doesn't need to be personally identifiable information.
 
