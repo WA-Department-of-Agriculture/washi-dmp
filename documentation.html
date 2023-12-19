@@ -565,18 +565,39 @@ View the <code>sampleLocations</code> dictionary
 <section id="codebook" class="level3">
 <h3 class="anchored" data-anchor-id="codebook">Codebook</h3>
 <p>Codebooks provide more information (i.e., existing values/ranges and summary statistics) than the data dictionary and can be used to understand a very high-level summary of the processed data. There are many R packages that generate codebooks; however, we have not implemented this type of documentation for our project yet.</p>
-<p>Crystal Lewis gave the lightning talk <a href="https://github.com/Cghlewis/codebook-pkg-comparison"><em>A Comparison of Packages to Generate Codebooks</em></a>. I’d like to generate a codebook for our dataset once it lives in a database.</p>
+<p>Crystal Lewis gave the lightning talk <a href="https://github.com/Cghlewis/codebook-pkg-comparison"><em>A Comparison of Packages to Generate Codebooks</em></a>. I’d like to generate codebooks for our datasets once they live in a database.</p>
 </section>
 </section>
 <section id="sec-external-data" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="sec-external-data"><span class="header-section-number">7.4</span> External data</h2>
-<p>Rate data quality</p>
-<p>Maintain metadata</p>
-<p>Standards for accepting data</p>
-<p>Parameters for what we will or won’t use (soils data with management metadata only)</p>
-<p>List example places to look</p>
+<p>External data refers to any data not directly collected by WSDA or trained partners (e.g., WSU or conservation districts) that follow our SOPs. These can include other studies pre-dating WaSHI, special soil health surveys, or publicly available datasets.</p>
+<p>The Data Scientist and Senior Soil Scientist will decide whether to integrate an external dataset case by case by considering the below questions:</p>
+<ul>
+<li>How does the study design fit into SoSA goals?</li>
+<li>Who collected the soil samples?</li>
+<li>What field procedures were used and how were they documented?</li>
+<li>Who analyzed the soil samples? With which methods and QA/QC procedures?</li>
+<li>Which pieces of metadata and management data accompany the lab results?
+<ul>
+<li>Farm, producer and field info<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Sampling date</li>
+<li>Sampling depth</li>
+<li>Latitude and longitude</li>
+<li>Production system (current crop, crop rotation, etc.)</li>
+<li>Tillage, livestock grazing, irrigation, soil fertility and amendments, conservation practices, etc.</li>
+</ul></li>
+<li>Is there a data dictionary or codebook to describe the variables and measurements, units, missing values, etc.?</li>
+</ul>
+<p>Generally, the external data should <strong>1)</strong> be well documented, <strong>2)</strong> be collected and analyzed by reputable scientists and labs; and <strong>3)</strong> have adequate accompanying metadata and management data to facilitate interpretation of the results.</p>
+<p>Some publicly available datasets to consider are listed in <a href="Y:\NRAS\Soil_Health_Initiative\DataSources">Y:\NRAS\Soil_Health_Initiative\DataSources</a>.</p>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Enough farm, producer and field info to distinguish unique farmers and fields and assign IDs to. This info doesn’t need to be personally identifiable information.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
