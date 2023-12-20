@@ -8,16 +8,19 @@ We strive for a balance between a deep and shallow structure. If too shallow, th
 
 `Y:\NRAS\Soil_Health_Initiative` is the parent folder for all WaSHI content.
 
-Within the `Sampling` sub-folder, we use a combination of **date-** (each year has its own sub-folder) and **categorical-** based (dataset and documentation that span across years) folder structures.
+Within the `StateOfTheSoils` sub-folder, we use a combination of **date-** (each year has its own sub-folder) and **categorical-** based (dataset and documentation that span across years) folder structures.
 
 ```         
-Y:\NRAS\Soil_Health_Initiative\Sampling
+Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils
 ├── _completeDataset
 ├── 2019_SCBG
 ├── 2021_Sampling
 ├── 2022_PartnershipsInSoilHealth
 ├── 2023_Sampling
 ├── 2024_Sampling
+├── DataManagement
+├── DataSharing
+├── DataSources
 ├── Maps
 ├── Projects
 ├── QAPP
@@ -31,7 +34,7 @@ Y:\NRAS\Soil_Health_Initiative\Sampling
 Within the each year sub-folder, we have sub-sub-folders for planning, forms, data, and processes. This structure helps maintain a reproducible workflow year after year. See the `2023_Sampling` for an example:
 
 ```         
-Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling
+Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling
 ├── Applications
 ├── CoCs
 ├── Equipment
@@ -53,7 +56,7 @@ Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling
 As mentioned in @sec-raw-data, it's good practice to maintain the raw data. We use additional sub-folders for the `LabData` folder. Everything in `Raw` has been set as `Read-Only`.
 
 ```         
-Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling\LabData
+Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling\LabData
 ├── 2023_DataTemplateSoiltest.xlsx
 ├── Clean
 ├── QC
@@ -61,7 +64,7 @@ Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling\LabData
 └── Working
 ```
 
-`Soil_Health_Initative` \> `Sampling` \> `2023_Sampling` \> `LabData` \> `Clean` already has five levels of nesting. We wouldn't want to add any many more levels or the hierarchy becomes difficult to manage.
+`Soil_Health_Initative` \> `StateOfTheSoils` \> `2023_Sampling` \> `LabData` \> `Clean` already has five levels of nesting. We wouldn't want to add any many more levels or the hierarchy becomes difficult to manage.
 
 ### Archive folders
 
@@ -70,7 +73,7 @@ When too many drafts or versions begin to clutter a sub-folder, create a new fol
 For example, the most recent sample labels for each conservation district are listed in the top level `CompletedLabels` folder, and previous working drafts were moved to the `Archive_Labels` folder.
 
 ```         
-Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling\Labels\CompletedLabels
+Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling\Labels\CompletedLabels
 ├── Archive_Labels
 │   ├── CowlitzCounty_Labels.docx
 │   ├── FerryCD_Labels.docx

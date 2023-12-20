@@ -13,15 +13,15 @@ Deliberately use underscores, hyphens, and uppercase letters so we can easily un
 -   Use underscores to delineate metadata elements (i.e. name from version `Name_Version`).
 
 -   Use hyphens to separate parts of one metadata element (i.e. date `YYYY-MM-DD`).
+
 -   Avoid spaces and special characters (only use underscores and hyphens). Characters like `/` `()` `!` `?` `%` `+` `"` `'` have special meaning to computers and can break file paths and URLs.
+
 -   Different conventions may work better for different purposes (folder, file, variable name). See @sec-naming-guidelines for which conventions to use for different file sets.
 
     -   **UpperCamelCase**: capitalize the first letter of each word without spaces or delimiters.
     -   **lowerCamelCase**: the first word is all lowercase and subsequent words have the first letter capitalized without spaces or delimiters.
     -   **snake_case**: all lowercase with underscores separating words
     -   **kebab-case**: all lowercase with hyphens separating words
-
-
 
 [![Artwork by \@allison_horst](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172){fig-alt="Cartoon representations of common cases in coding. A snake screams \"SCREAMING_SNAKE_CASE\" into the face of a camel (wearing ear muffs) with \"camelCase\" written along its back. Vegetables on a skewer spell out \"kebab-case\" (words on a skewer). A mellow, happy looking snake has text \"snake_case\" along it." width="500"}](https://allisonhorst.com/everything-else)
 
@@ -33,17 +33,17 @@ Computers are unable to read file paths and file names that surpass a certain ch
 
 Remember to express date 'back to front' of `YYYY-MM-DD` according to the [ISO 8601 standard](https://www.iso.org/iso-8601-date-and-time-format.html). This maintains the chronological order of records when they are sorted alphanumerically.
 
-+----------------------------------+------------------------+
-| ✅ Do this                       | ❌ Don't do this       |
-+==================================+========================+
-| 2020-05-28_Agenda.pdf            | 2-14-2023_Agenda.pdf   |
-+----------------------------------+------------------------+
-| 2023-01-01_Agenda.pdf            | 2023-Jan-1_Agenda.pdf  |
-+----------------------------------+------------------------+
-| 2023-02-14_Agenda.pdf            | Dec052020_Agenda.pdf   |
-+----------------------------------+------------------------+
-| 2023-12-05_Agenda.pdf            | May-28-2020_Agenda.pdf |
-+----------------------------------+------------------------+
++---------------------------------+------------------------+
+| ✅ Do this                      | ❌ Don't do this       |
++=================================+========================+
+| 2020-05-28_Agenda.pdf           | 2-14-2023_Agenda.pdf   |
++---------------------------------+------------------------+
+| 2023-01-01_Agenda.pdf           | 2023-Jan-1_Agenda.pdf  |
++---------------------------------+------------------------+
+| 2023-02-14_Agenda.pdf           | Dec052020_Agenda.pdf   |
++---------------------------------+------------------------+
+| 2023-12-05_Agenda.pdf           | May-28-2020_Agenda.pdf |
++---------------------------------+------------------------+
 
 #### Group and sort files by name
 
@@ -67,23 +67,23 @@ Consider how folders and files should be grouped and sorted. Put that piece of m
 | FerryCD_Tracking_2023-05-09.pdf | 2023-06-06_FerryCD_CoC.pdf      |
 +---------------------------------+---------------------------------+
 
-#### Use version numbers
+#### Use version numbers {#sec-version-numbers}
 
 If not using the date to version, or to keep multiple drafts from the same date, add version information to the end of the file name. Think about how many possible versions there could be. If there may be more than 10, use leading zeros before single digit numbers so the file name always has the same length. V1 through V15 will not sort the same way as V01 through V15.
 
-+----------------------------------+-----------------------+
-| ✅ Do this                       | ❌ Don't do this      |
-+==================================+=======================+
-| SOP_V01.pdf                      | SOP_V1.pdf            |
-+----------------------------------+-----------------------+
-| SOP_V02.pdf                      | SOP_V10.pdf           |
-+----------------------------------+-----------------------+
-| ... \[V03 - V09\]                | SOP_V11.pdf           |
-+----------------------------------+-----------------------+
-| SOP_V10.pdf                      | SOP_V2.pdf            |
-+----------------------------------+-----------------------+
-| SOP_V11.pdf                      | ... \[V3 - V9\]       |
-+----------------------------------+-----------------------+
++---------------------------------+-----------------------+
+| ✅ Do this                      | ❌ Don't do this      |
++=================================+=======================+
+| SOP_V01.pdf                     | SOP_V1.pdf            |
++---------------------------------+-----------------------+
+| SOP_V02.pdf                     | SOP_V10.pdf           |
++---------------------------------+-----------------------+
+| ... \[V03 - V09\]               | SOP_V11.pdf           |
++---------------------------------+-----------------------+
+| SOP_V10.pdf                     | SOP_V2.pdf            |
++---------------------------------+-----------------------+
+| SOP_V11.pdf                     | ... \[V3 - V9\]       |
++---------------------------------+-----------------------+
 
 #### Collaborating on files
 

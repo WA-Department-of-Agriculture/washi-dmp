@@ -22,13 +22,13 @@ Project-level documentation includes all descriptive information about the SoSA 
 
 The QAPP is the highest level of project documentation and covers everything from the project description, personnel roles and responsibilities, project timelines, data and measurement quality objectives, study design, and overviews of field, laboratory, and quality control.
 
-Ours can be found in [Y:\\NRAS\\Soil_Health_Initiative\\Sampling\\QAPP](Y:\NRAS\Soil_Health_Initiative\Sampling\QAPP), though it needs to be updated.
+Ours can be found in [Y:\\NRAS\\Soil_Health_Initiative\\StateOfTheSoils\\QAPP](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\QAPP), though it needs to be updated.
 
 ### Standard operating procedures (SOP)
 
 SOPs provide detailed instructions for field, lab, or data processing procedures and decision making processes.
 
-All sampling related SOPs can be found in [Y:\\NRAS\\Soil_Health_Initiative\\Sampling\\SOPs](Y:\NRAS\Soil_Health_Initiative\Sampling\SOPs).
+All sampling related SOPs can be found in [Y:\\NRAS\\Soil_Health_Initiative\\StateOfTheSoils\\SOPs](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\SOPs).
 
 #### SoSA sampling
 
@@ -90,7 +90,7 @@ Dataset-level documentation applies to lab results, sample locations, grower inf
 
 #### Describe contents of folder
 
-For example, the `_completeDataset` folder contains a [readme.txt](Y:\NRAS\Soil_Health_Initiative\Sampling_completeDataset\readme.txt) that describes each of the files' structure, contents, and other pertinent information, such as the data source (i.e. PRISM mean annual precipitation and temperature are 30-year normals from 1991-2020 at 800 m resolution).
+For example, the `_completeDataset` folder contains a [readme.txt](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\\_completeDataset\readme.txt) that describes each of the files' structure, contents, and other pertinent information, such as the data source (i.e. PRISM mean annual precipitation and temperature are 30-year normals from 1991-2020 at 800 m resolution).
 
 ::: {.content-visible when-format="html"}
 
@@ -121,7 +121,7 @@ exampleData.csv contains 100 random samples that have been anonymized with fake 
 
 #### Explain versions
 
-Another example is the [readme.txt](Y:\NRAS\Soil_Health_Initiative\Sampling\2023_Sampling\LabData\Raw\readme.txt) in the `2023_Sampling` \> `LabData` \> `Raw` folder, which explains why there are two different versions of the lab results and where to find additional information.
+Another example is the [readme.txt](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling\LabData\Raw\readme.txt) in the `2023_Sampling` \> `LabData` \> `Raw` folder, which explains why there are two different versions of the lab results and where to find additional information.
 
 ::: {.content-visible when-format="html"}
 
@@ -208,6 +208,8 @@ At the bare minimum, the `changelog.txt` should contain:
 
 ::: {.content-visible when-format="html"}
 
+An example [changelog.txt](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\\_completeDataset\changelog.txt) can be found in the `_completeDataset` folder.
+
 <details>
 
 <summary>View the example</summary>
@@ -242,7 +244,7 @@ Variable-level documentation includes data dictionaries and code books, which ar
 
 In a data dictionary, each row is a different variable and each column is a different attribute of that variable. With a data dictionary, any user should be able to properly interpret each variable in our data.
 
-Our [dataDictionary.xlsx](Y:\NRAS\Soil_Health_Initiative\Sampling_completeDataset\dataDictionary.xlsx) in the [\_completeDataset folder](Y:\NRAS\Soil_Health_Initiative\Sampling_completeDataset) contains two tabs (`labResults` and `sampleLocations`) that describe the attributes of each variable.
+Our [dataDictionary.xlsx](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\_completeDataset\dataDictionary.xlsx) in the [\_completeDataset folder](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\_completeDataset) contains two tabs (`labResults` and `sampleLocations`) that describe the attributes of each variable.
 
 ::: {.content-visible when-format="html"}
 
