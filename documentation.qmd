@@ -313,6 +313,6 @@ The Data Scientist and Senior Soil Scientist will decide whether to integrate an
 
 [^1]: Enough farm, producer and field info to distinguish unique farmers and fields and assign IDs to. This info doesn't need to be personally identifiable information.
 
-Generally, the external data should **1)** be well documented, **2)** be collected and analyzed by reputable scientists and labs; and **3)** have adequate accompanying metadata and management data to facilitate interpretation of the results.
+Generally, the external data should **1)** be well documented, **2)** be collected and analyzed by well-trained scientists and labs; and **3)** have adequate accompanying metadata and management data to facilitate interpretation of the results.
 
-Some publicly available datasets to consider are listed in [Y:\\NRAS\\Soil_Health_Initiative\\DataSources](Y:\\NRAS\\Soil_Health_Initiative\\DataSources).
+Some publicly available datasets to consider are listed in [Y:\\NRAS\\Soil_Health_Initiative\\StateOfTheSoils\\DataSources](Y:\\NRAS\\Soil_Health_Initiative\\StateOfTheSoils\\DataSources).

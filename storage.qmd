@@ -1,22 +1,33 @@
 # Storage {#sec-storage}
 
-Non-digital data, such as paper forms, must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.
+Non-digital data, such as paper forms, must be transcribed or
+converted to digital file formats and then stored in the WaSHI filing
+cabinet in the Natural Resources Building in Olympia.
 
-All digital data are stored in the WSDA shared drives, and other locations listed below.
+All digital data are stored in the WSDA shared drives, and other
+locations listed below.
 
 **WSDA shared drives:**
 
--   Agency files: [Y:\\NRAS\\Soil_Health_Initiative](Y:\NRAS\Soil_Health_Initiative)
--   GIS: [K:\\NRAS\\Arc_Data\\Soil_Health](K:\NRAS\Arc_Data\Soil_Health) (access requires permissions from IT)
+-   Agency files:
+    [Y:\\NRAS\\Soil_Health_Initiative](Y:\NRAS\Soil_Health_Initiative)
+-   GIS:
+    [K:\\NRAS\\Arc_Data\\Soil_Health](K:\NRAS\Arc_Data\Soil_Health)
+    (access requires permissions from IT)
 
 **Esri products and services:**
 
--   ArcGIS Online [Soil Health - WSDA Internal Group](https://nras.maps.arcgis.com/home/group.html?id=17a60cfa644c4c60ab622fdd84500f8f#overview)
--   WSDA GIS on-premise [ArcGIS REST Services Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS) (only Jadey, Perry, and Joel can publish to this server; Ed Thompson is the contact for getting access)
+-   ArcGIS Online [Soil Health - WSDA Internal
+    Group](https://nras.maps.arcgis.com/home/group.html?id=17a60cfa644c4c60ab622fdd84500f8f#overview)
+-   WSDA GIS on-premise [ArcGIS REST Services
+    Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS)
+    (only Jadey, Perry, and Joel can publish to this server; Ed
+    Thompson is the contact for getting access)
 
 **Database for lab results and management data:**
 
--   WISKI, but very likely will migrate to SQL Server or a less water-focused database
+-   WISKI, but very likely will migrate to SQL Server or a less
+    water-focused database
 
 **GitHub organizations for code-based projects:**
 
@@ -27,51 +38,116 @@ All digital data are stored in the WSDA shared drives, and other locations liste
 
 -   WSDA and WSU Teams WaSHI channels
 
-**Local workstations:**
+**Box.com for external file sharing:**
 
--   Should NOT be the only place data are stored!
+-   WSDA has a box.com account. Only Perry has a license; Jadey and
+    Dani are currently editors.
+
+**Individual devices (laptop, tablet, phone):**
+
+-   Must NOT be the only place data are stored!
+
+## Backup
+
+Data must be stored in multiple locations. At a bare minimum, data on
+an individual computer must also be saved on the WSDA shared drive.
+Backing up data using version control (GitHub) or a cloud service
+(Microsoft OneDrive or Box.com) is strongly recommended.
 
 ## Read-only raw data {#sec-raw-data}
 
-On our shared drives, raw data such as lab results from Soiltest or exports from ArcGIS Online, should be immediately set to `Read-only`. Right click the file \> click on Properties \> check the `Read-only` attribute box.
+On our shared drives, raw data such as lab results from Soiltest or
+exports from ArcGIS Online, should be immediately set to `Read-only`.
+Right click the file \> click on Properties \> check the `Read-only`
+attribute box.
 
 ![](images/read-only.png){fig-alt="Screenshot of the above directions to set files to Read-only on a Windows computer."}
 
-The file should then be copied over to a `Working` folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled `Clean` folder. Keeping a `readme`.txt\` to document your processing and analysis steps is good practice, as discussed in @sec-readme.
+The file should then be copied over to a `Working` folder for any
+processing or analyses. The final dataset should be saved in a
+separate descriptively titled `Clean` folder. Keeping a `readme.txt`
+to document your processing and analysis steps is good practice, as
+discussed in @sec-readme.
 
 ## Version control with Git and GitHub
 
-A version control system records changes to a file or set of files over time. [Git](https://git-scm.com/) is a free and open-source distributed version control system and [GitHub](https://github.com) is the hosting site WSDA and WaSHI use to interface with this system. Git and GitHub are an important foundation of reproducible statistical and data scientific workflows [@bryan2018].
+A version control system records changes to a file or set of files
+over time. [Git](https://git-scm.com/) is a free and open-source
+distributed version control system and [GitHub](https://github.com) is
+the hosting site WSDA and WaSHI use to interface with this system. Git
+and GitHub are an important foundation of reproducible statistical and
+data scientific workflows [@bryan2018].
 
-A major benefit of using version control is ensuring changes are well documented and previous versions are accessible if any changes must be recalled. Additionally, version control makes collaboration across projects much more robust.
+A major benefit of using version control is ensuring changes are well
+documented and previous versions are accessible if any changes must be
+recalled. Additionally, version control makes collaboration across
+projects much more robust.
 
-Version control is not just for code either! It's useful for scripts, documents, presentations, and books (like this DMP!). Instead of saving each version of a file with a different name (i.e., `Report_V01.docx` and `Report_V02.docx`; for a reminder on version naming, see [@sec-version-numbers]), there's only one file `Report.docx` which automatically has its history and editors saved with Git and GitHub.
+Version control is not just for code either! It's useful for scripts,
+documents, presentations, and books (like this DMP!). Instead of
+saving each version of a file with a different name (i.e.,
+`Report_V01.docx` and `Report_V02.docx`; for a reminder on version
+naming, see [@sec-version-numbers]), there's only one file
+`Report.docx` which automatically has its history and editors saved
+with Git and GitHub.
 
-In the screenshot below, you can see who made a commit (which is basically a named version of changes), when that commit was made, and you can click on the commit message to view all of the files that were changed.
+In the screenshot below, you can see who made a commit (which is
+basically a named version of changes), when that commit was made, and
+you can click on the commit message to view all of the files that were
+changed.
 
 ![](images/github-commits.png){fig-alt="Screenshot of GitHub commits for the WaSHI DMP."}
 
-After clicking on the first commit message, we see the `documentation.qmd` file was changed with additions highlighted in green and deletions highlighted in red.
+After clicking on the first commit message, we see the
+`documentation.qmd` file was changed with additions highlighted in
+green and deletions highlighted in red.
 
-![](images/github-diff.png){fig-alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red." fig-align="left"}
+![](images/github-diff.png){fig-alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red."
+fig-align="left"}
 
 ### Git and GitHub resources
 
-Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk About Version Control*](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\Bryan_ExcuseMeDoYouHaveMomentTalkVersionControl.pdf) for a great background on Git and GitHub, why we should be using it, and a brief how to get started. For detailed instructions , please follow along with Jenny Bryan's free online book [*Happy Git and GitHub for the useR*](https://happygitwithr.com/). Another helpful book resource is [*GitHub: A Beginner's Guide*](https://birdscanada.github.io/BirdsCanada_GitHubGuide/), which was created by Birds Canada (avian conservation NGO) for people without a lot of programming background.
+Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk
+About Version
+Control*](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\Bryan_ExcuseMeDoYouHaveMomentTalkVersionControl.pdf)
+for a great background on Git and GitHub, why we should be using it,
+and a brief how to get started. For detailed instructions , please
+follow along with Jenny Bryan's free online book [*Happy Git and
+GitHub for the useR*](https://happygitwithr.com/). Another helpful
+book resource is [*GitHub: A Beginner's
+Guide*](https://birdscanada.github.io/BirdsCanada_GitHubGuide/), which
+was created by Birds Canada (avian conservation NGO) for people
+without a lot of programming background.
 
-If you prefer to look through slides, check out Byron C. Jaeger's presentation [*Happier version control with Git and GitHub (and RStudio)*](https://bcjaeger.github.io/seminar-git/)*.*
+If you prefer to look through slides, check out Byron C. Jaeger's
+presentation [*Happier version control with Git and GitHub (and
+RStudio)*](https://bcjaeger.github.io/seminar-git/)*.*
 
 ## Staff turnover
 
-When staff leave our group, they take their skills, institutional knowledge, and personal understanding of their file management with them. To ensure knowledge isn't lost, time isn't wasted trying to recreate workflows, and projects keep moving, proper offboarding is essential.
+When staff leave our group, they take their skills, institutional
+knowledge, and personal understanding of their file management with
+them. Proper offboarding is essential to ensure knowledge isn't lost,
+time isn't wasted trying to recreate workflows, and projects keep
+moving.
 
-Before the employee leaves, the Senior Soil Scientist and Data Scientist ensure that:
+Before the employee leaves, the Senior Soil Scientist and Data
+Scientist ensure that:
 
--   Folders and files are moved from the employee's personal drive to the shared drive. They are named and organized according to [@sec-naming].
--   Workflows and specific processes the employee was responsible for are well documented.
--   Permissions and ownerships are transferred to the appropriate remaining staff.
-    -   [GitHub WSDA organization](https://github.com/WA-Department-of-Agriculture)
+-   Folders and files are moved from the employee's personal drive to
+    the shared drive. They are named and organized according to
+    [@sec-naming].
+-   Workflows and specific processes the employee was responsible for
+    are well documented.
+-   Permissions and ownerships are transferred to the appropriate
+    remaining staff.
+    -   [GitHub WSDA
+        organization](https://github.com/WA-Department-of-Agriculture)
     -   ArcGIS data products and online groups
     -   Database credentials
+    -   Box.com folders
 
-More resources and offboarding checklists from [Harvard Research Data Management](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover) can be found in our [DataManagement shared drive](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover).
+More resources and offboarding checklists from [Harvard Research Data
+Management](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover)
+can be found in our [DataManagement shared
+drive](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover).
