@@ -202,12 +202,13 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-raw-data" id="toc-sec-raw-data" class="nav-link active" data-scroll-target="#sec-raw-data"><span class="header-section-number">6.1</span> Read-only raw data</a></li>
-  <li><a href="#version-control-with-git-and-github" id="toc-version-control-with-git-and-github" class="nav-link" data-scroll-target="#version-control-with-git-and-github"><span class="header-section-number">6.2</span> Version control with Git and GitHub</a>
+  <li><a href="#backup" id="toc-backup" class="nav-link active" data-scroll-target="#backup"><span class="header-section-number">6.1</span> Backup</a></li>
+  <li><a href="#sec-raw-data" id="toc-sec-raw-data" class="nav-link" data-scroll-target="#sec-raw-data"><span class="header-section-number">6.2</span> Read-only raw data</a></li>
+  <li><a href="#version-control-with-git-and-github" id="toc-version-control-with-git-and-github" class="nav-link" data-scroll-target="#version-control-with-git-and-github"><span class="header-section-number">6.3</span> Version control with Git and GitHub</a>
   <ul class="collapse">
   <li><a href="#git-and-github-resources" id="toc-git-and-github-resources" class="nav-link" data-scroll-target="#git-and-github-resources">Git and GitHub resources</a></li>
   </ul></li>
-  <li><a href="#staff-turnover" id="toc-staff-turnover" class="nav-link" data-scroll-target="#staff-turnover"><span class="header-section-number">6.3</span> Staff turnover</a></li>
+  <li><a href="#staff-turnover" id="toc-staff-turnover" class="nav-link" data-scroll-target="#staff-turnover"><span class="header-section-number">6.4</span> Staff turnover</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/storage.qmd" class="toc-action">View source</a></p></div></div></nav>
     </div>
@@ -256,18 +257,26 @@ div.csl-indent {
 <ul>
 <li>WSDA and WSU Teams WaSHI channels</li>
 </ul>
-<p><strong>Local workstations:</strong></p>
+<p><strong>Box.com for external file sharing:</strong></p>
 <ul>
-<li>Should NOT be the only place data are stored!</li>
+<li>WSDA has a box.com account. Only Perry has a license; Jadey and Dani are currently editors.</li>
 </ul>
-<section id="sec-raw-data" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="sec-raw-data"><span class="header-section-number">6.1</span> Read-only raw data</h2>
+<p><strong>Individual devices (laptop, tablet, phone):</strong></p>
+<ul>
+<li>Must NOT be the only place data are stored!</li>
+</ul>
+<section id="backup" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="backup"><span class="header-section-number">6.1</span> Backup</h2>
+<p>Data must be stored in multiple locations. At a bare minimum, data on an individual computer must also be saved on the WSDA shared drive. Backing up data using version control (GitHub) or a cloud service (Microsoft OneDrive or Box.com) is strongly recommended.</p>
+</section>
+<section id="sec-raw-data" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-raw-data"><span class="header-section-number">6.2</span> Read-only raw data</h2>
 <p>On our shared drives, raw data such as lab results from Soiltest or exports from ArcGIS Online, should be immediately set to <code>Read-only</code>. Right click the file &gt; click on Properties &gt; check the <code>Read-only</code> attribute box.</p>
 <p><img src="images/read-only.png" class="img-fluid" alt="Screenshot of the above directions to set files to Read-only on a Windows computer."></p>
-<p>The file should then be copied over to a <code>Working</code> folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled <code>Clean</code> folder. Keeping a <code>readme</code>.txt` to document your processing and analysis steps is good practice, as discussed in <a href="documentation.html#sec-readme"><span>Section&nbsp;7.2.1</span></a>.</p>
+<p>The file should then be copied over to a <code>Working</code> folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled <code>Clean</code> folder. Keeping a <code>readme.txt</code> to document your processing and analysis steps is good practice, as discussed in <a href="documentation.html#sec-readme"><span>Section&nbsp;7.2.1</span></a>.</p>
 </section>
-<section id="version-control-with-git-and-github" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="version-control-with-git-and-github"><span class="header-section-number">6.2</span> Version control with Git and GitHub</h2>
+<section id="version-control-with-git-and-github" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="version-control-with-git-and-github"><span class="header-section-number">6.3</span> Version control with Git and GitHub</h2>
 <p>A version control system records changes to a file or set of files over time. <a href="https://git-scm.com/">Git</a> is a free and open-source distributed version control system and <a href="https://github.com">GitHub</a> is the hosting site WSDA and WaSHI use to interface with this system. Git and GitHub are an important foundation of reproducible statistical and data scientific workflows <span class="citation" data-cites="bryan2018">(<a href="references.html#ref-bryan2018" role="doc-biblioref">Bryan 2018</a>)</span>.</p>
 <p>A major benefit of using version control is ensuring changes are well documented and previous versions are accessible if any changes must be recalled. Additionally, version control makes collaboration across projects much more robust.</p>
 <p>Version control is not just for code either! It’s useful for scripts, documents, presentations, and books (like this DMP!). Instead of saving each version of a file with a different name (i.e., <code>Report_V01.docx</code> and <code>Report_V02.docx</code>; for a reminder on version naming, see <a href="naming.html#sec-version-numbers"><span>Section&nbsp;4.0.1.5</span></a>), there’s only one file <code>Report.docx</code> which automatically has its history and editors saved with Git and GitHub.</p>
@@ -285,9 +294,9 @@ div.csl-indent {
 <p>If you prefer to look through slides, check out Byron C. Jaeger’s presentation <a href="https://bcjaeger.github.io/seminar-git/"><em>Happier version control with Git and GitHub (and RStudio)</em></a><em>.</em></p>
 </section>
 </section>
-<section id="staff-turnover" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="staff-turnover"><span class="header-section-number">6.3</span> Staff turnover</h2>
-<p>When staff leave our group, they take their skills, institutional knowledge, and personal understanding of their file management with them. To ensure knowledge isn’t lost, time isn’t wasted trying to recreate workflows, and projects keep moving, proper offboarding is essential.</p>
+<section id="staff-turnover" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="staff-turnover"><span class="header-section-number">6.4</span> Staff turnover</h2>
+<p>When staff leave our group, they take their skills, institutional knowledge, and personal understanding of their file management with them. Proper offboarding is essential to ensure knowledge isn’t lost, time isn’t wasted trying to recreate workflows, and projects keep moving.</p>
 <p>Before the employee leaves, the Senior Soil Scientist and Data Scientist ensure that:</p>
 <ul>
 <li>Folders and files are moved from the employee’s personal drive to the shared drive. They are named and organized according to <a href="naming.html"><span>Chapter&nbsp;4</span></a>.</li>
@@ -297,6 +306,7 @@ div.csl-indent {
 <li><a href="https://github.com/WA-Department-of-Agriculture">GitHub WSDA organization</a></li>
 <li>ArcGIS data products and online groups</li>
 <li>Database credentials</li>
+<li>Box.com folders</li>
 </ul></li>
 </ul>
 <p>More resources and offboarding checklists from <a href="Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover">Harvard Research Data Management</a> can be found in our <a href="Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover">DataManagement shared drive</a>.</p>

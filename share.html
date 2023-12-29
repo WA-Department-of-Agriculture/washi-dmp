@@ -20,7 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -183,15 +236,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#data-sharing-and-public-access" id="toc-data-sharing-and-public-access" class="nav-link active" data-scroll-target="#data-sharing-and-public-access"><span class="header-section-number">9.1</span> Data sharing and public access</a>
-  <ul class="collapse">
-  <li><a href="#data-privacy-statement" id="toc-data-privacy-statement" class="nav-link" data-scroll-target="#data-privacy-statement">Data privacy statement</a></li>
-  <li><a href="#acknowledging-washi-data-in-publications" id="toc-acknowledging-washi-data-in-publications" class="nav-link" data-scroll-target="#acknowledging-washi-data-in-publications">Acknowledging WaSHI data in publications</a></li>
-  </ul></li>
-  <li><a href="#public-repositories" id="toc-public-repositories" class="nav-link" data-scroll-target="#public-repositories"><span class="header-section-number">9.2</span> Public repositories</a></li>
-  <li><a href="#understand-watech-data-categorization" id="toc-understand-watech-data-categorization" class="nav-link" data-scroll-target="#understand-watech-data-categorization"><span class="header-section-number">9.3</span> Understand WaTech data categorization</a></li>
-  <li><a href="#sec-maintain-confidentiality" id="toc-sec-maintain-confidentiality" class="nav-link" data-scroll-target="#sec-maintain-confidentiality"><span class="header-section-number">9.4</span> Maintain confidentiality</a></li>
-  <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline"><span class="header-section-number">9.5</span> Timeline</a></li>
+  <li><a href="#data-privacy-statement" id="toc-data-privacy-statement" class="nav-link active" data-scroll-target="#data-privacy-statement">Data privacy statement</a></li>
+  <li><a href="#watech-data-categorization" id="toc-watech-data-categorization" class="nav-link" data-scroll-target="#watech-data-categorization"><span class="header-section-number">9.1</span> WaTech data categorization</a></li>
+  <li><a href="#sec-maintain-confidentiality" id="toc-sec-maintain-confidentiality" class="nav-link" data-scroll-target="#sec-maintain-confidentiality"><span class="header-section-number">9.2</span> Maintain confidentiality</a></li>
+  <li><a href="#data-share-agreement" id="toc-data-share-agreement" class="nav-link" data-scroll-target="#data-share-agreement"><span class="header-section-number">9.3</span> Data share agreement</a></li>
+  <li><a href="#public-access" id="toc-public-access" class="nav-link" data-scroll-target="#public-access"><span class="header-section-number">9.4</span> Public access</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><span class="header-section-number">9.5</span> Acknowledgments</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/share.qmd" class="toc-action">View source</a></p></div></div></nav>
     </div>
@@ -215,46 +265,153 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="data-sharing-and-public-access" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="data-sharing-and-public-access"><span class="header-section-number">9.1</span> Data sharing and public access</h2>
+<p>Our data sharing policies promote FAIR principles such that our data are “<em>as open as possible, as closed as necessary</em>” <span class="citation" data-cites="europeancommission2016">(<a href="references.html#ref-europeancommission2016" role="doc-biblioref">European Commission 2016</a>)</span>. Data should be <em>open</em> enough to facilitate efficient re-use and avoid duplicating data collection efforts, enhance scholarly rigor, promote engagement across the research and public communities, and realize many other benefits <span class="citation" data-cites="whyte2011">(<a href="references.html#ref-whyte2011" role="doc-biblioref">Whyte and Pryor 2011</a>)</span>. However, data must also be as <em>closed</em> as necessary to protect grower privacy and to honor prior agreements with growers or other researchers.</p>
 <p>SoSA relies on growers’ willingness to volunteer their fields for sampling and participate in the required management survey. Their willingness depends on their trust in WaSHI to protect their privacy. Only aggregated and anonymized results will be publicly available or shared. The below data privacy statement may be shared with potential participants:</p>
 <section id="data-privacy-statement" class="level3">
 <h3 class="anchored" data-anchor-id="data-privacy-statement">Data privacy statement</h3>
 <blockquote class="blockquote">
 <p>Data will be aggregated and reported in a way which mitigates personal identification of growers. Information will be used to understand broad impacts and characterize trends in soil health and production practices across regions. Results will not be reported in a way that makes individuals identifiable. Information collected in this survey may be subject to release in accordance with RCW 42.56 (Public Records Act).</p>
 </blockquote>
-<p>Procedures for anonymizing data are detailed in <a href="#sec-maintain-confidentiality"><span>Section&nbsp;9.4</span></a>.</p>
+<p>Procedures for anonymizing data are detailed in <a href="#sec-maintain-confidentiality"><span>Section&nbsp;9.2</span></a>.</p>
 </section>
-<section id="acknowledging-washi-data-in-publications" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledging-washi-data-in-publications">Acknowledging WaSHI data in publications</h3>
-<p>All research partially or completely funded by WaSHI must include acknowledgements to the State of Washington. The following text should be included in all publications resulting from this funding:</p>
+<section id="watech-data-categorization" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="watech-data-categorization"><span class="header-section-number">9.1</span> WaTech data categorization</h2>
+<p>Under the Washington state policy 141.10 (Securing Information Technology Assets), state agencies must classify data into categories based on the sensitivity of the data. WaTech provides <a href="https://watech.wa.gov/Categorizing-Data-State-Agency">guidance</a> on the four categories of data.</p>
+<section id="category-4-confidential-information-requiring-special-handling" class="level4">
+<h4 class="anchored" data-anchor-id="category-4-confidential-information-requiring-special-handling">Category 4: “Confidential information requiring special handling”</h4>
+<p><strong>WaTech</strong>: Data requires strict handling requirements applied by statues (e.g.&nbsp;HIPAA) or regulations (e.g.&nbsp;rules on employee files).</p>
+<p><strong>SoSA</strong>: We don’t manage any data falling under this category.</p>
+</section>
+<section id="category-3-confidential-information" class="level4">
+<h4 class="anchored" data-anchor-id="category-3-confidential-information">Category 3: “Confidential information”</h4>
+<p><strong>WaTech</strong>: Data includes “personal information” as defined in RCW 42.56.590 (security breaches) and RCW 19.255.010 (personal information disclosure). An individual’s first name or first initial and last name <em>in combination</em> with at least one of the following elements: social security number, driver’s license or Washington identification card number, or any account numbers that permit access to their financial account.</p>
+<p><strong>SoSA</strong>: While we do not collect any of the above elements in combination with grower names, we still protect individual and farm names, and latitude and longitude coordinates as confidential information.</p>
+</section>
+<section id="category-2-sensitive-information" class="level4">
+<h4 class="anchored" data-anchor-id="category-2-sensitive-information">Category 2: “Sensitive information”</h4>
+<p><strong>WaTech</strong>: Data are intended for official use only and withheld unless specifically requested.</p>
+<p><strong>SoSA</strong>: Lab results and management surveys fall under this category. Access to this data requires a <a href="#data-share-agreement">data share agreement</a>.</p>
+</section>
+<section id="category-1-public-information" class="level4">
+<h4 class="anchored" data-anchor-id="category-1-public-information">Category 1: “Public information”</h4>
+<p><strong>WaTech</strong>: Data is not covered in any of the above categories or is already released to the public.</p>
+<p><strong>SoSA</strong>: De-identified and aggregated data such as the number of soil samples and from which counties and crops they were collected fall under this category. For example, the <a href="https://nras.maps.arcgis.com/apps/dashboards/d4b2d135d47a4ff7a89285fecf67cef2">SoSA dashboard</a> is publicly available and the map zoom is disabled at the 1:1,600,000 scale (counties level).</p>
+</section>
+</section>
+<section id="sec-maintain-confidentiality" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="sec-maintain-confidentiality"><span class="header-section-number">9.2</span> Maintain confidentiality</h2>
+<p>Under no circumstances should the following Category 3 data be released to external collaborators or made publicly available:</p>
+<ul>
+<li>farm name</li>
+<li>grower first and last name</li>
+<li>field names that contain street names or other identifying information</li>
+<li>latitude and longitude coordinates or other geospatial identifiers</li>
+<li>any information that identifies the individual farm or grower</li>
+</ul>
+<p>Category 2 data should be anonymized and aggregated to honor our <a href="#data-privacy-statement">data privacy statement</a> by either removing or replacing Category 3 confidential information with dummy data. The {randomNames} R package can be used to replace real names with fake names. Latitude and longitude should be rounded to a precision that does not identify the farm or fields sampled. See the example R script below, copied from the private <a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/R/anonymizeData.R">soils-internal GitHub repo</a>.</p>
+<details>
+<summary>
+R code to anonymize data
+</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomNames)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./data/_completeDataset/2020-2023_labResults_wide.Rdata"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./data/_completeDataset/2020-2023_labResults_long.Rdata"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>crops <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"./data/reference/crops.xlsx"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/_completeDataset/2020-2023_sampleLocations.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(sampleId, longitude, latitude) <span class="sc">|&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), \(x) <span class="fu">round</span>(x, <span class="dv">0</span>)))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Join lab data with gis data</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(allResults_wide, points)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Join data with crop dictionary to get crop groups</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(data, crops, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"crop"</span> <span class="ot">=</span> <span class="st">"Crop Type"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>crop) <span class="sc">|&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(<span class="st">"crop"</span> <span class="ot">=</span> <span class="st">"Crop Group"</span>, <span class="at">.after =</span> county)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Anonymize</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>anonData <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Farm name, producer name, sample ID</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">farmName =</span> <span class="fu">paste0</span>(<span class="st">"Farm "</span>, <span class="fu">sprintf</span>(<span class="st">"%03d"</span>, <span class="fu">cur_group_id</span>())),</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">producerName =</span> <span class="fu">randomNames</span>(<span class="at">which.names =</span> <span class="st">"first"</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sample.with.replacement =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">producerId =</span> <span class="fu">paste0</span>(</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(<span class="fu">sample</span>(LETTERS, <span class="dv">3</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">collapse =</span> <span class="st">""</span>),</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      <span class="st">"0"</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="dv">1</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">fieldName =</span> <span class="fu">paste0</span>(<span class="st">"Field "</span>, fieldId),</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">sampleId =</span> <span class="fu">paste0</span>(</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      <span class="fu">substr</span>(year, <span class="dv">3</span>, <span class="dv">4</span>), <span class="st">"-"</span>, producerId, <span class="st">"-"</span>, fieldId</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> <span class="fu">c</span>(county, producerName, producerId)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="co"># county</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">county =</span> <span class="fu">paste0</span>(<span class="st">"County "</span>, <span class="fu">cur_group_id</span>()),</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> <span class="fu">c</span>(county)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Grab 100 random samples</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>anon_subset <span class="ot">&lt;-</span> anonData <span class="sc">|&gt;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">100</span>)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(anon_subset, <span class="at">file =</span> <span class="st">"./data/_completeDataset/exampleData.csv"</span>,</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>          <span class="at">na =</span> <span class="st">""</span>,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="data-share-agreement" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="data-share-agreement"><span class="header-section-number">9.3</span> Data share agreement</h2>
+<p>SoSA CoPIs created a <a href="Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataSharing\StateoftheSoils_DataShareAgreement.pdf">Data Sharing and Scope of Work Agreement</a> that details the type of data to be shared, the scope of work in which the data may be used, and terms for using SoSA data.</p>
+<p>Once the agreement has been signed by both CoPIs and the “Partnering Scientists”, the agreement should be saved in its own folder within <a href="Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataSharing">Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/DataSharing</a>. If this agreement is also part of a grant proposal, it should also be saved in its corresponding grant folder <a href="Y:\NRAS\Soil_Health_Initiative\ContractsGrants\Grants">Y:/NRAS/Soil_Health_Initiative/ContractsGrants/Grants</a>.</p>
+<p>The request correspondence, code to subset the requested data, and the final dataset sent should all be saved in this folder. Internally documenting this information allows us to track publications and attributions resulting from this data sharing. This documentation also helps us track the broader impact of how our collaborators’ use the SoSA dataset.</p>
+</section>
+<section id="public-access" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="public-access"><span class="header-section-number">9.4</span> Public access</h2>
+<p>Currently the only SoSA data publicly available are the counts of samples across the project, counties, and crop types displayed in the <a href="https://nras.maps.arcgis.com/apps/dashboards/d4b2d135d47a4ff7a89285fecf67cef2">ArcGIS Online Dashboard</a>.</p>
+<p>A small, anonymized subset is included as example data in the <a href="https://github.com/WA-Department-of-Agriculture/washi">{washi}</a> and <a href="https://github.com/WA-Department-of-Agriculture/soils">{soils}</a> R packages for demonstration purposes.</p>
+<p><strong>TODO</strong>: discussion with team on the below ideas</p>
+<p>In the future when the data are more mature and hosted in a proper database, we may publish an anonymized subset in a public repository such as:</p>
+<ul>
+<li>GitHub via an R package or Shiny app</li>
+<li><a href="https://zenodo.org/">Zenodo</a>: integrates with GitHub and is citable with a DOI</li>
+<li><a href="https://data.wa.gov/">Data.WA.gov</a>: open data portal for the State of Washington</li>
+</ul>
+<p>More inspiration and ideas for enhancing data discoverability and sharing across the agricultural and soil health communities include:</p>
+<ul>
+<li><a href="https://ltar.ars.usda.gov/data/data-dashboards">USDA LTAR data dashboards</a></li>
+<li><a href="https://meta.cafltar.org/">CAF LTAR metadata tool</a></li>
+</ul>
+<p><a href="https://datamgmtinedresearch.com/share">Chapter 16</a> of <em>Data Management in Large-Scale Education Research</em> discusses more considerations for data sharing and choosing public repositories <span class="citation" data-cites="lewis2023">(<a href="references.html#ref-lewis2023" role="doc-biblioref">Lewis 2023</a>)</span>.</p>
+</section>
+<section id="acknowledgments" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="acknowledgments"><span class="header-section-number">9.5</span> Acknowledgments</h2>
+<p>All research and data partially or completely funded by WaSHI must include acknowledgements to the State of Washington. The following text should be included in all publications resulting from this funding:</p>
 <blockquote class="blockquote">
-<p>Data was in part provided by the Washington Soil Initiative, which is supported by the State of Washington and administered by the Washington State Department of Agriculture, Washington State Conservation Commission, and Washington State University.</p>
+<p>Data were in part provided by the Washington Soil Initiative, which is supported by the State of Washington and administered by the Washington State Department of Agriculture, Washington State Conservation Commission, and Washington State University.</p>
 </blockquote>
 <p>If WaSHI staff make <a href="https://www.pnas.org/doi/10.1073/pnas.1715374115">substantial scientific contributions</a> to the manuscript, discuss the possibility of co-authorship credit.</p>
-</section>
-</section>
-<section id="public-repositories" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="public-repositories"><span class="header-section-number">9.2</span> Public repositories</h2>
-<ul>
-<li>GitHub</li>
-<li>Zenodo</li>
-<li>data.gov</li>
-</ul>
-</section>
-<section id="understand-watech-data-categorization" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="understand-watech-data-categorization"><span class="header-section-number">9.3</span> Understand WaTech data categorization</h2>
-<p><a href="https://watech.wa.gov/Categorizing-Data-State-Agency" class="uri">https://watech.wa.gov/Categorizing-Data-State-Agency</a></p>
-</section>
-<section id="sec-maintain-confidentiality" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-maintain-confidentiality"><span class="header-section-number">9.4</span> Maintain confidentiality</h2>
-<p>Anonymize and aggregate</p>
-</section>
-<section id="timeline" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="timeline"><span class="header-section-number">9.5</span> Timeline</h2>
-<p>When to share data (after publication?), how long to share data?</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-europeancommission2016" class="csl-entry" role="listitem">
+European Commission. 2016. <span>“H2020 Programme Guidelines on FAIR Data Management in Horizon 2020.”</span> <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf">https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf</a>.
+</div>
+<div id="ref-lewis2023" class="csl-entry" role="listitem">
+Lewis, Crystal. 2023. <em>Data Management in Large-Scale Education Research [in Preparation]</em>. <a href="https://datamgmtinedresearch.com/">https://datamgmtinedresearch.com/</a>.
+</div>
+<div id="ref-whyte2011" class="csl-entry" role="listitem">
+Whyte, Angus, and Graham Pryor. 2011. <span>“Open Science in Practice: Researcher Perspectives and Participation.”</span> <em>International Journal of Digital Curation</em> 6 (March): 199–213. <a href="https://doi.org/10.2218/ijdc.v6i1.182">https://doi.org/10.2218/ijdc.v6i1.182</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
