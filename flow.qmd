@@ -1,9 +1,21 @@
 # Data flows
 
-## Project structure
+assign unique identifiers
 
-## Original data
+labels
 
-## Working data
+tracking sheet
 
-## Clean data
+arcgis (map, domains, field forms, surveys, script to back up)
+
+cross-reference different sources of crop data (field form, survey, initial form)
+
+lab data comes back - qa and cleaning
+
+generate reports (save to box.com)
+
+import to database
+
+save to year folder and _completeDataset, and WSU Teams channel
+
+archive jars and tubes, update archive spreadsheets
