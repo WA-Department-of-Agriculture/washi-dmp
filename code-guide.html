@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Management Plan - 10&nbsp; Code Style Guide</title>
+<title>Data Management Plan - 10&nbsp; Code style guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -75,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./code-guide.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Code Style Guide</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./code-guide.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Code style guide</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -164,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./code-guide.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Code Style Guide</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Code style guide</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -183,7 +236,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"><span class="header-section-number">10.1</span> </a></li>
+  <li><a href="#projects" id="toc-projects" class="nav-link active" data-scroll-target="#projects"><span class="header-section-number">10.1</span> Projects</a>
+  <ul class="collapse">
+  <li><a href="#sec-project-folder-structure" id="toc-sec-project-folder-structure" class="nav-link" data-scroll-target="#sec-project-folder-structure">Project folder structure</a></li>
+  <li><a href="#absolute-vs-relative-paths" id="toc-absolute-vs-relative-paths" class="nav-link" data-scroll-target="#absolute-vs-relative-paths">Absolute vs relative paths</a></li>
+  <li><a href="#here-package" id="toc-here-package" class="nav-link" data-scroll-target="#here-package">{here} package</a></li>
+  </ul></li>
+  <li><a href="#naming-conventions" id="toc-naming-conventions" class="nav-link" data-scroll-target="#naming-conventions"><span class="header-section-number">10.2</span> Naming conventions</a>
+  <ul class="collapse">
+  <li><a href="#project-folder-and-github-repository" id="toc-project-folder-and-github-repository" class="nav-link" data-scroll-target="#project-folder-and-github-repository">Project folder and GitHub repository</a></li>
+  <li><a href="#files" id="toc-files" class="nav-link" data-scroll-target="#files">Files</a></li>
+  <li><a href="#variables-objects-and-functions" id="toc-variables-objects-and-functions" class="nav-link" data-scroll-target="#variables-objects-and-functions">Variables, objects, and functions</a></li>
+  </ul></li>
+  <li><a href="#r-scripts" id="toc-r-scripts" class="nav-link" data-scroll-target="#r-scripts"><span class="header-section-number">10.3</span> R Scripts</a>
+  <ul class="collapse">
+  <li><a href="#header-template" id="toc-header-template" class="nav-link" data-scroll-target="#header-template">Header template</a></li>
+  <li><a href="#section-template" id="toc-section-template" class="nav-link" data-scroll-target="#section-template">Section template</a></li>
+  </ul></li>
+  <li><a href="#code-styling" id="toc-code-styling" class="nav-link" data-scroll-target="#code-styling"><span class="header-section-number">10.4</span> Code styling</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/code-guide.qmd" class="toc-action">View source</a></p></div></div></nav>
     </div>
@@ -192,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-code-style-guide" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Code Style Guide</span></span></h1>
+<h1 class="title"><span id="sec-code-style-guide" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Code style guide</span></span></h1>
 </div>
 
 
@@ -207,17 +277,341 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="section" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="section"><span class="header-section-number">10.1</span> </h2>
-<p>Template snippet</p>
-<p>Section break snippet</p>
-<p>.R and .qmd file names</p>
-<p>function names</p>
-<p>argument names</p>
-<p>variable names</p>
-<p>https://indrajeetpatil.github.io/second-hardest-cs-thing/</p>
+<p>This style guide is an adaptation of the <a href="https://style.tidyverse.org/"><em>tidyverse style guide</em></a> <span class="citation" data-cites="wickham2022">(<a href="references.html#ref-wickham2022" role="doc-biblioref">Wickham 2022</a>)</span> and includes best practices from <a href="https://r4ds.hadley.nz/"><em>R for Data Science (2e)</em></a> (<em>R4DS</em>) <span class="citation" data-cites="wickham2023">(<a href="references.html#ref-wickham2023" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Garrett 2023</a>)</span>, <a href="https://datamgmtinedresearch.com/style.html?q=farewell#style"><em>Data Management in Large-Scale Education Research</em></a> <span class="citation" data-cites="lewis2023">(<a href="references.html#ref-lewis2023" role="doc-biblioref">Lewis 2023</a>)</span>, and other resources. <strong>All WaSHI staff who code in R should thoroughly read and consistently implement this style guide.</strong> Using consistent project structures, naming conventions, script structures, and code style will improve code readability, analysis reproducibility, and ease of collaboration.</p>
+<blockquote class="blockquote">
+<p>Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread. This site describes the style used throughout the <a href="http://tidyverse.org/">tidyverse</a>. It was derived from Google’s original R Style Guide - but Google’s <a href="https://google.github.io/styleguide/Rguide.html">current guide</a> is derived from the tidyverse style guide.</p>
+<p>All style guides are fundamentally opinionated. Some decisions genuinely do make code easier to use (especially matching indenting to programming structure), but many decisions are arbitrary. The most important thing about a style guide is that it provides consistency, making code easier to write because you need to make fewer decisions.</p>
+<p>- Hadley Wickham in the <a href="https://style.tidyverse.org/">tidyverse style guide</a></p>
+</blockquote>
+<section id="projects" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="projects"><span class="header-section-number">10.1</span> Projects</h2>
+<p>All files associated with a given project (input data, R scripts, analytical results, figures, reports) should be kept together in one directory. RStudio has built-in support for this through <strong>projects</strong>. R projects bundle all the work in a portable, self-contained folder that can be moved around on your computer or on to other collaborators’ computers and still work. Learn more about projects in the <a href="https://r4ds.hadley.nz/workflow-scripts.html#projects">Workflow: scripts and projects chapter of <em>R4DS</em></a> and in Jenny Bryan’s article <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/"><em>Project-oriented workflow</em></a>.</p>
+<p>To create a project in RStudio, click <code>File</code> &gt; <code>New Project</code>, then follow the steps in the below figure.</p>
+<p><img src="https://r4ds.hadley.nz/diagrams/new-project.png" class="img-fluid" alt="Three screenshots of the New Project menu. In the first screenshot, the Create Project window is shown and New Directory is selected. In the second screenshot, the Project Type window is shown and Empty Project is selected. In the third screenshot, the Create New Project  window is shown and the directory name is given as r4ds and the project is being created as subdirectory of the Desktop."></p>
+<section id="sec-project-folder-structure" class="level3">
+<h3 class="anchored" data-anchor-id="sec-project-folder-structure">Project folder structure</h3>
+<p>Having a consistent and logical folder structure will make it easier for you (and future you) and collaborators to make sense of the files and work you’ve done. Well documented projects also make it easier to resume a project after some time away with minimal frustration of having to remember where everything is, what you did, and why you did it.</p>
+<p>The below structure works most of the time and should be used as a starting point. However, different projects have different needs, so add and remove subfolders as needed.</p>
+<ul>
+<li><p><strong>root</strong>: top-level project folder containing the <code>.Rproj</code> file.</p></li>
+<li><p><strong>data</strong>: contains raw and processed data files in subfolders. Raw data should be made <em>read-only</em> and not changed in any way.</p></li>
+<li><p><strong>output</strong>: outputs from R scripts such as figures or tables.</p></li>
+<li><p><strong>R</strong>: all R scripts containing data processing or function definitions.</p></li>
+<li><p><strong>reports</strong>: Quarto or RMarkdown files are saved here, as well as the resulting reports.</p></li>
+<li><p><strong>README</strong>: a markdown file (can be generated from Quarto or RMarkdown) to explain the project.</p></li>
+</ul>
+<details>
+<summary>
+See an example project folder structure
+</summary>
+<pre><code>├── project-demo.Rproj
+├── data
+│   ├── processed
+│   │   └── data-clean.csv
+│   └── raw
+│       └── data-raw.xlsx
+├── output
+│   ├── fig-01.png
+│   ├── fig-02.png
+│   ├── tbl-01.png
+│   └── tbl-02.png
+├── R
+│   ├── 01_import.R
+│   ├── 02_tidy.R
+│   ├── 03_transform.R
+│   ├── 04_visualize.R
+│   └── custom-functions.R
+└── reports
+│   ├── soil-health-report.pdf
+│   └── soil-health-report.qmd
+│   └── images
+│       └── logo.png
+├── README.md
+└── README.qmd</code></pre>
+</details>
+<p>R packages may contain these additional subfolders and files:</p>
+<ul>
+<li><p><strong>inst</strong>: any arbitrary additional files to be included in package installation such as <code>CITATION</code>, fonts, and Quarto templates.</p></li>
+<li><p><strong>man</strong>: all <code>.Rd</code> (“R documentation”) files for each function that are generated from <a href="https://roxygen2.r-lib.org/">{roxygen2}</a>.</p></li>
+<li><p><strong>vignettes</strong>: long-form guides that go beyond function documentation and can be used as tutorials to demonstrate a workflow using the package to solve a particular problem.</p></li>
+<li><p><strong>tests</strong>: all tests, usually using <a href="https://testthat.r-lib.org/">{testthat}</a>.</p></li>
+<li><p><strong>pkgdown</strong> and <strong>docs</strong>: if using <a href="https://pkgdown.r-lib.org/">{pkgdown}</a> to build a website for the package, you may have a pkgdown folder containing the favicon and any additional css and a docs folder containing the website source files.</p></li>
+<li><p><strong>DESCRIPTION</strong>: file containing metadata about the package (authors, current version, dependencies).</p></li>
+<li><p><strong>LICENSE</strong>: file describing the package usage agreement.</p></li>
+<li><p><strong>NAMESPACE</strong>: file generated by <a href="https://roxygen2.r-lib.org/">{roxygen2}</a> listing functions imported from other packages.</p></li>
+<li><p><strong>NEWS.md</strong>: file documenting user-facing changes to a package.</p></li>
+</ul>
+<p>Learn more about other R package components in <a href="https://r-pkgs.org/"><em>R Packages (2e)</em></a><span class="citation" data-cites="wickham2023a">(<a href="references.html#ref-wickham2023a" role="doc-biblioref">Wickham and Bryan 2023</a>)</span>.</p>
+</section>
+<section id="absolute-vs-relative-paths" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-vs-relative-paths">Absolute vs relative paths</h3>
+<p>Note: directories are synonymous with folders.</p>
+<p>❌Absolute paths start with the root directory and provide the full path to a specific file or folder like <code>C:\\Users\\jryan\\Documents\\R\\projects\\project-demo\\data\\processed</code>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You can run <code>getwd()</code> to find out where the current working directory is and <code>setwd()</code> to set a specific folder as your working directory. However, <strong>please don’t do use <code>setwd()</code></strong> because this absolute file path is going to break your code if you reorganize your folders and is not going to work on any collaborators’ computers as their directory configuration will be different.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e684ee45-98fc-469e-997c-e2d68b0096cd_rw_1920.png?h=d754f634e6fc1e292430124fbe44dad7" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing "setwd", looks on at a metal riveted cube labeled "R Proj" holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled "here" doing a trick on a skateboard. Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.</figcaption>
+</figure>
+</div>
+<p>✅Instead, always use relative paths in your scripts. Relative paths are <em>relative</em> to the working directory (i.e.&nbsp;the project’s home) like <code>data/processed/data-clean.csv</code>. When working in a RStudio project, the default working directory is always the <strong>root</strong> project directory (where the <code>.Rproj</code> file is).</p>
+<p>For example, say <code>01-import.R</code> contains the code <code>read.csv("data/processed/data-clean.csv")</code>. This will read the file from <code>C:\\Users\\jryan\\Documents\\R\\projects\\project-demo\\data\\processed\\data-clean.csv"</code>. The magic of relative paths means that if Dani were have this project on her desktop and run this code, it would read the file from <code>C:\\Users\\dgelardi\\Desktop\\project-demo\\data\\processed\\data-clean.csv"</code>. This is why relative paths are so important – they work no matter where the project folder is!</p>
+</section>
+<section id="here-package" class="level3">
+<h3 class="anchored" data-anchor-id="here-package">{here} package</h3>
+<p>In combination with R projects, use the {here} package to build relative file paths. This is especially important in Quarto files because when the <code>.qmd</code> file renders, its default current working directory is wherever the <code>.qmd</code> file lives. If we are using the above example project structure and wanted to read in our clean data to our <code>soil-health-report.qmd</code> file, we would get an error running <code>read.csv("data/processed/data-clean.csv")</code> because it would be looking for a data subfolder in the reports folder. Instead, we can use the {here} package to build a relative path from our root with <code>read.csv(here::here("data", "processed", "data-clean.csv"))</code>. {here} takes care of the backslashes or forward slashes so the relative path will work no matter the operating system.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/57457fc3-1d2d-4a3b-a9b7-f0b62e418cd5_rw_1920.png?h=e0721f766fc8f031edeb67f7f8024595" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">A cartoon showing two paths side-by-side. On the left is a scary spooky forest, with spiderwebs and gnarled trees, with file paths written on the branches like "~/mmm/nope.csv" and "setwd("/haha/good/luck/"), with a scared looking cute fuzzy monster running out of it. On the right is a bright, colorful path with flowers, rainbow and sunshine, with signs saying "here!" and "it's all right here!" A monster facing away from us in a backpack and walking stick is looking toward the right path. Stylized text reads "here: find your path." Learn more about <a href="https://here.r-lib.org/">here</a>. Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="naming-conventions" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="naming-conventions"><span class="header-section-number">10.2</span> Naming conventions</h2>
+<blockquote class="blockquote">
+<p>"There are only two hard things in Computer Science: cache invalidation and naming things."</p>
+<p>— Phil Karlton</p>
+</blockquote>
+<p>Based on this quote, Indrajeet Patil developed <a href="https://indrajeetpatil.github.io/second-hardest-cs-thing/">slides</a> with a lot of detailed advice on naming things in computer science (completely language-agnostic).</p>
+<p>R code specific naming conventions are listed below. They mostly follow the best practices from <a href="naming.html#sec-naming-best-practices"><span>Section&nbsp;4.2</span></a> in the naming conventions chapter still apply, with one exception as seen in <a href="#sec-variables-in-a-dataset"><span>Section&nbsp;10.2.3.1</span></a>.</p>
+<p>TODO: add Python naming conventions (they differ from R as static variables aka constants are supposed to be SCREAMING_SNAKE_CASE).</p>
+<section id="project-folder-and-github-repository" class="level3">
+<h3 class="anchored" data-anchor-id="project-folder-and-github-repository">Project folder and GitHub repository</h3>
+<p>The project folder and GitHub repository name should be the same. Be concise and descriptive. Use kebab-case.</p>
+<p><strong>Example</strong>: <code>washi-dmp</code>, <code>soils</code>.</p>
+</section>
+<section id="files" class="level3">
+<h3 class="anchored" data-anchor-id="files">Files</h3>
+<p>Be concise and descriptive. Avoid using special characters. Use kebab-case with underscores to separate different metadata groups (date_good-name).</p>
+<p><strong>Examples</strong>: <code>2024_producer-report.qmd</code>, <code>tables.R</code>, <code>create-soils.R</code>.</p>
+<p>If files should be run in a particular order, prefix them with numbers. Left pad with zero if there may be more than 10 files.</p>
+<p><strong>Example</strong>:</p>
+<pre><code>01_import.R
+02_tidy.R
+03_transform.R
+04_visualize.R</code></pre>
+</section>
+<section id="variables-objects-and-functions" class="level3">
+<h3 class="anchored" data-anchor-id="variables-objects-and-functions">Variables, objects, and functions</h3>
+<p>Let’s first define these terms so we’re on the same page. In this style guide, <strong>variables</strong> are essentially column names, <strong>objects</strong> are all data structures in R (vectors, lists, data frames), and <strong>functions</strong> are self-contained modules of code that accomplish a specific task.</p>
+<section id="sec-variables-in-a-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="sec-variables-in-a-dataset">Variables in a dataset</h4>
+<p>This is where we differ from the <a href="https://style.tidyverse.org/"><em>tidyverse style guide</em></a>. Hadley recommends using only lowercase letters, numbers, and <code>_</code> for all variables (column names and R objects). However, we are defining variables as only column names and objects as only data structures in R. For column names, we use lowerCamelCase for most variables, except for measurement names, we use <code>_</code> to separate the measurement name from the unit and <code>.</code> as a substitute for <code>/</code> (fraction bar).</p>
+<p><strong>Example of general variable</strong>: <code>sampleId</code></p>
+<p><strong>Example of soil health indicator variable</strong>: <code>96-hr-min-c_mg-c-per-kg-per-day</code> = 96 hour mineralizable carbon (mg C/kg/day).</p>
+</section>
+<section id="sec-objects-functions" class="level4">
+<h4 class="anchored" data-anchor-id="sec-objects-functions">Objects and functions</h4>
+<p>Objects names should be nouns and function names should be verbs <span class="citation" data-cites="wickham2022">(<a href="references.html#ref-wickham2022" role="doc-biblioref">Wickham 2022</a>)</span>. Again, use lowercase letters, numbers, and underscores. Do not put a number as the first character of the name. Do not use hyphens. Do not use names of common functions or variables.</p>
+<p><strong>Object examples</strong>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>primary_color</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data_2023</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Less human readable, inconsistent with style guide</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>primarycolor</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Using a hyphen in an object name causes error</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>data<span class="dv">-2023</span> <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"2023_data-clean.csv"</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> data <span class="sc">-</span> <span class="dv">2023</span> <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"2023_data-clean.csv"</span>) <span class="sc">:</span> could not find <span class="cf">function</span> <span class="st">"-&lt;-"</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Starting an object name with a number also causes error</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>2023_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"2023_data-clean.csv"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>Error<span class="sc">:</span> unexpected input <span class="cf">in</span> <span class="st">"2023_"</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Overwrites R shortcut for TRUE</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>T <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Overwrites R function</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Function examples</strong>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_row</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">assign_quality_codes</span>()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Uses noun instead of verb</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">row_adder</span>() </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Inconsistent with style guide</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">assignQualityCodes</span>()</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Overwrites common base R function</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="r-scripts" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="r-scripts"><span class="header-section-number">10.3</span> R Scripts</h2>
+<section id="header-template" class="level3">
+<h3 class="anchored" data-anchor-id="header-template">Header template</h3>
+<p>Including a header in every R script helps standardize the metadata elements provided at the beginning of your code and documents its purpose. Dr.&nbsp;Timothy S Farewell wrote a great <a href="https://timfarewell.co.uk/my-r-script-header-template/">blog post</a> for creating a template for the header of every R script. The following template and instructions are adapted from his post <span class="citation" data-cites="farewell2018">(<a href="references.html#ref-farewell2018" role="doc-biblioref">Farewell 2018</a>)</span>.</p>
+<ol type="1">
+<li><strong>Script name</strong>: meaningful and concise.</li>
+<li><strong>Purpose</strong>: brief description of what the script aims to accomplish.</li>
+<li><strong>Author(s) and email</strong>: it’s good to know where the script originated from if there are any questions, comments, or improvements.</li>
+<li><strong>Date created</strong>: this is automatically filled in from the template.</li>
+<li><strong>Notes</strong>: free-text space for any thoughts or todos.</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## ---------------------------</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Script name: check-crops.R</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Purpose: Cross reference sample requests, Field Maps forms, and management </span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">## surveys to get the correct crop planted at the time of sampling.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Author: Jadey Ryan </span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Email: jryan@agr.wa.gov</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Date created: 2024-01-02</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Notes:</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">##   </span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">## ---------------------------</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Attach packages ==============================================================</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(writexl)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data ====================================================================</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add this template to RStudio using <a href="https://docs.posit.co/ide/user/ide/guide/productivity/snippets.html"><code>snippets</code></a>:</p>
+<ol type="1">
+<li>Modify the below code with your name and preferred packages.</li>
+<li>In RStudio, go to <code>Tools</code> &gt; <code>Edit Code Snippets</code>.</li>
+<li>Scroll to the bottom of the R code snippets, and paste your modified code (the indent and tabs are important!).</li>
+<li>Click <code>Save</code> and close the window.</li>
+<li>Try it out by opening a new blank <code>.R</code> script, typing header, and then <code>Shift</code> + <code>Tab</code>.</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>snippet header</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Header ======================================================================</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="do">##</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Script name: </span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="do">##</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Purpose: </span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="do">##</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Author: Jadey Ryan </span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="do">##</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Email: jryan@agr.wa.gov</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="do">##</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Date created: `r paste(Sys.Date())`</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="do">##</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Notes:</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="do">##   </span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Attach packages ==============================================================</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(readxl)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(writexl)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(janitor)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(dplyr)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(tidyr)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Load data ====================================================================</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-template" class="level3">
+<h3 class="anchored" data-anchor-id="section-template">Section template</h3>
+<p>The above header template also uses section breaks (commented lines with <code>=</code> that break up the script into easily readable chunks). Section breaks are fantastic tools in RStudio because they allow you to easily show or hide blocks of code, see an outline of your script, and navigate through the source file. Read more about code folding and sections in this <a href="https://support.posit.co/hc/en-us/articles/200484568-Code-Folding-and-Sections-in-the-RStudio-IDE">Posit article</a>.</p>
+<p>The snippet to create this section template that fills in the rest of the line with <code>=</code> was adapted from this <a href="https://stackoverflow.com/questions/32633920/dynamic-rstudio-code-snippet">stack overflow answer</a>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>snippet end</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">r strrep("=", 84 - rstudioapi::primary_selection(rstudioapi::getActiveDocumentContext())$range$start[2])</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To create a new section with the heading “Tidy data”, type in your script:</p>
+<p><code># Tidy data end&lt;Shift+Tab&gt;</code> which will result in:</p>
+<pre><code># Tidy data ====================================================================</code></pre>
+<p><img src="images/sections.png" class="img-fluid" alt="Screenshot of RStudio with boxes highlighting section functionality including collapsed code blocks, Jump To menu, and the document outline."></p>
+</section>
+</section>
+<section id="code-styling" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="code-styling"><span class="header-section-number">10.4</span> Code styling</h2>
+<p>Review the Syntax chapter of the <a href="https://style.tidyverse.org/syntax.html"><em>tidyverse style guide</em></a> for a lengthy section that covers spacing, function calls, long lines, semicolons, assignments, comments, etc. Also skim through <a href="https://r4ds.hadley.nz/workflow-style.html">Chapter 4 Workflow: code style chapter of <em>R4DS</em></a>, which highlights the opinionated “most important parts of the tidyverse style guide”. Instead of rewriting all of these details and conventions into this style guide and making us all memorize the content, we should all just use the <a href="https://styler.r-lib.org/">{styler}</a> (as advised in R4DS Chapter 4).</p>
+<p>{styler} is a package and RStudio Addin that will format your code for you, so we can keep our coding style consistent across projects and better facilitate collaboration. We’ll deviate slightly from the tidyverse style and instead use <a href="https://github.com/gadenbuie/grkstyle">{grkstyle}</a>. {grkstyle} is an extension package for {styler} that Garrick Aden-Buie developed based on the tidyverse style guide. I prefer {grkstyle} over the tidyverse style that {styler} defaults to mainly because of how it handles line breaks in function calls.</p>
+<p>The below example and installation instructions are pretty much copied directly from Garrick’s {grkstyle} README.</p>
+<section id="examples" class="level4">
+<h4 class="anchored" data-anchor-id="examples">Examples</h4>
+<section id="grkstyle" class="level5">
+<h5 class="anchored" data-anchor-id="grkstyle">grkstyle</h5>
+<pre><code>do_something_very_complicated(
+    something = "that",
+    requires = many,
+    arguments = "some of which may be long"
+) </code></pre>
+</section>
+<section id="stylertidyverse_style" class="level5">
+<h5 class="anchored" data-anchor-id="stylertidyverse_style">styler::tidyverse_style</h5>
+<pre><code>do_something_very_complicated(
+  something = "that", requires = many,
+  arguments = "some of which may be long"
+) </code></pre>
+</section>
+</section>
+<section id="installation" class="level4">
+<h4 class="anchored" data-anchor-id="installation">Installation</h4>
+<p>Install {styler} and {grkstyle} with:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">gadenbuie =</span> <span class="st">"https://gadenbuie.r-universe.dev"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">getOption</span>(<span class="st">"repos"</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and install grkstyle in R</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"grkstyle"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Set <code>grkstyle</code> as the default in {styler} functions and addins by running</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set default code style for {styler} functions</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>grkstyle<span class="sc">::</span><span class="fu">use_grk_style</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or adding the following to your <code>~/.Rprofile</code></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">styler.addins_style_transformer =</span> <span class="st">"grkstyle::grk_style_transformer()"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To edit your <code>.Rprofile</code>, you can use <code>usethis::edit_r_profile()</code> to open the file in your RStudio.</p>
+</section>
+<section id="usage" class="level4">
+<h4 class="anchored" data-anchor-id="usage">Usage</h4>
+<p>Once {styler} and {grkstyle} are installed, you can apply the style to your <code>.R</code>, <code>.qmd</code>, and <code>.Rmd</code> files using the command palette, keyboard shortcut, or addins menu.</p>
+<section id="command-palette" class="level5">
+<h5 class="anchored" data-anchor-id="command-palette">Command palette</h5>
+<p>Use RStudio’s <strong>command palette</strong> to quickly and easily access any RStudio command and see keyboard shortcuts. Open the command palette with <code>Cmd/Ctrl + Shift + P</code>, then type “styler” to see the shortcuts offered by {styler}.</p>
+</section>
+<section id="keyboard-shortcuts" class="level5">
+<h5 class="anchored" data-anchor-id="keyboard-shortcuts">Keyboard shortcuts</h5>
+<p>I often use <code>Cmd/Ctrl + Shift + A</code> to style the entire active file every time I finish a code block or section. To style just a selection, use <code>Cmd/Ctrl + Alt + Shift + A</code>.</p>
+</section>
+<section id="addins-menu" class="level5">
+<h5 class="anchored" data-anchor-id="addins-menu">Addins menu</h5>
+<p>You can also use the Addins menu in RStudio to style your files by clicking on a button to run the command.</p>
+<p><img src="images/styler.png" class="img-fluid" alt="Screenshot of RStudio with the Addins menu open and boxes highlighting the styler functions."></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-farewell2018" class="csl-entry" role="listitem">
+Farewell, Dr Timothy S. 2018. <span>“My Easy r Script Header Template <span></span> Tim Farewell.”</span> <a href="https://timfarewell.co.uk/my-r-script-header-template/">https://timfarewell.co.uk/my-r-script-header-template/</a>.
+</div>
+<div id="ref-lewis2023" class="csl-entry" role="listitem">
+Lewis, Crystal. 2023. <em>Data Management in Large-Scale Education Research [in Preparation]</em>. <a href="https://datamgmtinedresearch.com/">https://datamgmtinedresearch.com/</a>.
+</div>
+<div id="ref-wickham2022" class="csl-entry" role="listitem">
+Wickham, Hadley. 2022. <em>The Tidyverse Style Guide</em>. <a href="https://style.tidyverse.org/index.html">https://style.tidyverse.org/index.html</a>.
+</div>
+<div id="ref-wickham2023a" class="csl-entry" role="listitem">
+Wickham, Hadley, and Jennifer Bryan. 2023. <em>R Packages (2e)</em>. 2nd ed. <a href="https://r-pkgs.org/">https://r-pkgs.org/</a>.
+</div>
+<div id="ref-wickham2023" class="csl-entry" role="listitem">
+Wickham, Hadley, Mine Çetinkaya-Rundel, and Grolemund Garrett. 2023. <em>R for Data Science (2e)</em>. 2nd ed. <a href="https://r4ds.hadley.nz/">https://r4ds.hadley.nz/</a>.
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Note the two backslashes. Windows paths use backslashes, which mean something specific in R. to get a single backslash in the path, we need to type two backslashes (or use forward slashes).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
