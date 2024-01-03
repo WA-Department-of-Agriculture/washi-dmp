@@ -30,9 +30,9 @@ The WSDA Data Scientist, supported by the project Principal Investigators (PIs),
 
 | Role           | Affiliation     | Name                  |
 |----------------|-----------------|-----------------------|
+| CoPI           | WSDA            | Dani Gelardi          |
+| CoPI           | WSU             | Deirdre Griffin LaHue |
 | Data Scientist | WSDA            | Jadey Ryan            |
-| Co-PI          | WSDA            | Dani Gelardi          |
-| Co-PI          | WSU             | Deirdre Griffin LaHue |
 | Data Stewards  | WaSHI personnel |                       |
 
 : Current roles as of November 2023

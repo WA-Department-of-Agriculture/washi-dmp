@@ -1,8 +1,8 @@
-## Organization
+# Organization
 
 We organize our folders into a hierarchical structure to clearly delineate segments of our projects, improve searchability, and ensure reproducibility across years.
 
-### Folder Structure
+## Folder Structure
 
 We strive for a balance between a deep and shallow structure. If too shallow, there are too many files in one folder and they are hard to sort through. If too deep, we have to click too many times to get to a file and specific files can be difficult to find.
 
@@ -66,7 +66,7 @@ Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling\LabData
 
 `Soil_Health_Initative` \> `StateOfTheSoils` \> `2023_Sampling` \> `LabData` \> `Clean` already has five levels of nesting. We wouldn't want to add any many more levels or the hierarchy becomes difficult to manage.
 
-### Archive folders
+## Archive folders
 
 When too many drafts or versions begin to clutter a sub-folder, create a new folder with the naming convention of `Archive_FolderDescription`. Place the old drafts there. Leave the most current, accurate file in the main folder.
 
@@ -86,3 +86,7 @@ Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling\Labels\CompletedLab
 ├── ...
 └── WallaWallaCD_Labels.docx
 ```
+
+## Code-based project organization
+
+Code-based projects should be organized according to @sec-project-folder-structure in the code style guide.
