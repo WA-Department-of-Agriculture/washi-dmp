@@ -45,7 +45,7 @@ statues (e.g. HIPAA) or regulations (e.g. rules on employee files).
 
 **SoSA**: We don't manage any data falling under this category.
 
-#### Category 3: "Confidential information"
+#### Category 3: "Confidential information" {#sec-category-3}
 
 **WaTech**: Data includes "personal information" as defined in RCW
 42.56.590 (security breaches) and RCW 19.255.010 (personal information

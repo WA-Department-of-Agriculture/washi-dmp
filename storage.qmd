@@ -69,7 +69,7 @@ separate descriptively titled `Clean` folder. Keeping a `readme.txt`
 to document your processing and analysis steps is good practice, as
 discussed in @sec-readme.
 
-## Version control with Git and GitHub
+## Version control with Git and GitHub {#sec-version-control}
 
 A version control system records changes to a file or set of files
 over time. [Git](https://git-scm.com/) is a free and open-source
@@ -104,6 +104,10 @@ green and deletions highlighted in red.
 
 ![](images/github-diff.png){fig-alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red."
 fig-align="left"}
+
+### Privacy considerations
+
+Review @sec-sharing to categorize the data included in the repository. If the data are not anonymized and aggregated, either 1) the repository must be [set to private](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) or 2) data files and any scripts containing Category 3 data as described in @sec-category-3 must be added to the [.gitignore](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files) file. 
 
 ### Git and GitHub resources
 

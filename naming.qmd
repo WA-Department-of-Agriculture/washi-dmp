@@ -28,13 +28,15 @@ These are guidelines and naming things is hard, so try your best. If you're not 
 
 See @sec-naming-examples for a table of examples of folder and file names using these best practices.
 
-### Lowercase only
+### Meaningful name casing
 
 Different conventions work better for different purposes (folders and file versus programming objects). 
 
-  -   **kebab-case**: all lowercase with hyphens separating words. Use for all folder and file names.
+  -   **kebab-case**: all lowercase with hyphens separating words. Use for all **folders and files**.
   
-  -   **snake_case**: all lowercase with underscores separating words. Only use for functions and variables in R. See [@sec-objects-functions] for example R errors when including hyphens in object names.
+  -   **snake_case**: all lowercase with underscores separating words. Only use for **code**, such as functions and variables in R. See [@sec-objects-functions] for example R errors when including hyphens in object names.
+  
+  -   **UpperCamelCase**: first letter of each word is capitalized. Only use for **variables** in spreadsheets and tables. If we used snake_case, the soil health indicators with units would be way too long. Using an `_` to separate the measurement from the unit allows us to more easily transform our data with code. `96HrMinC_MgCKgDay` instead of `96_hr_min_c_mg_kg_day`. See @sec-vars-code and @sec-variables-in-a-dataset for more details.
 
 ![Cartoon representations of common cases in coding. A snake screams "SCREAMING_SNAKE_CASE" into the face of a camel (wearing ear muffs) with "camelCase" written along its back. Vegetables on a skewer spell out "kebab-case" (words on a skewer). A mellow, happy looking snake has text "snake_case" along it. Artwork by
 [\@allison_horst](https://twitter.com/allison_horst).](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172)
@@ -115,9 +117,17 @@ If not using the date to version, or to keep multiple drafts from the same date,
 
 Add your initials at the end of the file name when "saving as" a file that multiple people are working on (i.e., `2023-11-14_sop-soil-health-monitoring_lm_jr.docx`). This ensures a version is kept as a backup. Alternatively, use [Track Changes](https://support.microsoft.com/en-au/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a) if working in a MS Word document.
 
-### Code and variables
+### Variables and code  {#sec-vars-code}
 
-Instead of kebab-case, we use snake_case for all code objects (R vectors, lists, dataframes, functions, etc.) and variables (column names). Hyphens in object names can cause errors in R and SQL code. 
+Naming conventions for variables and code differ from folders and files. The hyphens in kebab-case cause errors in R and SQL code. Additionally, hyphens, spaces, and other special characters are [invalid for ArcGIS table and field names](https://support.esri.com/en-us/knowledge-base/faq-what-characters-should-not-be-used-in-arcgis-for-fi-000005588).
+
+-   Use **UpperCamelCase** for **variables** (column names of spreadsheets and tables). 
+
+-   Use **snake_case** for naming **code objects**, including R data structures (vectors, lists, dataframes) and functions.
+
+In variable names, we include the measurement with the unit for clarity and self-documentation when sharing our data. This prevents unit confusion and reduces the risk of misinterpreting or inappropriately using the data. UpperCamelCase with an underscore to separate the measurement from the unit helps with readability and consistency.
+
+Do not use special characters. Instead of `TOC_%`, use `TOC_Percent`.
 
 See @sec-code-style-guide for more details in the code style guide.
 
@@ -144,11 +154,13 @@ See @sec-code-style-guide for more details in the code style guide.
 |                           |                   |                                     |
 |                           |                   | 2024_producer-report.qmd            |
 +---------------------------+-------------------+-------------------------------------+
-| **Code and variables**    | snake-case        | sample_id                           |
+| **Variables**             | UpperCamelCase    | SampleId                            |
 |                           |                   |                                     |
-|                           |                   | toc_percent                         |
+| (column names)            |                   | TOC_Percent                         |
 |                           |                   |                                     |
-|                           |                   | pmn_mg_per_kg                       |
+|                           |                   | PMN_MgKg                            |
++---------------------------+-------------------+-------------------------------------+
+| **Code**                  | snake_case        | primary_color                       |
 |                           |                   |                                     |
 |                           |                   | crop_summary                        |
 |                           |                   |                                     |

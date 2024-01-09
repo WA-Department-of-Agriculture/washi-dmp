@@ -1,4 +1,4 @@
-# Organization
+# Organization {#sec-organization}
 
 We organize our folders into a hierarchical structure to clearly delineate segments of our projects, improve searchability, and ensure reproducibility across years.
 
