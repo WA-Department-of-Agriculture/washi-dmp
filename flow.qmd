@@ -1,21 +1,296 @@
-# Data flows
+# Data flow
 
-assign unique identifiers
+Data flow refers to how information moves through a system and how it's
+processed along the way. This chapter outlines how our data are generated,
+processed, and moved from start to finish.
 
-labels
+This chapter is subject to lots of changes as 2024 is the final year of our soil
+sampling program through funding conservation district (CD). However, since the
+CDs are now trained according to the WSDA SOP, we will accept their data
+provided they also submit management surveys. More details on this process are
+TBD. Additionally, we do not yet have a database so the importing to the
+database section will be completed in the future.
 
-tracking sheet
+2020 - 2023 data and scripts are housed in the `soils-internal` [monolithic
+repository](https://github.com/WA-Department-of-Agriculture/soils-internal).
+Moving forward, each year (or special project) should have its own project and
+repository.
 
-arcgis (map, domains, field forms, surveys, script to back up)
+## Pre field season
 
-cross-reference different sources of crop data (field form, survey, initial form)
+### Assign unique identifiers
 
-lab data comes back - qa and cleaning
+Before sample IDs can be assigned, collect the following information for each
+proposed sample:
 
-generate reports (save to box.com)
+-   County
+-   Organization of sampling team
+-   Farm name (optional)
+-   Producer name
+-   Producer contact information (optional)
+-   Field name
+-   Crop
+-   General management practice (i.e., conventional, cover crop, reduced
+    tillage)
 
-import to database
+View examples of the 2023 [Sample Request
+Form](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/SampleIDAssignments/SampleRequestForm.xlsx)
+sent to CDs and the [Berries Sample Request
+Form](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/SampleIDAssignments/Berries/SampleRequestForm_Berries)
+for the WSDA/WSU special project.
 
-save to year folder and _completeDataset, and WSU Teams channel
+Once producers and fields have been identified, we assign a unique ID for the
+producer, field, and sample.
 
-archive jars and tubes, update archive spreadsheets
+-   Producer ID: first three letters of county + three-digit landowner number
+    -   `WHA001`
+-   Field ID: two-digit field number
+    -   `01` and `02`
+-   Pair ID (optional): letter extension added to paired fields
+    -   `A`
+-   Sample ID: last two digits of year + Producer ID + Field ID + Pair ID
+    -   `24-WHA001-01-A` and `24-WHA001-02-A`
+
+The following counties have different abbreviations than the first three
+letters:
+
+-   Clallam → CLL
+-   Grays Harbor → GRY
+-   Kitsap → KIS
+-   Skamania → SKM
+
+Producer and field IDs should first be matched to previous participants. New
+producers and fields should continue the previous sequence. There should be no
+duplicate producer IDs or sample IDs.
+
+For an example R script to automate this process, see
+[assign_sample_ids.R](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/SampleIDAssignments/assign_sample_ids.R).
+
+### Create sample labels
+
+We automate sample label creation using R and Microsoft Word's [mail merge
+tool](https://support.microsoft.com/en-us/topic/how-to-use-the-mail-merge-feature-in-word-to-create-and-to-print-form-letters-that-use-the-data-from-an-excel-worksheet-d8709e29-c106-2348-7e38-13eecc338679).
+[labels.R](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/Labels/labels.R)
+generates a
+[spreadsheet](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/Labels/Combined_Labels.xlsx)
+with all column names to be printed on the labels. Then
+[LabelsTemplate_MailMerge.docx](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/Labels/LabelsTemplate_MailMerge.docx)
+ingests this spreadsheet and the data scientist runs the mail merge to generate
+a [word
+document](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/Labels/AllLabelsCombined.docx)
+with all of the labels to be printed, as shown in the [CompletedLabels
+folder](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/Labels/CompletedLabels).
+
+### Create a data tracking sheet
+
+We keep a spreadsheet to track which pieces of data we have for each sample ID,
+including:
+
+-   GPS points submitted through the ArcGIS Field Maps field form
+-   Scanned paper field forms are received (for those who can't use ArcGIS Field
+    Maps)
+-   Management surveys through ArcGIS Survey123
+-   Scanned chain of custodies with shipping tracking numbers
+-   Location of archival falcon tubes
+-   Notes for if a sample will no longer be sampled, a sample ID was changed,
+    etc.
+
+See the [2023
+spreadsheet](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/2023_DataTracking.xlsx)
+for an example.
+
+### Develop ArcGIS web tools
+
+We use ArcGIS to build tools for managing spatial data and collecting management
+survey data. A sample selection feature layer is hosted and a web map with
+offline capabilities is created using ArcGIS Pro. Domains are used for point
+numbers, bulk density, and crop types. Then, a field form is created on ArcGIS
+Online using Field Maps. Management surveys are created and hosted with
+Survey123 and Experience Builder. We also use an ArcGIS Notebook with python to
+back up our feature layer and survey data.
+
+This [template ArcGIS Pro
+project](K:/NRAS/Arc_Data/Soil_Health/WaSHI_GIS_Projects/Template_SoilSamplePoints)
+includes a
+[README.txt](K:/NRAS/Arc_Data/Soil_Health/WaSHI_GIS_Projects/Template_SoilSamplePoints/README.txt)
+that describes this process.
+
+The ArcGIS Notebook is set to run as a task Monday, Wednesday, and Friday during
+the field season.
+
+<details>
+
+<summary>View code from the ArcGIS Notebook</summary>
+
+``` python
+import arcgis
+from arcgis.gis import GIS
+import datetime as dt
+from datetime import timezone, timedelta
+gis = GIS("home")
+
+folder_path = '/arcgis/home/backups/2023/points'
+title = "2023*"
+owner = "jryan_NRAS"
+items = gis.content.search(query = "title:" + title + " AND owner:" + owner,
+                          item_type='Feature Layer')
+print(str(len(items)) + " items will be backed up to " + folder_path +". See the list below:")
+items
+
+def download_as_fgdb(item_list, backup_location):
+    for item in item_list:
+        try:
+            if 'View Service' in item.typeKeywords:
+                print(item.title + " is view, not downloading")
+            else: 
+                print("Downloading " + item.title)
+                version = dt.datetime.now(timezone(timedelta(hours=-8))).strftime("%Y-%m-%d")
+                result = item.export(item.title + "_" + version, "File Geodatabase")
+                result.download(backup_location)
+                result.delete()
+                print("Successfully downloaded " + item.title)
+        except:
+            print("An error occurred downloading " + item.title)
+    print("The function has completed")
+
+download_as_fgdb(items, folder_path)
+
+folder_path = '/arcgis/home/backups/2023/surveys'
+title = "2023 * Survey* Production"
+owner = "dgelardi_NRAS"
+items = gis.content.search(query = "title:" + title + " AND owner:" + owner,
+                          item_type='Feature Layer')
+print(str(len(items)) + " items will be backed up to " + folder_path +". See the list below:")
+items
+
+def download_as_fgdb(item_list, backup_location):
+    for item in item_list:
+        try:
+            if 'View Service' in item.typeKeywords:
+                print(item.title + " is view, not downloading")
+            else: 
+                print("Downloading " + item.title)
+                version = dt.datetime.now(timezone(timedelta(hours=-8))).strftime("%Y-%m-%d")
+                result = item.export(item.title + "_" + version, "CSV")
+                result.download(backup_location)
+                result.delete()
+                print("Successfully downloaded " + item.title)
+        except:
+            print("An error occurred downloading " + item.title)
+    print("The function has completed")
+
+download_as_fgdb(items, folder_path)
+```
+
+</details>
+
+## During field season
+
+Data collection in the field is detailed in the [monitoring
+SOP](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/SOPs/Sampling/). We'll focus
+on the behind-the scenes tasks for managing data.
+
+### Update data tracking spreadsheet
+
+Throughout the season, the data tracking spreadsheet must be updated as various
+data, as described in [Create a data tracking sheet] are received.
+
+### Modify IDs when samples change
+
+Sometimes a producer can no longer participate, or they want to change which
+field is sampled. The sample request form should be updated, versioned, and
+archived (`SampleRequestForm_Ferry.xlsx` → `SampleRequestForm_Ferry_V2.xlsx`).
+
+The `assign_sample_ids.R` script should be run again to update the sample IDs.
+Lines 362 - 386 should be commented out as shown in the [highlighted lines of
+the script on
+GitHub](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/assign_sample_ids.R#L362-L386).
+
+Take a look through the
+[01.ReturnedSampleRequests](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/SampleIDAssignments/01.ReturnedSampleRequests)
+and
+[02.CompletedSampleRequests](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/2023_Sampling/SampleIDAssignments/02.CompletedSampleRequests)
+folders for an example of this flow.
+
+A concise, explanatory note should be added to the data tracking spreadsheet.
+
+## Post field season
+
+### Organize multiple sources of data
+
+We have many sources of data such as the initial sample request forms, ArcGIS
+Field Maps field forms, and management surveys. To organize these multiple
+sources into a single source of truth, we cross-reference each source and reach
+out to the sampling teams to resolve conflicting information. This is especially
+important for verifying the crop that was planted at the time of sampling.
+
+See how to *mostly* automate this process in these
+[01_loadMetadata.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/01_loadMetadata.R)
+and
+[02_checkCrops.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/02_checkCrops.R)
+scripts.
+
+### Process lab data
+
+Follow the [QA/QC
+SOP](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/SOPs/QC/2022_WaSHI_QC_SOP.docx)
+for processing the lab data.
+
+See the 2023 processing scripts and QA/QC report:
+
+-   [03_processSpatialData.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/03_processSpatialData.R)
+
+-   [04_loadLabData.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/04_loadLabData.R)
+
+-   [05_calculateZScores.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/R/05_calculateZScores.R)
+
+-   [2020-2023_QCresultsSummary.qmd](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/inst/2020-2023_QCresultsSummary.qmd)
+
+### Generate reports
+
+Use the [{soils}](https://github.com/WA-Department-of-Agriculture/soils) package
+to create a new project for each year. To avoid attachment size limitations of
+emails, reports are saved to
+[Box.com](https://agriculture.app.box.com/folder/136923153810?s=l3q9zq2p4yv38891d3q3753ybs6t0lec)
+for distribution to the sampling partners who will send the reports to the
+participants.
+
+### Import data to database
+
+TBD. Currently data are only in spreadsheets.
+
+### Save data to shared drive and WSU Teams channel
+
+The output data files and reports from [Process lab data] and [Generate reports]
+are copied to the
+[StateOfTheSoils](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils) folder in the
+relevant folders. Review [@sec-organization] and look at previous years in the
+shared drive to follow the same folder structure and organization.
+
+The final datasets in wide and long formats should also be saved to the WSU SCBG
+Soil Health Assessment Teams channel. If you don't have access to the
+[\_complete_SoSA_Dataset
+folder](https://emailwsu.sharepoint.com/:f:/r/teams/cahnrs.scbgsoilhealthassessment/Shared%20Documents/General/Data/Data%20for%20stats/_complete_SoSA_Dataset?csf=1&web=1&e=Xo490w),
+email it to Deirdre Griffin-LaHue.
+
+### Archive jars and falcon tubes
+
+::: columns
+::: {.column width="50%"}
+Subsamples in glass jars are stored in the Yakima WSDA storage room and the
+cryogenic archive subsamples in falcon tubes are stored in the -80 °C freezer at
+the [WSU Mount Vernon Northwestern Washington Research & Extension
+Center](https://mtvernon.wsu.edu/).
+
+Labels on the falcon tubes must be taped with a generous amount of packing tape
+to avoid falling off as they stiffen up and flatten out when they freeze.
+
+The [archive
+spreadsheet](Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/ArchivedSampleInventory.xlsx)
+must be updated.
+:::
+
+::: {.column width="50%"}
+![](images/cryo-labels.jpg){width="800px" fig-alt="Falcon tubes from a -80 °C freezer with the labels starting to peel off." fig-align="right"}
+:::
+:::
