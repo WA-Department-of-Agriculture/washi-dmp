@@ -171,7 +171,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data flows</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data flow</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,8 +204,9 @@ div.csl-indent {
   <ul>
   <li><a href="#backup" id="toc-backup" class="nav-link active" data-scroll-target="#backup"><span class="header-section-number">6.1</span> Backup</a></li>
   <li><a href="#sec-raw-data" id="toc-sec-raw-data" class="nav-link" data-scroll-target="#sec-raw-data"><span class="header-section-number">6.2</span> Read-only raw data</a></li>
-  <li><a href="#version-control-with-git-and-github" id="toc-version-control-with-git-and-github" class="nav-link" data-scroll-target="#version-control-with-git-and-github"><span class="header-section-number">6.3</span> Version control with Git and GitHub</a>
+  <li><a href="#sec-version-control" id="toc-sec-version-control" class="nav-link" data-scroll-target="#sec-version-control"><span class="header-section-number">6.3</span> Version control with Git and GitHub</a>
   <ul class="collapse">
+  <li><a href="#privacy-considerations" id="toc-privacy-considerations" class="nav-link" data-scroll-target="#privacy-considerations">Privacy considerations</a></li>
   <li><a href="#git-and-github-resources" id="toc-git-and-github-resources" class="nav-link" data-scroll-target="#git-and-github-resources">Git and GitHub resources</a></li>
   </ul></li>
   <li><a href="#staff-turnover" id="toc-staff-turnover" class="nav-link" data-scroll-target="#staff-turnover"><span class="header-section-number">6.4</span> Staff turnover</a></li>
@@ -275,8 +276,8 @@ div.csl-indent {
 <p><img src="images/read-only.png" class="img-fluid" alt="Screenshot of the above directions to set files to Read-only on a Windows computer."></p>
 <p>The file should then be copied over to a <code>Working</code> folder for any processing or analyses. The final dataset should be saved in a separate descriptively titled <code>Clean</code> folder. Keeping a <code>readme.txt</code> to document your processing and analysis steps is good practice, as discussed in <a href="documentation.html#sec-readme"><span>Section&nbsp;7.2.1</span></a>.</p>
 </section>
-<section id="version-control-with-git-and-github" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="version-control-with-git-and-github"><span class="header-section-number">6.3</span> Version control with Git and GitHub</h2>
+<section id="sec-version-control" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-version-control"><span class="header-section-number">6.3</span> Version control with Git and GitHub</h2>
 <p>A version control system records changes to a file or set of files over time. <a href="https://git-scm.com/">Git</a> is a free and open-source distributed version control system and <a href="https://github.com">GitHub</a> is the hosting site WSDA and WaSHI use to interface with this system. Git and GitHub are an important foundation of reproducible statistical and data scientific workflows <span class="citation" data-cites="bryan2018">(<a href="references.html#ref-bryan2018" role="doc-biblioref">Bryan 2018</a>)</span>.</p>
 <p>A major benefit of using version control is ensuring changes are well documented and previous versions are accessible if any changes must be recalled. Additionally, version control makes collaboration across projects much more robust.</p>
 <p>Version control is not just for code either! It’s useful for scripts, documents, presentations, and books (like this DMP!). Instead of saving each version of a file with a different name (i.e., <code>Report_V01.docx</code> and <code>Report_V02.docx</code>; for a reminder on version naming, see <a href="naming.html#sec-version-numbers"><span>Section&nbsp;4.2.7</span></a>), there’s only one file <code>Report.docx</code> which automatically has its history and editors saved with Git and GitHub.</p>
@@ -288,6 +289,10 @@ div.csl-indent {
 <p><img src="images/github-diff.png" class="img-fluid figure-img" alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red."></p>
 </figure>
 </div>
+<section id="privacy-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="privacy-considerations">Privacy considerations</h3>
+<p>Review <a href="share.html"><span>Chapter&nbsp;9</span></a> to categorize the data included in the repository. If the data are not anonymized and aggregated, either 1) the repository must be <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility">set to private</a> or 2) data files and any scripts containing Category 3 data as described in <a href="share.html#sec-category-3"><span>Section&nbsp;9.1.0.2</span></a> must be added to the <a href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files">.gitignore</a> file.</p>
+</section>
 <section id="git-and-github-resources" class="level3">
 <h3 class="anchored" data-anchor-id="git-and-github-resources">Git and GitHub resources</h3>
 <p>Read Jenny Bryan’s article <a href="Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\Bryan_ExcuseMeDoYouHaveMomentTalkVersionControl.pdf"><em>Excuse Me, Do You Have a Moment to Talk About Version Control</em></a> for a great background on Git and GitHub, why we should be using it, and a brief how to get started. For detailed instructions , please follow along with Jenny Bryan’s free online book <a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a>. Another helpful book resource is <a href="https://birdscanada.github.io/BirdsCanada_GitHubGuide/"><em>GitHub: A Beginner’s Guide</em></a>, which was created by Birds Canada (avian conservation NGO) for people without a lot of programming background.</p>

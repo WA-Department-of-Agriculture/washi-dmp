@@ -152,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data flows</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data flow</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -186,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-are-conventions-important" id="toc-why-are-conventions-important" class="nav-link active" data-scroll-target="#why-are-conventions-important"><span class="header-section-number">4.1</span> Why are conventions important?</a></li>
   <li><a href="#sec-naming-best-practices" id="toc-sec-naming-best-practices" class="nav-link" data-scroll-target="#sec-naming-best-practices"><span class="header-section-number">4.2</span> Best practices</a>
   <ul class="collapse">
-  <li><a href="#lowercase-only" id="toc-lowercase-only" class="nav-link" data-scroll-target="#lowercase-only">Lowercase only</a></li>
+  <li><a href="#meaningful-name-casing" id="toc-meaningful-name-casing" class="nav-link" data-scroll-target="#meaningful-name-casing">Meaningful name casing</a></li>
   <li><a href="#delimiters-convey-meaning" id="toc-delimiters-convey-meaning" class="nav-link" data-scroll-target="#delimiters-convey-meaning">Delimiters convey meaning</a></li>
   <li><a href="#no-spaces-or-special-characters" id="toc-no-spaces-or-special-characters" class="nav-link" data-scroll-target="#no-spaces-or-special-characters">No spaces or special characters</a></li>
   <li><a href="#character-length-matters" id="toc-character-length-matters" class="nav-link" data-scroll-target="#character-length-matters">Character length matters</a></li>
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#group-sort-files-by-name" id="toc-group-sort-files-by-name" class="nav-link" data-scroll-target="#group-sort-files-by-name">Group &amp; sort files by name</a></li>
   <li><a href="#sec-version-numbers" id="toc-sec-version-numbers" class="nav-link" data-scroll-target="#sec-version-numbers">Version numbers</a></li>
   <li><a href="#collaboration" id="toc-collaboration" class="nav-link" data-scroll-target="#collaboration">Collaboration</a></li>
-  <li><a href="#code-and-variables" id="toc-code-and-variables" class="nav-link" data-scroll-target="#code-and-variables">Code and variables</a></li>
+  <li><a href="#sec-vars-code" id="toc-sec-vars-code" class="nav-link" data-scroll-target="#sec-vars-code">Variables and code</a></li>
   </ul></li>
   <li><a href="#sec-naming-examples" id="toc-sec-naming-examples" class="nav-link" data-scroll-target="#sec-naming-examples"><span class="header-section-number">4.3</span> Naming examples</a></li>
   </ul>
@@ -246,12 +246,13 @@ ul.task-list li input[type="checkbox"] {
 <p><em>Many files and folders in our shared drive do not follow the above best practices or below naming conventions. We are learning and improving as we go.</em> Going forward, please follow the conventions listed below.</p>
 <p>These are guidelines and naming things is hard, so try your best. If you’re not sure how to name a folder or file, talk with Jadey. If you’re adding a bunch of files that came from somewhere else, ask Jadey to help you organize and bulk rename them.</p>
 <p>See <a href="#sec-naming-examples"><span>Section&nbsp;4.3</span></a> for a table of examples of folder and file names using these best practices.</p>
-<section id="lowercase-only" class="level3">
-<h3 class="anchored" data-anchor-id="lowercase-only">Lowercase only</h3>
+<section id="meaningful-name-casing" class="level3">
+<h3 class="anchored" data-anchor-id="meaningful-name-casing">Meaningful name casing</h3>
 <p>Different conventions work better for different purposes (folders and file versus programming objects).</p>
 <ul>
-<li><p><strong>kebab-case</strong>: all lowercase with hyphens separating words. Use for all folder and file names.</p></li>
-<li><p><strong>snake_case</strong>: all lowercase with underscores separating words. Only use for functions and variables in R. See <a href="code-guide.html#sec-objects-functions"><span>Section&nbsp;10.2.3.2</span></a> for example R errors when including hyphens in object names.</p></li>
+<li><p><strong>kebab-case</strong>: all lowercase with hyphens separating words. Use for all <strong>folders and files</strong>.</p></li>
+<li><p><strong>snake_case</strong>: all lowercase with underscores separating words. Only use for <strong>code</strong>, such as functions and variables in R. See <a href="code-guide.html#sec-objects-functions"><span>Section&nbsp;10.2.3.2</span></a> for example R errors when including hyphens in object names.</p></li>
+<li><p><strong>UpperCamelCase</strong>: first letter of each word is capitalized. Only use for <strong>variables</strong> in spreadsheets and tables. If we used snake_case, the soil health indicators with units would be way too long. Using an <code>_</code> to separate the measurement from the unit allows us to more easily transform our data with code. <code>96HrMinC_MgCKgDay</code> instead of <code>96_hr_min_c_mg_kg_day</code>. See <a href="#sec-vars-code"><span>Section&nbsp;4.2.9</span></a> and <a href="code-guide.html#sec-variables-in-a-dataset"><span>Section&nbsp;10.2.3.1</span></a> for more details.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
@@ -398,9 +399,15 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="collaboration">Collaboration</h3>
 <p>Add your initials at the end of the file name when “saving as” a file that multiple people are working on (i.e., <code>2023-11-14_sop-soil-health-monitoring_lm_jr.docx</code>). This ensures a version is kept as a backup. Alternatively, use <a href="https://support.microsoft.com/en-au/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a">Track Changes</a> if working in a MS Word document.</p>
 </section>
-<section id="code-and-variables" class="level3">
-<h3 class="anchored" data-anchor-id="code-and-variables">Code and variables</h3>
-<p>Instead of kebab-case, we use snake_case for all code objects (R vectors, lists, dataframes, functions, etc.) and variables (column names). Hyphens in object names can cause errors in R and SQL code.</p>
+<section id="sec-vars-code" class="level3">
+<h3 class="anchored" data-anchor-id="sec-vars-code">Variables and code</h3>
+<p>Naming conventions for variables and code differ from folders and files. The hyphens in kebab-case cause errors in R and SQL code. Additionally, hyphens, spaces, and other special characters are <a href="https://support.esri.com/en-us/knowledge-base/faq-what-characters-should-not-be-used-in-arcgis-for-fi-000005588">invalid for ArcGIS table and field names</a>.</p>
+<ul>
+<li><p>Use <strong>UpperCamelCase</strong> for <strong>variables</strong> (column names of spreadsheets and tables).</p></li>
+<li><p>Use <strong>snake_case</strong> for naming <strong>code objects</strong>, including R data structures (vectors, lists, dataframes) and functions.</p></li>
+</ul>
+<p>In variable names, we include the measurement with the unit for clarity and self-documentation when sharing our data. This prevents unit confusion and reduces the risk of misinterpreting or inappropriately using the data. UpperCamelCase with an underscore to separate the measurement from the unit helps with readability and consistency.</p>
+<p>Do not use special characters. Instead of <code>TOC_%</code>, use <code>TOC_Percent</code>.</p>
 <p>See <a href="code-guide.html"><span>Chapter&nbsp;10</span></a> for more details in the code style guide.</p>
 </section>
 </section>
@@ -439,11 +446,17 @@ ul.task-list li input[type="checkbox"] {
 <p>2024_producer-report.qmd</p></td>
 </tr>
 <tr class="odd">
-<td><strong>Code and variables</strong></td>
-<td>snake-case</td>
-<td><p>sample_id</p>
-<p>toc_percent</p>
-<p>pmn_mg_per_kg</p>
+<td><p><strong>Variables</strong></p>
+<p>(column names)</p></td>
+<td>UpperCamelCase</td>
+<td><p>SampleId</p>
+<p>TOC_Percent</p>
+<p>PMN_MgKg</p></td>
+</tr>
+<tr class="even">
+<td><strong>Code</strong></td>
+<td>snake_case</td>
+<td><p>primary_color</p>
 <p>crop_summary</p>
 <p>assign_quality_codes()</p></td>
 </tr>
