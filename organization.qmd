@@ -2,89 +2,89 @@
 
 We organize our folders into a hierarchical structure to clearly delineate segments of our projects, improve searchability, and ensure reproducibility across years.
 
-## Folder Structure
+## Folder structure
 
 We strive for a balance between a deep and shallow structure. If too shallow, there are too many files in one folder and they are hard to sort through. If too deep, we have to click too many times to get to a file and specific files can be difficult to find.
 
-`Y:\NRAS\Soil_Health_Initiative` is the parent folder for all WaSHI content.
+`Y:\NRAS\soil-health-initiative` is the parent folder for all WaSHI content.
 
-Within the `StateOfTheSoils` sub-folder, we use a combination of **date-** (each year has its own sub-folder) and **categorical-** based (dataset and documentation that span across years) folder structures.
-
-```         
-Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils
-├── _completeDataset
-├── 2019_SCBG
-├── 2021_Sampling
-├── 2022_PartnershipsInSoilHealth
-├── 2023_Sampling
-├── 2024_Sampling
-├── DataManagement
-├── DataSharing
-├── DataSources
-├── Maps
-├── Projects
-├── QAPP
-├── SOPs
-├── TrainingVideos
-├── ArchivedSampleInventory.xlsx
-├── EquipmentInventory.xlsx
-└── SOSImpacts.xlsx
-```
-
-Within the each year sub-folder, we have sub-sub-folders for planning, forms, data, and processes. This structure helps maintain a reproducible workflow year after year. See the `2023_Sampling` for an example:
+Within the `state-of-the-soils` subfolder, we use a combination of **date-** (each year has its own subfolder) and **categorical-** based (dataset and documentation that span across years) folder structures.
 
 ```         
-Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling
-├── Applications
-├── CoCs
-├── Equipment
-├── FieldForms
-├── Forms
-├── GIS
-├── LabData
-├── Labels
-├── ManagementSurveys
-├── PublicDocs
-├── Purchases
-├── Reports
-├── SampleIDAssignments
-├── Scripts
-├── 2023_DataTracking.xlsx
-└── PostSeasonWrapUp_2023.docx
+Y:\NRAS\soil-health-initiative\state-of-the-soils\
+├── _complete-dataset
+├── 2019_scbg
+├── 2021_sampling
+├── 2022_partnerships-in-soil-health
+├── 2023_sampling
+├── 2024_sampling
+├── data-management
+├── data-sharing
+├── data-sources
+├── maps
+├── projects
+├── qapp
+├── sop
+├── training-videos
+├── equipment-inventory.xlsx
+├── archived-sample-inventory.xlsx
+└── sos-impacts.xlsx
 ```
 
-As mentioned in @sec-raw-data, it's good practice to maintain the raw data. We use additional sub-folders for the `LabData` folder. Everything in `Raw` has been set as `Read-Only`.
+Within the each year subfolder, we have sub-subfolders for planning, forms, data, and processes. This structure helps maintain a reproducible workflow year after year. See the `2023_sampling` folder tree for an example:
 
 ```         
-Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling\LabData
-├── 2023_DataTemplateSoiltest.xlsx
-├── Clean
-├── QC
-├── Raw
-└── Working
+Y:\NRAS\soil-health-initiative\state-of-the-soils\2023_sampling\
+├── applications
+├── coc
+├── equipment
+├── field-forms
+├── forms
+├── gis
+├── lab-data
+├── labels
+├── management-surveys
+├── public-docs
+├── purchases
+├── reports
+├── sample-id-assignments
+├── scripts
+├── 2023-data-tracking.xlsx
+└── 2023_post-season-wrap-up.docx
 ```
 
-`Soil_Health_Initative` \> `StateOfTheSoils` \> `2023_Sampling` \> `LabData` \> `Clean` already has five levels of nesting. We wouldn't want to add any many more levels or the hierarchy becomes difficult to manage.
+It's good practice to maintain the raw data, see how to set files to `Read-Only` in @sec-raw-data. We use additional subfolders for the `lab-data` folder. Everything in `raw` has been set as `Read-Only`.
+
+```         
+Y:\NRAS\soil-health-initiative\state-of-the-soils\2023_sampling\lab-data
+├── 2023_data-template-soiltest.xlsx
+├── clean
+├── qc
+├── raw
+└── working
+```
+
+`soil-health-initative` \> `state-of-the-soils` \> `2023_sampling` \> `lab-data` \> `clean` already has five levels of nesting. We wouldn't want to add many more levels or the hierarchy becomes difficult to manage.
 
 ## Archive folders
 
-When too many drafts or versions begin to clutter a sub-folder, create a new folder with the naming convention of `Archive_FolderDescription`. Place the old drafts there. Leave the most current, accurate file in the main folder.
+When too many drafts or versions begin to clutter a subfolder, create a new folder with the naming convention of `archive-folder-description`. Place the old drafts there. Leave the most current, accurate file in the main folder.
 
-For example, the most recent sample labels for each conservation district are listed in the top level `CompletedLabels` folder, and previous working drafts were moved to the `Archive_Labels` folder.
+For example, the most recent sample labels for each conservation district are listed in the top level `completed-labels` folder, and previous working drafts were moved to the `archive-labels` folder.
 
 ```         
-Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\2023_Sampling\Labels\CompletedLabels
-├── Archive_Labels
-│   ├── CowlitzCounty_Labels.docx
-│   ├── FerryCD_Labels.docx
-│   ├── LewisCD_Labels.docx
-│   └── StevensCD_Labels.docx
-├── CowlitzCounty_Labels_V2.docx
-├── FerryCD_Labels_V2.docx
-├── KittitasCD_Labels.docx
-├── LewisCD_Labels_V2.docx
+Y:\NRAS\soil-health-initiative\state-of-the-soils\2023_sampling\labels\completed-labels
+├── archive-labels
+│   ├── cowlitz-county_labels.docx
+│   ├── ferry-cd_labels.docx
+│   ├── lewis-cd_labels.docx
+│   └── stevens-cd_labels.docx
+├── cowlitz-county_labels_v2.docx
+├── ferry-cd_labels_v2.docx
 ├── ...
-└── WallaWallaCD_Labels.docx
+├── south-yakima-cd_labels.docx
+├── stevens-cd_labels_v2.docx
+└── walla-walla-cd_labels.docx
 ```
 
 ## Code-based project organization

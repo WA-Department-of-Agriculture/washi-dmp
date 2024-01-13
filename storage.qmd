@@ -10,9 +10,9 @@ locations listed below.
 **WSDA shared drives:**
 
 -   Agency files:
-    [Y:\\NRAS\\Soil_Health_Initiative](Y:\NRAS\Soil_Health_Initiative)
+    [Y:\\NRAS\\soil-health-initiative](Y:\NRAS\soil-health-initiative)
 -   GIS:
-    [K:\\NRAS\\Arc_Data\\Soil_Health](K:\NRAS\Arc_Data\Soil_Health)
+    [K:\\NRAS\\Arc_Data\\soil-health](K:\NRAS\Arc_Data\soil-health)
     (access requires permissions from IT)
 
 **Esri products and services:**
@@ -57,16 +57,16 @@ Backing up data using version control (GitHub) or a cloud service
 ## Read-only raw data {#sec-raw-data}
 
 On our shared drives, raw data such as lab results from Soiltest or
-exports from ArcGIS Online, should be immediately set to `Read-only`.
+exports from ArcGIS Online, should immediately be set to `Read-only`.
 Right click the file \> click on Properties \> check the `Read-only`
 attribute box.
 
 ![](images/read-only.png){fig-alt="Screenshot of the above directions to set files to Read-only on a Windows computer."}
 
-The file should then be copied over to a `Working` folder for any
+The file should then be copied over to a `working` folder for any
 processing or analyses. The final dataset should be saved in a
-separate descriptively titled `Clean` folder. Keeping a `readme.txt`
-to document your processing and analysis steps is good practice, as
+separate `clean` folder, with a descriptive title. Keeping a `readme.txt`
+to document your processing steps is good practice, as
 discussed in @sec-readme.
 
 ## Version control with Git and GitHub {#sec-version-control}
@@ -86,9 +86,9 @@ projects much more robust.
 Version control is not just for code either! It's useful for scripts,
 documents, presentations, and books (like this DMP!). Instead of
 saving each version of a file with a different name (i.e.,
-`Report_V01.docx` and `Report_V02.docx`; for a reminder on version
+`report_v01.docx` and `report_v02.docx`; for a reminder on version
 naming, see [@sec-version-numbers]), there's only one file
-`Report.docx` which automatically has its history and editors saved
+`report.docx` which automatically has its history and editors saved
 with Git and GitHub.
 
 In the screenshot below, you can see who made a commit (which is
@@ -125,33 +125,4 @@ without a lot of programming background.
 
 If you prefer to look through slides, check out Byron C. Jaeger's
 presentation [*Happier version control with Git and GitHub (and
-RStudio)*](https://bcjaeger.github.io/seminar-git/)*.*
-
-## Staff turnover
-
-When staff leave our group, they take their skills, institutional
-knowledge, and personal understanding of their file management with
-them. Proper offboarding is essential to ensure knowledge isn't lost,
-time isn't wasted trying to recreate workflows, and projects keep
-moving.
-
-Before the employee leaves, the Senior Soil Scientist and Data
-Scientist ensure that:
-
--   Folders and files are moved from the employee's personal drive to
-    the shared drive. They are named and organized according to
-    [@sec-naming].
--   Workflows and specific processes the employee was responsible for
-    are well documented.
--   Permissions and ownerships are transferred to the appropriate
-    remaining staff.
-    -   [GitHub WSDA
-        organization](https://github.com/WA-Department-of-Agriculture)
-    -   ArcGIS data products and online groups
-    -   Database credentials
-    -   Box.com folders
-
-More resources and offboarding checklists from [Harvard Research Data
-Management](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover)
-can be found in our [DataManagement shared
-drive](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\StaffTurnover).
+RStudio)*](https://bcjaeger.github.io/seminar-git/).

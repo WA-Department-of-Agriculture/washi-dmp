@@ -1,4 +1,4 @@
-# Formats & standards
+# Formats & standards {#sec-formats-standards}
 
 ## Data formats
 
@@ -18,16 +18,16 @@ Digital data include tabular, spatial, and binary data, such as lab results, sam
 
 **Binary data** include photos (jpeg, png, gif, tiff), videos (mp4), code (R, py, js), and object-oriented data files (RDS, Rdata, parquet, arrow).
 
-**Proprietary data formats** include Microsoft Excel, Word, and Powerpoint files (xlsx, docx, pptx). RDS and Rdata files are an example of an application-specific data format that can only be opened using the R programming language or RStudio IDE. These types of files should be saved in conjunction with a copy of the data in a non-proprietary and open-standard format, such as csv, to maintain accessibility for those who do not have Microsoft Office or do not use R.
+**Proprietary data formats** include Microsoft Excel, Word, and Powerpoint files (xlsx, docx, pptx). RDS and RData files are examples of application-specific data formats that can only be opened using the R programming language or RStudio IDE. These types of files should be saved in conjunction with a copy of the data in a non-proprietary and open-standard format, such as csv, to maintain accessibility for those who do not have Microsoft Office or do not use R.
 
 **Written documents and presentations** are in formats including Microsoft Word and Powerpoint (docx and pptx), hypertext markup language (HTML), and pdf.
 
-**Notebooks** combine text with executable code to generate written documents and presentations in docx, pptx, HTML, or pdf formats. These notebooks are stored in formats depending on the programming language: a few examples include R markdown (rmd), Quarto (qmd), and Jupyter notebook (ipynb).
+**Notebooks** combine text with executable code to generate written documents and presentations in docx, pptx, html, or pdf formats. These notebooks are stored in formats depending on the programming language: a few examples include R markdown (rmd), Quarto (qmd), and Jupyter notebook (ipynb).
 
 The list below is not exhaustive and will continue to grow as additional useful data sources are discovered.
 
 | **Type**                   | **Source**                                                                                                                                                    | **Formats**                                         |
-|----------------|----------------------------------------|----------------|
+|-----------------|--------------------------------------|-----------------|
 | **Lab results**            | Provided by the lab analyzing the soil sample, principal investigator of a study, or grower                                                                   | csv, xlsx, pdf, xml, json, RDS, RData               |
 | **Management surveys**     | Collected through interviews with grower                                                                                                                      | csv, xlsx, RDS, RData, paper form (to be digitized) |
 | **Field forms**            | Completed in the field during/immediately after sampling                                                                                                      | pdf, paper form (to be digitized), csv, xlsx        |
@@ -35,7 +35,7 @@ The list below is not exhaustive and will continue to grow as additional useful 
 | **Chain of custody forms** | Completed prior to shipping or dropping off samples                                                                                                           | pdf, paper form (to be digitized)                   |
 | **Climate data**           | [OSU PRISM](https://prism.oregonstate.edu/), [NOAA](https://www.ncdc.noaa.gov/cdo-web/datasets), [Esri Living Atlas](https://livingatlas.arcgis.com/en/home/) | csv, shp, netCDF, tiff, gdb                         |
 | **Soil data**              | [NRCS Web Soil Survey](https://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm), [NRCS WA gSSURGO](K:\NRAS\Arc_Data\Soil_Health\NRCS_StatewideSoils)          | gdb, accdb                                          |
-| **Strata classification**  | Provided by Soil Health Institute in 2021 as a [lyr file](K:\NRAS\Arc_Data\Soil_Health\SoilHealthInstitute_Strata)                                            | lyr                                                 |
+| **Strata classification**  | Provided by Soil Health Institute in 2021 as a [lyr file](K:\NRAS\Arc_Data\soil-health\soil-health-institute-strata\wa-strata-sum.zip)                        | lyr                                                 |
 | **Images**                 | Logos, icons, photos taken in the field                                                                                                                       | jpeg, png, gif, tiff, svg                           |
 | **Videos**                 | Recordings of meetings, training videos                                                                                                                       | mp4                                                 |
 | **Documents**              | Reports, manuscripts, SOP, QAPP, factsheets, brochures                                                                                                        | docx, txt, html, pdf                                |
@@ -54,7 +54,7 @@ The list below is not exhaustive and will continue to grow as additional useful 
 -   Pacific Standard Time (PST) has a UTC-8:00 offset and Pacific Daylight Time (PDT) has a UTC-7:00 offset and would be expressed as YYYY-MM-DD**T**HH:MM:SS-8:00. The **Z** has been replaced with the offset.
 -   Example: `2023-11-28T14:55:56-08:00`.
 
-!["ISO 8601" from Randall Munroe's xkcd](https://imgs.xkcd.com/comics/iso_8601.png){alt="\"ISO 8601\" from Randall Munroe's xkcd" width="300"}
+!["ISO 8601" from Randall Munroe's xkcd](https://imgs.xkcd.com/comics/iso_8601.png){width="300"}
 
 **Geospatial** data will be accompanied by metadata that abides by the [ISO 19115 standard](https://www.iso.org/standard/53798.html) by following Esri's [documentation](https://pro.arcgis.com/en/pro-app/latest/help/metadata/create-iso-19115-and-iso-19139-metadata.htm) when working in ArcGIS Pro. Metadata contains information about the identification, the extent, the quality, the spatial and temporal schema, spatial reference, and distribution of digital geographic data.
 

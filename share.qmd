@@ -1,88 +1,46 @@
 # Data sharing {#sec-sharing}
 
-Our data sharing policies promote FAIR principles such that our data
-are "*as open as possible, as closed as necessary*"
-[@europeancommission2016]. Data should be *open* enough to facilitate
-efficient re-use and avoid duplicating data collection efforts,
-enhance scholarly rigor, promote engagement across the research and
-public communities, and realize many other benefits [@whyte2011].
-However, data must also be as *closed* as necessary to protect grower
-privacy and to honor prior agreements with growers or other
-researchers.
+Our data sharing policies promote FAIR principles such that our data are "**as open as possible, as closed as necessary**" [@europeancommission2016]. Data should be **open** enough to facilitate efficient re-use; avoid duplicating data collection efforts; enhance scholarly rigor; promote engagement across the research and public communities; and realize many other benefits [@whyte2011]. However, data must also be as **closed** as necessary to protect grower privacy and to honor prior agreements with growers or other researchers.
 
-SoSA relies on growers' willingness to volunteer their fields for
-sampling and participate in the required management survey. Their
-willingness depends on their trust in WaSHI to protect their privacy.
-Only aggregated and anonymized results will be publicly available or
-shared. The below data privacy statement may be shared with potential
-participants:
+SOS relies on growers' willingness to volunteer their fields for sampling and participate in the required management survey. Their willingness depends on their trust in WaSHI to protect their privacy. Only aggregated and anonymized results will be publicly available or shared. The below data privacy statement may be shared with potential participants.
 
 ### Data privacy statement
 
-> Data will be aggregated and reported in a way which mitigates
-> personal identification of growers. Information will be used to
-> understand broad impacts and characterize trends in soil health and
-> production practices across regions. Results will not be reported in
-> a way that makes individuals identifiable. Information collected in
-> this survey may be subject to release in accordance with RCW 42.56
-> (Public Records Act).
+> Data will be aggregated and reported in a way which mitigates personal identification of growers. Information will be used to understand broad impacts and characterize trends in soil health and production practices across regions. Results will not be reported in a way that makes individuals identifiable. Information collected in this survey may be subject to release in accordance with RCW 42.56 (Public Records Act).
 
-Procedures for anonymizing data are detailed in
-@sec-maintain-confidentiality.
+Procedures for anonymizing data are detailed in @sec-maintain-confidentiality.
 
 ## WaTech data categorization
 
-Under the Washington state policy 141.10 (Securing Information
-Technology Assets), state agencies must classify data into categories
-based on the sensitivity of the data. WaTech provides
-[guidance](https://watech.wa.gov/Categorizing-Data-State-Agency) on
-the four categories of data.
+Under the Washington state policy [141.10 (Securing Information Technology Assets)](https://watech.wa.gov/policies/securing-information-technology-assets), state agencies must classify data into categories based on the sensitivity of the data. WaTech provides [guidance](https://watech.wa.gov/Categorizing-Data-State-Agency) on the four categories of data.
 
 #### Category 4: "Confidential information requiring special handling"
 
-**WaTech**: Data requires strict handling requirements applied by
-statues (e.g. HIPAA) or regulations (e.g. rules on employee files).
+**WaTech**: Data requires strict handling requirements applied by statues (e.g. HIPAA) or regulations (e.g. rules on employee files).
 
-**SoSA**: We don't manage any data falling under this category.
+**SOS**: We don't manage any data under this category.
 
 #### Category 3: "Confidential information" {#sec-category-3}
 
-**WaTech**: Data includes "personal information" as defined in RCW
-42.56.590 (security breaches) and RCW 19.255.010 (personal information
-disclosure). An individual's first name or first initial and last name
-*in combination* with at least one of the following elements: social
-security number, driver's license or Washington identification card
-number, or any account numbers that permit access to their financial
-account.
+**WaTech**: Data includes "personal information" as defined in [RCW 42.56.590](https://apps.leg.wa.gov/rcw/default.aspx?cite=42.56.590) (security breaches) and [RCW 19.255.010](https://apps.leg.wa.gov/rcw/default.aspx?cite=19.255.010) (personal information disclosure). An individual's first name or first initial and last name *in combination* with at least one of the following elements: social security number, driver's license or Washington identification card number, or any account numbers that permit access to their financial account.
 
-**SoSA**: While we do not collect any of the above elements in
-combination with grower names, we still protect individual and farm
-names, and latitude and longitude coordinates as confidential
-information.
+**SOS**: While we do not collect any of the above elements in combination with grower names, we still protect individual and farm names, and latitude and longitude coordinates as confidential information.
 
 #### Category 2: "Sensitive information"
 
-**WaTech**: Data are intended for official use only and withheld
-unless specifically requested.
+**WaTech**: Data are intended for official use only and withheld unless specifically requested.
 
-**SoSA**: Lab results and management surveys fall under this category.
-Access to this data requires a [data share agreement].
+**SOS**: Lab results and management surveys fall under this category. Access to this data requires a [data share agreement].
 
 #### Category 1: "Public information"
 
-**WaTech**: Data is not covered in any of the above categories or is
-already released to the public.
+**WaTech**: Data is not covered in any of the above categories or is already released to the public.
 
-**SoSA**: De-identified and aggregated data such as the number of soil
-samples and from which counties and crops they were collected fall
-under this category. For example, the [SoSA
-dashboard](https://nras.maps.arcgis.com/apps/dashboards/d4b2d135d47a4ff7a89285fecf67cef2)
-is publicly available and the map zoom is disabled at the 1:1,600,000
-scale (counties level).
+**SOS**: De-identified and aggregated data such as the number of soil samples and from which counties and crops they were collected fall under this category. For example, the [SOS dashboard](https://nras.maps.arcgis.com/apps/dashboards/d4b2d135d47a4ff7a89285fecf67cef2) is publicly available and the map zoom is disabled at the 1:1,600,000 scale (counties level).
 
 ## Maintain confidentiality {#sec-maintain-confidentiality}
 
-Under no circumstances should the following Category 3 data be released to external collaborators or made publicly available:
+Only under special circumstances and with proper justification in the [data share agreement] should the following Category 3 data be released to external collaborators. Under no circumstances should these data be  made publicly available.
 
 -   farm name
 -   grower first and last name
@@ -90,11 +48,15 @@ Under no circumstances should the following Category 3 data be released to exter
 -   latitude and longitude coordinates or other geospatial identifiers
 -   any information that identifies the individual farm or grower
 
-Category 2 data should be anonymized and aggregated to honor our [data privacy statement] by either removing or replacing Category 3 confidential information with dummy data. The {randomNames} R package can be used to replace real names with fake names. Latitude and longitude should be rounded to a precision that does not identify the farm or fields sampled. See the example R script below, copied from the private [soils-internal GitHub repo](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/R/anonymizeData.R).
+Category 2 data should be anonymized and aggregated to honor our [data privacy statement] by either removing or replacing Category 3 confidential information with dummy data. The [{randomNames}](https://centerforassessment.github.io/randomNames/) R package can be used to replace real names with fake names. Latitude and longitude should be rounded to a precision that does not identify the farm or fields sampled.
+
+See the example R script below, copied from the private [soils-internal GitHub repo](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/anonymizeData.R) (if you aren't part of the WSDA GitHub organization, this link will give you a 404 error). Note: this script does not follow the code style guide in @sec-code-style-guide as it was written prior to this DMP.
 
 <details>
-  <summary>R code to anonymize data</summary>
-``` {{r}}
+
+<summary>R code to anonymize data</summary>
+
+```r
 library(dplyr)
 library(readxl)
 library(janitor)
@@ -108,7 +70,11 @@ points <- read.csv("./data/_completeDataset/2020-2023_sampleLocations.csv") |>
   mutate(across(where(is.numeric), \(x) round(x, 0)))
 
 # Join lab data with gis data
-data <- left_join(allResults_wide, points)
+data <- left_join(allResults_wide, points) |>
+  # Remove WSU SCBG samples and 0-6/6-12 in WSDA samples
+  subset(!year %in% c(2020, 2021) &
+           !grepl("[A-Z]", fieldId)) |>
+  janitor::remove_empty("cols")
 
 # Join data with crop dictionary to get crop groups
 data <- left_join(data, crops, by = c("crop" = "Crop Type")) |>
@@ -139,7 +105,7 @@ anonData <- data |>
     .by = c(county)
   )
 
-# Grab 100 random samples
+# Grab 100 random samples by county
 anon_subset <- anonData |>
   slice_sample(n = 100)
 
@@ -147,19 +113,20 @@ write.csv(anon_subset, file = "./data/_completeDataset/exampleData.csv",
           na = "",
           row.names = FALSE)
 ```
+
 </details>
 
-## Data share agreement 
+## Data share agreement
 
-SoSA CoPIs created a [Data Sharing and Scope of Work Agreement](Y:\\NRAS\\Soil_Health_Initiative\\StateOfTheSoils\\DataSharing\\StateoftheSoils_DataShareAgreement.pdf) that details the type of data to be shared, the scope of work in which the data may be used, and terms for using SoSA data.
+SOS CoPIs created a [Data Sharing and Scope of Work Agreement](Y:\NRAS\soil-health-initiative\state-of-the-soils\data-sharing\sos-data-share-agreement.pdf) that details the type of data to be shared, the scope of work in which the data may be used, and terms for using SOS data.
 
-Once the agreement has been signed by both CoPIs and the "Partnering Scientists", the agreement should be saved in its own folder within [Y:/NRAS/Soil_Health_Initiative/StateOfTheSoils/DataSharing](Y:\\NRAS\\Soil_Health_Initiative\\StateOfTheSoils\\DataSharing). If this agreement is also part of a grant proposal, it should also be saved in its corresponding grant folder [Y:/NRAS/Soil_Health_Initiative/ContractsGrants/Grants](Y:\\NRAS\\Soil_Health_Initiative\\ContractsGrants\\Grants).
+Once the agreement has been signed by both CoPIs and the "Partnering Scientists", the agreement should be saved in its own folder within [Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing). If this agreement is also part of a grant proposal, it should also be saved in its corresponding grant folder [Y:/NRAS/soil-health-initiative/contracts-grants/grants](Y:\NRAS\soil-health-initiative\contracts-grants\grants).
 
-The request correspondence, code to subset the requested data, and the final dataset sent should all be saved in this folder. Internally documenting this information allows us to track publications and attributions resulting from this data sharing. This documentation also helps us track the broader impact of how our collaborators' use the SoSA dataset.
+The request correspondence, code to subset the requested data, and the final dataset sent should all be saved in this folder. Internally documenting this information allows us to track publications and attributions resulting from this data sharing. This documentation also helps us track the broader impact of how our collaborators' use the SOS dataset.
 
 ## Public access
 
-Currently the only SoSA data publicly available are the counts of samples across the project, counties, and crop types displayed in the [ArcGIS Online Dashboard](https://nras.maps.arcgis.com/apps/dashboards/d4b2d135d47a4ff7a89285fecf67cef2).
+Currently the only SOS data publicly available are the counts of samples across the project, counties, and crop types displayed in the [ArcGIS Online Dashboard](https://nras.maps.arcgis.com/apps/dashboards/d4b2d135d47a4ff7a89285fecf67cef2).
 
 A small, anonymized subset is included as example data in the [{washi}](https://github.com/WA-Department-of-Agriculture/washi) and [{soils}](https://github.com/WA-Department-of-Agriculture/soils) R packages for demonstration purposes.
 
@@ -180,15 +147,8 @@ More inspiration and ideas for enhancing data discoverability and sharing across
 
 ## Acknowledgments
 
-All research and data partially or completely funded by WaSHI must include
-acknowledgements to the State of Washington. The following text should
-be included in all publications resulting from this funding:
+All research and data partially or completely funded by WaSHI must include acknowledgements to the State of Washington. The following text should be included in all publications resulting from this funding:
 
-> Data were in part provided by the Washington Soil Initiative, which
-> is supported by the State of Washington and administered by the
-> Washington State Department of Agriculture, Washington State
-> Conservation Commission, and Washington State University.
+> Data were in part provided by the Washington Soil Initiative, which is supported by the State of Washington and administered by the Washington State Department of Agriculture, Washington State Conservation Commission, and Washington State University.
 
-If WaSHI staff make [substantial scientific
-contributions](https://www.pnas.org/doi/10.1073/pnas.1715374115) to
-the manuscript, discuss the possibility of co-authorship credit.
+If WaSHI staff make [substantial scientific contributions](https://www.pnas.org/doi/10.1073/pnas.1715374115) to the manuscript, discuss the possibility of co-authorship credit.
