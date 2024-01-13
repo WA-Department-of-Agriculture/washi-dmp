@@ -96,7 +96,6 @@ ul.task-list li input[type="checkbox"] {
       <a href="./">Data Management Plan</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/WA-Department-of-Agriculture/washi-dmp" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Data-Management-Plan.docx" rel="" title="Download Docx" class="quarto-navigation-tool px-1" aria-label="Download Docx"><i class="bi bi-file-word"></i></a>
 </div>
     </div>
       </div>
@@ -199,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#sec-naming-examples" id="toc-sec-naming-examples" class="nav-link" data-scroll-target="#sec-naming-examples"><span class="header-section-number">3.3</span> Naming examples</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/naming.qmd" class="toc-action">View source</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/naming.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/naming.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -221,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>When naming folders and files, we want consistent and clear names that are findable and understandabe by both humans and computers. From only a file name, we should immediately know what the file contains and which file is the most recent version.</p>
+<p>When naming folders and files, we want consistent and clear names that are findable and understandable by both humans and computers. From only a file name, we should immediately know what the file contains, and which file is the most recent version.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="https://imgs.xkcd.com/comics/documents.png" class="img-fluid figure-img" width="250"></p>
@@ -232,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="3.1" class="anchored" data-anchor-id="why-are-conventions-important"><span class="header-section-number">3.1</span> Why are conventions important?</h2>
 <ul>
 <li><p>Improves consistency and predictability, making it easier to browse folders and know what the file/folder contains.</p></li>
-<li><p>Easily sort and retrieve files by date, conservation district, or other theme.</p></li>
+<li><p>Easily sort and retrieve files by date, conservation district, or another theme.</p></li>
 <li><p>Facilitates collaboration so all team members can find the information they need.</p></li>
 <li><p>Standardizes file paths and URLs for efficient programming and website hosting.</p>
 <ul>
@@ -245,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-naming-best-practices" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-naming-best-practices"><span class="header-section-number">3.2</span> Best practices</h2>
 <p><strong>Some files and folders in our shared drive do not follow these best practices or naming conventions. We are learning and improving as we go.</strong></p>
-<p>These are guidelines and naming things is hard, so try your best. If you’re not sure how to name some files or you’re adding a bunch of files that came from somewhere else, Jadey can help you organize and bulk rename them.</p>
+<p>These are guidelines and naming things is hard, so try your best. If you’re not sure how to name some files or you’re adding a bunch of files that came from somewhere else, Jadey can help you organize and/or bulk rename them.</p>
 <p>See <a href="#sec-naming-examples"><span>Section&nbsp;3.3</span></a> for a table of examples of folder and file names following these best practices.</p>
 <section id="meaningful-name-casing" class="level3">
 <h3 class="anchored" data-anchor-id="meaningful-name-casing">Meaningful name casing</h3>
@@ -253,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><strong>kebab-case</strong>: all lowercase with hyphens separating words. Use for all <strong>folders</strong> and <strong>files</strong>.</p></li>
 <li><p><strong>snake_case</strong>: all lowercase with underscores separating words. Only use for <strong>code</strong>, such as functions and variables in R. See <a href="code-guide.html#sec-objects-functions"><span>Section&nbsp;9.2.3.2</span></a> for example R errors when including hyphens in object names.</p></li>
-<li><p><strong>UpperCamelCase</strong>: first letter of each word is capitalized. Only use for <strong>variables</strong> in spreadsheets and tables. If we used snake_case, the soil health indicators with units would be way too long. Using an <code>_</code> to separate the measurement from the unit allows us to more easily transform our data with code. <code>96HrMinC_MgCKgDay</code> instead of <code>96_hr_min_c_mg_kg_day</code>. See <a href="#sec-vars-code"><span>Section&nbsp;3.2.10</span></a> and <a href="code-guide.html#sec-variables-in-a-dataset"><span>Section&nbsp;9.2.3.1</span></a> for more details.</p></li>
+<li><p><strong>UpperCamelCase</strong>: first letter of each word is capitalized. Only use for <strong>variables</strong> in spreadsheets and tables. If we used snake_case, the soil health indicators with units would be way too long. Using an <code>_</code> to separate the measurement from the unit allows us to transform more easily our data with code. <code>96HrMinC_MgCKgDay</code> instead of <code>96_hr_min_c_mg_kg_day</code>. See <a href="#sec-vars-code"><span>Section&nbsp;3.2.10</span></a> and <a href="code-guide.html#sec-variables-in-a-dataset"><span>Section&nbsp;9.2.3.1</span></a> for more details.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
@@ -283,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Remember to express date ‘back to front’ like <code>YYYY-MM-DD</code> according to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 standard</a>. Left pad single-digit months and days with a zero. This maintains the chronological order of records when they are sorted alphanumerically.</p>
 <table class="table">
 <colgroup>
-<col style="width: 36%">
+<col style="width: 34%">
 <col style="width: 34%">
 </colgroup>
 <thead>
@@ -363,8 +362,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Including the date in the file name is one way to version a document. Alternatively, or in addition to, we can add a version number to the end of the file name. Consider how many possible versions there could be. If there may be more than 10, use leading zeros to left-pad single digit numbers so the file name always has the same length. v1 through v15 will not sort the same way as v01 through v15.</p>
 <table class="table">
 <colgroup>
-<col style="width: 45%">
-<col style="width: 31%">
+<col style="width: 44%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -443,9 +442,9 @@ ul.task-list li input[type="checkbox"] {
 <table class="table-striped table">
 <caption></caption>
 <colgroup>
-<col style="width: 21%">
-<col style="width: 23%">
-<col style="width: 53%">
+<col style="width: 22%">
+<col style="width: 25%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
