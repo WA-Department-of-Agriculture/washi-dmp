@@ -8,7 +8,7 @@ The [Washington Soil Health Initiative](https://washingtonsoilhealthinitiative.c
 
 To date, nearly 1,000 soil samples and management surveys across 50 different cropping systems have been collected as a part of the [State of the Soils Assessment](https://washingtonsoilhealthinitiative.com/state-of-the-soils/) (SOS). WSDA and WSU lead this project with support from staff, students, conservation districts, and agricultural professionals throughout Washington.
 
-![](images/sos-goals.png)
+![](images/sos-goals.png){fig-alt="State of the Soils Assessment goals: 1. Assess baseline soil health. 2. Understand how climate, crop type, and management impact soil health. 3. Develop cost-effective ways for producers to assess their own soil. 4. Develop crop-specific decision-support tools."}
 
 ## Chapter outline
 
