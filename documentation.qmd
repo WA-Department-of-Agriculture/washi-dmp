@@ -22,43 +22,43 @@ Project-level documentation includes all descriptive information about the SOS d
 
 The QAPP is the highest level of project documentation and covers everything from the project description; personnel roles and responsibilities; project timelines; data and measurement quality objectives; study design; and overviews of field, laboratory, and quality control.
 
-Ours can be found in [Y:\\NRAS\\soil-health-initiative\\state-of-the-soils\\qapp](Y:\NRAS\soil-health-initiative\state-of-the-soils\qapp), though it needs to be updated.
+Ours can be found in [Y:/NRAS/soil-health-initiative/state-of-the-soils/qapp](Y:/NRAS/soil-health-initiative/state-of-the-soils/qapp), though it needs to be updated.
 
 ### Standard operating procedures (SOP)
 
 SOPs provide detailed instructions for field, lab, or data processing procedures and decision making processes.
 
-Ours can be found in [Y:\\NRAS\\soil-health-initiative\\state-of-the-soils\\sop](Y:\NRAS\soil-health-initiative\state-of-the-soils\sop).
+Ours can be found in [Y:/NRAS/soil-health-initiative/state-of-the-soils/sop](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop).
 
 #### SOS sampling
 
-The purpose of this [SOP](Y:\NRAS\soil-health-initiative\state-of-the-soils\sop\sampling) is to detail the procedures for a typical site visit in which soil samples are collected for physical, chemical, and biological soil health indicator analyses. Procedures include equipment preparation prior to sampling; best practices for filling out field forms; the selection of sampling locations; sampling protocols; sample handling and storage; and submitting samples to the lab. Following this SOP ensures data quality by creating audit trails and reminders to check that data are present, complete, and accurate. Additionally, this SOP will be used to maintain consistent sample collection procedures throughout the state for WSDA employees and partners.
+The purpose of this [SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling) is to detail the procedures for a typical site visit in which soil samples are collected for physical, chemical, and biological soil health indicator analyses. Procedures include equipment preparation prior to sampling; best practices for filling out field forms; the selection of sampling locations; sampling protocols; sample handling and storage; and submitting samples to the lab. Following this SOP ensures data quality by creating audit trails and reminders to check that data are present, complete, and accurate. Additionally, this SOP will be used to maintain consistent sample collection procedures throughout the state for WSDA employees and partners.
 
 #### Quality control / quality assurance (QA/QC)
 
-This [SOP](Y:\NRAS\soil-health-initiative\state-of-the-soils\sop\qc) outlines the process for screening sample metadata and lab results for completeness, consistency, and quality. Procedures involve subject matter expertise, investigation, communication with sampling teams and labs, algorithmic quality control, and tagging sample results with quality codes (listed in the below table). Data are then integrated into the statewide database according to a SOP not yet authored.
+This [SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc) outlines the process for screening sample metadata and lab results for completeness, consistency, and quality. Procedures involve subject matter expertise, investigation, communication with sampling teams and labs, algorithmic quality control, and tagging sample results with quality codes (listed in the below table). Data are then integrated into the statewide database according to a SOP not yet authored.
 
-+---------------+---------------+----------------------------------------+---------------------------+
-| **Code**      | **Tag**       | **Description**                        | **Inclusion in analyses** |
-+===============+===============+========================================+===========================+
-| **0**         | Excellent     | Met lab's and WSDA's QC criteria       | Yes                       |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **100**       | Estimate      | Interpolated missing value             | Yes                       |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **110**       | Derived       | Derived from an estimated value        | Yes                       |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **120**       | Suspect       | Z-score is ≥ \|3\|                     | Yes                       |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **130**       | Calculated ND | Calculated value using at least one ND | Yes                       |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **140**       | Non-detect    | Below the method detection limit       | No                        |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **160**       | Poor          | Did not meet lab's QC criteria         | No                        |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **180**       | Outlier       | Outlier, designated by soil scientist  | No                        |
-+---------------+---------------+----------------------------------------+---------------------------+
-| **200**       | Unknown       | External dataset                       | Yes                       |
-+---------------+---------------+----------------------------------------+---------------------------+
++-------------+---------------+----------------------------------------+---------------------------+
+| **Code**    | **Tag**       | **Description**                        | **Inclusion in analyses** |
++=============+===============+========================================+===========================+
+| **0**       | Excellent     | Met lab's and WSDA's QC criteria       | Yes                       |
++-------------+---------------+----------------------------------------+---------------------------+
+| **100**     | Estimate      | Interpolated missing value             | Yes                       |
++-------------+---------------+----------------------------------------+---------------------------+
+| **110**     | Derived       | Derived from an estimated value        | Yes                       |
++-------------+---------------+----------------------------------------+---------------------------+
+| **120**     | Suspect       | Z-score is ≥ \|3\|                     | Yes                       |
++-------------+---------------+----------------------------------------+---------------------------+
+| **130**     | Calculated ND | Calculated value using at least one ND | Yes                       |
++-------------+---------------+----------------------------------------+---------------------------+
+| **140**     | Non-detect    | Below the method detection limit       | No                        |
++-------------+---------------+----------------------------------------+---------------------------+
+| **160**     | Poor          | Did not meet lab's QC criteria         | No                        |
++-------------+---------------+----------------------------------------+---------------------------+
+| **180**     | Outlier       | Outlier, designated by soil scientist  | No                        |
++-------------+---------------+----------------------------------------+---------------------------+
+| **200**     | Unknown       | External dataset                       | Yes                       |
++-------------+---------------+----------------------------------------+---------------------------+
 
 : {.striped}
 
@@ -80,10 +80,9 @@ Dataset-level documentation applies to lab results, sample locations, grower inf
 
 #### Describe contents of folder
 
-For example, the `_complete-dataset` folder contains a [readme.txt](Y:\NRAS\soil-health-initiative\state-of-the-soils\\_complete-dataset\readme.txt) that describes each files' structure, contents, and other pertinent information, such as the data source.
+For example, the `_complete-dataset` folder contains a [readme.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/readme.txt) that describes each files' structure, contents, and other pertinent information, such as the data source.
 
 ::: {.content-visible when-format="html"}
-
 <details>
 
 <summary>View the example</summary>
@@ -105,16 +104,15 @@ all-farm-info lists all participating farm names, producer names, producer IDs, 
 
 example-data.csv contains 100 random samples that have been anonymized with fake sampleIDs, county, farm, producer, and field names. WSU SCBG samples are excluded, as are the 0-6in to 6-12in WSDA samples.
 ```
-</details>
 
+</details>
 :::
 
 #### Explain versions
 
-Another example is the [readme.txt](Y:\NRAS\soil-health-initiative\state-of-the-soils\2023_sampling\lab-data\raw\readme.txt) in the `2023_sampling` \> `lab-data` \> `raw` folder, which explains why there are two different versions of the lab results and where to find additional information.
+Another example is the [readme.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/lab-data/raw/readme.txt) in the `2023_sampling` \> `lab-data` \> `raw` folder, which explains why there are two different versions of the lab results and where to find additional information.
 
 ::: {.content-visible when-format="html"}
-
 <details>
 
 <summary>View the example</summary>
@@ -122,19 +120,17 @@ Another example is the [readme.txt](Y:\NRAS\soil-health-initiative\state-of-the-
 ```         
 2023-08-21
 2023_wsda-soil-health_v1.xlsx has errors. See email for details.
-'		   'v2.xlsx still has some errors, that are cleaned up in the R scripts.
+'          'v2.xlsx still has some errors, that are cleaned up in the R scripts.
 ```
 
 </details>
-
 :::
 
 #### Provide instructions
 
-An example of a [readme.txt](https://app.box.com/s/jl714sbos0jus6mr9zesqsfpv718j783) that provides instructions on how to use the folder contents can be found in the [ArcGIS soil sample points box.com folder](https://app.box.com/s/4d6xg8q5dr1cjjoxver0g3h35d3s3bao). When this folder is shared with our partners, the readme helps them orient to the contents of the folder and modify the files as needed for their own adaptation.
+An example of a [readme.txt](https://app.box.com/s/axozzclt3nus5mzhmvspo2dtxrbfbpbj) that provides instructions on how to use the folder contents can be found in the [ArcGIS soil sample points box.com folder](https://app.box.com/s/4d6xg8q5dr1cjjoxver0g3h35d3s3bao). When this folder is shared with our partners, the readme helps them orient to the contents of the folder and modify the files as needed for their own adaptation.
 
 ::: {.content-visible when-format="html"}
-
 <details>
 
 <summary>View the example</summary>
@@ -181,7 +177,6 @@ Resources:
 - WSDA WaSHI_SoilSeries MapServer: https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS/WaSHI_SoilSeries/MapServer
 - Introduction to attribute domains: https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/overview/an-overview-of-attribute-domains.htm
 - Introducing smart forms in ArcGIS Field Maps: https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/introducing-arcgis-smart-forms/
-
 ```
 
 </details>
@@ -198,8 +193,7 @@ At the bare minimum, the `changelog.txt` should contain:
 -   description of the changes
 
 ::: {.content-visible when-format="html"}
-
-An example [changelog.txt](Y:\NRAS\soil-health-initiative\state-of-the-soils\\_complete-dataset\changelog.txt) can be found in the `_complete-dataset` folder.
+An example [changelog.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/changelog.txt) can be found in the `_complete-dataset` folder.
 
 <details>
 
@@ -233,14 +227,13 @@ Variable-level documentation includes data dictionaries and codebooks, which are
 
 ### Data dictionary
 
-In a data dictionary, each row is a different variable and each column is a different attribute of that variable. With a data dictionary, any user should be able to properly interpret each variable in our data.
+In a data dictionary, each row is a different variable, while each column is a different attribute of that variable. With a data dictionary, any user should be able to properly interpret each variable in our data.
 
-Our [data-dictionary.xlsx](Y:\NRAS\soil-health-initiative\state-of-the-soils\_complete-cataset\data-dictionary.xlsx) in the [\_complete-dataset folder](Y:\NRAS\soil-health-initiative\state-of-the-soils\_complete-dataset) contains two tabs (`lab-results` and `sample-locations`) that describe the attributes of each variable.
+Our [data-dictionary.xlsx](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-cataset/data-dictionary.xlsx) in the [\_complete-dataset folder](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset) contains two tabs (`lab-results` and `sample-locations`) that describe the attributes of each variable.
 
 **TODO**: update variable names in R scripts, data dictionary, and Soiltest template.
 
 ::: {.content-visible when-format="html"}
-
 <details>
 
 <summary>View the `sample-locations` dictionary</summary>
@@ -276,7 +269,6 @@ Our [data-dictionary.xlsx](Y:\NRAS\soil-health-initiative\state-of-the-soils\_co
 : {.striped}
 
 </details>
-
 :::
 
 ### Codebook
@@ -287,7 +279,7 @@ Crystal Lewis gave the lightning talk [*A Comparison of Packages to Generate Cod
 
 ## External data {#sec-external-data}
 
-External data refers to any data not directly collected by WSDA or trained partners (e.g., WSU or conservation districts) that follow our SOPs. These can include other studies pre-dating WaSHI, special soil health surveys, or publicly available datasets. 
+External data refers to any data not directly collected by WSDA or trained partners (e.g., WSU or conservation districts) that follow our SOPs. These can include other studies pre-dating WaSHI, special soil health surveys, or publicly available datasets.
 
 The Data Scientist and Senior Soil Scientist will decide whether to integrate an external dataset case by case by considering the following questions:
 
@@ -296,7 +288,7 @@ The Data Scientist and Senior Soil Scientist will decide whether to integrate an
 -   What field procedures were used and how were they documented?
 -   Who analyzed the soil samples? With which methods and QA/QC procedures?
 -   Which pieces of metadata and management data accompany the lab results?
-    -   Farm, producer and field info[^1]
+    -   Farm, producer and field info[^documentation-1]
     -   Sampling date
     -   Sampling depth
     -   Latitude and longitude
@@ -304,8 +296,8 @@ The Data Scientist and Senior Soil Scientist will decide whether to integrate an
     -   Tillage, livestock grazing, irrigation, soil fertility and amendments, conservation practices, etc.
 -   Is there a data dictionary or codebook to describe the variables and measurements, units, missing values, etc.?
 
-[^1]: Enough farm, producer and field info to distinguish unique farmers and fields for assigning unique IDs. This info doesn't need to be personally identifiable information.
+[^documentation-1]: Enough farm, producer and field info to distinguish unique farmers and fields for assigning unique IDs. This info doesn't need to be personally identifiable information.
 
 Generally, the external data should **1)** be well documented, **2)** be collected and analyzed by well-trained scientists and labs; and **3)** have adequate accompanying metadata and management data to facilitate interpretation of the results.
 
-Some publicly available datasets to consider are listed in [Y:\\NRAS\\soil-health-initiative\\state-of-the-soils\\data-sources](Y:\\NRAS\\soil-health-initiative\\state-of-the-soils\\data-sources).
+Some publicly available datasets to consider are listed in [Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources).

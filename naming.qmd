@@ -1,6 +1,6 @@
 # Naming conventions {#sec-naming}
 
-When naming folders and files, we want consistent and clear names that are findable and understandabe by both humans and computers. From only a file name, we should immediately know what the file contains and which file is the most recent version.
+When naming folders and files, we want consistent and clear names that are findable and understandable by both humans and computers. From only a file name, we should immediately know what the file contains, and which file is the most recent version.
 
 !["Documents" from Randall Munroe's xkcd](https://imgs.xkcd.com/comics/documents.png){width="250"}
 
@@ -8,7 +8,7 @@ When naming folders and files, we want consistent and clear names that are finda
 
 -   Improves consistency and predictability, making it easier to browse folders and know what the file/folder contains.
 
--   Easily sort and retrieve files by date, conservation district, or other theme.
+-   Easily sort and retrieve files by date, conservation district, or another theme.
 
 -   Facilitates collaboration so all team members can find the information they need.
 
@@ -24,7 +24,7 @@ For more web-specific naming conventions, see this [Learn the Web webpage](https
 
 **Some files and folders in our shared drive do not follow these best practices or naming conventions. We are learning and improving as we go.**
 
-These are guidelines and naming things is hard, so try your best. If you're not sure how to name some files or you're adding a bunch of files that came from somewhere else, Jadey can help you organize and bulk rename them.
+These are guidelines and naming things is hard, so try your best. If you're not sure how to name some files or you're adding a bunch of files that came from somewhere else, Jadey can help you organize and/or bulk rename them.
 
 See @sec-naming-examples for a table of examples of folder and file names following these best practices.
 
@@ -36,7 +36,7 @@ Different conventions work better for different purposes (folders and files vers
 
 -   **snake_case**: all lowercase with underscores separating words. Only use for **code**, such as functions and variables in R. See [@sec-objects-functions] for example R errors when including hyphens in object names.
 
--   **UpperCamelCase**: first letter of each word is capitalized. Only use for **variables** in spreadsheets and tables. If we used snake_case, the soil health indicators with units would be way too long. Using an `_` to separate the measurement from the unit allows us to more easily transform our data with code. `96HrMinC_MgCKgDay` instead of `96_hr_min_c_mg_kg_day`. See @sec-vars-code and @sec-variables-in-a-dataset for more details.
+-   **UpperCamelCase**: first letter of each word is capitalized. Only use for **variables** in spreadsheets and tables. If we used snake_case, the soil health indicators with units would be way too long. Using an `_` to separate the measurement from the unit allows us to transform more easily our data with code. `96HrMinC_MgCKgDay` instead of `96_hr_min_c_mg_kg_day`. See @sec-vars-code and @sec-variables-in-a-dataset for more details.
 
 ![Cartoon representations of common cases in coding. A snake screams "SCREAMING_SNAKE_CASE" into the face of a camel (wearing ear muffs) with "camelCase" written along its back. Vegetables on a skewer spell out "kebab-case" (words on a skewer). A mellow, happy looking snake has text "snake_case" along it. Artwork by [\@allison_horst](https://twitter.com/allison_horst).](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172)
 
@@ -60,17 +60,17 @@ Computers are unable to read file paths and file names that surpass a certain ch
 
 Remember to express date 'back to front' like `YYYY-MM-DD` according to the [ISO 8601 standard](https://www.iso.org/iso-8601-date-and-time-format.html). Left pad single-digit months and days with a zero. This maintains the chronological order of records when they are sorted alphanumerically.
 
-+-------------------------+------------------------+
-| ✅ Do this              | ❌ Don't do this       |
-+=========================+========================+
-| 2020-05-28_agenda.pdf   | 2-14-2023_Agenda.pdf   |
-+-------------------------+------------------------+
-| 2023-01-01_agenda.pdf   | 2023-Jan-1_Agenda.pdf  |
-+-------------------------+------------------------+
-| 2023-02-14_agenda.pdf   | Dec052020_Agenda.pdf   |
-+-------------------------+------------------------+
-| 2023-12-05_agenda.pdf   | May_28_2020_Agenda.pdf |
-+-------------------------+------------------------+
++------------------------+------------------------+
+| ✅ Do this             | ❌ Don't do this       |
++========================+========================+
+| 2020-05-28_agenda.pdf  | 2-14-2023_Agenda.pdf   |
++------------------------+------------------------+
+| 2023-01-01_agenda.pdf  | 2023-Jan-1_Agenda.pdf  |
++------------------------+------------------------+
+| 2023-02-14_agenda.pdf  | Dec052020_Agenda.pdf   |
++------------------------+------------------------+
+| 2023-12-05_agenda.pdf  | May_28_2020_Agenda.pdf |
++------------------------+------------------------+
 
 ### Group & sort files by name
 
@@ -98,19 +98,19 @@ Consider how folders and files should be grouped and sorted. Put that piece of m
 
 Including the date in the file name is one way to version a document. Alternatively, or in addition to, we can add a version number to the end of the file name. Consider how many possible versions there could be. If there may be more than 10, use leading zeros to left-pad single digit numbers so the file name always has the same length. v1 through v15 will not sort the same way as v01 through v15.
 
-+--------------------------------+----------------------+
-| ✅ Do this                     | ❌ Don't do this     |
-+================================+======================+
-| sop_v01.pdf                    | SOP_v1.pdf           |
-+--------------------------------+----------------------+
-| sop_v02.pdf                    | SOP_v10.pdf          |
-+--------------------------------+----------------------+
-| ... \[v03 - v09\]              | SOP_v11.pdf          |
-+--------------------------------+----------------------+
-| sop_v10.pdf                    | SOP_v2.pdf           |
-+--------------------------------+----------------------+
-| sop_v11.pdf                    | ... \[v3 - v9\]      |
-+--------------------------------+----------------------+
++-------------------------------+---------------------+
+| ✅ Do this                    | ❌ Don't do this    |
++===============================+=====================+
+| sop_v01.pdf                   | SOP_v1.pdf          |
++-------------------------------+---------------------+
+| sop_v02.pdf                   | SOP_v10.pdf         |
++-------------------------------+---------------------+
+| ... \[v03 - v09\]             | SOP_v11.pdf         |
++-------------------------------+---------------------+
+| sop_v10.pdf                   | SOP_v2.pdf          |
++-------------------------------+---------------------+
+| sop_v11.pdf                   | ... \[v3 - v9\]     |
++-------------------------------+---------------------+
 
 ### Collaboration
 
@@ -144,40 +144,40 @@ See @sec-code-style-guide for more details in the code style guide.
 
 ## Naming examples {#sec-naming-examples}
 
-+----------------------------------+-------------------------------------+-------------------------------------------------------------------------------------+
-|                                  | Naming convention                   | Examples                                                                            |
-+==================================+=====================================+=====================================================================================+
-| **Folders**                      | kebab-case                          | 2024_sampling                                                                       |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | data-management                                                                     |
-+----------------------------------+-------------------------------------+-------------------------------------------------------------------------------------+
-| **Files**                        | kebab-case                          | 2023-11-15_survey-perennial.xlsx                                                    |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | records-management_v01.docx                                                         |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | pend-oreille-cd_coc_2023-06-05.pdf                                                  |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | geisseler-et-al_2019_ace-protein.pdf                                                |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | washi-logo-color.png                                                                |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | washi-dmp.Rproj                                                                     |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | 01_load-metadata.R                                                                  |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | 2024_producer-report.qmd                                                            |
-+----------------------------------+-------------------------------------+-------------------------------------------------------------------------------------+
-| **Variables**                    | UpperCamelCase                      | SampleId                                                                            |
-|                                  |                                     |                                                                                     |
-| (column names)                   |                                     | TOC_Percent                                                                         |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | PMN_MgKg                                                                            |
-+----------------------------------+-------------------------------------+-------------------------------------------------------------------------------------+
-| **Code**                         | snake_case                          | primary_color                                                                       |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | crop_summary                                                                        |
-|                                  |                                     |                                                                                     |
-|                                  |                                     | assign_quality_codes()                                                              |
-+----------------------------------+-------------------------------------+-------------------------------------------------------------------------------------+
++----------------+-------------------+--------------------------------------+
+|                | Naming convention | Examples                             |
++================+===================+======================================+
+| **Folders**    | kebab-case        | 2024_sampling                        |
+|                |                   |                                      |
+|                |                   | data-management                      |
++----------------+-------------------+--------------------------------------+
+| **Files**      | kebab-case        | 2023-11-15_survey-perennial.xlsx     |
+|                |                   |                                      |
+|                |                   | records-management_v01.docx          |
+|                |                   |                                      |
+|                |                   | pend-oreille-cd_coc_2023-06-05.pdf   |
+|                |                   |                                      |
+|                |                   | geisseler-et-al_2019_ace-protein.pdf |
+|                |                   |                                      |
+|                |                   | washi-logo-color.png                 |
+|                |                   |                                      |
+|                |                   | washi-dmp.Rproj                      |
+|                |                   |                                      |
+|                |                   | 01_load-metadata.R                   |
+|                |                   |                                      |
+|                |                   | 2024_producer-report.qmd             |
++----------------+-------------------+--------------------------------------+
+| **Variables**  | UpperCamelCase    | SampleId                             |
+|                |                   |                                      |
+| (column names) |                   | TOC_Percent                          |
+|                |                   |                                      |
+|                |                   | PMN_MgKg                             |
++----------------+-------------------+--------------------------------------+
+| **Code**       | snake_case        | primary_color                        |
+|                |                   |                                      |
+|                |                   | crop_summary                         |
+|                |                   |                                      |
+|                |                   | assign_quality_codes()               |
++----------------+-------------------+--------------------------------------+
 
 : {.striped}

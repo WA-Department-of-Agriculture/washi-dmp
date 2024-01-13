@@ -1,5 +1,9 @@
 # Overview {.unnumbered}
 
+::: {.content-visible when-format="docx"}
+**View this data management plan as an online book at [https://wa-department-of-agriculture.github.io/washi-dmp/](https://wa-department-of-agriculture.github.io/washi-dmp/).**
+:::
+
 The [Washington Soil Health Initiative](https://washingtonsoilhealthinitiative.com/) (WaSHI) is a partnership between the Washington State Department of Agriculture (WSDA), Washington State University (WSU), and the State Conservation Commission. WaSHI establishes a coordinated approach to healthy soil in Washington.
 
 To date, nearly 1,000 soil samples and management surveys across 50 different cropping systems have been collected as a part of the [State of the Soils Assessment](https://washingtonsoilhealthinitiative.com/state-of-the-soils/) (SOS). WSDA and WSU lead this project with support from staff, students, conservation districts, and agricultural professionals throughout Washington.
@@ -42,7 +46,7 @@ However, when viewing this DMP in Microsoft Edge, links to our shared drive are 
 
 ## Roles and responsibilities
 
-All WaSHI personnel who will be interacting with SOS data must familiarize themselves with the contents of this document. Following chapters with technical details will be referenced when relevant. If all collaborators are not consistently implementing this DMP, then the benefits of effective data management are lost.
+All WaSHI personnel who will be interacting with SOS data must familiarize themselves with the contents of this document. If all collaborators are not consistently implementing this DMP, then the benefits of effective data management are lost.
 
 The WSDA Data Scientist, supported by the Co- Principal Investigators (CoPIs), is responsible for providing guidance to WaSHI staff working with SOS data and ensuring the implementation of this DMP. The Data Scientist is also responsible for reviewing and updating this document annually, and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the [GitHub repository](https://github.com/WA-Department-of-Agriculture/washi-dmp).
 
@@ -69,7 +73,7 @@ Before the employee leaves, the Senior Soil Scientist and Data Scientist ensure 
     -   Database credentials
     -   Box.com folders
 
-More resources and offboarding checklists from [Harvard Research Data Management](https://datamanagement.hms.harvard.edu/about/where-start/rdm-offboarding-checklist) can be found in our [data-management shared drive](Y:\NRAS\soil-health-initiative\state-of-the-soils\data-management\resources\staff-turnover).
+More resources and offboarding checklists from [Harvard Research Data Management](https://datamanagement.hms.harvard.edu/about/where-start/rdm-offboarding-checklist) can be found in our [data-management shared drive](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-management/resources/staff-turnover).
 
 ## Acknowledgements
 

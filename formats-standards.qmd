@@ -14,7 +14,7 @@ Digital data include tabular, spatial, and binary data, such as lab results, sam
 
 **Tabular data** include comma separated values (csv), tab separated values (tsv), Microsoft Excel open XML spreadsheet (xlsx), and portable document format (pdf).
 
-**Spatial data** include file geodatabases (gdb), vector shapefiles (zipped folder containing multiple file extensions), keyhole markup language (kml or kmz). Tabular data may also contain spatial data as longitude and latitude.
+**Spatial data** include file geodatabases (gdb), vector shapefiles (zipped folder containing multiple file extensions), keyhole markup language (kml or kmz). Tabular data may also contain spatial data such as longitude and latitude.
 
 **Binary data** include photos (jpeg, png, gif, tiff), videos (mp4), code (R, py, js), and object-oriented data files (RDS, Rdata, parquet, arrow).
 
@@ -26,21 +26,21 @@ Digital data include tabular, spatial, and binary data, such as lab results, sam
 
 The list below is not exhaustive and will continue to grow as additional useful data sources are discovered.
 
-| **Type**                   | **Source**                                                                                                                                                    | **Formats**                                         |
-|-----------------|--------------------------------------|-----------------|
-| **Lab results**            | Provided by the lab analyzing the soil sample, principal investigator of a study, or grower                                                                   | csv, xlsx, pdf, xml, json, RDS, RData               |
-| **Management surveys**     | Collected through interviews with grower                                                                                                                      | csv, xlsx, RDS, RData, paper form (to be digitized) |
-| **Field forms**            | Completed in the field during/immediately after sampling                                                                                                      | pdf, paper form (to be digitized), csv, xlsx        |
-| **Sample locations**       | Identified prior to sampling and may be edited during sampling using ArcGIS Online, Collector, Field Maps or Google Maps                                      | ArcGIS feature layer, shp, kmz, csv, xlsx           |
-| **Chain of custody forms** | Completed prior to shipping or dropping off samples                                                                                                           | pdf, paper form (to be digitized)                   |
-| **Climate data**           | [OSU PRISM](https://prism.oregonstate.edu/), [NOAA](https://www.ncdc.noaa.gov/cdo-web/datasets), [Esri Living Atlas](https://livingatlas.arcgis.com/en/home/) | csv, shp, netCDF, tiff, gdb                         |
-| **Soil data**              | [NRCS Web Soil Survey](https://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm), [NRCS WA gSSURGO](K:\NRAS\Arc_Data\Soil_Health\NRCS_StatewideSoils)          | gdb, accdb                                          |
-| **Strata classification**  | Provided by Soil Health Institute in 2021 as a [lyr file](K:\NRAS\Arc_Data\soil-health\soil-health-institute-strata\wa-strata-sum.zip)                        | lyr                                                 |
-| **Images**                 | Logos, icons, photos taken in the field                                                                                                                       | jpeg, png, gif, tiff, svg                           |
-| **Videos**                 | Recordings of meetings, training videos                                                                                                                       | mp4                                                 |
-| **Documents**              | Reports, manuscripts, SOP, QAPP, factsheets, brochures                                                                                                        | docx, txt, html, pdf                                |
-| **Presentations**          | Powerpoints, slide decks                                                                                                                                      | pptx, html, pdf                                     |
-| **Code**                   | Scripts for wrangling, processing, analyzing data; markdown for producing documents and presentations; style sheets for html outputs                          | R, py, ipynb, js, yml, rmd, qmd, css, scss          |
+| **Type**                   | **Source**                                                                                                                                                       | **Formats**                                         |
+|------------------|-----------------------------------|------------------|
+| **Lab results**            | Provided by the lab analyzing the soil sample, principal investigator of a study, or grower                                                                      | csv, xlsx, pdf, xml, json, RDS, RData               |
+| **Management surveys**     | Collected through interviews with grower                                                                                                                         | csv, xlsx, RDS, RData, paper form (to be digitized) |
+| **Field forms**            | Completed in the field during/immediately after sampling                                                                                                         | pdf, paper form (to be digitized), csv, xlsx        |
+| **Sample locations**       | Identified prior to sampling and may be edited during sampling using ArcGIS Online, Collector, Field Maps or Google Maps                                         | ArcGIS feature layer, shp, kmz, csv, xlsx           |
+| **Chain of custody forms** | Completed prior to shipping or dropping off samples                                                                                                              | pdf, paper form (to be digitized)                   |
+| **Climate data**           | [OSU PRISM](https://prism.oregonstate.edu/), [NOAA](https://www.ncdc.noaa.gov/cdo-web/datasets), [Esri Living Atlas](https://livingatlas.arcgis.com/en/home/)    | csv, shp, netCDF, tiff, gdb                         |
+| **Soil data**              | [NRCS Web Soil Survey](https://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm), [NRCS WA gSSURGO](K:/NRAS/Arc_Data/soil-health/nrcs-statewide-soils/gssurgo-wa) | gdb, accdb                                          |
+| **Strata classification**  | Provided by Soil Health Institute in 2021 as a [lyr file](K:/NRAS/Arc_Data/soil-health/soil-health-institute-strata/wa-strata-sum.zip)                           | lyr                                                 |
+| **Images**                 | Logos, icons, photos taken in the field                                                                                                                          | jpeg, png, gif, tiff, svg                           |
+| **Videos**                 | Recordings of meetings, training videos                                                                                                                          | mp4                                                 |
+| **Documents**              | Reports, manuscripts, SOP, QAPP, factsheets, brochures                                                                                                           | docx, txt, html, pdf                                |
+| **Presentations**          | Powerpoints, slide decks                                                                                                                                         | pptx, html, pdf                                     |
+| **Code**                   | Scripts for wrangling, processing, analyzing data; markdown for producing documents and presentations; style sheets for html outputs                             | R, py, ipynb, js, yml, rmd, qmd, css, scss          |
 
 : {.striped}
 

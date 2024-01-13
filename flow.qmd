@@ -13,7 +13,7 @@ For printed sample ID assignments, labels, chain of custodies, etc., use Atkinso
 
 Download [Atkinson Hyperlegible from Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible).
 
-!["0O" and "1li" in Atkinson Hyperlegible.](images/atkinson-hyperlegible.png)
+!["0O" and "1li" in Atkinson Hyperlegible.](images/atkinson-hyperlegible.png){width="100px"}
 :::
 
 ## Pre field season
@@ -148,7 +148,7 @@ download_as_fgdb(items, folder_path)
 
 ## During field season
 
-Data collection in the field is detailed in the [monitoring SOP](Y:\NRAS\soil-health-initiative\state-of-the-soils\sop\sampling). We'll focus on the behind-the scenes tasks for managing data.
+Data collection in the field is detailed in the [monitoring SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling). We'll focus on the behind-the scenes tasks for managing data.
 
 ### Update data tracking spreadsheet
 
@@ -188,7 +188,7 @@ See the 2023 processing scripts and QA/QC report:
 
 ### Generate reports
 
-Use the [{soils}](https://github.com/WA-Department-of-Agriculture/soils) package to create a new project for each year. To avoid email attachment size limitations, reports may be saved to [Box.com](https://agriculture.app.box.com/folder/136923153810?s=l3q9zq2p4yv38891d3q3753ybs6t0lec) for distribution to the sampling partners who will send the reports to the participants.
+Use the [{soils}](https://github.com/WA-Department-of-Agriculture/soils) package to create a new project for each year. To avoid email attachment size limitations, reports may be saved to [Box.com](https://agriculture.app.box.com/folder/136923153810?s=l3q9zq2p4yv38891d3q3753ybs6t0lec) for distribution to the sampling partners who will send the reports to the participants. Note: this folder is private unless invited by Jadey, Dani, or Perry.
 
 ### Import data to database
 
@@ -202,16 +202,10 @@ The final datasets in wide and long formats should also be saved to the WSU SCBG
 
 ### Archive jars and falcon tubes
 
-::: columns
-::: {.column width="50%"}
 Archival subsamples in glass jars are stored in the Yakima WSDA storage room and the cryogenic archive subsamples in falcon tubes are stored in the -80 °C freezer at the [WSU Mount Vernon Northwestern Washington Research & Extension Center](https://mtvernon.wsu.edu/).
 
 Labels on the falcon tubes must be taped with a generous amount of packing tape to avoid falling off as they stiffen up and flatten out when they freeze.
 
 The [archive spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/archived-sample-inventory.xlsx) must be updated.
-:::
 
-::: {.column width="50%"}
-![](images/cryo-labels.jpg){width="800px" fig-alt="Falcon tubes from a -80 °C freezer with the labels starting to peel off." fig-align="right"}
-:::
-:::
+![](images/cryo-labels.jpg){width="450px" fig-alt="Falcon tubes from a -80 °C freezer with the labels starting to peel off."}

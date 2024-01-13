@@ -16,9 +16,8 @@ book:
     search: true
     logo: images/washi-logo.jpg
   favicon: images/washi-circle.png
-  downloads: [docx]
   repo-url: https://github.com/WA-Department-of-Agriculture/washi-dmp
-  repo-actions: [source]
+  repo-actions: [source, edit]
   
   chapters:
     - index.qmd

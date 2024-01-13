@@ -1,33 +1,22 @@
 # Storage {#sec-storage}
 
-Non-digital data, such as paper forms, must be transcribed or
-converted to digital file formats and then stored in the WaSHI filing
-cabinet in the Natural Resources Building in Olympia.
+Non-digital data, such as paper forms, must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.
 
-All digital data are stored in the WSDA shared drives, and other
-locations listed below.
+All digital data are stored in the WSDA shared drives, and other locations listed below.
 
 **WSDA shared drives:**
 
--   Agency files:
-    [Y:\\NRAS\\soil-health-initiative](Y:\NRAS\soil-health-initiative)
--   GIS:
-    [K:\\NRAS\\Arc_Data\\soil-health](K:\NRAS\Arc_Data\soil-health)
-    (access requires permissions from IT)
+-   Agency files: [Y:/NRAS/soil-health-initiative](Y:/NRAS/soil-health-initiative)
+-   GIS: [K:/NRAS/Arc_Data/soil-health](K:/NRAS/Arc_Data/soil-health) (access requires permissions from IT)
 
 **Esri products and services:**
 
--   ArcGIS Online [Soil Health - WSDA Internal
-    Group](https://nras.maps.arcgis.com/home/group.html?id=17a60cfa644c4c60ab622fdd84500f8f#overview)
--   WSDA GIS on-premise [ArcGIS REST Services
-    Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS)
-    (only Jadey, Perry, and Joel can publish to this server; Ed
-    Thompson is the contact for getting access)
+-   ArcGIS Online [Soil Health - WSDA Internal Group](https://nras.maps.arcgis.com/home/group.html?id=17a60cfa644c4c60ab622fdd84500f8f#overview)
+-   WSDA GIS on-premise [ArcGIS REST Services Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS) (only Jadey, Perry, and Joel can publish to this server; Ed Thompson is the contact for getting access)
 
 **Database for lab results and management data:**
 
--   WISKI, but very likely will migrate to SQL Server or a less
-    water-focused database
+-   WISKI, but very likely will migrate to SQL Server or a less water-focused database
 
 **GitHub organizations for code-based projects:**
 
@@ -40,8 +29,7 @@ locations listed below.
 
 **Box.com for external file sharing:**
 
--   WSDA has a box.com account. Only Perry has a license; Jadey and
-    Dani are currently editors.
+-   WSDA has a box.com account. Only Perry has a license; Jadey and Dani are currently editors.
 
 **Individual devices (laptop, tablet, phone):**
 
@@ -49,80 +37,38 @@ locations listed below.
 
 ## Backup
 
-Data must be stored in multiple locations. At a bare minimum, data on
-an individual computer must also be saved on the WSDA shared drive.
-Backing up data using version control (GitHub) or a cloud service
-(Microsoft OneDrive or Box.com) is strongly recommended.
+Data must be stored in multiple locations. At a bare minimum, data on an individual computer must also be saved on the WSDA shared drive. Backing up data using version control (GitHub) or a cloud service (Microsoft OneDrive or Box.com) is strongly recommended.
 
 ## Read-only raw data {#sec-raw-data}
 
-On our shared drives, raw data such as lab results from Soiltest or
-exports from ArcGIS Online, should immediately be set to `Read-only`.
-Right click the file \> click on Properties \> check the `Read-only`
-attribute box.
+On our shared drives, raw data such as lab results from Soiltest or exports from ArcGIS Online, should immediately be set to `Read-only`. Right click the file \> click on Properties \> check the `Read-only` attribute box.
 
 ![](images/read-only.png){fig-alt="Screenshot of the above directions to set files to Read-only on a Windows computer."}
 
-The file should then be copied over to a `working` folder for any
-processing or analyses. The final dataset should be saved in a
-separate `clean` folder, with a descriptive title. Keeping a `readme.txt`
-to document your processing steps is good practice, as
-discussed in @sec-readme.
+The file should then be copied over to a `working` folder for any processing or analyses. The final dataset should be saved in a separate `clean` folder, with a descriptive title. Keeping a `readme.txt` to document your processing steps is good practice, as discussed in @sec-readme.
 
 ## Version control with Git and GitHub {#sec-version-control}
 
-A version control system records changes to a file or set of files
-over time. [Git](https://git-scm.com/) is a free and open-source
-distributed version control system and [GitHub](https://github.com) is
-the hosting site WSDA and WaSHI use to interface with this system. Git
-and GitHub are an important foundation of reproducible statistical and
-data scientific workflows [@bryan2018].
+A version control system records changes to a file or set of files over time. [Git](https://git-scm.com/) is a free and open-source distributed version control system and [GitHub](https://github.com) is the hosting site WSDA and WaSHI use to interface with this system. Git and GitHub are an important foundation of reproducible statistical and data scientific workflows [@bryan2018].
 
-A major benefit of using version control is ensuring changes are well
-documented and previous versions are accessible if any changes must be
-recalled. Additionally, version control makes collaboration across
-projects much more robust.
+A major benefit of using version control is ensuring changes are well documented and previous versions are accessible if any changes must be recalled. Additionally, version control makes collaboration across projects much more robust.
 
-Version control is not just for code either! It's useful for scripts,
-documents, presentations, and books (like this DMP!). Instead of
-saving each version of a file with a different name (i.e.,
-`report_v01.docx` and `report_v02.docx`; for a reminder on version
-naming, see [@sec-version-numbers]), there's only one file
-`report.docx` which automatically has its history and editors saved
-with Git and GitHub.
+Version control is not just for code either! It's useful for scripts, documents, presentations, and books (like this DMP!). Instead of saving each version of a file with a different name (i.e., `report_v01.docx` and `report_v02.docx`; for a reminder on version naming, see [@sec-version-numbers]), there's only one file `report.docx` which automatically has its history and editors saved with Git and GitHub.
 
-In the screenshot below, you can see who made a commit (which is
-basically a named version of changes), when that commit was made, and
-you can click on the commit message to view all of the files that were
-changed.
+In the screenshot below, you can see who made a commit (which is basically a named version of changes), when that commit was made, and you can click on the commit message to view all of the files that were changed.
 
 ![](images/github-commits.png){fig-alt="Screenshot of GitHub commits for the WaSHI DMP."}
 
-After clicking on the first commit message, we see the
-`documentation.qmd` file was changed with additions highlighted in
-green and deletions highlighted in red.
+After clicking on the first commit message, we see the `documentation.qmd` file was changed with additions highlighted in green and deletions highlighted in red.
 
-![](images/github-diff.png){fig-alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red."
-fig-align="left"}
+![](images/github-diff.png){fig-alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red." fig-align="left"}
 
 ### Privacy considerations
 
-Review @sec-sharing to categorize the data included in the repository. If the data are not anonymized and aggregated, either 1) the repository must be [set to private](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) or 2) data files and any scripts containing Category 3 data as described in @sec-category-3 must be added to the [.gitignore](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files) file. 
+Review @sec-sharing to categorize the data included in the repository. If the data are not anonymized and aggregated, either 1) the repository must be [set to private](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) or 2) data files and any scripts containing Category 3 data as described in @sec-category-3 must be added to the [.gitignore](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files) file.
 
 ### Git and GitHub resources
 
-Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk
-About Version
-Control*](Y:\NRAS\Soil_Health_Initiative\StateOfTheSoils\DataManagement\Resources\Bryan_ExcuseMeDoYouHaveMomentTalkVersionControl.pdf)
-for a great background on Git and GitHub, why we should be using it,
-and a brief how to get started. For detailed instructions , please
-follow along with Jenny Bryan's free online book [*Happy Git and
-GitHub for the useR*](https://happygitwithr.com/). Another helpful
-book resource is [*GitHub: A Beginner's
-Guide*](https://birdscanada.github.io/BirdsCanada_GitHubGuide/), which
-was created by Birds Canada (avian conservation NGO) for people
-without a lot of programming background.
+Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk About Version Control*](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-management/resources/bryan_2018_excuse-me-do-you-have-moment-talk_version-control.pdf) for a great background on Git and GitHub, why we should be using it, and a brief how to get started. For detailed instructions , please follow along with Jenny Bryan's free online book [*Happy Git and GitHub for the useR*](https://happygitwithr.com/). Another helpful book resource is [*GitHub: A Beginner's Guide*](https://birdscanada.github.io/BirdsCanada_GitHubGuide/), which was created by Birds Canada (avian conservation NGO) for people without a lot of programming background.
 
-If you prefer to look through slides, check out Byron C. Jaeger's
-presentation [*Happier version control with Git and GitHub (and
-RStudio)*](https://bcjaeger.github.io/seminar-git/).
+If you prefer to look through slides, check out Byron C. Jaeger's presentation [*Happier version control with Git and GitHub (and RStudio)*](https://bcjaeger.github.io/seminar-git/).

@@ -12,7 +12,7 @@ Procedures for anonymizing data are detailed in @sec-maintain-confidentiality.
 
 ## WaTech data categorization
 
-Under the Washington state policy [141.10 (Securing Information Technology Assets)](https://watech.wa.gov/policies/securing-information-technology-assets), state agencies must classify data into categories based on the sensitivity of the data. WaTech provides [guidance](https://watech.wa.gov/Categorizing-Data-State-Agency) on the four categories of data.
+Under Washington State [Policy 141.10 (Securing Information Technology Assets)](https://watech.wa.gov/policies/securing-information-technology-assets), state agencies must classify data into categories based on the sensitivity of the data. WaTech provides [guidance](https://watech.wa.gov/Categorizing-Data-State-Agency) on the four categories of data.
 
 #### Category 4: "Confidential information requiring special handling"
 
@@ -22,7 +22,7 @@ Under the Washington state policy [141.10 (Securing Information Technology Asset
 
 #### Category 3: "Confidential information" {#sec-category-3}
 
-**WaTech**: Data includes "personal information" as defined in [RCW 42.56.590](https://apps.leg.wa.gov/rcw/default.aspx?cite=42.56.590) (security breaches) and [RCW 19.255.010](https://apps.leg.wa.gov/rcw/default.aspx?cite=19.255.010) (personal information disclosure). An individual's first name or first initial and last name *in combination* with at least one of the following elements: social security number, driver's license or Washington identification card number, or any account numbers that permit access to their financial account.
+**WaTech**: Data includes "personal information" as defined in [RCW 42.56.590](https://apps.leg.wa.gov/rcw/default.aspx?cite=42.56.590) (Security Breaches) and [RCW 19.255.010](https://apps.leg.wa.gov/rcw/default.aspx?cite=19.255.010) (Personal Information Disclosure). An individual's first name or first initial and last name *in combination* with at least one of the following elements: social security number, driver's license or Washington identification card number, or any account numbers that permit access to their financial account.
 
 **SOS**: While we do not collect any of the above elements in combination with grower names, we still protect individual and farm names, and latitude and longitude coordinates as confidential information.
 
@@ -118,9 +118,9 @@ write.csv(anon_subset, file = "./data/_completeDataset/exampleData.csv",
 
 ## Data share agreement
 
-SOS CoPIs created a [Data Sharing and Scope of Work Agreement](Y:\NRAS\soil-health-initiative\state-of-the-soils\data-sharing\sos-data-share-agreement.pdf) that details the type of data to be shared, the scope of work in which the data may be used, and terms for using SOS data.
+SOS CoPIs created a [Data Sharing and Scope of Work Agreement](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing/sos-data-share-agreement.pdf) that details the type of data to be shared, the scope of work in which the data may be used, and terms for using SOS data.
 
-Once the agreement has been signed by both CoPIs and the "Partnering Scientists", the agreement should be saved in its own folder within [Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing). If this agreement is also part of a grant proposal, it should also be saved in its corresponding grant folder [Y:/NRAS/soil-health-initiative/contracts-grants/grants](Y:\NRAS\soil-health-initiative\contracts-grants\grants).
+Once the agreement has been signed by both CoPIs and the "Partnering Scientists", the agreement should be saved in its own folder within [Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing). If this agreement is also part of a grant proposal, it should also be saved in its corresponding grant folder [Y:/NRAS/soil-health-initiative/contracts-grants/grants](Y:/NRAS/soil-health-initiative/contracts-grants/grants).
 
 The request correspondence, code to subset the requested data, and the final dataset sent should all be saved in this folder. Internally documenting this information allows us to track publications and attributions resulting from this data sharing. This documentation also helps us track the broader impact of how our collaborators' use the SOS dataset.
 
