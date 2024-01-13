@@ -61,6 +61,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -271,7 +274,11 @@ div.csl-indent {
 <section id="sec-raw-data" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="sec-raw-data"><span class="header-section-number">5.2</span> Read-only raw data</h2>
 <p>On our shared drives, raw data such as lab results from Soiltest or exports from ArcGIS Online, should immediately be set to <code>Read-only</code>. Right click the file &gt; click on Properties &gt; check the <code>Read-only</code> attribute box.</p>
-<p><img src="images/read-only.png" class="img-fluid" alt="Screenshot of the above directions to set files to Read-only on a Windows computer."></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="images/read-only.png" class="lightbox" title="Screenshot of the above directions to set files to Read-only on a Windows computer." data-gallery="quarto-lightbox-gallery-1"><img src="images/read-only.png" class="img-fluid figure-img" alt="Screenshot of the above directions to set files to Read-only on a Windows computer."></a></p>
+</figure>
+</div>
 <p>The file should then be copied over to a <code>working</code> folder for any processing or analyses. The final dataset should be saved in a separate <code>clean</code> folder, with a descriptive title. Keeping a <code>readme.txt</code> to document your processing steps is good practice, as discussed in <a href="documentation.html#sec-readme"><span>Section&nbsp;6.2.1</span></a>.</p>
 </section>
 <section id="sec-version-control" class="level2" data-number="5.3">
@@ -280,11 +287,15 @@ div.csl-indent {
 <p>A major benefit of using version control is ensuring changes are well documented and previous versions are accessible if any changes must be recalled. Additionally, version control makes collaboration across projects much more robust.</p>
 <p>Version control is not just for code either! It’s useful for scripts, documents, presentations, and books (like this DMP!). Instead of saving each version of a file with a different name (i.e., <code>report_v01.docx</code> and <code>report_v02.docx</code>; for a reminder on version naming, see <a href="naming.html#sec-version-numbers"><span>Section&nbsp;3.2.7</span></a>), there’s only one file <code>report.docx</code> which automatically has its history and editors saved with Git and GitHub.</p>
 <p>In the screenshot below, you can see who made a commit (which is basically a named version of changes), when that commit was made, and you can click on the commit message to view all of the files that were changed.</p>
-<p><img src="images/github-commits.png" class="img-fluid" alt="Screenshot of GitHub commits for the WaSHI DMP."></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="images/github-commits.png" class="lightbox" title="Screenshot of GitHub commits for the WaSHI DMP." data-gallery="quarto-lightbox-gallery-2"><img src="images/github-commits.png" class="img-fluid figure-img" alt="Screenshot of GitHub commits for the WaSHI DMP."></a></p>
+</figure>
+</div>
 <p>After clicking on the first commit message, we see the <code>documentation.qmd</code> file was changed with additions highlighted in green and deletions highlighted in red.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="images/github-diff.png" class="img-fluid figure-img" alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red."></p>
+<p><a href="images/github-diff.png" class="lightbox" title="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red." data-gallery="quarto-lightbox-gallery-3"><img src="images/github-diff.png" class="img-fluid figure-img" alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red."></a></p>
 </figure>
 </div>
 <section id="privacy-considerations" class="level3">
@@ -566,6 +577,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"right","openEffect":"zoom"});</script>
 
 
 

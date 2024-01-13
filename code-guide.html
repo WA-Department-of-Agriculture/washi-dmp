@@ -95,6 +95,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -296,7 +299,7 @@ div.csl-indent {
 <p>To create a project in RStudio, click <code>File</code> &gt; <code>New Project</code>, then follow the steps in the below figure.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="https://r4ds.hadley.nz/diagrams/new-project.png" class="img-fluid figure-img" alt="Three screenshots of the New Project menu. In the first screenshot, the Create Project window is shown and New Directory is selected. In the second screenshot, the Project Type window is shown and Empty Project is selected. In the third screenshot, the Create New Project  window is shown and the directory name is given as r4ds and the project is being created as subdirectory of the Desktop. Figure from Chapter 6 of R4DS."></p>
+<p><a href="https://r4ds.hadley.nz/diagrams/new-project.png" class="lightbox" title="Figure from Chapter 6 of R4DS" data-gallery="quarto-lightbox-gallery-1"><img src="https://r4ds.hadley.nz/diagrams/new-project.png" class="img-fluid figure-img" alt="Three screenshots of the New Project menu. In the first screenshot, the Create Project window is shown and New Directory is selected. In the second screenshot, the Project Type window is shown and Empty Project is selected. In the third screenshot, the Create New Project  window is shown and the directory name is given as r4ds and the project is being created as subdirectory of the Desktop. Figure from Chapter 6 of R4DS."></a></p>
 <figcaption class="figure-caption">Figure from Chapter 6 of <em>R4DS</em></figcaption>
 </figure>
 </div>
@@ -363,7 +366,7 @@ See an example project folder structure
 <p>❌Absolute paths start with the root directory and provide the full path to a specific file or folder like <code>C:\\Users\\jryan\\Documents\\R\\projects\\project-demo\\data\\processed</code>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You can run <code>getwd()</code> to find out where the current working directory is and <code>setwd()</code> to set a specific folder as your working directory. However, <strong>please don’t do use <code>setwd()</code></strong> because this absolute file path is going to break your code if you reorganize your folders and is not going to work on any collaborators’ computers as their directory configuration will be different.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e684ee45-98fc-469e-997c-e2d68b0096cd_rw_1920.png?h=d754f634e6fc1e292430124fbe44dad7" class="img-fluid figure-img"></p>
+<p><a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e684ee45-98fc-469e-997c-e2d68b0096cd_rw_1920.png?h=d754f634e6fc1e292430124fbe44dad7" class="lightbox" title="A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing “setwd”, looks on at a metal riveted cube labeled “R Proj” holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled “here” doing a trick on a skateboard. Artwork by @allison_horst." data-gallery="quarto-lightbox-gallery-2"><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e684ee45-98fc-469e-997c-e2d68b0096cd_rw_1920.png?h=d754f634e6fc1e292430124fbe44dad7" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing “setwd”, looks on at a metal riveted cube labeled “R Proj” holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled “here” doing a trick on a skateboard. Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.</figcaption>
 </figure>
 </div>
@@ -375,7 +378,7 @@ See an example project folder structure
 <p>In combination with R projects, use the <a href="https://here.r-lib.org/">{here}</a> package to build <em>relative</em> file paths. This is especially important in Quarto files because when the <code>.qmd</code> file renders, its default current working directory is wherever the <code>.qmd</code> file lives. If we are using the above example project structure and wanted to read in our clean data to our <code>soil-health-report.qmd</code> file, we would get an error running <code>read.csv("data/processed/data-clean.csv")</code> because it would be looking for a data subfolder in the reports folder. Instead, we can use the {here} package to build a relative path from our root with <code>read.csv(here::here("data", "processed", "data-clean.csv"))</code>. {here} takes care of the backslashes or forward slashes so the relative path will work no matter the operating system.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/57457fc3-1d2d-4a3b-a9b7-f0b62e418cd5_rw_1920.png?h=e0721f766fc8f031edeb67f7f8024595" class="img-fluid figure-img"></p>
+<p><a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/57457fc3-1d2d-4a3b-a9b7-f0b62e418cd5_rw_1920.png?h=e0721f766fc8f031edeb67f7f8024595" class="lightbox" title="A cartoon showing two paths side-by-side. On the left is a scary spooky forest, with spiderwebs and gnarled trees, with file paths written on the branches like “~/mmm/nope.csv” and “setwd(”/haha/good/luck/“), with a scared looking cute fuzzy monster running out of it. On the right is a bright, colorful path with flowers, rainbow and sunshine, with signs saying”here!” and “it’s all right here!” A monster facing away from us in a backpack and walking stick is looking toward the right path. Stylized text reads “here: find your path.” Learn more about here. Artwork by @allison_horst." data-gallery="quarto-lightbox-gallery-3"><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/57457fc3-1d2d-4a3b-a9b7-f0b62e418cd5_rw_1920.png?h=e0721f766fc8f031edeb67f7f8024595" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">A cartoon showing two paths side-by-side. On the left is a scary spooky forest, with spiderwebs and gnarled trees, with file paths written on the branches like “~/mmm/nope.csv” and “setwd(”/haha/good/luck/“), with a scared looking cute fuzzy monster running out of it. On the right is a bright, colorful path with flowers, rainbow and sunshine, with signs saying”here!” and “it’s all right here!” A monster facing away from us in a backpack and walking stick is looking toward the right path. Stylized text reads “here: find your path.” Learn more about <a href="https://here.r-lib.org/">here</a>. Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.</figcaption>
 </figure>
 </div>
@@ -559,7 +562,11 @@ See an example project folder structure
 <p>After adding the above code to your snippets, try creating a new section by typing “#&nbsp;Tidy&nbsp;data&nbsp;end” then pressing <code>Shift</code> + <code>Tab</code>.</p>
 <p><code># Tidy data end&lt;Shift+Tab&gt;</code> results in:</p>
 <pre><code># Tidy data ====================================================================</code></pre>
-<p><img src="images/sections.png" class="img-fluid" alt="Screenshot of RStudio with boxes highlighting section functionality including collapsed code blocks, Jump To menu, and the document outline."></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="images/sections.png" class="lightbox" title="Screenshot of RStudio with boxes highlighting section functionality including collapsed code blocks, Jump To menu, and the document outline." data-gallery="quarto-lightbox-gallery-4"><img src="images/sections.png" class="img-fluid figure-img" alt="Screenshot of RStudio with boxes highlighting section functionality including collapsed code blocks, Jump To menu, and the document outline."></a></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="code-styling" class="level2" data-number="9.4">
@@ -618,7 +625,11 @@ See an example project folder structure
 <section id="addins-menu" class="level4">
 <h4 class="anchored" data-anchor-id="addins-menu">Addins menu</h4>
 <p>You can also use the Addins menu in RStudio to style your files by clicking on a button to run the command.</p>
-<p><img src="images/styler.png" class="img-fluid" alt="Screenshot of RStudio with the Addins menu open and boxes highlighting the styler functions."></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="images/styler.png" class="lightbox" title="Screenshot of RStudio with the Addins menu open and boxes highlighting the styler functions." data-gallery="quarto-lightbox-gallery-5"><img src="images/styler.png" class="img-fluid figure-img" alt="Screenshot of RStudio with the Addins menu open and boxes highlighting the styler functions."></a></p>
+</figure>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -900,6 +911,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"right"});</script>
 
 
 
