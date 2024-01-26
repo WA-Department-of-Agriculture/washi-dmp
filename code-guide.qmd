@@ -101,17 +101,19 @@ Learn more about other R package components in [*R Packages (2e)*](https://r-pkg
 
 ### Absolute vs relative paths
 
-Note: directories are synonymous with folders.
+::: callout-note
+I use directories and folders interchangeable here. But if you're interested in the technical differences: **directories** contain folders and files to organize data at *different levels* while **folders** hold subfolders and files in a *single level.*
+:::
 
-❌Absolute paths start with the root directory and provide the full path to a specific file or folder like `C:\\Users\\jryan\\Documents\\R\\projects\\project-demo\\data\\processed`.[^code-guide-1] You can run `getwd()` to find out where the current working directory is and `setwd()` to set a specific folder as your working directory. However, **please don't do use `setwd()`** because this absolute file path is going to break your code if you reorganize your folders and is not going to work on any collaborators' computers as their directory configuration will be different.
+❌ Absolute paths start with the root directory and provide the full path to a specific file or folder like `C:\\Users\\jryan\\Documents\\R\\projects\\project-demo\\data\\processed`.[^code-guide-1] You can run `getwd()` to find out where the current working directory is and `setwd()` to set a specific folder as your working directory. However, **please don't do use `setwd()`** because this absolute file path is going to break your code if you reorganize your directory and is not going to work on any collaborators' computers as their directory configuration will be different.
 
 [^code-guide-1]: Note the two backslashes. Windows paths use backslashes, which mean something specific in R. to get a single backslash in the path, we need to type two backslashes (or use forward slashes).
 
 ![A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing "setwd", looks on at a metal riveted cube labeled "R Proj" holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled "here" doing a trick on a skateboard. Artwork by [\@allison_horst](https://twitter.com/allison_horst).](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e684ee45-98fc-469e-997c-e2d68b0096cd_rw_1920.png?h=d754f634e6fc1e292430124fbe44dad7)
 
-✅Instead, always use relative paths in your scripts. Relative paths are *relative* to the working directory (i.e. the project's home) like `data/processed/data-clean.csv`. When working in a RStudio project, the default working directory is always the **root** project directory (where the `.Rproj` file is).
+✅ Instead, always use relative paths in your scripts. Relative paths are *relative* to the working directory (i.e. the project's home) like `data/processed/data-clean.csv`. When working in a RStudio project, the default working directory is always the **root** project directory (where the `.Rproj` file is).
 
-For example, say `01_import.R` contains the code `read.csv("data/processed/data-clean.csv")`. This will read the file from `C:\\Users\\jryan\\Documents\\R\\projects\\project-demo\\data\\processed\\data-clean.csv"`. The magic of relative paths means that if Dani were have this project on her desktop and run this code, it would read the file from `C:\\Users\\dgelardi\\Desktop\\project-demo\\data\\processed\\data-clean.csv`. This is why relative paths are so important -- they work no matter where the project folder is!
+For example, say `01_import.R` contains the code `read.csv("data/processed/data-clean.csv")`. This will read the file from `C:/Users/jryan/Documents/R/projects/project-demo/data/processed/data-clean.csv"`. The magic of relative paths means that if Dani were have this project on her desktop and run this code, it would read the file from `C:/Users/dgelardi/Desktop/project-demo/data/processed/data-clean.csv`. This is why relative paths are so important -- they work no matter where the project folder is!
 
 ### {here} package
 
@@ -127,9 +129,14 @@ In combination with R projects, use the [{here}](https://here.r-lib.org/) packag
 
 Based on this quote, Indrajeet Patil developed [slides](https://indrajeetpatil.github.io/second-hardest-cs-thing/) with a lot of detailed language-agnostic advice on naming things in computer science.
 
-R code specific naming conventions are listed below. They mostly follow the best practices from @sec-naming-best-practices in the naming conventions chapter, with one exception as described in [variables in a dataset](#sec-variables-in-a-dataset).
+R code specific naming conventions are listed below.
 
-**TODO**: add Python naming conventions. They differ from R as static variables (aka constants) are supposed to be SCREAMING_SNAKE_CASE.
+::: callout-note
+The code naming convention here applies primarily to R. Python and JavaScript have different naming standards.
+
+**TODO**: add Python naming conventions? They differ from R as static variables (aka constants) are supposed to be SCREAMING_SNAKE_CASE.
+:::
+
 
 ### Project folder, .RProj and GitHub repository
 
@@ -156,41 +163,27 @@ If files should be run in a particular order, prefix them with numbers. Left pad
 
 ### Variables, objects, and functions
 
-Let's first define these terms so we're on the same page. In this style guide, **variables** are essentially column names, **objects** are all data structures in R and ArcGIS (vectors, lists, data frames, fields, tables), and **functions** are self-contained modules of code that accomplish a specific task.
-
-#### Variables in a dataset {#sec-variables-in-a-dataset}
-
-This is where we differ from the [*tidyverse style guide*](https://style.tidyverse.org/). Hadley recommends using only lowercase letters, numbers, and `_` for all variables (column names and R objects). However, we are defining variables as only column names. For column names, we use UpperCamelCase and `_` to separate the measurement name from the unit. Do not use special characters (i.e., write out `Percent` instead of using `%`).
-
-This helps us mutate and pivot our data using the `_`:
-
-``` r
-results_long <- data |>
-  dplyr::mutate(dplyr::across(dplyr::contains("_"), as.numeric)) |>
-  tidyr::pivot_longer(
-    cols = dplyr::matches("_|pH"),
-    names_to = "measurement"
-  ) 
-```
+Let's first define these terms so we're on the same page. In this style guide, **variables** are column names in spreadsheets (that become column names in R dataframes), **objects** are all data structures in R and ArcGIS (vectors, lists, dataframes, fields, tables), and **functions** are self-contained modules of code that accomplish a specific task.
 
 **Variable examples:**
 
 ``` r
 # Good
-Clay_Percent
-96HrMinC_MgCKgDay
-PMN_MgKg
+clay_percent
+min_c_96hr_mg_c_kg_day
+pmn_mg_kg
 
 # Bad
 
 # Uses special character
-Clay_%
+clay_%
 
-# Less human readable, inconsistent with style guide
-96hrminc_mgkgday
+# Less human readable, inconsistent with style guide, 
+# starts with number and will error in R
+96hrminc_mgckgday
 
 # Hyphen will need to be escaped in R code to avoid error
-PMN-MgKg
+pmn-mgkg
 ```
 
 #### Objects and functions {#sec-objects-functions}
