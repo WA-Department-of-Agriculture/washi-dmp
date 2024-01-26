@@ -22,13 +22,21 @@ book:
   subtitle: "Washington Soil Health Initiative: State of the Soils Assessment"
   date: last-modified
   author: [Jadey Ryan, Dani Gelardi]
-  sidebar: 
-    search: true
-    logo: images/washi-logo.jpg
   favicon: images/washi-circle.png
   repo-url: https://github.com/WA-Department-of-Agriculture/washi-dmp
   repo-actions: [source, edit]
   
+  sidebar: 
+    search: true
+    logo: images/washi-logo.jpg
+    tools:
+      - icon: download
+        menu:
+          - text: PDF
+            url: sos-data-management-plan.pdf
+          - text: MS Word
+            url: sos-data-management-plan.docx
+            
   chapters:
     - index.qmd
     - data-management.qmd
