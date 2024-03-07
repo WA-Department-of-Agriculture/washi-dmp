@@ -300,12 +300,6 @@ div.csl-indent {
 
     
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 7, 2024</p>
-    </div>
-  </div>
     
   </div>
   
@@ -401,7 +395,7 @@ Note
 <p>✅ Instead, always use relative paths, which are <em>relative</em> to the working directory (i.e.&nbsp;the project’s home) like <code>data/processed/data-clean.csv</code>. When working in an RStudio project, the default working directory is the <strong>root</strong> project directory (i.e., where the <code>.Rproj</code> file is).</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="images/ah-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Artwork by Allison Horst"><img src="images/ah-project.png" class="img-fluid figure-img" style="width:4in" alt="A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing &quot;setwd&quot;, looks on at a metal riveted cube labeled &quot;R Proj&quot; holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled &quot;here&quot; doing a trick on a skateboard."></a></p>
+<p><a href="images/ah-project.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Artwork by Allison Horst"><img src="images/ah-project.png" class="img-fluid figure-img" style="width:4in" alt="A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing &quot;setwd&quot;, looks on at a metal riveted cube labeled &quot;R Proj&quot; holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled &quot;here&quot; doing a trick on a skateboard."></a></p>
 <figcaption>Artwork by <a href="https://allisonhorst.com">Allison Horst</a></figcaption>
 </figure>
 </div>
@@ -411,7 +405,7 @@ Note
 <p>In combination with R projects, the <a href="https://here.r-lib.org/">{here}</a> package builds <em>relative</em> file paths. This is especially important when rendering Quarto files because the default working directory is where the <code>.qmd</code> file lives. Using the above example project structure, running <code>read.csv("data/processed/data-clean.csv")</code> in <code>soil-health-report.qmd</code> errors because it looks for a data subfolder in the reports folder. Instead, use <code>here</code> to build a relative path from the project root with <code>read.csv(here::here("data", "processed", "data-clean.csv"))</code>. This takes care of the backslashes or forward slashes so the relative path works with any operating system.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="images/ah-here.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Artwork by Allison Horst"><img src="images/ah-here.png" class="img-fluid figure-img" style="width:4in" alt="A cartoon showing two paths side-by-side. On the left is a scary spooky forest, with spiderwebs and gnarled trees, with file paths written on the branches like &quot;~/mmm/nope.csv&quot; and &quot;setwd(&quot;/haha/good/luck/&quot;)&quot;, with a scared looking cute fuzzy monster running out of it. On the right is a bright, colorful path with flowers, rainbow and sunshine, with signs saying &quot;here!&quot; and &quot;it's all right here!&quot; A monster facing away from us in a backpack and walking stick is looking toward the right path. Stylized text reads &quot;here: find your path.&quot;"></a></p>
+<p><a href="images/ah-here.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Artwork by Allison Horst"><img src="images/ah-here.png" class="img-fluid figure-img" style="width:4in" alt="A cartoon showing two paths side-by-side. On the left is a scary spooky forest, with spiderwebs and gnarled trees, with file paths written on the branches like &quot;~/mmm/nope.csv&quot; and &quot;setwd(&quot;/haha/good/luck/&quot;)&quot;, with a scared looking cute fuzzy monster running out of it. On the right is a bright, colorful path with flowers, rainbow and sunshine, with signs saying &quot;here!&quot; and &quot;it's all right here!&quot; A monster facing away from us in a backpack and walking stick is looking toward the right path. Stylized text reads &quot;here: find your path.&quot;"></a></p>
 <figcaption>Artwork by <a href="https://allisonhorst.com">Allison Horst</a></figcaption>
 </figure>
 </div>
@@ -1078,7 +1072,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/code-guide.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/code-guide.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"right","closeEffect":"zoom","loop":false,"selector":".lightbox"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/code-guide.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/code-guide.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"descPosition":"right","closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
