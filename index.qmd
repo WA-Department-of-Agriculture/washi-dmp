@@ -12,15 +12,7 @@ To date, nearly 1,000 soil samples and management surveys across 50 different cr
 
 ## Chapter outline
 
-**This Data Management Plan (DMP) is a living document to be continually reviewed and improved based on lessons learned, new information, and collaborator feedback.** 
-
-::: {.content-visible when-format="docx"}
-The first page displays the date of the last update.
-:::
-
-::: {.content-visible when-format="html"}
-Each page displays the date of the last modification.
-:::
+**This Data Management Plan (DMP) is a living document to be continually reviewed and improved based on lessons learned, new information, and collaborator feedback.** The header on the first page displays the date of the last update.
 
 @sec-data-management describes what data management is, why it is crucial to achieve our data-driven goals, and how our data move through the data life cycle.
 

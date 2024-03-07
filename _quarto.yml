@@ -21,7 +21,7 @@ book:
   title: Data Management Plan
   subtitle: "Washington Soil Health Initiative: State of the Soils Assessment"
   author: [Jadey Ryan, Dani Gelardi]
-  date: 2024-03-06
+  date: last-modified
   favicon: images/washi-circle.png
   repo-url: https://github.com/WA-Department-of-Agriculture/washi-dmp
   repo-actions: [source, edit]
