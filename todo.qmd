@@ -1,0 +1,69 @@
+# Documentation
+
+## SOPs to be developed
+
+-   assigning producer, field, and sample IDs
+-   data cleaning
+-   data import into the database
+-   data storage
+-   external data integration
+
+## Other todos
+
+-   Update QAPP
+-   Update variable names in R scripts, data dictionary, and Soiltest template.
+
+## Variable-level
+
+Variable-level documentation includes data dictionaries and codebooks, which are
+often talked about interchangeably. However, we'll refer to the **data
+dictionary** as a tabular collection of names, definitions, and attributes about
+the variables in a dataset. Data dictionaries are ideally created in the
+planning phase of the project before data are collected. In contrast,
+**codebooks** provide descriptive, variable-level information and univariate
+summary statistics to allow users to understand the contents of a dataset
+without opening it. Codebooks are created or updated after data are collected,
+cleaned, and validated.
+
+### Codebook
+
+Codebooks provide more information (i.e., existing values/ranges and summary
+statistics) than the data dictionary and can be used to understand a very
+high-level summary of the processed data. There are many R packages that
+generate codebooks; however, we have not implemented this type of documentation
+for our project yet.
+
+Crystal Lewis gave the lightning talk [A Comparison of Packages to Generate
+Codebooks](https://github.com/Cghlewis/codebook-pkg-comparison). Once, our data
+live in a database, I'd like to generate codebooks.
+
+# Flow
+
+### Import data to database
+
+TBD. Currently data are only in spreadsheets.
+
+# Sharing
+
+**TODO**: discussion with team on the below ideas
+
+In the future when the data are more mature and hosted in a proper database, we
+may publish an anonymized subset in a public repository such as:
+
+-   GitHub via an R package or Shiny app
+-   [Zenodo](https://zenodo.org/): integrates with GitHub and is citable with a
+    DOI
+-   [Data.WA.gov](https://data.wa.gov/): open data portal for the State of
+    Washington
+    
+# Code Style Guide
+
+## Naming conventions
+
+::: callout-note
+The code naming convention here applies primarily to R. Python and JavaScript
+have different naming standards.
+
+**TODO**: add Python naming conventions? They differ from R as static variables
+(aka constants) are supposed to be SCREAMING_SNAKE_CASE.
+:::

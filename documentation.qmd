@@ -1,86 +1,129 @@
 # Documentation {#sec-documentation}
 
-Documentation is the process of recording all aspects of project design; sampling; lab analyses; data cleaning; data analyses; data quality control and assurance procedures; and development of decision-support tools. Seem familiar? All of these aspects are also part of our data life cycle. We document our data throughout the life cycle to:
+Documentation is the process of recording all aspects of project design;
+sampling; lab analyses; data cleaning; data analyses; data quality control and
+assurance procedures; and development of decision-support tools. Seem familiar?
+These are the steps of the data life cycle. Documentation helps to:
 
--   standardize our procedures
+-   standardize procedures
 -   enable reproducibility
 -   establish credibility
 -   ensure others (including our future selves) use and interpret data correctly
 -   provide searchability
 
-**All documentation (including this document) should be updated (and versioned) as procedures change and lessons are learned.**
+**All documentation (including this document) should be updated (and versioned)
+as procedures change and lessons are learned.**
 
-Samples collected by WSDA for the SOS should follow the procedures and standards described in the below documentation.
+Samples collected by WSDA for the SOS must follow the procedures and standards
+described in the below documentation.
 
-External data must have at least the documentation outlined in @sec-external-data to be integrated into the SOS dataset.
+External data must have, at minimum, the documentation outlined in
+@sec-external-data to be integrated into the SOS dataset.
 
 ## Project-level
 
-Project-level documentation includes all descriptive information about the SOS dataset, as well as planning decisions and process documentation. Documentation includes quality assurance project plans, standard operating procedures, and other high-level documents (i.e., request for proposals, applications, meeting agendas/notes, etc.).
+Project-level documentation includes all descriptive information about the SOS
+dataset, as well as planning decisions and process documentation. Documentation
+includes **quality assurance project plans**, **standard operating procedures**, and
+other high-level documents (e.g., request for proposals, applications, meeting
+agendas/notes).
 
 ### Quality assurance project plan (QAPP)
 
-The QAPP is the highest level of project documentation and covers everything from the project description; personnel roles and responsibilities; project timelines; data and measurement quality objectives; study design; and overviews of field, laboratory, and quality control.
+The QAPP is the highest level of project documentation and covers everything
+from the project description; personnel roles and responsibilities; project
+timelines; data and measurement quality objectives; study design; and overviews
+of field, laboratory, and quality control.
 
-Ours can be found in [Y:/NRAS/soil-health-initiative/state-of-the-soils/qapp](Y:/NRAS/soil-health-initiative/state-of-the-soils/qapp), though it needs to be updated.
+Ours can be found in
+[Y:/NRAS/soil-health-initiative/state-of-the-soils/qapp](Y:/NRAS/soil-health-initiative/state-of-the-soils/qapp).
 
 ### Standard operating procedures (SOP)
 
-SOPs provide detailed instructions for field, lab, or data processing procedures and decision making processes.
+SOPs provide detailed instructions for field, lab, or data processing procedures
+and decision-making processes.
 
-Ours can be found in [Y:/NRAS/soil-health-initiative/state-of-the-soils/sop](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop).
+Ours can be found in
+[Y:/NRAS/soil-health-initiative/state-of-the-soils/sop](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop).
 
 #### SOS sampling
 
-The purpose of this [SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling) is to detail the procedures for a typical site visit in which soil samples are collected for physical, chemical, and biological soil health indicator analyses. Procedures include equipment preparation prior to sampling; best practices for filling out field forms; the selection of sampling locations; sampling protocols; sample handling and storage; and submitting samples to the lab. Following this SOP ensures data quality by creating audit trails and reminders to check that data are present, complete, and accurate. Additionally, this SOP will be used to maintain consistent sample collection procedures throughout the state for WSDA employees and partners.
+The purpose of this
+[SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling) is to
+detail the procedures for a typical site visit in which soil samples are
+collected for physical, chemical, and biological soil health indicator analyses.
+Procedures include equipment preparation prior to sampling; best practices for
+filling out field forms; the selection of sampling locations; sampling
+protocols; sample handling and storage; and submitting samples to the lab.
+Following this SOP ensures data quality by creating audit trails and reminders
+to check that data are present, complete, and accurate. Additionally, this SOP
+will be used to maintain consistent sample collection procedures throughout the
+state for WSDA employees and partners.
 
 #### Quality control / quality assurance (QA/QC)
 
-This [SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc) outlines the process for screening sample metadata and lab results for completeness, consistency, and quality. Procedures involve subject matter expertise, investigation, communication with sampling teams and labs, algorithmic quality control, and tagging sample results with quality codes (listed in the below table). Data are then integrated into the statewide database according to a SOP not yet authored.
+This [SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc) outlines
+the process for screening sample metadata and lab results for completeness,
+consistency, and quality. Procedures involve subject matter expertise,
+investigation, communication with sampling teams and labs, algorithmic quality
+control, and tagging sample results with quality codes (listed in the below
+table). Data are then integrated into the statewide database.
 
-+-------------+---------------+----------------------------------------+---------------------------+
-| **Code**    | **Tag**       | **Description**                        | **Inclusion in analyses** |
-+=============+===============+========================================+===========================+
-| **0**       | Excellent     | Met lab's and WSDA's QC criteria       | Yes                       |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **100**     | Estimate      | Interpolated missing value             | Yes                       |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **110**     | Derived       | Derived from an estimated value        | Yes                       |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **120**     | Suspect       | Z-score is ≥ \|3\|                     | Yes                       |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **130**     | Calculated ND | Calculated value using at least one ND | Yes                       |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **140**     | Non-detect    | Below the method detection limit       | No                        |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **160**     | Poor          | Did not meet lab's QC criteria         | No                        |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **180**     | Outlier       | Outlier, designated by soil scientist  | No                        |
-+-------------+---------------+----------------------------------------+---------------------------+
-| **200**     | Unknown       | External dataset                       | Yes                       |
-+-------------+---------------+----------------------------------------+---------------------------+
++-----------------+-----------------+---------------------+-----------------+
+| **Code**        | **Tag**         | **Description**     | **Inclusion in  |
+|                 |                 |                     | analyses**      |
++=================+=================+=====================+=================+
+| **0**           | Excellent       | Met lab's and       | Yes             |
+|                 |                 | WSDA's QC criteria  |                 |
++-----------------+-----------------+---------------------+-----------------+
+| **100**         | Estimate        | Interpolated        | Yes             |
+|                 |                 | missing value       |                 |
++-----------------+-----------------+---------------------+-----------------+
+| **110**         | Derived         | Derived from an     | Yes             |
+|                 |                 | estimated value     |                 |
++-----------------+-----------------+---------------------+-----------------+
+| **120**         | Suspect         | Z-score is ≥ \|3\|  | Yes             |
++-----------------+-----------------+---------------------+-----------------+
+| **130**         | Calculated ND   | Calculated value    | Yes             |
+|                 |                 | using at least one  |                 |
+|                 |                 | ND                  |                 |
++-----------------+-----------------+---------------------+-----------------+
+| **140**         | Non-detect      | Below the method    | No              |
+|                 |                 | detection limit     |                 |
++-----------------+-----------------+---------------------+-----------------+
+| **160**         | Poor            | Did not meet lab's  | No              |
+|                 |                 | QC criteria         |                 |
++-----------------+-----------------+---------------------+-----------------+
+| **180**         | Outlier         | Outlier, designated | No              |
+|                 |                 | by soil scientist   |                 |
++-----------------+-----------------+---------------------+-----------------+
+| **200**         | Unknown         | External dataset    | Yes             |
++-----------------+-----------------+---------------------+-----------------+
+| *ND =           |                 |                     |                 |
+| non-detect*     |                 |                     |                 |
++-----------------+-----------------+---------------------+-----------------+
 
 : {.striped}
 
-#### SOPs we don't have (yet)
-
--   assigning producer, field, and sample IDs
--   data cleaning
--   data import into the database
--   data storage
--   external data integration
-
 ## Dataset-level
 
-Dataset-level documentation applies to lab results, sample locations, grower information, and management data. We use readmes and changelogs to document what each dataset contains, how they are related, potential issues to be aware of, and any alterations made to the data.
+Dataset-level documentation applies to lab results, sample locations, grower
+information, and management data. **Readme's** and **changelogs** document what
+each dataset contains, how they are related, potential issues to be aware of,
+and any alterations made to the data. See below for examples of what to include.
 
 ### Readme {#sec-readme}
 
-`readme` files are plain text documents that contain information about the files in a folder, explanation of versioning, and instructions/metadata for data packages. These files are saved as `.txt`, instead of MS Word documents that take longer to open and can only be opened on computers with Microsoft installed.
+`readme` files are plain text documents that contain information about the files
+in a folder, explanation of versioning, and instructions/metadata for data
+packages. These files are saved as `.txt`, instead of MS Word documents that
+take longer to open and can only be opened on computers with Microsoft
+installed.
 
 #### Describe contents of folder
 
-For example, the `_complete-dataset` folder contains a [readme.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/readme.txt) that describes each files' structure, contents, and other pertinent information, such as the data source.
+The [readme.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/readme.txt) in the `_complete-dataset` folder describes each files' structure, contents, and other pertinent information,
+such as data sources.
 
 ::: {.content-visible when-format="html"}
 <details>
@@ -110,7 +153,10 @@ example-data.csv contains 100 random samples that have been anonymized with fake
 
 #### Explain versions
 
-Another example is the [readme.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/lab-data/raw/readme.txt) in the `2023_sampling` \> `lab-data` \> `raw` folder, which explains why there are two different versions of the lab results and where to find additional information.
+The [readme.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/lab-data/raw/readme.txt)
+in the `2023_sampling` \> `lab-data` \> `raw` folder explains why there
+are two different versions of the lab results and where to find additional
+information.
 
 ::: {.content-visible when-format="html"}
 <details>
@@ -128,7 +174,10 @@ Another example is the [readme.txt](Y:/NRAS/soil-health-initiative/state-of-the-
 
 #### Provide instructions
 
-An example of a [readme.txt](https://app.box.com/s/axozzclt3nus5mzhmvspo2dtxrbfbpbj) that provides instructions on how to use the folder contents can be found in the [ArcGIS soil sample points box.com folder](https://app.box.com/s/4d6xg8q5dr1cjjoxver0g3h35d3s3bao). When this folder is shared with our partners, the readme helps them orient to the contents of the folder and modify the files as needed for their own adaptation.
+Another [readme.txt](https://app.box.com/s/axozzclt3nus5mzhmvspo2dtxrbfbpbj)
+instructs how to use the files in the [ArcGIS soil sample points box.com folder](https://app.box.com/s/4d6xg8q5dr1cjjoxver0g3h35d3s3bao). When this
+folder is shared with partners, the readme helps orient them to the contents
+of the folder and modify the files as needed for their own project.
 
 ::: {.content-visible when-format="html"}
 <details>
@@ -184,17 +233,18 @@ Resources:
 
 ### Changelog
 
-Changelogs are also simple and concise plain text documents saved in a folder alongside data files to document any changes to the dataset.
+Changelogs are also simple and concise plain text documents saved in a folder
+alongside data files that document changes to the dataset.
 
-At the bare minimum, the `changelog.txt` should contain:
+At the bare minimum, the `changelog.txt` contains:
 
 -   date of modification
 -   initials of who made the changes
 -   description of the changes
 
-::: {.content-visible when-format="html"}
-An example [changelog.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/changelog.txt) can be found in the `_complete-dataset` folder.
+See the example [changelog.txt](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/changelog.txt) in the `_complete-dataset` folder.
 
+::: {.content-visible when-format="html"}
 <details>
 
 <summary>View the example</summary>
@@ -223,81 +273,107 @@ Contents of changelog.txt in _complete-dataset folder:
 
 ## Variable-level
 
-Variable-level documentation includes data dictionaries and codebooks, which are often talked about interchangeably. However, we'll refer to the **data dictionary** as a tabular collection of names, definitions, and attributes about the variables in a dataset. Data dictionaries are ideally created in the planning phase of the project before data are collected. In contrast, **codebooks** provide descriptive, variable-level information and univariate summary statistics to allow users to understand the contents of a dataset without opening it. The codebook is created or updated after data are collected, cleaned, and validated.
+Variable-level documentation includes **data dictionaries**, which are tabular
+collections of names, definitions, and attributes about the variables in a
+dataset. Data dictionaries are ideally created in the planning phase of the
+project before data are collected.
 
 ### Data dictionary
 
-In a data dictionary, each row is a different variable, while each column is a different attribute of that variable. With a data dictionary, any user should be able to properly interpret each variable in our data.
+Each row is a different variable, and each column is a different attribute of that variable.  With a data dictionary, a user should be able to properly interpret each variable in the data.
 
-Our [data-dictionary.xlsx](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-cataset/data-dictionary.xlsx) in the [\_complete-dataset folder](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset) contains two tabs (`lab-results` and `sample-locations`) that describe the attributes of each variable.
-
-**TODO**: update variable names in R scripts, data dictionary, and Soiltest template.
+Our [data-dictionary.xlsx](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/data-dictionary.xlsx) in the [\_complete-dataset folder](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset)
+contains two tabs (`lab-results` and `sample-locations`) that describe the attributes of each variable.
 
 ::: {.content-visible when-format="html"}
 <details>
 
 <summary>View the `sample-locations` dictionary</summary>
 
-+-------------+-------------------------------------------------+-----------------+-----------+
-| variable    | description                                     | unit            | dataType  |
-+=============+=================================================+=================+===========+
-| year        | Year the sample was collected                   |                 | Numeric   |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| county      | County of the sampled field                     |                 | Character |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| sampleId    | Sample identification code                      |                 | Character |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| cropGroup   | Crop group of the sampled field                 |                 | Character |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| cropType    | Crop type of the sampled field                  |                 | Character |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| stratum     | Soil Health Institute stratum                   |                 | Character |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| MAP_mm.year | OSU PRISM mean annual precipitation             | mm/year         | Numeric   |
-|             |                                                 |                 |           |
-|             | 30-year normals (1991-2020) at 800 m resolution |                 |           |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| MAT_c       | OSU PRISM mean annual temperature               | degrees C       | Numeric   |
-|             |                                                 |                 |           |
-|             | 30-year normals (1991-2020) at 800 m resolution |                 |           |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| longitude   | Longitude of sample point, WGS84                | decimal degrees | Numeric   |
-+-------------+-------------------------------------------------+-----------------+-----------+
-| latitude    | Latitude of sample point, WGS84                 | decimal degrees | Numeric   |
-+-------------+-------------------------------------------------+-----------------+-----------+
++----------------+------------------------+----------------+----------------+
+| variable       | description            | unit           | data_type      |
++================+========================+================+================+
+| year           | Year the sample was    |                | Numeric        |
+|                | collected              |                |                |
++----------------+------------------------+----------------+----------------+
+| county         | County of the sampled  |                | Character      |
+|                | field                  |                |                |
++----------------+------------------------+----------------+----------------+
+| sample_id      | Sample identification  |                | Character      |
+|                | code                   |                |                |
++----------------+------------------------+----------------+----------------+
+| crop_group     | Crop group of the      |                | Character      |
+|                | sampled field          |                |                |
++----------------+------------------------+----------------+----------------+
+| crop_type      | Crop type of the       |                | Character      |
+|                | sampled field          |                |                |
++----------------+------------------------+----------------+----------------+
+| map_mm_year    | OSU PRISM mean annual  | mm/year        | Numeric        |
+|                | precipitation          |                |                |
+|                |                        |                |                |
+|                | 30-year normals        |                |                |
+|                | (1991-2020) at 800 m   |                |                |
+|                | resolution             |                |                |
++----------------+------------------------+----------------+----------------+
+| mat_c          | OSU PRISM mean annual  | degrees C      | Numeric        |
+|                | temperature            |                |                |
+|                |                        |                |                |
+|                | 30-year normals        |                |                |
+|                | (1991-2020) at 800 m   |                |                |
+|                | resolution             |                |                |
++----------------+------------------------+----------------+----------------+
+| longitude      | Longitude of sample    | decimal        | Numeric        |
+|                | point, WGS84           | degrees        |                |
++----------------+------------------------+----------------+----------------+
+| latitude       | Latitude of sample     | decimal        | Numeric        |
+|                | point, WGS84           | degrees        |                |
++----------------+------------------------+----------------+----------------+
 
 : {.striped}
 
 </details>
 :::
 
-### Codebook
-
-Codebooks provide more information (i.e., existing values/ranges and summary statistics) than the data dictionary and can be used to understand a very high-level summary of the processed data. There are many R packages that generate codebooks; however, we have not implemented this type of documentation for our project yet.
-
-Crystal Lewis gave the lightning talk [*A Comparison of Packages to Generate Codebooks*](https://github.com/Cghlewis/codebook-pkg-comparison). Once, our data live in a database, I'd like to generate codebooks.
-
 ## External data {#sec-external-data}
 
-External data refers to any data not directly collected by WSDA or trained partners (e.g., WSU or conservation districts) that follow our SOPs. These can include other studies pre-dating WaSHI, special soil health surveys, or publicly available datasets.
+External data refers to any data not directly collected by WSDA or trained
+partners (e.g., WSU or conservation districts) that follow our SOPs. These can
+include other studies pre-dating WaSHI, special soil health surveys, and publicly
+available datasets.
 
-The Data Scientist and Senior Soil Scientist will decide whether to integrate an external dataset case by case by considering the following questions:
+On a case-by-case basis, the Senior Soil Scientist and Data Scientist consider the following questions when deciding whether to integrate an external dataset:
 
 -   How does the study design fit into SOS goals?
--   Who collected the soil samples?
 -   What field procedures were used and how were they documented?
 -   Who analyzed the soil samples? With which methods and QA/QC procedures?
--   Which pieces of metadata and management data accompany the lab results?
+-   Are the following required metadata and management data available along with
+    the lab results?
     -   Farm, producer and field info[^documentation-1]
     -   Sampling date
     -   Sampling depth
     -   Latitude and longitude
     -   Production system (current crop, crop rotation, etc.)
-    -   Tillage, livestock grazing, irrigation, soil fertility and amendments, conservation practices, etc.
--   Is there a data dictionary or codebook to describe the variables and measurements, units, missing values, etc.?
+    -   Information concerning tillage, livestock grazing, irrigation, soil
+        fertility and amendments, land use history, and/or conservation
+        practices
+-   Is there a data dictionary or codebook describing the measurements, units,
+    missing values, etc.?
 
-[^documentation-1]: Enough farm, producer and field info to distinguish unique farmers and fields for assigning unique IDs. This info doesn't need to be personally identifiable information.
+[^documentation-1]: Enough farm, producer and field info to distinguish unique
+    farmers and fields for assigning unique IDs. They don't need to include
+    personally identifiable information.
 
-Generally, the external data should **1)** be well documented, **2)** be collected and analyzed by well-trained scientists and labs; and **3)** have adequate accompanying metadata and management data to facilitate interpretation of the results.
+Generally, external data should **1)** be well documented, **2)** be collected
+and analyzed by well-trained scientists and labs; and **3)** have adequate
+accompanying metadata and management data to facilitate interpretation of the
+results.
 
-Some publicly available datasets to consider are listed in [Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources).
+Some publicly available datasets to consider are in
+[Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources).
+
+### Intake form
+
+External data may be provided in the [External Data Intake
+spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources/washi-sos-external-data-intake.xlsx),
+alongside related documents such as SOPs, management surveys, raw data files,
+etc.

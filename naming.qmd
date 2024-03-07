@@ -1,183 +1,234 @@
 # Naming conventions {#sec-naming}
 
-When naming folders and files, we want consistent and clear names that are findable and understandable by both humans and computers. From only a file name, we should immediately know what the file contains, and which file is the most recent version.
-
-!["Documents" from Randall Munroe's xkcd](https://imgs.xkcd.com/comics/documents.png){width="250"}
+When naming folders and files, use consistent and clear names that are findable 
+and understandable by both humans and computers. A file name should convey what 
+it contains and which file is the most recent version.
 
 ## Why are conventions important?
 
--   Improves consistency and predictability, making it easier to browse folders and know what the file/folder contains.
+::: columns
+::: {.column style="width: 65%"}
+-   Improves consistency and predictability, making it easier to browse folders
+    and know what they contain.
 
--   Easily sort and retrieve files by date, conservation district, or another theme.
+-   Enables sorting files by date, conservation district, or another theme.
 
--   Facilitates collaboration so all team members can find the information they need.
+-   Facilitates collaboration so all team members can find the information they
+    need.
 
--   Standardizes file paths and URLs for efficient programming and website hosting.
+-   Standardizes file paths and URLs for efficient programming and website
+    hosting.
 
-    -   URLs and programming languages are case-sensitive. `WaSHI-data.csv` and `washi-data.csv` are completely different files.
+    -   URLs and programming languages are case-sensitive. `WaSHI-data.csv` and
+        `washi-data.csv` are completely different files.
 
-    -   URLs cannot have spaces in them. They must be escaped with this character entity `%20`. For example, `wasoilhealth.org/producer spotlights` would need to be `wasoilhealth.org/producer%20spotlights`.
+    -   URLs cannot have spaces in them. They must be escaped with this
+        character entity `%20`. For example,
+        `wasoilhealth.org/producer spotlights` would need to be
+        `wasoilhealth.org/producer%20spotlights`.
 
-For more web-specific naming conventions, see this [Learn the Web webpage](https://learntheweb.courses/topics/naming-conventions/).
+For more web-specific naming conventions, see this [Learn the Web
+webpage](https://learntheweb.courses/topics/naming-conventions/).
+:::
+
+::: {.column style="width: 2%"}
+:::
+
+::: {.column style="width: 33%"}
+![*Documents*, Randall Munroe's xkcd](images/xkcd-documents.png)
+:::
+:::
 
 ## Best practices {#sec-naming-best-practices}
 
-**Some files and folders in our shared drive do not follow these best practices or naming conventions. We are learning and improving as we go.**
+**Some files and folders in our shared drive do not follow these best practices
+or naming conventions. We are learning and improving as we go.**
 
-These are guidelines and naming things is hard, so try your best. If you're not sure how to name some files or you're adding a bunch of files that came from somewhere else, Jadey can help you organize and/or bulk rename them.
+These are just guidelines. Because naming things is hard, we only ask that you
+try your best. If you're unsure about names or adding externally named
+files, the Data Scientist can support you.
 
-See @sec-naming-examples for a table of examples of folder and file names following these best practices.
+See @sec-naming-examples for a table of examples of folder and file names
+following these best practices.
 
 ### Meaningful name casing
 
-Different conventions work better for different purposes (folders and files versus programming objects).
+Different conventions work for different purposes (folders and files versus
+programming objects).
 
--   **kebab-case**: all lowercase with hyphens separating words. Use for all **folders** and **files**.
+-   **kebab-case**: all lowercase with hyphens separating words. Use for
+    **folders** and **files**.
 
--   **snake_case**: all lowercase with underscores separating words. Only use for **column names** in spreadsheets and **code**, such as functions and variables in R. See [@sec-objects-functions] for example R errors when including hyphens in object names.
+-   **snake_case**: all lowercase with underscores separating words. Only use
+    for **column names** in spreadsheets and **code**, such as functions and
+    variables in R. See [@sec-objects-functions] for example R errors when
+    including hyphens in object names.
 
-![Cartoon representations of common cases in coding. A snake screams "SCREAMING_SNAKE_CASE" into the face of a camel (wearing ear muffs) with "camelCase" written along its back. Vegetables on a skewer spell out "kebab-case" (words on a skewer). A mellow, happy looking snake has text "snake_case" along it. Artwork by [\@allison_horst](https://twitter.com/allison_horst).](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172)
+![Artwork by [Allison Horst](https://allisonhorst.com)](images/ah-case.png){fig-alt="Cartoon representations of common cases in coding. A snake screams \"SCREAMING_SNAKE_CASE\" into the face of a camel (wearing ear muffs) with \"camelCase\" written along its back. Vegetables on a skewer spell out \"kebab-case\" (words on a skewer). A mellow, happy looking snake has text \"snake_case\" along it."}
 
 ### Delimiters convey meaning
 
-Deliberately use underscores and hyphens so we can easily understand the contents and programmatically parse file and folder names.
+Deliberately use underscores and hyphens so we can easily understand the
+contents and programmatically parse file and folder names.
 
--   Use underscores to delineate metadata elements (i.e. date from name from version `date_name_version`).
+-   Use underscores to delineate metadata elements (i.e. date from name from
+    version `date_name_version`).
 
--   Use hyphens to separate parts of one metadata element (i.e. date `YYYY-MM-DD` or name `wsda-washi-presentation`).
+-   Use hyphens to separate parts of one metadata element (i.e. date
+    `YYYY-MM-DD` or name `wsda-washi-presentation`).
 
 ### No spaces or special characters
 
-Avoid spaces and special characters (only use underscores and hyphens). Characters like `/` `()` `!` `?` `%` `+` `"` `'` have special meaning to computers and can break file paths and URLs.
+Avoid spaces and special characters (only use underscores and hyphens).
+Characters like `/` `()` `!` `?` `%` `+` `"` `'` have special meaning to
+computers and can break file paths and URLs.
 
 ### Character length matters
 
-Computers are unable to read file paths and file names that surpass a certain character length. Be concise AND descriptive. Omit prepositions and articles when possible. Abbreviate long words. The path limit on Windows is 260 characters.
+Computers are unable to read file paths and file names that surpass a certain
+character length. Be concise AND descriptive. Omit prepositions and articles
+when possible. Abbreviate long words. The path limit on Windows is 260
+characters.
 
 ### 'Back to front' date
 
-Remember to express date 'back to front' like `YYYY-MM-DD` according to the [ISO 8601 standard](https://www.iso.org/iso-8601-date-and-time-format.html). Left pad single-digit months and days with a zero. This maintains the chronological order of records when they are sorted alphanumerically.
+Express date 'back to front' like `YYYY-MM-DD` according to the [ISO
+8601 standard](https://www.iso.org/iso-8601-date-and-time-format.html). Left pad
+single-digit months and days with zeros to maintain chronological order
+of records when sorting alphanumerically.
 
-+-----------------------+------------------------+
-| ✅ Do this            | ❌ Don't do this       |
-+=======================+========================+
-| 2020-05-28_agenda.pdf | 2-14-2023_Agenda.pdf   |
-+-----------------------+------------------------+
-| 2023-01-01_agenda.pdf | 2023-Jan-1_Agenda.pdf  |
-+-----------------------+------------------------+
-| 2023-02-14_agenda.pdf | Dec052020_Agenda.pdf   |
-+-----------------------+------------------------+
-| 2023-12-05_agenda.pdf | May_28_2020_Agenda.pdf |
-+-----------------------+------------------------+
++-------------------------+--------------------------+
+| ✅ Do this              | ❌ Don't do this         |
++=========================+==========================+
+| 2020-05-28_agenda.pdf   | 2-14-2023_Agenda.pdf     |
++-------------------------+--------------------------+
+| 2023-01-01_agenda.pdf   | 2023-Jan-1_Agenda.pdf    |
++-------------------------+--------------------------+
+| 2023-02-14_agenda.pdf   | Dec052020_Agenda.pdf     |
++-------------------------+--------------------------+
+| 2023-12-05_agenda.pdf   | May_28_2020_Agenda.pdf   |
++-------------------------+--------------------------+
 
 ### Group & sort files by name
 
-Consider how folders and files should be grouped and sorted. Put that piece of metadata in the beginning of the file name. By putting the conservation district name in the front, we can sort by district. Or, we can sort by date by putting the date before the district name.
+Consider how folders and files should be grouped and sorted, and include the
+appropriate metadata at the beginning of the file name. See examples below.
 
-+----------------------------------+----------------------------------+
-| Sort by district                 | Sort by date                     |
-+==================================+==================================+
-| cowlitz_coc_2023-05-01.pdf       | 2023-05-01_cowlitz_coc.pdf       |
-+----------------------------------+----------------------------------+
-| cowlitz_coc_2023-05-23.pdf       | 2023-05-01_cowlitz_tracking.pdf  |
-+----------------------------------+----------------------------------+
-| cowlitz_tracking_2023-05-01.pdf  | 2023-05-09_ferry-cd_tracking.pdf |
-+----------------------------------+----------------------------------+
-| ferry-cd_coc_2023-05-10.pdf      | 2023-05-10_ferry-cd_coc.pdf      |
-+----------------------------------+----------------------------------+
-| ferry-cd_coc_2023-05-17.pdf      | 2023-05-17_ferry-cd_coc.pdf      |
-+----------------------------------+----------------------------------+
-| ferry-cd_coc_2023-06-06.pdf      | 2023-05-23_cowlitz_coc.pdf       |
-+----------------------------------+----------------------------------+
-| ferry-cd_tracking_2023-05-09.pdf | 2023-06-06_ferry-cd_coc.pdf      |
-+----------------------------------+----------------------------------+
++-------------------------------------+-------------------------------------+
+| Sort by district                    | Sort by date                        |
++=====================================+=====================================+
+| cowlitz_coc_2023-05-01.pdf          | 2023-05-01_cowlitz_coc.pdf          |
++-------------------------------------+-------------------------------------+
+| cowlitz_coc_2023-05-23.pdf          | 2023-05-01_cowlitz_tracking.pdf     |
++-------------------------------------+-------------------------------------+
+| cowlitz_tracking_2023-05-01.pdf     | 2023-05-09_ferry-cd_tracking.pdf    |
++-------------------------------------+-------------------------------------+
+| ferry-cd_coc_2023-05-10.pdf         | 2023-05-10_ferry-cd_coc.pdf         |
++-------------------------------------+-------------------------------------+
+| ferry-cd_coc_2023-05-17.pdf         | 2023-05-17_ferry-cd_coc.pdf         |
++-------------------------------------+-------------------------------------+
+| ferry-cd_coc_2023-06-06.pdf         | 2023-05-23_cowlitz_coc.pdf          |
++-------------------------------------+-------------------------------------+
+| ferry-cd_tracking_2023-05-09.pdf    | 2023-06-06_ferry-cd_coc.pdf         |
++-------------------------------------+-------------------------------------+
 
 ### Version numbers {#sec-version-numbers}
 
-Including the date in the file name is one way to version a document. Alternatively, or in addition to, we can add a version number to the end of the file name. Consider how many possible versions there could be. If there may be more than 10, use leading zeros to left-pad single digit numbers so the file name always has the same length. v1 through v15 will not sort the same way as v01 through v15.
+Including the date in the file name is one way to version a file. Alternatively,
+or in addition to, append a number. Consider how many possible versions
+there could be. If more than 10, use leading zeros so the numbers have the same
+length. v1 through v15 will not sort the same way as v01 through v15.
 
-+-----------------------------+-------------------+
-| ✅ Do this                  | ❌ Don't do this  |
-+=============================+===================+
-| sop_v01.pdf                 | SOP_v1.pdf        |
-+-----------------------------+-------------------+
-| sop_v02.pdf                 | SOP_v10.pdf       |
-+-----------------------------+-------------------+
-| ... \[v03 - v09\]           | SOP_v11.pdf       |
-+-----------------------------+-------------------+
-| sop_v10.pdf                 | SOP_v2.pdf        |
-+-----------------------------+-------------------+
-| sop_v11.pdf                 | ... \[v3 - v9\]   |
-+-----------------------------+-------------------+
++--------------------------------+---------------------+
+| ✅ Do this                     | ❌ Don't do this    |
++================================+=====================+
+| sop_v01.pdf                    | SOP_v1.pdf          |
++--------------------------------+---------------------+
+| sop_v02.pdf                    | SOP_v10.pdf         |
++--------------------------------+---------------------+
+| ... \[v03 - v09\]              | SOP_v11.pdf         |
++--------------------------------+---------------------+
+| sop_v10.pdf                    | SOP_v2.pdf          |
++--------------------------------+---------------------+
+| sop_v11.pdf                    | ... \[v3 - v9\]     |
++--------------------------------+---------------------+
 
 ### Collaboration
 
-Add your initials to the end of the file name when "saving as" a file that multiple people are working on (i.e., `2023_sop-soil-health-monitoring_lm-jr.docx`). This ensures a version is kept as a backup. Alternatively, use [Track Changes](https://support.microsoft.com/en-au/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a) if working in a MS Word document.
+Add your initials to the end of the file name when "saving as" a file that
+multiple people are working on (i.e.,
+`2023_sop-soil-health-monitoring_lm-jr.docx`). This ensures a version is kept as
+a backup. Alternatively, use [Track
+Changes](https://support.microsoft.com/en-au/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a)
+if working in a MS Word document.
 
 ### Literature and references
 
-When saving journal articles, user guides, and other reference materials, use the convention `author_year_abbreviated-title` where each authors' last name is separated with a hyphen, the title is abbreviated, and hyphens separate each word of the title. Remember to use underscores to separate different metadata.
+When saving journal articles, user guides, and other reference materials, use
+the convention `author_year_abbreviated-title`. Use underscores to separate
+different metadata.
 
-+------------------------------------+------------------------------------+
-| ✅ Do this                         | ❌ Don't do this                   |
-+====================================+====================================+
-| lal_2004_soil-c-to-mitigate-cc.pdf | lal-2004-soil-c-to-mitigate-cc.pdf |
-+------------------------------------+------------------------------------+
-| clark-et-al_2020_pmn-sampling      | clark-et-al_2020_pmn-sampling      |
-+------------------------------------+------------------------------------+
++--------------------------------------+--------------------------------------+
+| ✅ Do this                           | ❌ Don't do this                     |
++======================================+======================================+
+| lal_2004_soil-c-to-mitigate-cc.pdf   | lal-2004-soil-c-to-mitigate-cc.pdf   |
++--------------------------------------+--------------------------------------+
+| clark-et-al_2020_pmn-sampling        | clark-et-al_2020_pmn-sampling        |
++--------------------------------------+--------------------------------------+
 
 ### Column names and code {#sec-vars-code}
 
-Naming conventions for column names in spreadsheets and objects in code differ from folders and files. The hyphens in kebab-case cause errors in R and SQL code. Additionally, hyphens, spaces, and other special characters are [invalid for ArcGIS table and field names](https://support.esri.com/en-us/knowledge-base/faq-what-characters-should-not-be-used-in-arcgis-for-fi-000005588).
+Naming conventions for data column headers differ from folders and files. The
+hyphens in kebab-case cause errors in R and SQL code. Additionally, hyphens,
+spaces, and other special characters are [invalid for ArcGIS table and field
+names](https://support.esri.com/en-us/knowledge-base/faq-what-characters-should-not-be-used-in-arcgis-for-fi-000005588).
 
-Use **snake_case** for column names in spreadsheets and all **code objects** (R vectors, lists, dataframes, and functions).
+Use **snake_case** for column names in spreadsheets and code objects (R
+vectors, lists, dataframes, and functions).
 
-In variable or parameter names, we include the measurement with the unit for clarity and self-documentation when sharing our data. This prevents unit confusion and reduces the risk of misinterpreting or inappropriately using the data.
+In variable or parameter names, include the measurement with the unit. This
+prevents unit confusion and reduces the risk of misinterpreting or
+inappropriately using the data.
 
-Remember to not use special characters. Instead of `toc_%`, use `toc_percent`.
+Do not use special characters. Instead of `toc_%`, use `toc_percent`.
 
 ::: callout-note
-The code naming convention here applies primarily to R. Python and JavaScript have different naming standards.
+The code naming convention here applies primarily to R. Python and other programming languages have different conventions.
 :::
 
 See @sec-code-style-guide for more details in the code style guide.
 
 ## Naming examples {#sec-naming-examples}
 
-+-------------------------+-------------------+--------------------------------------+
-|                         | Naming convention | Examples                             |
-+=========================+===================+======================================+
-| **Folders**             | kebab-case        | 2024_sampling                        |
-|                         |                   |                                      |
-|                         |                   | data-management                      |
-+-------------------------+-------------------+--------------------------------------+
-| **Files**               | kebab-case        | 2023-11-15_survey-perennial.xlsx     |
-|                         |                   |                                      |
-|                         |                   | records-management_v01.docx          |
-|                         |                   |                                      |
-|                         |                   | pend-oreille-cd_coc_2023-06-05.pdf   |
-|                         |                   |                                      |
-|                         |                   | geisseler-et-al_2019_ace-protein.pdf |
-|                         |                   |                                      |
-|                         |                   | washi-logo-color.png                 |
-|                         |                   |                                      |
-|                         |                   | washi-dmp.Rproj                      |
-|                         |                   |                                      |
-|                         |                   | 01_load-metadata.R                   |
-|                         |                   |                                      |
-|                         |                   | 2024_producer-report.qmd             |
-+-------------------------+-------------------+--------------------------------------+
-| **Column Names & Code** | snake_case        | sample_id                            |
-|                         |                   |                                      |
-|                         |                   | clay_percent                         |
-|                         |                   |                                      |
-|                         |                   | pmn_lb_ac                            |
-|                         |                   |                                      |
-|                         |                   | primary_color                        |
-|                         |                   |                                      |
-|                         |                   | crop_summary                         |
-|                         |                   |                                      |
-|                         |                   | assign_quality_codes()               |
-+-------------------------+-------------------+--------------------------------------+
++-------------+------------------+----------------------------------------+
+|             | Naming           | Examples                               |
+|             | convention       |                                        |
++=============+==================+========================================+
+| **Folders** | kebab-case       | 2024_sampling                          |
+|             |                  |                                        |
+|             |                  | data-management                        |
++-------------+------------------+----------------------------------------+
+| **Files**   | kebab-case       | 2023-11-15_survey-perennial.xlsx       |
+|             |                  |                                        |
+|             |                  | 2024-03_washi-newsletter-wsda-sos.docx |
+|             |                  |                                        |
+|             |                  | geisseler-et-al_2019_ace-protein.pdf   |
+|             |                  |                                        |
+|             |                  | washi-logo-color.png                   |
+|             |                  |                                        |
+|             |                  | washi-dmp.Rproj                        |
+|             |                  |                                        |
+|             |                  | 01_load-metadata.R                     |
+|             |                  |                                        |
+|             |                  | 2024_producer-report.qmd               |
++-------------+------------------+----------------------------------------+
+| **Column    | snake_case       | sample_id                              |
+| Names &     |                  |                                        |
+| Code**      |                  | pmn_lb_ac                              |
+|             |                  |                                        |
+|             |                  | crop_summary                           |
+|             |                  |                                        |
+|             |                  | assign_quality_codes()                 |
++-------------+------------------+----------------------------------------+
 
 : {.striped}

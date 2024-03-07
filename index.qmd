@@ -12,9 +12,17 @@ To date, nearly 1,000 soil samples and management surveys across 50 different cr
 
 ## Chapter outline
 
-**This Data Management Plan (DMP) is a living document to be continually reviewed and improved based on lessons learned, new information, and collaborator feedback.**
+**This Data Management Plan (DMP) is a living document to be continually reviewed and improved based on lessons learned, new information, and collaborator feedback.** 
 
-@sec-data-management describes what data management is, how it is crucial to achieve our data-driven goals, and how our data move through the data life cycle.
+::: {.content-visible when-format="docx"}
+The first page displays the date of the last update.
+:::
+
+::: {.content-visible when-format="html"}
+Each page displays the date of the last modification.
+:::
+
+@sec-data-management describes what data management is, why it is crucial to achieve our data-driven goals, and how our data move through the data life cycle.
 
 @sec-formats-standards describes the various data formats we collect and manage. [ISO standards](https://www.iso.org/standards.html) are also described for date and geospatial data.
 
@@ -32,42 +40,53 @@ To date, nearly 1,000 soil samples and management surveys across 50 different cr
 
 @sec-code-style-guide describes our recommended project structures, code-specific naming conventions, script structures, and code style.
 
-::: {.content-visible when-format="html"}
+
+::: {.content-visible when-format="docx"}
 ::: callout-important
 ## Links to shared drive folders and files
 
-This DMP is best viewed in Google Chrome since the browser can open links to our local folders and files using the [Enable local file links extension](chrome://extensions/?id=nikfmfgobenbhmocjaaboihbeocackld) that should automatically be enabled by our organization.
+This DMP includes many links to folders and files on the shared drive, which are only accessible to WSDA staff on the state network or remotely connected using VPN (Virtual Private Networking).  
+:::
+:::
 
-However, when viewing this DMP in Microsoft Edge, links to our shared drive are not accessible in the browser. Nothing happens if you click on these links. To open the file or folder, right-click on the hyperlink \> copy the path \> paste it into the search bar of the file explorer \> press `Enter` or click the arrow.
+::: {.content-visible when-format="html"}
+::: {.callout-important collapse="false"}
+## Links to shared drive folders and files
 
-![](images/paste-file-path.png){fig-alt="Screenshots of DMP with outlining the process of right-clicking a hyperlink to a shared drive folder, copying the link, and then pasting it into the file explorer, and clicking enter."}
+This DMP includes many links to folders and files on the shared drive, which are only accessible to WSDA staff on the state network or remotely connected using VPN (Virtual Private Networking).  
+
+Google Chrome will allow you to open the links using the [Enable local file links extension](chrome://extensions/?id=nikfmfgobenbhmocjaaboihbeocackld) that should automatically be enabled by WSDA.
+
+However, shared drive links are not accessible when using Microsoft Edge. Nothing happens when clicking on these links. To open the file or folder, right-click on the hyperlink \> copy the path \> paste it into the search bar of the file explorer \> press `Enter` or click the arrow.
+
+![](images/paste-file-path.png){fig-alt="Screenshots of DMP outlining the process of right-clicking a hyperlink to a shared drive folder, copying the link, and then pasting it into the file explorer, and clicking enter."}
 :::
 :::
 
 ## Roles and responsibilities
 
-All WaSHI personnel who will be interacting with SOS data must familiarize themselves with the contents of this document. If all collaborators are not consistently implementing this DMP, then the benefits of effective data management are lost.
+To maximize the benefits of effective data management, all WaSHI personnel who interact with SOS data must familiarize themselves with this DMP.
 
-The WSDA Data Scientist, supported by the Co- Principal Investigators (CoPIs), is responsible for providing guidance to WaSHI staff working with SOS data and ensuring the implementation of this DMP. The Data Scientist is also responsible for reviewing and updating this document annually, and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the [GitHub repository](https://github.com/WA-Department-of-Agriculture/washi-dmp).
+The WSDA Data Scientist, supported by the Co-Principal Investigators (CoPIs), is responsible for providing guidance to WaSHI staff working with SOS data and ensuring the implementation of this DMP. The Data Scientist is also responsible for reviewing and updating this document annually, and as needed. Upon updates, the Data Scientist will distribute this document to WaSHI staff and commit the source code to the [GitHub repository](https://github.com/WA-Department-of-Agriculture/washi-dmp).
 
 | Role          | Affiliation     | Name                  | Title                 |
-|----------------|------------------------|----------------|----------------|
+|---------------|-----------------|-----------------------|-----------------------|
 | CoPI          | WSDA            | Dani Gelardi          | Senior Soil Scientist |
 | CoPI          | WSU             | Deirdre Griffin LaHue | Assistant Professor   |
 | Data Manager  | WSDA            | Jadey Ryan            | Data Scientist        |
-| Data Stewards | WaSHI personnel |                       |                       |
+| Data Stewards | WaSHI staff     |                       |                       |
 
-: Current roles as of January 2024
+: Current roles
 
 ## Staff turnover
 
-When staff leave our group, they take their skills, institutional knowledge, and personal understanding of their file management with them. Proper offboarding is essential to ensure knowledge isn't lost, time isn't wasted trying to recreate workflows, and projects keep moving.
+When staff leave, they take their skills, institutional knowledge, and personal understanding of their file management with them. Proper offboarding is essential to ensure knowledge isn't lost, time isn't wasted trying to recreate workflows, and projects keep moving.
 
 Before the employee leaves, the Senior Soil Scientist and Data Scientist ensure that:
 
 -   Folders and files are moved from the employee's personal drive to the shared drive. They are named and organized according to [@sec-naming].
 -   Workflows and specific processes the employee was responsible for are well documented.
--   Permissions and ownerships are transferred to the appropriate remaining staff.
+-   Permission and ownership for the following are transferred to the appropriate remaining staff:
     -   [GitHub WSDA organization](https://github.com/WA-Department-of-Agriculture)
     -   ArcGIS data products and online groups
     -   Database credentials

@@ -1,22 +1,23 @@
 # Data flow {#sec-flow}
 
-Data flow refers to how information moves through a system and how it's processed along the way. This chapter outlines how our data are generated, processed, and moved from start to finish.
-
-This chapter is subject to lots of changes as 2024 is the final year of our soil sampling program through funding conservation districts (CDs). However, since the CDs are now trained according to the WSDA SOP, we will accept their data provided they also submit management surveys. See @sec-external-data for the requirements to accept external data. Additionally, we do not yet have a database so the importing to the database section will be completed in the future.
-
-2020 - 2023 data and scripts are housed in the `soils-internal` [monolithic repository](https://github.com/WA-Department-of-Agriculture/soils-internal). Moving forward, each year (or special project) should have its own project and repository.
-
-::: callout-important
-## Accessible font
-
-For printed sample ID assignments, labels, chain of custodies, etc., use Atkinson Hyperlegible because it is very accessible and easy to differentiate 1) numeric zero 0 from uppercase O and 2) numeric one 1, lowercase l, and lowercase i.
-
-Download [Atkinson Hyperlegible from Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible).
-
-!["0O" and "1li" in Atkinson Hyperlegible.](images/atkinson-hyperlegible.png){width="100px"}
-:::
+ This chapter outlines how data are generated, processed, and moved from start to finish.
 
 ## Pre field season
+
+:::: {.columns}
+
+::: {.column width="68%"}
+When preparing sample ID assignments, labels, chain of custodies, and other materials, use an accessible font to reduce transcription errors. [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) has very distinct alphanumeric characters, which improves legibility. Download it from [Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible).
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="30%"}
+!["0O" and "11li" in Atkinson Hyperlegible](images/atkinson-hyperlegible.png){width="100px"}
+:::
+
+::::
 
 ### Assign unique identifiers
 
@@ -31,9 +32,9 @@ Before sample IDs can be assigned, collect the following information for each pr
 -   Crop
 -   General management practice (i.e., conventional, cover crop, reduced tillage)
 
-View examples of the 2023 [Sample Request Form](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/sample-request-form.xlsx) sent to CDs and the [Berries Sample Request Form](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/berries/sample-request-form-berries.xlsx) for the WSDA/WSU special project.
+View examples of the 2024 [Sample Request Form](Y:/NRAS/soil-health-initiative/state-of-the-soils/2024_sampling/sample-id-assignments/sample-request-form.xlsx) sent to conservation districts and the [Berries Sample Request Form](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/berries/sample-request-form-berries.xlsx) used for a WSDA/WSU special project.
 
-Once producers and fields have been identified, we assign a unique ID for the producer, field, and sample with the following convention:
+Once producers and fields have been identified, assign a unique ID for the producer, field, and sample with the following convention:
 
 -   **Producer ID**: first three letters of county + three-digit landowner number
     -   `WHA001`
@@ -51,35 +52,38 @@ The following counties have different abbreviations than their first three lette
 -   Kitsap → KIS
 -   Skamania → SKM
 
-Producer and field IDs should first be matched to previous participants. New producers and fields should continue the previous sequence. There should be no duplicate producer IDs or sample IDs.
+Match producer and field IDs to previous participants. Continue the sequence for new producers and fields. Producer IDs and sample IDs must not be duplicated.
 
 For an example R script to automate this process, see [assign-sample-ids.R](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/assign-sample-ids.R).
 
 ### Create sample labels
 
-We automate sample label creation using R and Microsoft Word's [mail merge tool](https://support.microsoft.com/en-us/topic/how-to-use-the-mail-merge-feature-in-word-to-create-and-to-print-form-letters-that-use-the-data-from-an-excel-worksheet-d8709e29-c106-2348-7e38-13eecc338679). [labels.R](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels.R) generates a [spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/combined-labels.xlsx) with all column names to be printed on the labels. Then [labels-template-mail-merge.docx](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels-template-mail-merge.docx) ingests this spreadsheet and the data scientist runs the mail merge to generate a [word document](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/all-labels-combined.docx) with all of the labels to be printed, as shown in the [completed-labels folder](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/completed-labels).
+Sample label creation is automated using R and Microsoft Word's [mail merge tool](https://support.microsoft.com/en-us/topic/how-to-use-the-mail-merge-feature-in-word-to-create-and-to-print-form-letters-that-use-the-data-from-an-excel-worksheet-d8709e29-c106-2348-7e38-13eecc338679). [labels.R](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels.R) generates a [spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/combined-labels.xlsx) with the information to be printed on the labels. Then open [labels-template-mail-merge.docx](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels-template-mail-merge.docx), select the spreadsheet as the recipient list, and run the mail merge to generate a [word document](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/all-labels-combined.docx) with all labels to be printed (as shown in the [completed-labels folder](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/completed-labels)).
 
 ### Create a data tracking sheet
 
-We keep a spreadsheet to track which pieces of data we have for each sample ID, including:
+Create a spreadsheet to track which data have been submitted for each sample, including:
 
--   GPS points submitted through the ArcGIS Field Maps field form
+-   GPS points through the ArcGIS Field Maps field form
 -   Scanned paper field forms (for those without ArcGIS Field Maps)
 -   Management surveys through ArcGIS Survey123
 -   Scanned chain of custodies with shipping tracking numbers
--   Location of archival falcon tubes
+-   Location of archival falcon tubes (once retrieved by WSDA staff)
 -   Notes for if a sample will no longer be sampled, a sample ID was changed, etc.
 
 See the [2023 spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/2023_data-tracking.xlsx) for an example.
 
 ### Develop ArcGIS web tools
 
-We use ArcGIS to build tools for managing spatial data and collecting management survey data. A sample selection feature layer is hosted and a web map with offline capabilities is created using ArcGIS Pro. Domains are used for point numbers, bulk density, and crop types. Then, a field form is created on ArcGIS Online using Field Maps. Management surveys are created and hosted with Survey123 and Experience Builder. We also use an ArcGIS Notebook with python to back up our feature layer and survey data.
+Use ArcGIS to build tools for managing spatial data and collecting management survey data. In ArcGIS Pro, create a **sample selection feature layer** with domains for point numbers, bulk density, and crop types. Publish this feature layer to ArcGIS Online as a web map with a soil series layer. Then publish a second copy without the soil series layer and enable offline use. On ArcGIS Online, use Field Maps to configure the **field form** for the feature layer. **Management surveys** are created and hosted with Survey123 and Experience Builder. Schedule the ArcGIS Notebook with Python that backs up all data to run as a task every Monday, Wednesday, and Friday during the field season.
 
 This [template ArcGIS Pro project](K:/NRAS/Arc_Data/soil-health/washi-gis-projects/template-soil-sample-points) includes a [readme.txt](K:/NRAS/Arc_Data/soil-health/washi-gis-projects/template-soil-sample-points/readme.txt) that describes this process.
 
-The ArcGIS Notebook is set to run as a task Monday, Wednesday, and Friday during the field season.
+::: {.content-visible when-format="docx"}
+View the [code from the ArcGIS Notebook](https://wa-department-of-agriculture.github.io/washi-dmp/flow.html#develop-arcgis-web-tools) on the website version of this DMP.
+:::
 
+::: {.content-visible when-format="html"}
 <details>
 
 <summary>View code from the ArcGIS Notebook</summary>
@@ -145,67 +149,65 @@ download_as_fgdb(items, folder_path)
 ```
 
 </details>
+:::
 
 ## During field season
 
-Data collection in the field is detailed in the [monitoring SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling). We'll focus on the behind-the scenes tasks for managing data.
+Data collection in the field is detailed in the [sampling SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling). Here, we focus on the behind-the scenes tasks for managing data.
 
 ### Update data tracking spreadsheet
 
-Throughout the season, the data tracking spreadsheet must be updated as various forms and surveys, as described in [create a data tracking sheet], are received.
+Throughout the season, update the data tracking spreadsheet as various forms, surveys, and correspondence are received, as described in [Create a data tracking sheet].
 
 ### Modify IDs when samples change
 
-Sometimes a producer can no longer participate, or they want to change which field is sampled. The sample request form should be updated, versioned, and archived (`sample-request-form-ferry.xlsx` → `sample-request-form-ferry_v2.xlsx`).
+Sometimes a producer can no longer participate, or they need to change which field is sampled. Update, version, and archive the sample request form (`sample-request-form-ferry.xlsx` → `sample-request-form-ferry_v2.xlsx`). Run the `assign-sample-ids.R` script again to update the sample IDs. Lines 362 - 386 should be commented out as shown in the [highlighted lines of the script on GitHub](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/assign_sample_ids.R#L362-L386). 
 
-The `assign-sample-ids.R` script should be run again to update the sample IDs. Lines 362 - 386 should be commented out as shown in the [highlighted lines of the script on GitHub](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/assign_sample_ids.R#L362-L386). Note: This link will take you to a 404 page if you are not logged into a GitHub account that is part of the WSDA organization.
+::: callout-warning
+## GitHub links
 
-Take a look through the [01_returned-sample-requests](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/01_returned-sample-requests) and [02_completed-sample-ids](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/02_completed-sample-ids) folders for an example of this flow.
+If you aren't logged into a GitHub account that is part of the WSDA organization or has access to the `soils-internal` repository, these links will take you to a `404 not found` error page.
+:::
 
-A concise, explanatory note should be added to the data tracking spreadsheet.
+See [01_returned-sample-requests](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/01_returned-sample-requests) and [02_completed-sample-ids](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/02_completed-sample-ids) for an example of this flow.
+
+Add a concise, explanatory note to the data tracking spreadsheet.
 
 ## Post field season
 
 ### Organize multiple sources of data
 
-We have many sources of data such as the initial sample request forms, ArcGIS Field Maps field forms, and management surveys. To organize these multiple sources into a single source of truth, we cross-reference each source and reach out to the sampling teams to resolve conflicting information. This is especially important for verifying the crop that was planted at the time of sampling.
+To unify the information from multiple data sources (e.g., sample request forms, ArcGIS Field Maps forms, and management surveys), cross-reference each source and reach out to the sampling teams to resolve conflicting information as needed. This is especially important for verifying the crop planted at the time of sampling.
 
-See how to *mostly* automate this process in these [01_load-metadata.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/01_loadMetadata.R) and [02_check-crops.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/02_checkCrops.R) scripts.
+See how to *mostly* automate this in: [01_load-metadata.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/01_loadMetadata.R) and [02_check-crops.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/02_checkCrops.R).
 
 ### Process lab data
 
-Follow the [QA/QC SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc/2022_washi-qc-sop.docx) for processing the lab data.
+Follow the [QA/QC SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc/2022_washi-qc-sop.docx) for processing lab data.
 
-See the 2023 processing scripts and QA/QC report:
+See the 2023 processing scripts and QA/QC report on GitHub:
 
 -   [03_process-spatial-data.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/03_processSpatialData.R)
-
 -   [04_load-lab-data.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/04_loadLabData.R)
-
 -   [05_calculate-z-scores.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/R/05_calculateZScores.R)
-
 -   [2020-2023_qc-results-summary.qmd](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/inst/2020-2023_QCresultsSummary.qmd)
 
 ### Generate reports
 
-Use the [{soils}](https://github.com/WA-Department-of-Agriculture/soils) package to create a new project for each year. To avoid email attachment size limitations, reports may be saved to [Box.com](https://agriculture.app.box.com/folder/136923153810?s=l3q9zq2p4yv38891d3q3753ybs6t0lec) for distribution to the sampling partners who will send the reports to the participants. Note: this folder is private unless invited by Jadey, Dani, or Perry.
-
-### Import data to database
-
-TBD. Currently data are only in spreadsheets.
+Use the [{soils}](https://github.com/WA-Department-of-Agriculture/soils) package to create a new project for each year. To avoid email attachment size limitations, save reports to [Box.com](https://agriculture.app.box.com/folder/136923153810?s=l3q9zq2p4yv38891d3q3753ybs6t0lec) for distribution to the sampling partners who send the reports to the participants. Access to this folder requires a share link provided by WSDA staff.
 
 ### Save data to shared drive and WSU Teams channel
 
-The output data files and reports from [process lab data] and [generate reports] are copied to the [state-of-the-soils](Y:/NRAS/soil-health-initiative/state-of-the-soils) folder in its respective `year_sampling` folder. Review [@sec-organization] and look at previous years in the shared drive to follow the same folder structure and organization.
+Copy the output data files and reports from [Process lab data] and [Generate reports] to the [state-of-the-soils](Y:/NRAS/soil-health-initiative/state-of-the-soils) folder in its respective `year_sampling` folder. See [@sec-organization] to review folder structure and organization.
 
-The final datasets in wide and long formats should also be saved to the WSU SCBG Soil Health Assessment Teams channel. If you don't have access to the [*Data for stats* folder](https://emailwsu.sharepoint.com/:f:/r/teams/cahnrs.scbgsoilhealthassessment/Shared%20Documents/General/Data/Data%20for%20stats), email it to Deirdre Griffin-LaHue.
+Save the final datasets (in wide and long formats) and documentation (data dictionary, changelog, readme) to the WSU SCBG Soil Health Assessment Teams channel.
 
 ### Archive jars and falcon tubes
 
-Archival subsamples in glass jars are stored in the Yakima WSDA storage room and the cryogenic archive subsamples in falcon tubes are stored in the -80 °C freezer at the [WSU Mount Vernon Northwestern Washington Research & Extension Center](https://mtvernon.wsu.edu/).
+![](images/cryo-labels.jpg){style="float:right" width=250 fig-alt="Falcon tubes from a -80 °C freezer with the labels starting to peel off."}Store the archival subsamples in glass jars in the Yakima WSDA storage room and the cryogenic archive subsamples in falcon tubes in the -80 °C freezer at the [WSU Mount Vernon Northwestern Washington Research & Extension Center](https://mtvernon.wsu.edu/).
 
-Labels on the falcon tubes must be taped with a generous amount of packing tape to avoid falling off as they stiffen up and flatten out when they freeze.
+Tape the labels on the falcon tubes with a generous amount of packing tape to avoid falling off when they freeze.
 
-The [archive spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/archived-sample-inventory.xlsx) must be updated.
+Update the [archive spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/archived-sample-inventory.xlsx) with the additional sample IDs, number of falcon tubes, and box number of the glass jar.
 
-![](images/cryo-labels.jpg){width="450px" fig-alt="Falcon tubes from a -80 °C freezer with the labels starting to peel off."}
+

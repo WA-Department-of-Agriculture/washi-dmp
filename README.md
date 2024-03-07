@@ -12,12 +12,13 @@ Assessment](https://washingtonsoilhealthinitiative.com/state-of-the-soils/)
 2.  In `_book`, open `Data-Management-Plan.docx`.
     -   Change date to Last Modified: \<date\>.
     -   Formatting tweaks:
+        -   turn the data life cycle steps into a table (vertical align icons)
         -   tables (turn off column banding and choose Plain Table 1 in
             `Table Design`)
-        -   scroll through and adjust image wrapping/sizing and page breaks as
-            necessary
-        -   delete one `=` from each line header line in the `snippet header`
-            code block in section 9.3
+        -   scroll through and adjust image wrapping/sizing, bullet lists, spacing, and page breaks as necessary
+        -   delete extra line breaks after some images
+        -   extend margin for code block in `snippet header` to get all `=` in one line in (section 9.3)
+    -   Update the table of contents.
     -   Save as `sos-data-management-plan.docx` and as PDF in the `washi-dmp`
         project folder and in the shared drive `data-management` folder.
 3.  Run `quarto render` again in Terminal.
