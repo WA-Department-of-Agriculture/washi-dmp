@@ -80,7 +80,7 @@ Maintenance involves processing data for aggregation, analyses, and reporting. W
 ::: {.column style="width: 85%"}
 **Access**
 
-Access refers to data storage, publication, and security. Raw and processed data with accompanying metadata should be stored, backed up, and available for information sharing with our partners. With PI approval, anonymized and aggregated data that does not compromise growers’ personally identifiable information (PII) can be made publicly available in a data repository or data product/decision-support tool.
+Access refers to data storage, publication, and security. Raw and processed data with accompanying metadata should be stored, backed up, and available for information sharing with our partners. With PI approval, anonymized and aggregated data that does not compromise growers’ personally identifiable information can be made publicly available in a data repository or data product/decision-support tool.
 :::
 :::
 
