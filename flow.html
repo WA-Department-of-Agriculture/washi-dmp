@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -258,7 +258,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#organize-multiple-sources-of-data" id="toc-organize-multiple-sources-of-data" class="nav-link" data-scroll-target="#organize-multiple-sources-of-data">Organize multiple sources of data</a></li>
   <li><a href="#process-lab-data" id="toc-process-lab-data" class="nav-link" data-scroll-target="#process-lab-data">Process lab data</a></li>
   <li><a href="#generate-reports" id="toc-generate-reports" class="nav-link" data-scroll-target="#generate-reports">Generate reports</a></li>
-  <li><a href="#import-data-to-database" id="toc-import-data-to-database" class="nav-link" data-scroll-target="#import-data-to-database">Import data to database</a></li>
   <li><a href="#save-data-to-shared-drive-and-wsu-teams-channel" id="toc-save-data-to-shared-drive-and-wsu-teams-channel" class="nav-link" data-scroll-target="#save-data-to-shared-drive-and-wsu-teams-channel">Save data to shared drive and WSU Teams channel</a></li>
   <li><a href="#archive-jars-and-falcon-tubes" id="toc-archive-jars-and-falcon-tubes" class="nav-link" data-scroll-target="#archive-jars-and-falcon-tubes">Archive jars and falcon tubes</a></li>
   </ul></li>
@@ -279,6 +278,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 7, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -287,31 +292,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Data flow refers to how information moves through a system and how it’s processed along the way. This chapter outlines how our data are generated, processed, and moved from start to finish.</p>
-<p>This chapter is subject to lots of changes as 2024 is the final year of our soil sampling program through funding conservation districts (CDs). However, since the CDs are now trained according to the WSDA SOP, we will accept their data provided they also submit management surveys. See <a href="documentation.html#sec-external-data" class="quarto-xref"><span>Section 6.4</span></a> for the requirements to accept external data. Additionally, we do not yet have a database so the importing to the database section will be completed in the future.</p>
-<p>2020 - 2023 data and scripts are housed in the <code>soils-internal</code> <a href="https://github.com/WA-Department-of-Agriculture/soils-internal">monolithic repository</a>. Moving forward, each year (or special project) should have its own project and repository.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Accessible font
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For printed sample ID assignments, labels, chain of custodies, etc., use Atkinson Hyperlegible because it is very accessible and easy to differentiate 1) numeric zero 0 from uppercase O and 2) numeric one 1, lowercase l, and lowercase i.</p>
-<p>Download <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Atkinson Hyperlegible from Google Fonts</a>.</p>
+<p>This chapter outlines how data are generated, processed, and moved from start to finish.</p>
+<section id="pre-field-season" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="pre-field-season"><span class="header-section-number">7.1</span> Pre field season</h2>
+<div class="columns">
+<div class="column" style="width:68%;">
+<p>When preparing sample ID assignments, labels, chain of custodies, and other materials, use an accessible font to reduce transcription errors. <a href="https://brailleinstitute.org/freefont">Atkinson Hyperlegible</a> has very distinct alphanumeric characters, which improves legibility. Download it from <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Google Fonts</a>.</p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="images/atkinson-hyperlegible.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="“0O” and “1li” in Atkinson Hyperlegible."><img src="images/atkinson-hyperlegible.png" class="img-fluid figure-img" width="100" alt="“0O” and “1li” in Atkinson Hyperlegible."></a></p>
-<figcaption>“0O” and “1li” in Atkinson Hyperlegible.</figcaption>
+<p><a href="images/atkinson-hyperlegible.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="“0O” and “11li” in Atkinson Hyperlegible"><img src="images/atkinson-hyperlegible.png" class="img-fluid figure-img" width="100" alt="“0O” and “11li” in Atkinson Hyperlegible"></a></p>
+<figcaption>“0O” and “11li” in Atkinson Hyperlegible</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<section id="pre-field-season" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="pre-field-season"><span class="header-section-number">7.1</span> Pre field season</h2>
 <section id="assign-unique-identifiers" class="level3">
 <h3 class="anchored" data-anchor-id="assign-unique-identifiers">Assign unique identifiers</h3>
 <p>Before sample IDs can be assigned, collect the following information for each proposed sample:</p>
@@ -325,8 +322,8 @@ Accessible font
 <li>Crop</li>
 <li>General management practice (i.e., conventional, cover crop, reduced tillage)</li>
 </ul>
-<p>View examples of the 2023 <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/sample-request-form.xlsx">Sample Request Form</a> sent to CDs and the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/berries/sample-request-form-berries.xlsx">Berries Sample Request Form</a> for the WSDA/WSU special project.</p>
-<p>Once producers and fields have been identified, we assign a unique ID for the producer, field, and sample with the following convention:</p>
+<p>View examples of the 2024 <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2024_sampling/sample-id-assignments/sample-request-form.xlsx">Sample Request Form</a> sent to conservation districts and the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/berries/sample-request-form-berries.xlsx">Berries Sample Request Form</a> used for a WSDA/WSU special project.</p>
+<p>Once producers and fields have been identified, assign a unique ID for the producer, field, and sample with the following convention:</p>
 <ul>
 <li><strong>Producer ID</strong>: first three letters of county + three-digit landowner number
 <ul>
@@ -352,31 +349,30 @@ Accessible font
 <li>Kitsap → KIS</li>
 <li>Skamania → SKM</li>
 </ul>
-<p>Producer and field IDs should first be matched to previous participants. New producers and fields should continue the previous sequence. There should be no duplicate producer IDs or sample IDs.</p>
+<p>Match producer and field IDs to previous participants. Continue the sequence for new producers and fields. Producer IDs and sample IDs must not be duplicated.</p>
 <p>For an example R script to automate this process, see <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/assign-sample-ids.R">assign-sample-ids.R</a>.</p>
 </section>
 <section id="create-sample-labels" class="level3">
 <h3 class="anchored" data-anchor-id="create-sample-labels">Create sample labels</h3>
-<p>We automate sample label creation using R and Microsoft Word’s <a href="https://support.microsoft.com/en-us/topic/how-to-use-the-mail-merge-feature-in-word-to-create-and-to-print-form-letters-that-use-the-data-from-an-excel-worksheet-d8709e29-c106-2348-7e38-13eecc338679">mail merge tool</a>. <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels.R">labels.R</a> generates a <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/combined-labels.xlsx">spreadsheet</a> with all column names to be printed on the labels. Then <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels-template-mail-merge.docx">labels-template-mail-merge.docx</a> ingests this spreadsheet and the data scientist runs the mail merge to generate a <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/all-labels-combined.docx">word document</a> with all of the labels to be printed, as shown in the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/completed-labels">completed-labels folder</a>.</p>
+<p>Sample label creation is automated using R and Microsoft Word’s <a href="https://support.microsoft.com/en-us/topic/how-to-use-the-mail-merge-feature-in-word-to-create-and-to-print-form-letters-that-use-the-data-from-an-excel-worksheet-d8709e29-c106-2348-7e38-13eecc338679">mail merge tool</a>. <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels.R">labels.R</a> generates a <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/combined-labels.xlsx">spreadsheet</a> with the information to be printed on the labels. Then open <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/labels-template-mail-merge.docx">labels-template-mail-merge.docx</a>, select the spreadsheet as the recipient list, and run the mail merge to generate a <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/all-labels-combined.docx">word document</a> with all labels to be printed (as shown in the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/completed-labels">completed-labels folder</a>).</p>
 </section>
 <section id="create-a-data-tracking-sheet" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-data-tracking-sheet">Create a data tracking sheet</h3>
-<p>We keep a spreadsheet to track which pieces of data we have for each sample ID, including:</p>
+<p>Create a spreadsheet to track which data have been submitted for each sample, including:</p>
 <ul>
-<li>GPS points submitted through the ArcGIS Field Maps field form</li>
+<li>GPS points through the ArcGIS Field Maps field form</li>
 <li>Scanned paper field forms (for those without ArcGIS Field Maps)</li>
 <li>Management surveys through ArcGIS Survey123</li>
 <li>Scanned chain of custodies with shipping tracking numbers</li>
-<li>Location of archival falcon tubes</li>
+<li>Location of archival falcon tubes (once retrieved by WSDA staff)</li>
 <li>Notes for if a sample will no longer be sampled, a sample ID was changed, etc.</li>
 </ul>
 <p>See the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/2023_data-tracking.xlsx">2023 spreadsheet</a> for an example.</p>
 </section>
 <section id="develop-arcgis-web-tools" class="level3">
 <h3 class="anchored" data-anchor-id="develop-arcgis-web-tools">Develop ArcGIS web tools</h3>
-<p>We use ArcGIS to build tools for managing spatial data and collecting management survey data. A sample selection feature layer is hosted and a web map with offline capabilities is created using ArcGIS Pro. Domains are used for point numbers, bulk density, and crop types. Then, a field form is created on ArcGIS Online using Field Maps. Management surveys are created and hosted with Survey123 and Experience Builder. We also use an ArcGIS Notebook with python to back up our feature layer and survey data.</p>
+<p>Use ArcGIS to build tools for managing spatial data and collecting management survey data. In ArcGIS Pro, create a <strong>sample selection feature layer</strong> with domains for point numbers, bulk density, and crop types. Publish this feature layer to ArcGIS Online as a web map with a soil series layer. Then publish a second copy without the soil series layer and enable offline use. On ArcGIS Online, use Field Maps to configure the <strong>field form</strong> for the feature layer. <strong>Management surveys</strong> are created and hosted with Survey123 and Experience Builder. Schedule the ArcGIS Notebook with Python that backs up all data to run as a task every Monday, Wednesday, and Friday during the field season.</p>
 <p>This <a href="K:/NRAS/Arc_Data/soil-health/washi-gis-projects/template-soil-sample-points">template ArcGIS Pro project</a> includes a <a href="K:/NRAS/Arc_Data/soil-health/washi-gis-projects/template-soil-sample-points/readme.txt">readme.txt</a> that describes this process.</p>
-<p>The ArcGIS Notebook is set to run as a task Monday, Wednesday, and Friday during the field season.</p>
 <details>
 <summary>
 View code from the ArcGIS Notebook
@@ -443,60 +439,67 @@ View code from the ArcGIS Notebook
 </section>
 <section id="during-field-season" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="during-field-season"><span class="header-section-number">7.2</span> During field season</h2>
-<p>Data collection in the field is detailed in the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling">monitoring SOP</a>. We’ll focus on the behind-the scenes tasks for managing data.</p>
+<p>Data collection in the field is detailed in the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/sampling">sampling SOP</a>. Here, we focus on the behind-the scenes tasks for managing data.</p>
 <section id="update-data-tracking-spreadsheet" class="level3">
 <h3 class="anchored" data-anchor-id="update-data-tracking-spreadsheet">Update data tracking spreadsheet</h3>
-<p>Throughout the season, the data tracking spreadsheet must be updated as various forms and surveys, as described in <a href="#create-a-data-tracking-sheet">create a data tracking sheet</a>, are received.</p>
+<p>Throughout the season, update the data tracking spreadsheet as various forms, surveys, and correspondence are received, as described in <a href="#create-a-data-tracking-sheet">Create a data tracking sheet</a>.</p>
 </section>
 <section id="modify-ids-when-samples-change" class="level3">
 <h3 class="anchored" data-anchor-id="modify-ids-when-samples-change">Modify IDs when samples change</h3>
-<p>Sometimes a producer can no longer participate, or they want to change which field is sampled. The sample request form should be updated, versioned, and archived (<code>sample-request-form-ferry.xlsx</code> → <code>sample-request-form-ferry_v2.xlsx</code>).</p>
-<p>The <code>assign-sample-ids.R</code> script should be run again to update the sample IDs. Lines 362 - 386 should be commented out as shown in the <a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/assign_sample_ids.R#L362-L386">highlighted lines of the script on GitHub</a>. Note: This link will take you to a 404 page if you are not logged into a GitHub account that is part of the WSDA organization.</p>
-<p>Take a look through the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/01_returned-sample-requests">01_returned-sample-requests</a> and <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/02_completed-sample-ids">02_completed-sample-ids</a> folders for an example of this flow.</p>
-<p>A concise, explanatory note should be added to the data tracking spreadsheet.</p>
+<p>Sometimes a producer can no longer participate, or they need to change which field is sampled. Update, version, and archive the sample request form (<code>sample-request-form-ferry.xlsx</code> → <code>sample-request-form-ferry_v2.xlsx</code>). Run the <code>assign-sample-ids.R</code> script again to update the sample IDs. Lines 362 - 386 should be commented out as shown in the <a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/assign_sample_ids.R#L362-L386">highlighted lines of the script on GitHub</a>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+GitHub links
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you aren’t logged into a GitHub account that is part of the WSDA organization or has access to the <code>soils-internal</code> repository, these links will take you to a <code>404 not found</code> error page.</p>
+</div>
+</div>
+<p>See <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/01_returned-sample-requests">01_returned-sample-requests</a> and <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/02_completed-sample-ids">02_completed-sample-ids</a> for an example of this flow.</p>
+<p>Add a concise, explanatory note to the data tracking spreadsheet.</p>
 </section>
 </section>
 <section id="post-field-season" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="post-field-season"><span class="header-section-number">7.3</span> Post field season</h2>
 <section id="organize-multiple-sources-of-data" class="level3">
 <h3 class="anchored" data-anchor-id="organize-multiple-sources-of-data">Organize multiple sources of data</h3>
-<p>We have many sources of data such as the initial sample request forms, ArcGIS Field Maps field forms, and management surveys. To organize these multiple sources into a single source of truth, we cross-reference each source and reach out to the sampling teams to resolve conflicting information. This is especially important for verifying the crop that was planted at the time of sampling.</p>
-<p>See how to <em>mostly</em> automate this process in these <a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/01_loadMetadata.R">01_load-metadata.R</a> and <a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/02_checkCrops.R">02_check-crops.R</a> scripts.</p>
+<p>To unify the information from multiple data sources (e.g., sample request forms, ArcGIS Field Maps forms, and management surveys), cross-reference each source and reach out to the sampling teams to resolve conflicting information as needed. This is especially important for verifying the crop planted at the time of sampling.</p>
+<p>See how to <em>mostly</em> automate this in: <a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/01_loadMetadata.R">01_load-metadata.R</a> and <a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/02_checkCrops.R">02_check-crops.R</a>.</p>
 </section>
 <section id="process-lab-data" class="level3">
 <h3 class="anchored" data-anchor-id="process-lab-data">Process lab data</h3>
-<p>Follow the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc/2022_washi-qc-sop.docx">QA/QC SOP</a> for processing the lab data.</p>
-<p>See the 2023 processing scripts and QA/QC report:</p>
+<p>Follow the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc/2022_washi-qc-sop.docx">QA/QC SOP</a> for processing lab data.</p>
+<p>See the 2023 processing scripts and QA/QC report on GitHub:</p>
 <ul>
-<li><p><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/03_processSpatialData.R">03_process-spatial-data.R</a></p></li>
-<li><p><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/04_loadLabData.R">04_load-lab-data.R</a></p></li>
-<li><p><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/R/05_calculateZScores.R">05_calculate-z-scores.R</a></p></li>
-<li><p><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/inst/2020-2023_QCresultsSummary.qmd">2020-2023_qc-results-summary.qmd</a></p></li>
+<li><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/03_processSpatialData.R">03_process-spatial-data.R</a></li>
+<li><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/04_loadLabData.R">04_load-lab-data.R</a></li>
+<li><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/R/05_calculateZScores.R">05_calculate-z-scores.R</a></li>
+<li><a href="https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/inst/2020-2023_QCresultsSummary.qmd">2020-2023_qc-results-summary.qmd</a></li>
 </ul>
 </section>
 <section id="generate-reports" class="level3">
 <h3 class="anchored" data-anchor-id="generate-reports">Generate reports</h3>
-<p>Use the <a href="https://github.com/WA-Department-of-Agriculture/soils">{soils}</a> package to create a new project for each year. To avoid email attachment size limitations, reports may be saved to <a href="https://agriculture.app.box.com/folder/136923153810?s=l3q9zq2p4yv38891d3q3753ybs6t0lec">Box.com</a> for distribution to the sampling partners who will send the reports to the participants. Note: this folder is private unless invited by Jadey, Dani, or Perry.</p>
-</section>
-<section id="import-data-to-database" class="level3">
-<h3 class="anchored" data-anchor-id="import-data-to-database">Import data to database</h3>
-<p>TBD. Currently data are only in spreadsheets.</p>
+<p>Use the <a href="https://github.com/WA-Department-of-Agriculture/soils">{soils}</a> package to create a new project for each year. To avoid email attachment size limitations, save reports to <a href="https://agriculture.app.box.com/folder/136923153810?s=l3q9zq2p4yv38891d3q3753ybs6t0lec">Box.com</a> for distribution to the sampling partners who send the reports to the participants. Access to this folder requires a share link provided by WSDA staff.</p>
 </section>
 <section id="save-data-to-shared-drive-and-wsu-teams-channel" class="level3">
 <h3 class="anchored" data-anchor-id="save-data-to-shared-drive-and-wsu-teams-channel">Save data to shared drive and WSU Teams channel</h3>
-<p>The output data files and reports from <a href="#process-lab-data">process lab data</a> and <a href="#generate-reports">generate reports</a> are copied to the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils">state-of-the-soils</a> folder in its respective <code>year_sampling</code> folder. Review <a href="organization.html" class="quarto-xref"><span>Chapter 4</span></a> and look at previous years in the shared drive to follow the same folder structure and organization.</p>
-<p>The final datasets in wide and long formats should also be saved to the WSU SCBG Soil Health Assessment Teams channel. If you don’t have access to the <a href="https://emailwsu.sharepoint.com/:f:/r/teams/cahnrs.scbgsoilhealthassessment/Shared%20Documents/General/Data/Data%20for%20stats"><em>Data for stats</em> folder</a>, email it to Deirdre Griffin-LaHue.</p>
+<p>Copy the output data files and reports from <a href="#process-lab-data">Process lab data</a> and <a href="#generate-reports">Generate reports</a> to the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils">state-of-the-soils</a> folder in its respective <code>year_sampling</code> folder. See <a href="organization.html" class="quarto-xref"><span>Chapter 4</span></a> to review folder structure and organization.</p>
+<p>Save the final datasets (in wide and long formats) and documentation (data dictionary, changelog, readme) to the WSU SCBG Soil Health Assessment Teams channel.</p>
 </section>
 <section id="archive-jars-and-falcon-tubes" class="level3">
 <h3 class="anchored" data-anchor-id="archive-jars-and-falcon-tubes">Archive jars and falcon tubes</h3>
-<p>Archival subsamples in glass jars are stored in the Yakima WSDA storage room and the cryogenic archive subsamples in falcon tubes are stored in the -80 °C freezer at the <a href="https://mtvernon.wsu.edu/">WSU Mount Vernon Northwestern Washington Research &amp; Extension Center</a>.</p>
-<p>Labels on the falcon tubes must be taped with a generous amount of packing tape to avoid falling off as they stiffen up and flatten out when they freeze.</p>
-<p>The <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/archived-sample-inventory.xlsx">archive spreadsheet</a> must be updated.</p>
-<p><a href="images/cryo-labels.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/cryo-labels.jpg" class="img-fluid" alt="Falcon tubes from a -80 °C freezer with the labels starting to peel off." width="450"></a></p>
+<p><img src="images/cryo-labels.jpg" class="img-fluid" style="float:right" alt="Falcon tubes from a -80 °C freezer with the labels starting to peel off." width="250">Store the archival subsamples in glass jars in the Yakima WSDA storage room and the cryogenic archive subsamples in falcon tubes in the -80 °C freezer at the <a href="https://mtvernon.wsu.edu/">WSU Mount Vernon Northwestern Washington Research &amp; Extension Center</a>.</p>
+<p>Tape the labels on the falcon tubes with a generous amount of packing tape to avoid falling off when they freeze.</p>
+<p>Update the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/archived-sample-inventory.xlsx">archive spreadsheet</a> with the additional sample IDs, number of falcon tubes, and box number of the glass jar.</p>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">“0O” and “1li” in Atkinson Hyperlegible.</span>
+<span class="glightbox-desc lightbox-desc-1">“0O” and “11li” in Atkinson Hyperlegible</span>
 </div>
 </section>
 </section>
@@ -592,6 +595,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -633,7 +641,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -909,18 +921,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./documentation.html" class="pagination-link  aria-label=" &lt;span="">
+      <a href="./documentation.html" class="pagination-link" aria-label="Documentation">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Documentation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./share.html" class="pagination-link" aria-label="<span class='chapter-number'>8</span>&nbsp; <span class='chapter-title'>Data sharing</span>">
+      <a href="./share.html" class="pagination-link" aria-label="Data sharing">
         <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data sharing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/flow.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/flow.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"right"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/flow.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/flow.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"right","selector":".lightbox","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

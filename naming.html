@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -239,6 +239,12 @@ ul.task-list li input[type="checkbox"] {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 7, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -247,18 +253,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>When naming folders and files, we want consistent and clear names that are findable and understandable by both humans and computers. From only a file name, we should immediately know what the file contains, and which file is the most recent version.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><a href="https://imgs.xkcd.com/comics/documents.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="“Documents” from Randall Munroe’s xkcd"><img src="https://imgs.xkcd.com/comics/documents.png" class="img-fluid figure-img" width="250" alt="“Documents” from Randall Munroe’s xkcd"></a></p>
-<figcaption>“Documents” from Randall Munroe’s xkcd</figcaption>
-</figure>
-</div>
+<p>When naming folders and files, use consistent and clear names that are findable and understandable by both humans and computers. A file name should convey what it contains and which file is the most recent version.</p>
 <section id="why-are-conventions-important" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="why-are-conventions-important"><span class="header-section-number">3.1</span> Why are conventions important?</h2>
+<div class="columns">
+<div class="column" style="width: 65%">
 <ul>
-<li><p>Improves consistency and predictability, making it easier to browse folders and know what the file/folder contains.</p></li>
-<li><p>Easily sort and retrieve files by date, conservation district, or another theme.</p></li>
+<li><p>Improves consistency and predictability, making it easier to browse folders and know what they contain.</p></li>
+<li><p>Enables sorting files by date, conservation district, or another theme.</p></li>
 <li><p>Facilitates collaboration so all team members can find the information they need.</p></li>
 <li><p>Standardizes file paths and URLs for efficient programming and website hosting.</p>
 <ul>
@@ -267,23 +269,34 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 <p>For more web-specific naming conventions, see this <a href="https://learntheweb.courses/topics/naming-conventions/">Learn the Web webpage</a>.</p>
+</div><div class="column" style="width: 2%">
+
+</div><div class="column" style="width: 33%">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="images/xkcd-documents.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Documents, Randall Munroe’s xkcd"><img src="images/xkcd-documents.png" class="img-fluid figure-img" alt="Documents, Randall Munroe’s xkcd"></a></p>
+<figcaption><em>Documents</em>, Randall Munroe’s xkcd</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="sec-naming-best-practices" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-naming-best-practices"><span class="header-section-number">3.2</span> Best practices</h2>
 <p><strong>Some files and folders in our shared drive do not follow these best practices or naming conventions. We are learning and improving as we go.</strong></p>
-<p>These are guidelines and naming things is hard, so try your best. If you’re not sure how to name some files or you’re adding a bunch of files that came from somewhere else, Jadey can help you organize and/or bulk rename them.</p>
+<p>These are just guidelines. Because naming things is hard, we only ask that you try your best. If you’re unsure about names or adding externally named files, the Data Scientist can support you.</p>
 <p>See <a href="#sec-naming-examples" class="quarto-xref"><span>Section 3.3</span></a> for a table of examples of folder and file names following these best practices.</p>
 <section id="meaningful-name-casing" class="level3">
 <h3 class="anchored" data-anchor-id="meaningful-name-casing">Meaningful name casing</h3>
-<p>Different conventions work better for different purposes (folders and files versus programming objects).</p>
+<p>Different conventions work for different purposes (folders and files versus programming objects).</p>
 <ul>
-<li><p><strong>kebab-case</strong>: all lowercase with hyphens separating words. Use for all <strong>folders</strong> and <strong>files</strong>.</p></li>
+<li><p><strong>kebab-case</strong>: all lowercase with hyphens separating words. Use for <strong>folders</strong> and <strong>files</strong>.</p></li>
 <li><p><strong>snake_case</strong>: all lowercase with underscores separating words. Only use for <strong>column names</strong> in spreadsheets and <strong>code</strong>, such as functions and variables in R. See <a href="code-guide.html#sec-objects-functions" class="quarto-xref"><span>Section 9.2.3.1</span></a> for example R errors when including hyphens in object names.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Cartoon representations of common cases in coding. A snake screams “SCREAMING_SNAKE_CASE” into the face of a camel (wearing ear muffs) with “camelCase” written along its back. Vegetables on a skewer spell out “kebab-case” (words on a skewer). A mellow, happy looking snake has text “snake_case” along it. Artwork by @allison_horst."><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172" class="img-fluid figure-img" alt="Cartoon representations of common cases in coding. A snake screams “SCREAMING_SNAKE_CASE” into the face of a camel (wearing ear muffs) with “camelCase” written along its back. Vegetables on a skewer spell out “kebab-case” (words on a skewer). A mellow, happy looking snake has text “snake_case” along it. Artwork by @allison_horst."></a></p>
-<figcaption>Cartoon representations of common cases in coding. A snake screams “SCREAMING_SNAKE_CASE” into the face of a camel (wearing ear muffs) with “camelCase” written along its back. Vegetables on a skewer spell out “kebab-case” (words on a skewer). A mellow, happy looking snake has text “snake_case” along it. Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.</figcaption>
+<p><a href="images/ah-case.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Artwork by Allison Horst"><img src="images/ah-case.png" class="img-fluid figure-img" alt="Cartoon representations of common cases in coding. A snake screams &quot;SCREAMING_SNAKE_CASE&quot; into the face of a camel (wearing ear muffs) with &quot;camelCase&quot; written along its back. Vegetables on a skewer spell out &quot;kebab-case&quot; (words on a skewer). A mellow, happy looking snake has text &quot;snake_case&quot; along it."></a></p>
+<figcaption>Artwork by <a href="https://allisonhorst.com">Allison Horst</a></figcaption>
 </figure>
 </div>
 </section>
@@ -305,11 +318,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="back-to-front-date" class="level3">
 <h3 class="anchored" data-anchor-id="back-to-front-date">‘Back to front’ date</h3>
-<p>Remember to express date ‘back to front’ like <code>YYYY-MM-DD</code> according to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 standard</a>. Left pad single-digit months and days with a zero. This maintains the chronological order of records when they are sorted alphanumerically.</p>
+<p>Express date ‘back to front’ like <code>YYYY-MM-DD</code> according to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 standard</a>. Left pad single-digit months and days with zeros to maintain chronological order of records when sorting alphanumerically.</p>
 <table class="table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 34%">
+<col style="width: 36%">
+<col style="width: 37%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -339,11 +352,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="group-sort-files-by-name" class="level3">
 <h3 class="anchored" data-anchor-id="group-sort-files-by-name">Group &amp; sort files by name</h3>
-<p>Consider how folders and files should be grouped and sorted. Put that piece of metadata in the beginning of the file name. By putting the conservation district name in the front, we can sort by district. Or, we can sort by date by putting the date before the district name.</p>
+<p>Consider how folders and files should be grouped and sorted, and include the appropriate metadata at the beginning of the file name. See examples below.</p>
 <table class="table">
 <colgroup>
-<col style="width: 48%">
-<col style="width: 48%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -385,11 +398,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-version-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="sec-version-numbers">Version numbers</h3>
-<p>Including the date in the file name is one way to version a document. Alternatively, or in addition to, we can add a version number to the end of the file name. Consider how many possible versions there could be. If there may be more than 10, use leading zeros to left-pad single digit numbers so the file name always has the same length. v1 through v15 will not sort the same way as v01 through v15.</p>
+<p>Including the date in the file name is one way to version a file. Alternatively, or in addition to, append a number. Consider how many possible versions there could be. If more than 10, use leading zeros so the numbers have the same length. v1 through v15 will not sort the same way as v01 through v15.</p>
 <table class="table">
 <colgroup>
-<col style="width: 41%">
-<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -427,7 +440,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="literature-and-references" class="level3">
 <h3 class="anchored" data-anchor-id="literature-and-references">Literature and references</h3>
-<p>When saving journal articles, user guides, and other reference materials, use the convention <code>author_year_abbreviated-title</code> where each authors’ last name is separated with a hyphen, the title is abbreviated, and hyphens separate each word of the title. Remember to use underscores to separate different metadata.</p>
+<p>When saving journal articles, user guides, and other reference materials, use the convention <code>author_year_abbreviated-title</code>. Use underscores to separate different metadata.</p>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -453,10 +466,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-vars-code" class="level3">
 <h3 class="anchored" data-anchor-id="sec-vars-code">Column names and code</h3>
-<p>Naming conventions for column names in spreadsheets and objects in code differ from folders and files. The hyphens in kebab-case cause errors in R and SQL code. Additionally, hyphens, spaces, and other special characters are <a href="https://support.esri.com/en-us/knowledge-base/faq-what-characters-should-not-be-used-in-arcgis-for-fi-000005588">invalid for ArcGIS table and field names</a>.</p>
-<p>Use <strong>snake_case</strong> for column names in spreadsheets and all <strong>code objects</strong> (R vectors, lists, dataframes, and functions).</p>
-<p>In variable or parameter names, we include the measurement with the unit for clarity and self-documentation when sharing our data. This prevents unit confusion and reduces the risk of misinterpreting or inappropriately using the data.</p>
-<p>Remember to not use special characters. Instead of <code>toc_%</code>, use <code>toc_percent</code>.</p>
+<p>Naming conventions for data column headers differ from folders and files. The hyphens in kebab-case cause errors in R and SQL code. Additionally, hyphens, spaces, and other special characters are <a href="https://support.esri.com/en-us/knowledge-base/faq-what-characters-should-not-be-used-in-arcgis-for-fi-000005588">invalid for ArcGIS table and field names</a>.</p>
+<p>Use <strong>snake_case</strong> for column names in spreadsheets and code objects (R vectors, lists, dataframes, and functions).</p>
+<p>In variable or parameter names, include the measurement with the unit. This prevents unit confusion and reduces the risk of misinterpreting or inappropriately using the data.</p>
+<p>Do not use special characters. Instead of <code>toc_%</code>, use <code>toc_percent</code>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -467,7 +480,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The code naming convention here applies primarily to R. Python and JavaScript have different naming standards.</p>
+<p>The code naming convention here applies primarily to R. Python and other programming languages have different conventions.</p>
 </div>
 </div>
 <p>See <a href="code-guide.html" class="quarto-xref"><span>Chapter 9</span></a> for more details in the code style guide.</p>
@@ -477,9 +490,9 @@ Note
 <h2 data-number="3.3" class="anchored" data-anchor-id="sec-naming-examples"><span class="header-section-number">3.3</span> Naming examples</h2>
 <table class="table-striped table">
 <colgroup>
-<col style="width: 30%">
-<col style="width: 23%">
-<col style="width: 45%">
+<col style="width: 18%">
+<col style="width: 25%">
+<col style="width: 54%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -499,8 +512,7 @@ Note
 <td><strong>Files</strong></td>
 <td>kebab-case</td>
 <td><p>2023-11-15_survey-perennial.xlsx</p>
-<p>records-management_v01.docx</p>
-<p>pend-oreille-cd_coc_2023-06-05.pdf</p>
+<p>2024-03_washi-newsletter-wsda-sos.docx</p>
 <p>geisseler-et-al_2019_ace-protein.pdf</p>
 <p>washi-logo-color.png</p>
 <p>washi-dmp.Rproj</p>
@@ -511,9 +523,7 @@ Note
 <td><strong>Column Names &amp; Code</strong></td>
 <td>snake_case</td>
 <td><p>sample_id</p>
-<p>clay_percent</p>
 <p>pmn_lb_ac</p>
-<p>primary_color</p>
 <p>crop_summary</p>
 <p>assign_quality_codes()</p></td>
 </tr>
@@ -522,8 +532,8 @@ Note
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">“Documents” from Randall Munroe’s xkcd</span>
-<span class="glightbox-desc lightbox-desc-2">Cartoon representations of common cases in coding. A snake screams “SCREAMING_SNAKE_CASE” into the face of a camel (wearing ear muffs) with “camelCase” written along its back. Vegetables on a skewer spell out “kebab-case” (words on a skewer). A mellow, happy looking snake has text “snake_case” along it. Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.</span>
+<span class="glightbox-desc lightbox-desc-1"><em>Documents</em>, Randall Munroe’s xkcd</span>
+<span class="glightbox-desc lightbox-desc-2">Artwork by <a href="https://allisonhorst.com">Allison Horst</a></span>
 </div>
 </section>
 
@@ -618,6 +628,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -659,7 +674,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -935,18 +954,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./formats-standards.html" class="pagination-link  aria-label=" &lt;span="" &amp;="" standards&lt;="" span&gt;"="">
+      <a href="./formats-standards.html" class="pagination-link" aria-label="Formats &amp; standards">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formats &amp; standards</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./organization.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Organization</span>">
+      <a href="./organization.html" class="pagination-link" aria-label="Organization">
         <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Organization</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/naming.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/naming.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"descPosition":"right","selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/naming.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/naming.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"right","selector":".lightbox","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -230,6 +230,12 @@ ul.task-list li input[type="checkbox"] {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 7, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -252,9 +258,9 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Spatial data</strong> include file geodatabases (gdb), vector shapefiles (zipped folder containing multiple file extensions), keyhole markup language (kml or kmz). Tabular data may also contain spatial data such as longitude and latitude.</p>
 <p><strong>Binary data</strong> include photos (jpeg, png, gif, tiff), videos (mp4), code (R, py, js), and object-oriented data files (RDS, Rdata, parquet, arrow).</p>
 <p><strong>Proprietary data formats</strong> include Microsoft Excel, Word, and Powerpoint files (xlsx, docx, pptx). RDS and RData files are examples of application-specific data formats that can only be opened using the R programming language or RStudio IDE. These types of files should be saved in conjunction with a copy of the data in a non-proprietary and open-standard format, such as csv, to maintain accessibility for those who do not have Microsoft Office or do not use R.</p>
-<p><strong>Written documents and presentations</strong> are in formats including Microsoft Word and Powerpoint (docx and pptx), hypertext markup language (HTML), and pdf.</p>
+<p><strong>Written documents and presentations</strong> are in formats including Microsoft Word and PowerPoint (docx and pptx), hypertext markup language (HTML), and pdf.</p>
 <p><strong>Notebooks</strong> combine text with executable code to generate written documents and presentations in docx, pptx, html, or pdf formats. These notebooks are stored in formats depending on the programming language: a few examples include R markdown (rmd), Quarto (qmd), and Jupyter notebook (ipynb).</p>
-<p>The list below is not exhaustive and will continue to grow as additional useful data sources are discovered.</p>
+<p>The list below is not exhaustive and will continue to grow as additional data sources are discovered.</p>
 <table class="table-striped table">
 <thead>
 <tr class="header">
@@ -266,28 +272,28 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><strong>Lab results</strong></td>
-<td>Provided by the lab analyzing the soil sample, principal investigator of a study, or grower</td>
+<td>Provided by an analytical lab, study PI, or grower</td>
 <td>csv, xlsx, pdf, xml, json, RDS, RData</td>
 </tr>
 <tr class="even">
 <td><strong>Management surveys</strong></td>
 <td>Collected through interviews with grower</td>
-<td>csv, xlsx, RDS, RData, paper form (to be digitized)</td>
+<td>csv, xlsx, RDS, RData, scanned paper form</td>
 </tr>
 <tr class="odd">
 <td><strong>Field forms</strong></td>
 <td>Completed in the field during/immediately after sampling</td>
-<td>pdf, paper form (to be digitized), csv, xlsx</td>
+<td>pdf, scanned paper form, csv, xlsx</td>
 </tr>
 <tr class="even">
 <td><strong>Sample locations</strong></td>
-<td>Identified prior to sampling and may be edited during sampling using ArcGIS Online, Collector, Field Maps or Google Maps</td>
+<td>Identified prior to sampling using ArcGIS Online and updated while sampling using ArcGIS Field Maps</td>
 <td>ArcGIS feature layer, shp, kmz, csv, xlsx</td>
 </tr>
 <tr class="odd">
 <td><strong>Chain of custody forms</strong></td>
 <td>Completed prior to shipping or dropping off samples</td>
-<td>pdf, paper form (to be digitized)</td>
+<td>pdf, scanned paper form</td>
 </tr>
 <tr class="even">
 <td><strong>Climate data</strong></td>
@@ -300,33 +306,28 @@ ul.task-list li input[type="checkbox"] {
 <td>gdb, accdb</td>
 </tr>
 <tr class="even">
-<td><strong>Strata classification</strong></td>
-<td>Provided by Soil Health Institute in 2021 as a <a href="K:/NRAS/Arc_Data/soil-health/soil-health-institute-strata/wa-strata-sum.zip">lyr file</a></td>
-<td>lyr</td>
-</tr>
-<tr class="odd">
 <td><strong>Images</strong></td>
 <td>Logos, icons, photos taken in the field</td>
 <td>jpeg, png, gif, tiff, svg</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Videos</strong></td>
 <td>Recordings of meetings, training videos</td>
 <td>mp4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Documents</strong></td>
 <td>Reports, manuscripts, SOP, QAPP, factsheets, brochures</td>
 <td>docx, txt, html, pdf</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Presentations</strong></td>
-<td>Powerpoints, slide decks</td>
+<td>PowerPoints, slide decks</td>
 <td>pptx, html, pdf</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Code</strong></td>
-<td>Scripts for wrangling, processing, analyzing data; markdown for producing documents and presentations; style sheets for html outputs</td>
+<td>Scripts for wrangling and analyzing data; markdown for documents and presentations; style sheets for html</td>
 <td>R, py, ipynb, js, yml, rmd, qmd, css, scss</td>
 </tr>
 </tbody>
@@ -335,25 +336,38 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-data-standards" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="sec-data-standards"><span class="header-section-number">2.2</span> Data standards</h2>
-<p><strong>Date</strong> will be expressed as <code>YYYY-MM-DD</code> according to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 standard</a>.</p>
+<div class="columns">
+<div class="column" style="width: 65%">
+<p><strong>Date</strong> will be expressed as <strong>YYYY-MM-DD</strong> according to <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 standard</a>.</p>
 <p><strong>Date with time</strong> will be expressed as YYYY-MM-DD<strong>T</strong>HH:MM:SS<strong>Z</strong>.</p>
 <ul>
-<li><strong>T</strong> separates date from time. The <strong>Z</strong> indicates the date-time is using the Universal Time Coordinated (UTC) with no offset.</li>
-<li>Pacific Standard Time (PST) has a UTC-8:00 offset and Pacific Daylight Time (PDT) has a UTC-7:00 offset and would be expressed as YYYY-MM-DD<strong>T</strong>HH:MM:SS-8:00. The <strong>Z</strong> has been replaced with the offset.</li>
-<li>Example: <code>2023-11-28T14:55:56-08:00</code>.</li>
+<li><strong>T</strong> separates date from time.</li>
+<li><strong>Z</strong> designates the time zone (Z or -HH:MM).
+<ul>
+<li><strong>Z</strong> if using Universal Time Coordinated (UTC) with no offset.</li>
+<li>Pacific Standard Time (PST) offset is <strong>-8:00</strong>.<br>
+YYYY-MM-DD<strong>T</strong>HH:MM:SS<strong>-8:00</strong></li>
+<li>Pacific Daylight Time (PDT) offset is <strong>-7:00</strong>.<br>
+YYYY-MM-DD<strong>T</strong>HH:MM:SS<strong>-7:00</strong></li>
+</ul></li>
 </ul>
+</div><div class="column" style="width: 2%">
+
+</div><div class="column" style="width: 33%">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="https://imgs.xkcd.com/comics/iso_8601.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="“ISO 8601” from Randall Munroe’s xkcd"><img src="https://imgs.xkcd.com/comics/iso_8601.png" class="img-fluid figure-img" width="300" alt="“ISO 8601” from Randall Munroe’s xkcd"></a></p>
-<figcaption>“ISO 8601” from Randall Munroe’s xkcd</figcaption>
+<p><a href="images/xkcd-date.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="ISO 8601, Randall Munroe’s xkcd"><img src="images/xkcd-date.png" class="img-fluid figure-img" alt="ISO 8601, Randall Munroe’s xkcd"></a></p>
+<figcaption><em>ISO 8601</em>, Randall Munroe’s xkcd</figcaption>
 </figure>
 </div>
-<p><strong>Geospatial</strong> data will be accompanied by metadata that abides by the <a href="https://www.iso.org/standard/53798.html">ISO 19115 standard</a> by following Esri’s <a href="https://pro.arcgis.com/en/pro-app/latest/help/metadata/create-iso-19115-and-iso-19139-metadata.htm">documentation</a> when working in ArcGIS Pro. Metadata contains information about the identification, the extent, the quality, the spatial and temporal schema, spatial reference, and distribution of digital geographic data.</p>
+</div>
+</div>
+<p><strong>Geospatial</strong> data will be accompanied by metadata that abides by the <a href="https://www.iso.org/standard/53798.html">ISO 19115 standard</a> and follows Esri’s <a href="https://pro.arcgis.com/en/pro-app/latest/help/metadata/create-iso-19115-and-iso-19139-metadata.htm">documentation</a> when using ArcGIS Pro. Metadata contains information about the identification, extent, quality, spatial and temporal schema, spatial reference, and distribution of digital geographic data.</p>
 <p><strong>Code</strong> will follow the style guide in <a href="code-guide.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">“ISO 8601” from Randall Munroe’s xkcd</span>
+<span class="glightbox-desc lightbox-desc-1"><em>ISO 8601</em>, Randall Munroe’s xkcd</span>
 </div>
 </section>
 
@@ -448,6 +462,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -489,7 +508,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -765,18 +788,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./data-management.html" class="pagination-link  aria-label=" &lt;span="" is="" data="" management?&lt;="" span&gt;"="">
+      <a href="./data-management.html" class="pagination-link" aria-label="What is data management?">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is data management?</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./naming.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Naming conventions</span>">
+      <a href="./naming.html" class="pagination-link" aria-label="Naming conventions">
         <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Naming conventions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/formats-standards.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/formats-standards.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"right"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/formats-standards.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/formats-standards.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"right","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

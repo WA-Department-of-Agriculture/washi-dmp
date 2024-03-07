@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -224,6 +224,12 @@ ul.task-list li input[type="checkbox"] {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 7, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -232,17 +238,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We organize our folders into a hierarchical structure to clearly delineate segments of our projects, improve searchability, and ensure reproducibility across years.</p>
+<p>Folders are organized into a hierarchical structure to clearly delineate project segments, improve searchability, and ensure reproducibility across time.</p>
 <section id="folder-structure" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="folder-structure"><span class="header-section-number">4.1</span> Folder structure</h2>
-<p>We strive for a balance between a deep and shallow structure. If too shallow, there are too many files in one folder and they are hard to sort through. If too deep, we have to click too many times to get to a file and specific files can be difficult to find.</p>
+<p>There is a delicate balance between deep and shallow folder structures. If too shallow, too many files in one folder are difficult to search. If too deep, too many clicks are required to find a specific file.</p>
 <p><code>Y:/NRAS/soil-health-initiative</code> is the parent folder for all WaSHI content.</p>
-<p>Within the <code>state-of-the-soils</code> subfolder, we use a combination of <strong>date-</strong> (each year has its own subfolder) and <strong>categorical-</strong> based (dataset and documentation that span across years) folder structures.</p>
+<p>The <code>state-of-the-soils</code> subfolder uses <strong>date-</strong> (each year has its own subfolder) and <strong>categorical-</strong> based (dataset and documentation that span across years) folder structures.</p>
 <pre><code>Y:/NRAS/soil-health-initiative/state-of-the-soils/
 ├── _complete-dataset
 ├── 2019_scbg
 ├── 2021_sampling
-├── 2022_partnerships-in-soil-health
+├── 2022_sampling
 ├── 2023_sampling
 ├── 2024_sampling
 ├── data-management
@@ -256,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 ├── equipment-inventory.xlsx
 ├── archived-sample-inventory.xlsx
 └── sos-impacts.xlsx</code></pre>
-<p>Within each year subfolder, we have sub-subfolders for planning, forms, data, and processes. This structure helps maintain a reproducible workflow year after year. See the <code>2023_sampling</code> folder tree for an example:</p>
+<p>Within each year subfolder, use sub-subfolders for planning, forms, data, and processes to maintain a reproducible workflow each year. See the <code>2023_sampling</code> folder tree for an example:</p>
 <pre><code>Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/
 ├── applications
 ├── coc
@@ -274,18 +280,10 @@ ul.task-list li input[type="checkbox"] {
 ├── scripts
 ├── 2023-data-tracking.xlsx
 └── 2023_post-season-wrap-up.docx</code></pre>
-<p>It’s good practice to maintain the raw data, see how to set files to <code>Read-Only</code> in <a href="storage.html#sec-raw-data" class="quarto-xref"><span>Section 5.2</span></a>. We use additional subfolders for the <code>lab-data</code> folder. Everything in <code>raw</code> has been set as <code>Read-Only</code>.</p>
-<pre><code>Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/lab-data
-├── 2023_data-template-soiltest.xlsx
-├── clean
-├── qc
-├── raw
-└── working</code></pre>
-<p><code>soil-health-initative</code> &gt; <code>state-of-the-soils</code> &gt; <code>2023_sampling</code> &gt; <code>lab-data</code> &gt; <code>clean</code> already has five levels of nesting. We wouldn’t want to add many more levels, or the hierarchy becomes difficult to manage.</p>
 </section>
 <section id="archive-folders" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="archive-folders"><span class="header-section-number">4.2</span> Archive folders</h2>
-<p>When too many drafts or versions begin to clutter a subfolder, create a new folder with the naming convention of <code>archive-folder-description</code>. Place the old drafts there. Leave the most current, accurate file in the main folder.</p>
+<p>When too many drafts or versions clutter a subfolder, create a new folder with the naming convention of <code>archive-folder-description</code>. Place the old drafts there. Leave the most current, accurate file in the main folder.</p>
 <p>For example, the most recent sample labels for each conservation district are listed in the top level <code>completed-labels</code> folder, and previous working drafts were moved to the <code>archive-labels</code> folder.</p>
 <pre><code>Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/labels/completed-labels
 ├── archive-labels
@@ -398,6 +396,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -439,7 +442,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -715,12 +722,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./naming.html" class="pagination-link  aria-label=" &lt;span="" conventions&lt;="" span&gt;"="">
+      <a href="./naming.html" class="pagination-link" aria-label="Naming conventions">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Naming conventions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./storage.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Storage</span>">
+      <a href="./storage.html" class="pagination-link" aria-label="Storage">
         <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Storage</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

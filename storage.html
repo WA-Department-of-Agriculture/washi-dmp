@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -251,6 +251,12 @@ div.csl-indent {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 7, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -286,7 +292,7 @@ div.csl-indent {
 </ul>
 <p><strong>Box.com for external file sharing:</strong></p>
 <ul>
-<li>WSDA has a box.com account. Only Perry has a license; Jadey and Dani are currently editors.</li>
+<li>WSDA has a box.com account. The WSDA Senior Soil Scientist has an account and can add editors as needed.</li>
 </ul>
 <p><strong>Individual devices (laptop, tablet, phone):</strong></p>
 <ul>
@@ -294,22 +300,29 @@ div.csl-indent {
 </ul>
 <section id="backup" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="backup"><span class="header-section-number">5.1</span> Backup</h2>
-<p>Data must be stored in multiple locations. At a bare minimum, data on an individual computer must also be saved on the WSDA shared drive. Backing up data using version control (GitHub) or a cloud service (Microsoft OneDrive or Box.com) is strongly recommended.</p>
+<p>Data must be stored in multiple locations. At minimum, data on an individual computer must also be saved on the WSDA shared drive. Backing up data using version control (GitHub) or a cloud service (Microsoft OneDrive or Box.com) is strongly recommended.</p>
 </section>
 <section id="sec-raw-data" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="sec-raw-data"><span class="header-section-number">5.2</span> Read-only raw data</h2>
-<p>On our shared drives, raw data such as lab results from Soiltest or exports from ArcGIS Online, should immediately be set to <code>Read-only</code>. Right click the file &gt; click on Properties &gt; check the <code>Read-only</code> attribute box.</p>
+<p>Always set raw data files, such as lab results or ArcGIS Online exports, as <code>Read-Only</code> to avoid accidental corruption or overwriting. For example, in the <code>lab-data</code> folder, all original data files are set to <code>Read-Only</code> and saved in the <code>raw</code> folder.</p>
+<p>Copy the raw data file to the <code>working</code> folder for processing and analyses. Then save the final dataset in the separate <code>clean</code> folder with a descriptive title. Keeping a <code>readme.txt</code> to document processing steps is good practice, as discussed in <a href="documentation.html#sec-readme" class="quarto-xref"><span>Section 6.2.1</span></a>.</p>
+<pre><code>Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/lab-data
+├── 2023_data-template-soiltest.xlsx
+├── clean
+├── qc
+├── raw
+└── working</code></pre>
+<p><strong>To set a file as <code>Read-Only</code></strong>: right-click the file &gt; <code>Properties</code> &gt; check the <code>Read-only</code> attribute box &gt; <code>OK</code>.</p>
 <p><a href="images/read-only.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/read-only.png" class="img-fluid" alt="Screenshot of the above directions to set files to Read-only on a Windows computer."></a></p>
-<p>The file should then be copied over to a <code>working</code> folder for any processing or analyses. The final dataset should be saved in a separate <code>clean</code> folder, with a descriptive title. Keeping a <code>readme.txt</code> to document your processing steps is good practice, as discussed in <a href="documentation.html#sec-readme" class="quarto-xref"><span>Section 6.2.1</span></a>.</p>
 </section>
 <section id="sec-version-control" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="sec-version-control"><span class="header-section-number">5.3</span> Version control with Git and GitHub</h2>
-<p>A version control system records changes to a file or set of files over time. <a href="https://git-scm.com/">Git</a> is a free and open-source distributed version control system and <a href="https://github.com">GitHub</a> is the hosting site WSDA and WaSHI use to interface with this system. Git and GitHub are an important foundation of reproducible statistical and data scientific workflows <span class="citation" data-cites="bryan2018">(<a href="references.html#ref-bryan2018" role="doc-biblioref">Bryan 2018</a>)</span>.</p>
-<p>A major benefit of using version control is ensuring changes are well documented and previous versions are accessible if any changes must be recalled. Additionally, version control makes collaboration across projects much more robust.</p>
-<p>Version control is not just for code either! It’s useful for scripts, documents, presentations, and books (like this DMP!). Instead of saving each version of a file with a different name (i.e., <code>report_v01.docx</code> and <code>report_v02.docx</code>; for a reminder on version naming, see <a href="naming.html#sec-version-numbers" class="quarto-xref"><span>Section 3.2.7</span></a>), there’s only one file <code>report.docx</code> which automatically has its history and editors saved with Git and GitHub.</p>
-<p>In the screenshot below, you can see who made a commit (which is basically a named version of changes), when that commit was made, and you can click on the commit message to view all of the files that were changed.</p>
+<p>A version control system records changes to files over time. <a href="https://git-scm.com/">Git</a> is a free and open-source distributed version control system. <a href="https://github.com">GitHub</a> is the hosting site we use to interface with Git. Git and GitHub are fundamental to reproducible statistical and data scientific workflows <span class="citation" data-cites="bryan2018">(<a href="references.html#ref-bryan2018" role="doc-biblioref">Bryan 2018</a>)</span>.</p>
+<p>Version control ensures changes are documented and previous versions are accessible if changes must be recalled. Additionally, version control enables robust collaboration across projects.</p>
+<p>It’s useful for not only code projects, but also for documents, presentations, and books (like this DMP!). Git and GitHub automatically save the revision history of each file, so there is only a single name for each file (e.g., <code>report.docx</code>) instead of <code>report_v01.docx</code> and <code>report_v02.docx</code>. For a reminder on version naming, see <a href="naming.html#sec-version-numbers" class="quarto-xref"><span>Section 3.2.7</span></a>).</p>
+<p>The screenshot below shows who made commits (i.e., named version histories) and when they were made. From this screen, a user can click on the commit message to view all files that were changed.</p>
 <p><a href="images/github-commits.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/github-commits.png" class="img-fluid" alt="Screenshot of GitHub commits for the WaSHI DMP."></a></p>
-<p>After clicking on the first commit message, we see the <code>documentation.qmd</code> file was changed with additions highlighted in green and deletions highlighted in red.</p>
+<p>After clicking the first commit message, a <code>diff</code> (i.e., a visual of what changed) displays the additions to <code>documentation.qmd</code> highlighted in green and deletions highlighted in red.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><a href="images/github-diff.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/github-diff.png" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red."></a></p>
@@ -317,12 +330,12 @@ div.csl-indent {
 </div>
 <section id="privacy-considerations" class="level3">
 <h3 class="anchored" data-anchor-id="privacy-considerations">Privacy considerations</h3>
-<p>Review <a href="share.html" class="quarto-xref"><span>Chapter 8</span></a> to categorize the data included in the repository. If the data are not anonymized and aggregated, either 1) the repository must be <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility">set to private</a> or 2) data files and any scripts containing Category 3 data as described in <a href="share.html#sec-category-3" class="quarto-xref"><span>Section 8.1.0.2</span></a> must be added to the <a href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files">.gitignore</a> file.</p>
+<p>Review <a href="share.html" class="quarto-xref"><span>Chapter 8</span></a> to categorize the data included in the repository to protect grower privacy. If the data are not anonymized and aggregated, either 1) the repository must be <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility">set to private</a> or 2) data files and any scripts containing Category 3 data as described in <a href="share.html#sec-category-3" class="quarto-xref"><span>Section 8.1.0.2</span></a> must be added to the <a href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files">.gitignore</a> file.</p>
 </section>
 <section id="git-and-github-resources" class="level3">
 <h3 class="anchored" data-anchor-id="git-and-github-resources">Git and GitHub resources</h3>
-<p>Read Jenny Bryan’s article <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/data-management/resources/bryan_2018_excuse-me-do-you-have-moment-talk_version-control.pdf"><em>Excuse Me, Do You Have a Moment to Talk About Version Control</em></a> for a great background on Git and GitHub, why we should be using it, and a brief how to get started. For detailed instructions , please follow along with Jenny Bryan’s free online book <a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a>. Another helpful book resource is <a href="https://birdscanada.github.io/BirdsCanada_GitHubGuide/"><em>GitHub: A Beginner’s Guide</em></a>, which was created by Birds Canada (avian conservation NGO) for people without a lot of programming background.</p>
-<p>If you prefer to look through slides, check out Byron C. Jaeger’s presentation <a href="https://bcjaeger.github.io/seminar-git/"><em>Happier version control with Git and GitHub (and RStudio)</em></a>.</p>
+<p>Read Jenny Bryan’s article <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/data-management/resources/bryan_2018_excuse-me-do-you-have-moment-talk_version-control.pdf"><em>Excuse Me, Do You Have a Moment to Talk About Version Control</em></a> for a background on Git and GitHub, why we should use it, and how to get started. For detailed instructions, follow along with her free online book <a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a>.</p>
+<p><a href="https://birdscanada.github.io/BirdsCanada_GitHubGuide/"><em>GitHub: A Beginner’s Guide</em></a> is a helpful resource created by Birds Canada for less advanced programmers. If you prefer to look through slides, see Byron C. Jaeger’s presentation <a href="https://bcjaeger.github.io/seminar-git/"><em>Happier version control with Git and GitHub (and RStudio)</em></a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -424,6 +437,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -465,7 +483,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -741,18 +763,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./organization.html" class="pagination-link  aria-label=" &lt;span="">
+      <a href="./organization.html" class="pagination-link" aria-label="Organization">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Organization</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./documentation.html" class="pagination-link" aria-label="<span class='chapter-number'>6</span>&nbsp; <span class='chapter-title'>Documentation</span>">
+      <a href="./documentation.html" class="pagination-link" aria-label="Documentation">
         <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Documentation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/storage.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/storage.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"right"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/storage.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/storage.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"right","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

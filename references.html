@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -234,6 +234,12 @@ div.csl-indent {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 7, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -253,6 +259,11 @@ Carlson, Bryan. 2021. <span>“Data Management Plan for the
 <span>R.J.</span> Cook Agronomy Farm Long-Term Agroecological Research
 Site.”</span>
 </div>
+<div id="ref-czarnecki2022" class="csl-entry" role="listitem">
+Czarnecki, Joby M. Prince, and Mary Ann Jones. 2022. <span>“The Problem
+with Open Geospatial Data for on-Farm Research.”</span> <em>Agricultural
+&amp; Environmental Letters</em> 7 (1): e20062. <a href="https://doi.org/10.1002/ael2.20062">https://doi.org/10.1002/ael2.20062</a>.
+</div>
 <div id="ref-europeancommission2016" class="csl-entry" role="listitem">
 European Commission. 2016. <span>“H2020 Programme Guidelines on FAIR
 Data Management in Horizon 2020.”</span> <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf">https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf</a>.
@@ -263,6 +274,10 @@ Farewell, Dr Timothy S. 2018. <span>“My Easy r Script Header Template
 </div>
 <div id="ref-harvardmedicalschool2023" class="csl-entry" role="listitem">
 Harvard Medical School. 2023. <span>“Data Management Plans.”</span> <a href="https://datamanagement.hms.harvard.edu/plan-design/data-management-plans">https://datamanagement.hms.harvard.edu/plan-design/data-management-plans</a>.
+</div>
+<div id="ref-korzekwa2023" class="csl-entry" role="listitem">
+Korzekwa, Kaine. 2023. <span>“Protecting Privacy While Making Data Open
+in Agricultural Research.”</span> <em>CSA News</em> 68 (3): 6–10. <a href="https://doi.org/10.1002/csan.20979">https://doi.org/10.1002/csan.20979</a>.
 </div>
 <div id="ref-lewis2023" class="csl-entry" role="listitem">
 Lewis, Crystal. 2023. <em>Data Management in Large-Scale Education
@@ -381,6 +396,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -422,7 +442,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -698,7 +722,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./code-guide.html" class="pagination-link  aria-label=" &lt;span="" style="" guide&lt;="" span&gt;"="">
+      <a href="./code-guide.html" class="pagination-link" aria-label="Code style guide">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code style guide</span></span>
       </a>          
   </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -62,6 +62,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -242,6 +245,12 @@ div.csl-indent {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">March 7, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -250,84 +259,86 @@ div.csl-indent {
 </header>
 
 
-<p>Effective data management involves properly documenting, storing, and sharing our data and the information we derive from the data. If the data aren’t usable by researchers, policymakers, or growers, then all the time, energy, and effort spent collecting and analyzing the samples may be wasted.</p>
-<p>The guidelines detailed in this DMP help us achieve our data-driven goals, while also optimizing the value of the data by supporting information sharing and innovation. Our data management policies attempt to follow <strong>FAIR</strong> (<strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable) principles while also maintaining data privacy <span class="citation" data-cites="wilkinson2016">(<a href="references.html#ref-wilkinson2016" role="doc-biblioref">Wilkinson et al. 2016</a>)</span>.</p>
+<p>Effective data management involves properly documenting, storing, and sharing data and information derived from the data. If the data aren’t usable by researchers, policymakers, or growers, then all the time, energy, and effort spent collecting and analyzing the samples may be wasted.</p>
+<p>The guidelines detailed in this DMP help us achieve our data-driven goals, while also optimizing the value of the data by supporting information sharing and innovation. Our data management policies aim to implement <strong>FAIR</strong> (<strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable) principles while also maintaining data privacy <span class="citation" data-cites="wilkinson2016">(<a href="references.html#ref-wilkinson2016" role="doc-biblioref">Wilkinson et al. 2016</a>)</span>.</p>
 <section id="data-life-cycle" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="data-life-cycle"><span class="header-section-number">1.1</span> Data life cycle</h2>
 <div class="columns">
-<div class="column" style="width: 40%">
-<p>The U.S. Fish and Wildlife Service developed a great graphic to explain the elements of the data life cycle and emphasize the importance of data quality at every step <span class="citation" data-cites="u.s.fishwildlifeservice2023">(<a href="references.html#ref-u.s.fishwildlifeservice2023" role="doc-biblioref">U.S. Fish &amp; Wildlife Service 2023</a>)</span>. Each step within the data life cycle requires careful intention to ensure transparency, quality, and integrity.</p>
-</div><div class="column" style="width: 5%">
-
-</div><div class="column" style="width: 55%">
+<div class="column" style="width: 50%">
+<p>This graphic explains the data life cycle <span class="citation" data-cites="u.s.fishwildlifeservice2023">(<a href="references.html#ref-u.s.fishwildlifeservice2023" role="doc-biblioref">U.S. Fish &amp; Wildlife Service 2023</a>)</span>, in which each step requires care to ensure transparency, quality, and integrity.</p>
+<p>Our adaptation is outlined below and the following chapters detail our internal processes and standards to follow throughout each step in the data life cycle.</p>
+</div><div class="column" style="width: 50%">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="https://www.fws.gov/data/life-cycle"><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data-lifecycle-graphic_2.png?itok=PHzTuZu3" class="img-fluid quarto-figure quarto-figure-left figure-img" width="268"></a></p>
+<p><a href="https://www.fws.gov/program/data-management/data-management-life-cycle"><img src="images/fws-data-lifecycle.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:3in"></a></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Our adaptation of this data life cycle is outlined below.</p>
-<table class="table">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 75%">
-<col style="width: 1%">
-<col style="width: 1%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_plan_3.png?itok=qfLmDr2I" class="img-fluid" width="100"></td>
-<td><p><strong>Plan</strong></p>
-<p>Each sampling year presents an opportunity to consider what worked and what could be improved from the previous year. Planning involves making decisions about data acquisition, management, and quality control. For example, each year we provide a spreadsheet template with our requested column headers to Soiltest lab to ensure the measurements are reported with correct units and in the format we use. Special projects that deviate from our standard operating procedures require additional planning.</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_acquire_3.png?itok=oyw5uIlY" class="img-fluid" width="100"></td>
-<td><p><strong>Acquire</strong></p>
-<p>We acquire data by collecting and analyzing new samples, deriving new insights from existing data, or accepting datasets from collaborators.</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_maintain_3.png?itok=OHGYA3sl" class="img-fluid" width="100"></td>
-<td><p><strong>Maintain</strong></p>
-<p>Maintenance involves processing data for aggregation, analyses, and reporting. We create metadata that facilitates interpretation of the data. We also store at least one copy of our data in a non-proprietary format that is accessible to our collaborators and future selves.</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_access_3.png?itok=v7cjtSOH" class="img-fluid" width="100"></td>
-<td><p><strong>Access</strong></p>
-<p>Access refers to data storage, publication, and security. Raw and processed data with accompanying metadata should be stored, backed up, and available for information sharing with our partners. With PI approval, anonymized and aggregated data that does not compromise growers’ personally identifiable information (PII) should be made publicly available in a data repository or data product/decision-support tool.</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_evaluate_3.png?itok=epsQPcX1" class="img-fluid" width="100"></td>
-<td><p><strong>Evaluate</strong></p>
-<p>We evaluate data while processing and analyzing it to maximize accuracy and productivity, while minimizing costs associated with errors or tedious data cleaning labor. Evaluation workflows should be efficient, well-documented, and reproducible. Our evaluated data help us better understand how environmental factors and management decisions impact soil health.</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/data_lifecycle_archive_3.png?itok=8chNBA3G" class="img-fluid" width="100"></td>
-<td><p><strong>Archive</strong></p>
-<p>Properly archiving our results supports the long-term storage and usefulness of our data. While similar to the Access element of the life cycle, archiving focuses on preserving data for long-term/historical retention that aren’t needed for immediate access. For example, we archive each year’s raw data for long-term storage and set those files to <code>Read-Only</code>.</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><img src="https://www.fws.gov/data/sites/default/files/styles/width_825/public/2019-09/qa-qc_icon_3.png?itok=17L7s1tE" class="img-fluid" width="100"></td>
-<td><p><strong>Quality Assurance / Quality Control (QA/QC)</strong></p>
-<p>Data quality management prevents data defects that hinder our ability to apply data towards our science-based conservation efforts. Defects include incorrectly entered data, invalid data, and missing or lost data. QA/QC processes should be incorporated in every element of the data life cycle.</p></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>The following chapters describe our internal processes and standards to follow throughout each step in the data life cycle.</p>
+<hr>
+<div class="columns">
+<div class="column" style="width: 15%">
+<p><a href="images/fws-plan.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/fws-plan.png" class="img-fluid" width="100"></a></p>
+</div><div class="column" style="width: 85%">
+<p><strong>Plan</strong></p>
+<p>Planning includes decisions about data acquisition, management, and quality control, as well as regular examinations of ways to improve. For example, each year we provide an updated spreadsheet template to Soiltest lab to ensure that measurements are reported with correct units and in the correct format. Special projects that deviate from our standard operating procedures require additional planning.</p>
+</div>
+</div>
+<hr>
+<div class="columns">
+<div class="column" style="width: 15%">
+<p><a href="images/fws-acquire.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/fws-acquire.png" class="img-fluid" width="100"></a></p>
+</div><div class="column" style="width: 85%">
+<p><strong>Acquire</strong></p>
+<p>We acquire data by collecting and analyzing new samples, deriving new insights from existing samples, or accepting datasets from collaborators.</p>
+</div>
+</div>
+<hr>
+<div class="columns">
+<div class="column" style="width: 15%">
+<p><a href="images/fws-maintain.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/fws-maintain.png" class="img-fluid" width="100"></a></p>
+</div><div class="column" style="width: 85%">
+<p><strong>Maintain</strong></p>
+<p>Maintenance involves processing data for aggregation, analyses, and reporting. We create metadata that facilitates interpretation of the data. We also store a copy of our data in a format that is accessible to our collaborators and future selves.</p>
+</div>
+</div>
+<hr>
+<div class="columns">
+<div class="column" style="width: 15%">
+<p><a href="images/fws-access.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/fws-access.png" class="img-fluid" width="100"></a></p>
+</div><div class="column" style="width: 85%">
+<p><strong>Access</strong></p>
+<p>Access refers to data storage, publication, and security. Raw and processed data with accompanying metadata should be stored, backed up, and available for information sharing with our partners. With PI approval, anonymized and aggregated data that does not compromise growers’ personally identifiable information (PII) can be made publicly available in a data repository or data product/decision-support tool.</p>
+</div>
+</div>
+<hr>
+<div class="columns">
+<div class="column" style="width: 15%">
+<p><a href="images/fws-evaluate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/fws-evaluate.png" class="img-fluid" width="100"></a></p>
+</div><div class="column" style="width: 85%">
+<p><strong>Evaluate</strong></p>
+<p>We evaluate data while processing and analyzing it to maximize accuracy and productivity, while minimizing costs associated with errors or tedious data cleaning labor. Evaluation workflows should be efficient, well-documented, and reproducible. Our evaluated data help us better understand how environmental factors and management decisions impact soil health.</p>
+</div>
+</div>
+<hr>
+<div class="columns">
+<div class="column" style="width: 15%">
+<p><a href="images/fws-archive.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/fws-archive.png" class="img-fluid" width="100"></a></p>
+</div><div class="column" style="width: 85%">
+<p><strong>Archive</strong></p>
+<p>Properly archiving our results supports the long-term storage and usefulness of our data. While similar to the Access element of the life cycle, archiving focuses on preserving data for historical and long-term access. For example, we archive each year’s raw data for long-term storage and set those files to Read-Only.</p>
+</div>
+</div>
+<hr>
+<div class="columns">
+<div class="column" style="width: 15%">
+<p><a href="images/fws-qa-qc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/fws-qa-qc.png" class="img-fluid" width="100"></a></p>
+</div><div class="column" style="width: 85%">
+<p><strong>Quality Assurance / Quality Control (QA/QC)</strong></p>
+<p>Data quality management prevents data defects that hinder our ability to apply data towards our science-based conservation efforts. Defects include incorrectly entered data, invalid data, and missing or lost data. QA/QC processes should be incorporated in every element of the data life cycle.</p>
+</div>
+</div>
+<hr>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -431,6 +442,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -472,7 +488,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -748,19 +768,44 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link  aria-label=" overview"="">
+      <a href="./index.html" class="pagination-link" aria-label="Overview">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./formats-standards.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Formats &amp; standards</span>">
+      <a href="./formats-standards.html" class="pagination-link" aria-label="Formats &amp; standards">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formats &amp; standards</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/data-management.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/data-management.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"descPosition":"right","closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/blob/main/data-management.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/WA-Department-of-Agriculture/washi-dmp/edit/main/data-management.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+</body></html>
