@@ -369,11 +369,11 @@ accompanying metadata and management data to facilitate interpretation of the
 results.
 
 Some publicly available datasets to consider are in
-[Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources).
+[Y:/NRAS/soil-health-initiative/state-of-the-soils/external-data](Y:/NRAS/soil-health-initiative/state-of-the-soils/external-data).
 
 ### Intake form
 
 External data may be provided in the [External Data Intake
-spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sources/washi-sos-external-data-intake.xlsx),
+spreadsheet](Y:/NRAS/soil-health-initiative/state-of-the-soils/external-data/intake/washi-sos-external-data-intake.xlsx),
 alongside related documents such as SOPs, management surveys, raw data files,
 etc.
