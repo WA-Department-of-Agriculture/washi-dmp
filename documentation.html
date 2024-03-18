@@ -360,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dataset-level" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="dataset-level"><span class="header-section-number">6.2</span> Dataset-level</h2>
-<p>Dataset-level documentation applies to lab results, sample locations, grower information, and management data. <strong>Readme’s</strong> and <strong>changelogs</strong> document what each dataset contains, how they are related, potential issues to be aware of, and any alterations made to the data. See below for examples of what to include.</p>
+<p>Dataset-level documentation applies to lab results, sample locations, grower information, and management data. <strong>Readmes</strong> and <strong>changelogs</strong> document what each dataset contains, how they are related, potential issues to be aware of, and any alterations made to the data. See below for examples of what to include.</p>
 <section id="sec-readme" class="level3">
 <h3 class="anchored" data-anchor-id="sec-readme">Readme</h3>
 <p><code>readme</code> files are plain text documents that contain information about the files in a folder, explanation of versioning, and instructions/metadata for data packages. These files are saved as <code>.txt</code>, instead of MS Word documents that take longer to open and can only be opened on computers with Microsoft installed.</p>
@@ -371,21 +371,34 @@ ul.task-list li input[type="checkbox"] {
 <summary>
 View the example
 </summary>
-<pre><code>2020-2023_lab-results_wide has one sample per row with each measurement as a separate column.
+<pre><code>Last modified: 2024-03-18
 
-2020-2023_lab-results_long has one result per row with columns for sample identification, measurement name, result value, quality code, and lab.
-This spreadsheet also contains a second tab that describes the quality codes.
+INSTRUCTIONS
+Place the latest, complete SOS data in this folder as RDS and csv files. Update the readme and data dictionary as needed. Document the changes in the changelog.txt.
 
-2020-2023_sample-locations has the coordinates, PRISM mean annual precipitation and mean annual temperature (800 m resolution, 30-year normals, 1991-2020), and SHI strata.
+ROOT: complete dataset with documentation.
+sos_lab-results-wide has one sample per row with each measurement as a separate column.
+sos_lab-results-long has one result per row with columns for sample identification, measurement name, result value, quality code, and lab. See `~qc/qc_codes.csv` for quality code descriptions.
+sos_sample-locations has the coordinates, sample ID, crop info, and PRISM mean annual precipitation and mean annual temperature (800 m resolution, 30-year normals, 1991-2020).
+example-data.csv contains 100 random samples that have been anonymized with fake sampleIDs, county, farm, producer, and field names. WSU SCBG samples are excluded, as are the 0-6in to 6-12in WSDA samples.
+data-dictionary lists each variable with its short name (variable name without units), description, indicator type (chemical, physical, biological), unit (if applicable), label, and data type. This spreadsheet also contains tabs describing the variables in the sample-locations and qc-codes spreadsheets.
+qc_codes describes the quality codes.
+readme.txt (this file) describes the contents of the root folder and subfolders.
+changelog.txt documents changes made to the data and organization.
 
-data-dictionary lists each variable with its short name (variable name without units), description, indicator type (chemical, physical, biological), unit (if applicable), label, and data type.
-This spreadsheet also contains a second tab that describes the variables in the sampleLocations spreadsheet.
+MANAGEMENT SURVEYS
+Since management surveys aren't yet compiled, they will be placed in this folder.
+JR will work on a crosswalk between old sample IDs and new sample IDs to make joining with lab data easier.
 
-scbg_producer-id_recode lists all SCBG fields with original SCBG assigned producer ID and new WSDA producer ID
-
-all-farm-info lists all participating farm names, producer names, producer IDs, field names, field IDs, and county
-
-example-data.csv contains 100 random samples that have been anonymized with fake sampleIDs, county, farm, producer, and field names. WSU SCBG samples are excluded, as are the 0-6in to 6-12in WSDA samples.</code></pre>
+REFERENCE: dictionaries and data used in code.
+column-names is a dictionary to convert the old naming convention (Ca_mg.kg) to the new convention (ca_mg_kg).
+crop-group-type is a dictionary mapping WSDA crop group to crop type.
+format-survey-crop-names.csv is a dictionary mapping crop_type (snake_case) to Crop Type (Title Case).
+lab-methods describes the lab, measurement name, method, and mdl.
+soiltest-mdl contains Soiltest measurement names, methods, descriptions, units, and minimum detection limits.
+staff-contacts lists year, sampling organization, and sampling contact(s).
+ppt and temp are {sf} dataframes containing MAP (mm/yr) and MAT (deg C) downloaded from the {prism} package (800 m resolution, 30-year normals, 1991-2020). Created from download-spatial-data.R.
+wa is a {sf} dataframe containing the WA boundary downloaded from the {rgeoboundaries} package. Created from download-spatial-data.R.</code></pre>
 </details>
 </section>
 <section id="explain-versions" class="level4">
@@ -490,7 +503,7 @@ View the example
 <section id="data-dictionary" class="level3">
 <h3 class="anchored" data-anchor-id="data-dictionary">Data dictionary</h3>
 <p>Each row is a different variable, and each column is a different attribute of that variable. With a data dictionary, a user should be able to properly interpret each variable in the data.</p>
-<p>Our <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/data-dictionary.xlsx">data-dictionary.xlsx</a> in the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset">_complete-dataset folder</a> contains two tabs (<code>lab-results</code> and <code>sample-locations</code>) that describe the attributes of each variable.</p>
+<p>Our <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/data-dictionary.xlsx">data-dictionary.xlsx</a> in the <a href="Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset">_complete-dataset folder</a> contains three tabs (<code>lab-results</code>, <code>sample-locations</code>, and <code>qc-codes</code>) that describe the attributes of each variable.</p>
 <details>
 <summary>
 View the <code>sample-locations</code> dictionary
@@ -582,7 +595,7 @@ View the <code>sample-locations</code> dictionary
 <li>Who analyzed the soil samples? With which methods and QA/QC procedures?</li>
 <li>Are the following required metadata and management data available along with the lab results?
 <ul>
-<li>Farm, producer and field info<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Farm, producer, and field info<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li>Sampling date</li>
 <li>Sampling depth</li>
 <li>Latitude and longitude</li>
