@@ -55,6 +55,12 @@ However, shared drive links are not accessible when using Microsoft Edge. Nothin
 :::
 :::
 
+::: callout-warning
+## GitHub links
+
+If you aren't logged into a GitHub account that is part of the WSDA organization or has access to the `washi-sos` repository, GitHub links to specific scripts will take you to a `404 not found` error page.
+:::
+
 ## Roles and responsibilities
 
 To maximize the benefits of effective data management, all WaSHI personnel who interact with SOS data must familiarize themselves with this DMP.

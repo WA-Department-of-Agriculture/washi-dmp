@@ -161,13 +161,7 @@ Throughout the season, update the data tracking spreadsheet as various forms, su
 
 ### Modify IDs when samples change
 
-Sometimes a producer can no longer participate, or they need to change which field is sampled. Update, version, and archive the sample request form (`sample-request-form-ferry.xlsx` → `sample-request-form-ferry_v2.xlsx`). Run the `assign-sample-ids.R` script again to update the sample IDs. Lines 362 - 386 should be commented out as shown in the [highlighted lines of the script on GitHub](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/assign_sample_ids.R#L362-L386). 
-
-::: callout-warning
-## GitHub links
-
-If you aren't logged into a GitHub account that is part of the WSDA organization or has access to the `soils-internal` repository, these links will take you to a `404 not found` error page.
-:::
+Sometimes a producer can no longer participate, or they need to change which field is sampled. Update, version, and archive the sample request form (`sample-request-form-ferry.xlsx` → `sample-request-form-ferry_v2.xlsx`). Run the `assign-sample-ids.R` script again to update the sample IDs. Lines 362 - 386 should be commented out as shown in the [highlighted lines of the script on GitHub](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/c9bd0a8d7e00371ca33e7216a1b004442e7e9cf3/2023/R/assign_sample_ids.R#L362-L386). 
 
 See [01_returned-sample-requests](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/01_returned-sample-requests) and [02_completed-sample-ids](Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/sample-id-assignments/02_completed-sample-ids) for an example of this flow.
 
@@ -179,18 +173,18 @@ Add a concise, explanatory note to the data tracking spreadsheet.
 
 To unify the information from multiple data sources (e.g., sample request forms, ArcGIS Field Maps forms, and management surveys), cross-reference each source and reach out to the sampling teams to resolve conflicting information as needed. This is especially important for verifying the crop planted at the time of sampling.
 
-See how to *mostly* automate this in: [01_load-metadata.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/01_loadMetadata.R) and [02_check-crops.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/02_checkCrops.R).
+See how to *mostly* automate this in: [01_load-metadata.R](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/main/2023/R/01_load-metadata.R) and [02_check-crops.R](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/main/2023/R/02_check-crops.R).
 
 ### Process lab data
 
-Follow the [QA/QC SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc/2022_washi-qc-sop.docx) for processing lab data.
+Follow the [QA/QC SOP](Y:/NRAS/soil-health-initiative/state-of-the-soils/sop/qc/washi-qc-sop.docx) for processing lab data.
 
 See the 2023 processing scripts and QA/QC report on GitHub:
 
--   [03_process-spatial-data.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/03_processSpatialData.R)
--   [04_load-lab-data.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/04_loadLabData.R)
--   [05_calculate-z-scores.R](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/R/05_calculateZScores.R)
--   [2020-2023_qc-results-summary.qmd](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/main/inst/2020-2023_QCresultsSummary.qmd)
+-   [03_process-spatial-data.R](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/main/2023/R/03_process-spatial-data.R)
+-   [04_load-lab-data.R](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/main/2023/R/04_load-lab-data.R)
+-   [05_calculate-z-scores.R](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/main/2023/R/05_calculate-z-scores.R)
+-   [2020-2023_qc-results-summary.qmd](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/main/2023/reports/2020-2023_QCresultsSummary.qmd)
 
 ### Generate reports
 

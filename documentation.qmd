@@ -108,7 +108,7 @@ table). Data are then integrated into the statewide database.
 ## Dataset-level
 
 Dataset-level documentation applies to lab results, sample locations, grower
-information, and management data. **Readme's** and **changelogs** document what
+information, and management data. **Readmes** and **changelogs** document what
 each dataset contains, how they are related, potential issues to be aware of,
 and any alterations made to the data. See below for examples of what to include.
 
@@ -130,22 +130,35 @@ such as data sources.
 
 <summary>View the example</summary>
 
-```         
-2020-2023_lab-results_wide has one sample per row with each measurement as a separate column.
+```
+Last modified: 2024-03-18
 
-2020-2023_lab-results_long has one result per row with columns for sample identification, measurement name, result value, quality code, and lab.
-This spreadsheet also contains a second tab that describes the quality codes.
+INSTRUCTIONS
+Place the latest, complete SOS data in this folder as RDS and csv files. Update the readme and data dictionary as needed. Document the changes in the changelog.txt.
 
-2020-2023_sample-locations has the coordinates, PRISM mean annual precipitation and mean annual temperature (800 m resolution, 30-year normals, 1991-2020), and SHI strata.
-
-data-dictionary lists each variable with its short name (variable name without units), description, indicator type (chemical, physical, biological), unit (if applicable), label, and data type.
-This spreadsheet also contains a second tab that describes the variables in the sampleLocations spreadsheet.
-
-scbg_producer-id_recode lists all SCBG fields with original SCBG assigned producer ID and new WSDA producer ID
-
-all-farm-info lists all participating farm names, producer names, producer IDs, field names, field IDs, and county
-
+ROOT: complete dataset with documentation.
+sos_lab-results-wide has one sample per row with each measurement as a separate column.
+sos_lab-results-long has one result per row with columns for sample identification, measurement name, result value, quality code, and lab. See `~qc/qc_codes.csv` for quality code descriptions.
+sos_sample-locations has the coordinates, sample ID, crop info, and PRISM mean annual precipitation and mean annual temperature (800 m resolution, 30-year normals, 1991-2020).
 example-data.csv contains 100 random samples that have been anonymized with fake sampleIDs, county, farm, producer, and field names. WSU SCBG samples are excluded, as are the 0-6in to 6-12in WSDA samples.
+data-dictionary lists each variable with its short name (variable name without units), description, indicator type (chemical, physical, biological), unit (if applicable), label, and data type. This spreadsheet also contains tabs describing the variables in the sample-locations and qc-codes spreadsheets.
+qc_codes describes the quality codes.
+readme.txt (this file) describes the contents of the root folder and subfolders.
+changelog.txt documents changes made to the data and organization.
+
+MANAGEMENT SURVEYS
+Since management surveys aren't yet compiled, they will be placed in this folder.
+JR will work on a crosswalk between old sample IDs and new sample IDs to make joining with lab data easier.
+
+REFERENCE: dictionaries and data used in code.
+column-names is a dictionary to convert the old naming convention (Ca_mg.kg) to the new convention (ca_mg_kg).
+crop-group-type is a dictionary mapping WSDA crop group to crop type.
+format-survey-crop-names.csv is a dictionary mapping crop_type (snake_case) to Crop Type (Title Case).
+lab-methods describes the lab, measurement name, method, and mdl.
+soiltest-mdl contains Soiltest measurement names, methods, descriptions, units, and minimum detection limits.
+staff-contacts lists year, sampling organization, and sampling contact(s).
+ppt and temp are {sf} dataframes containing MAP (mm/yr) and MAT (deg C) downloaded from the {prism} package (800 m resolution, 30-year normals, 1991-2020). Created from download-spatial-data.R.
+wa is a {sf} dataframe containing the WA boundary downloaded from the {rgeoboundaries} package. Created from download-spatial-data.R.
 ```
 
 </details>
@@ -283,7 +296,7 @@ project before data are collected.
 Each row is a different variable, and each column is a different attribute of that variable.  With a data dictionary, a user should be able to properly interpret each variable in the data.
 
 Our [data-dictionary.xlsx](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset/data-dictionary.xlsx) in the [\_complete-dataset folder](Y:/NRAS/soil-health-initiative/state-of-the-soils/_complete-dataset)
-contains two tabs (`lab-results` and `sample-locations`) that describe the attributes of each variable.
+contains three tabs (`lab-results`, `sample-locations`, and `qc-codes`) that describe the attributes of each variable.
 
 ::: {.content-visible when-format="html"}
 <details>
@@ -348,7 +361,7 @@ On a case-by-case basis, the Senior Soil Scientist and Data Scientist consider t
 -   Who analyzed the soil samples? With which methods and QA/QC procedures?
 -   Are the following required metadata and management data available along with
     the lab results?
-    -   Farm, producer and field info[^documentation-1]
+    -   Farm, producer, and field info[^documentation-1]
     -   Sampling date
     -   Sampling depth
     -   Latitude and longitude

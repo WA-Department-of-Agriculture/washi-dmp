@@ -96,58 +96,88 @@ See an [example R script](https://wa-department-of-agriculture.github.io/washi-d
 :::
 
 ::: {.content-visible when-format="html"}
-See the example R script below, copied from the private [`soils-internal` GitHub
-repository](https://github.com/WA-Department-of-Agriculture/soils-internal/blob/2f7ed5a621a7254835b3f3126acecf0c6ed72b00/R/anonymizeData.R)
-(if you aren't part of the WSDA GitHub organization, this link will give you a
-404 error). Note: this script does not follow the code style guide in
-@sec-code-style-guide as it was written prior to this DMP.
+See the example R script below, copied from the private [`washi-sos` GitHub
+repository](https://github.com/WA-Department-of-Agriculture/washi-sos/blob/main/R/anonymize-data.R).
 
 <details>
 
 <summary>R code to anonymize data</summary>
 
 ``` r
+# Attach packages ==============================================================
+
 library(dplyr)
 library(readxl)
 library(janitor)
 library(randomNames)
 
-load("./data/_completeDataset/2020-2023_labResults_wide.Rdata")
-load("./data/_completeDataset/2020-2023_labResults_long.Rdata")
-crops <- read_excel("./data/reference/crops.xlsx")
-points <- read.csv("./data/_completeDataset/2020-2023_sampleLocations.csv") |>
-  select(sampleId, longitude, latitude) |>
+# Load data ====================================================================
+
+farm <- readRDS(
+  "data/sos-sample-metadata.RDS"
+) |>
+  select(
+    c(sample_id, farm_name, producer_name, producer_id, field_name, field_id)
+  )
+
+results_wide <- readRDS(
+  "data/sos-lab-results-wide.RDS"
+) |>
+  select(-c(
+    project_id,
+    lab_id:lab_analyzed_date,
+    crop_type,
+    crop_variety,
+    texture_class
+  ))
+
+points <- readRDS(
+  "data/sos-sample-locations.RDS"
+) |>
+  select(sample_id, longitude, latitude) |>
   mutate(across(where(is.numeric), \(x) round(x, 0)))
 
-# Join lab data with gis data
-data <- left_join(allResults_wide, points) |>
-  # Remove WSU SCBG samples and 0-6/6-12 in WSDA samples
-  subset(!year %in% c(2020, 2021) &
-           !grepl("[A-Z]", fieldId)) |>
-  janitor::remove_empty("cols")
+# Join farm info with lab data
+results_wide <- left_join(farm, results_wide) |>
+  relocate(year, .before = sample_id) |>
+  rename(crop = crop_group)
 
-# Join data with crop dictionary to get crop groups
-data <- left_join(data, crops, by = c("crop" = "Crop Type")) |>
-  select(-crop) |>
-  relocate("crop" = "Crop Group", .after = county)
+# Join lab data with gis data
+data <- left_join(results_wide, points) |>
+  remove_empty("cols") |>
+  relocate(latitude, longitude, .after = county)
+
+# Remove WSU SCBG samples and 0-6/6-12 in WSDA samples
+data <- data |>
+  subset(!year %in% c(2020, 2021) &
+    !grepl("[A-Z]", field_id)) |>
+  remove_empty("cols") |>
+  select(-c(pmn_nitrate_n_mg_kg:min_c_24hr_mg_c_kg_day))
 
 # Anonymize
-anonData <- data |>
+set.seed(123)
+anon_data <- data |>
   # Farm name, producer name, sample ID
   mutate(
-    farmName = paste0("Farm ", sprintf("%03d", cur_group_id())),
-    producerName = randomNames(which.names = "first",
-                               sample.with.replacement = FALSE),
-    producerId = paste0(
+    farm_name = paste0("Farm ", sprintf("%03d", cur_group_id())),
+    producer_name = randomNames(
+      which.names = "first",
+      sample.with.replacement = FALSE
+    ),
+    producer_id = paste0(
       paste0(sample(LETTERS, 3, replace = TRUE), collapse = ""),
       "0",
       paste0(sample(1:9, 1, replace = TRUE), collapse = "")
     ),
-    fieldName = paste0("Field ", fieldId),
-    sampleId = paste0(
-      substr(year, 3, 4), "-", producerId, "-", fieldId
+    field_name = paste0("Field ", field_id),
+    sample_id = paste0(
+      substr(year, 3, 4),
+      "-",
+      producer_id,
+      "-",
+      field_id
     ),
-    .by = c(county, producerName, producerId)
+    .by = c(county, producer_name, producer_id)
   ) |>
   # county
   mutate(
@@ -155,13 +185,17 @@ anonData <- data |>
     .by = c(county)
   )
 
-# Grab 100 random samples by county
-anon_subset <- anonData |>
-  slice_sample(n = 100)
+# Grab 100 random samples
+anon_subset <- anon_data |>
+  slice_sample(n = 100) |>
+  arrange(sample_id)
 
-write.csv(anon_subset, file = "./data/_completeDataset/exampleData.csv",
-          na = "",
-          row.names = FALSE)
+write.csv(
+  anon_subset,
+  file = "data/example-data.csv",
+  na = "",
+  row.names = FALSE
+)
 ```
 
 </details>
