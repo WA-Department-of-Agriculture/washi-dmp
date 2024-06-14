@@ -247,7 +247,7 @@ Resources:
 ### Changelog
 
 Changelogs are also simple and concise plain text documents saved in a folder
-alongside data files that document changes to the dataset.
+alongside data files that document changes to the dataset. For more information, see [keepachangelog.com/](https://keepachangelog.com/).
 
 At the bare minimum, the `changelog.txt` contains:
 

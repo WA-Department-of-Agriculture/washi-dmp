@@ -1,4 +1,4 @@
-# Storage {#sec-storage}
+# Storage & version control {#sec-storage}
 
 Non-digital data, such as paper forms, must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.
 
@@ -80,6 +80,6 @@ Review @sec-sharing to categorize the data included in the repository to protect
 
 ### Git and GitHub resources
 
-Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk About Version Control*](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-management/resources/bryan_2018_excuse-me-do-you-have-moment-talk_version-control.pdf) for a background on Git and GitHub, why we should use it, and how to get started. For detailed instructions, follow along with her free online book [*Happy Git and GitHub for the useR*](https://happygitwithr.com/). 
+Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk About Version Control*](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1399928) ([open-access pre-print](https://peerj.com/preprints/3159/); [full article on WSDA shared drive](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-management/resources/bryan_2018_excuse-me-do-you-have-moment-talk_version-control.pdf)) for a background on Git and GitHub, why we should use it, and how to get started. For detailed instructions, follow along with her free online book [*Happy Git and GitHub for the useR*](https://happygitwithr.com/). 
 
 [*GitHub: A Beginner's Guide*](https://birdscanada.github.io/BirdsCanada_GitHubGuide/) is a helpful resource created by Birds Canada for less advanced programmers. If you prefer to look through slides, see Byron C. Jaeger's presentation [*Happier version control with Git and GitHub (and RStudio)*](https://bcjaeger.github.io/seminar-git/).
