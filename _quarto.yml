@@ -29,9 +29,9 @@ book:
       - icon: download
         menu:
           - text: PDF
-            url: wsda-cct-data-management-plan.pdf
+            url: wsda-cct-dmp.pdf
           - text: MS Word
-            url: wsda-cct-data-management-plan.docx
+            url: wsda-cct-dmp.docx
             
   chapters:
     - index.qmd
