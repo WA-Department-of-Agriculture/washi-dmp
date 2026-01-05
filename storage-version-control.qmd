@@ -2,26 +2,25 @@
 
 Non-digital data, such as paper forms, must be transcribed or converted to digital file formats and then stored in the WaSHI filing cabinet in the Natural Resources Building in Olympia.
 
-All digital data are stored in the WSDA shared drives, and other locations listed below.
+All digital data are stored in the WSDA shared drives, SharePoint, and other locations listed below.
 
 **WSDA shared drives:**
 
 -   Agency files: [Y:/NRAS/soil-health-initiative](Y:/NRAS/soil-health-initiative)
--   GIS: [K:/NRAS/Arc_Data/soil-health](K:/NRAS/Arc_Data/soil-health) (access requires permissions from IT)
+-   GIS: [K:/NRAS/Arc_Data/soil-health](K:/NRAS/Arc_Data/soil-health). Submit a ticket to IT for access.
+
+**WSDA SharePoint:**
+
+-   WSDA-DO - NRAS All Staff Soil Health Initiative [SharePoint](https://stateofwa.sharepoint.com/:f:/r/sites/WSDA-DO-NRASAllStaff/Shared%20Documents/Soil%20Health%20Initiative?csf=1&web=1&e=O73m3S)
 
 **Esri products and services:**
 
 -   ArcGIS Online [Soil Health - WSDA Internal Group](https://nras.maps.arcgis.com/home/group.html?id=17a60cfa644c4c60ab622fdd84500f8f#overview)
--   WSDA GIS on-premise [ArcGIS REST Services Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS) (only Jadey, Perry, and Joel can publish to this server; Ed Thompson is the contact for getting access)
+-   WSDA GIS on-premise [ArcGIS REST Services Directory](https://fortress.wa.gov/agr/gis/wsdagis/rest/services/NRAS): contact the Cartography Supervisor to request publishing access.
 
-**Database for lab results and management data:**
+**GitHub for code-based projects:**
 
--   WISKI, but very likely will migrate to SQL Server or a less water-focused database
-
-**GitHub organizations for code-based projects:**
-
--   [WSDA](https://github.com/WA-Department-of-Agriculture)
--   [WaSHI](https://github.com/WASoilHealth)
+-   [WSDA GitHub organization](https://github.com/WA-Department-of-Agriculture): contact the Data Scientist for access.
 
 **Microsoft Teams for data sharing between WSDA and WSU:**
 
@@ -29,7 +28,7 @@ All digital data are stored in the WSDA shared drives, and other locations liste
 
 **Box.com for external file sharing:**
 
--   WSDA has a box.com account. The WSDA Senior Soil Scientist has an account and can add editors as needed.
+-   WSDA has a [box.com account](https://agriculture.app.box.com/folder/212647453105?s=lry90ry5x5mdv1lizifwv13og9jmhe3e): contact the Senior Soil Scientist for access.
 
 **Individual devices (laptop, tablet, phone):**
 
@@ -43,7 +42,7 @@ Data must be stored in multiple locations. At minimum, data on an individual com
 
 Always set raw data files, such as lab results or ArcGIS Online exports, as `Read-Only` to avoid accidental corruption or overwriting. For example, in the `lab-data` folder, all original data files are set to `Read-Only` and saved in the `raw` folder.
 
-Copy the raw data file to the `working` folder for processing and analyses. Then save the final dataset in the separate `clean` folder with a descriptive title. Keeping a `readme.txt` to document processing steps is good practice, as discussed in @sec-readme.
+Copy the raw data file to the `working` folder for processing and analyses. Then save the final dataset in the separate `clean` folder with a descriptive title. Keeping a `readme.txt` or `readme.md` to document processing steps is good practice, as discussed in @sec-readme.
 
 ```         
 Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/lab-data
@@ -70,7 +69,7 @@ The screenshot below shows who made commits (i.e., named version histories) and 
 
 ![](images/github-commits.png){fig-alt="Screenshot of GitHub commits for the WaSHI DMP."}
 
-After clicking the first commit message, a `diff` (i.e., a visual of what changed) displays the additions to `documentation.qmd` highlighted in green and deletions highlighted in red.
+After clicking the first commit message, a `diff` (i.e., a visual of what changed) displays the changed file `documentation.qmd` with additions highlighted in green and deletions highlighted in red.
 
 ![](images/github-diff.png){fig-alt="Screenshot of GitHub commit message titled 'First complete draft of documentation chapter' which shows the changed file with additions highlighted in green and deletions highlighted in red." fig-align="left"}
 
@@ -80,6 +79,8 @@ Review @sec-sharing to categorize the data included in the repository to protect
 
 ### Git and GitHub resources
 
-Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk About Version Control*](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1399928) ([open-access pre-print](https://peerj.com/preprints/3159/); [full article on WSDA shared drive](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-management/resources/bryan_2018_excuse-me-do-you-have-moment-talk_version-control.pdf)) for a background on Git and GitHub, why we should use it, and how to get started. For detailed instructions, follow along with her free online book [*Happy Git and GitHub for the useR*](https://happygitwithr.com/). 
+Review the *Get Started with Git & GitHub* [slides](https://raw.githack.com/WA-Department-of-Agriculture/github-training/main/get-started.html#/title-slide) and [recording](https://drive.google.com/file/d/16d6ZPvh8sNlFz6wWokjNSgyLa4LvhQr8/view) provided by the Data Scientist. 
+
+Read Jenny Bryan's article [*Excuse Me, Do You Have a Moment to Talk About Version Control*](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1399928) ([open-access pre-print](https://peerj.com/preprints/3159/); [full article on WSDA shared drive](Y:/NRAS/soil-health-initiative/data-management/resources/bryan_2018_excuse-me-do-you-have-moment-talk_version-control.pdf)) for a background on Git and GitHub, why we should use it, and how to get started. For detailed instructions, follow along with her free online book [*Happy Git and GitHub for the useR*](https://happygitwithr.com/). 
 
 [*GitHub: A Beginner's Guide*](https://birdscanada.github.io/BirdsCanada_GitHubGuide/) is a helpful resource created by Birds Canada for less advanced programmers. If you prefer to look through slides, see Byron C. Jaeger's presentation [*Happier version control with Git and GitHub (and RStudio)*](https://bcjaeger.github.io/seminar-git/).

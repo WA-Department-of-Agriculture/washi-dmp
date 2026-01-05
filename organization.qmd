@@ -1,14 +1,14 @@
 # Organization {#sec-organization}
 
-Folders are organized into a hierarchical structure to clearly delineate project segments, improve searchability, and ensure reproducibility across time.
+Folders are organized into a hierarchical structure to clearly delineate project components, improve searchability, and support reproducible workflows over time.
 
 ## Folder structure
 
-There is a delicate balance between deep and shallow folder structures. If too shallow, too many files in one folder are difficult to search. If too deep, too many clicks are required to find a specific file.
+An effective folder structure balances depth and simplicity. Shallow structures can become cluttered and difficult to search, while overly deep structures require excessive clicking to navigate to a specific file. When a folder contains many subfolders, standalone files should be minimized or grouped into clearly labeled subfolders to reduce visual clutter and improve findability.
 
 `Y:/NRAS/soil-health-initiative` is the parent folder for all WaSHI content.
 
-The `state-of-the-soils` subfolder uses **date-** (each year has its own subfolder) and **categorical-** based (dataset and documentation that span across years) folder structures.
+The SOS folder structure uses a combination of **date-based** (year-specific subfolders) and **categorical-based** (datasets and documentation that span multiple years) organization. This structure is well suited for long-term projects that generate data over multiple years. Shorter-term or special projects may instead follow a single-year structure.
 
 ```         
 Y:/NRAS/soil-health-initiative/state-of-the-soils/
@@ -18,7 +18,6 @@ Y:/NRAS/soil-health-initiative/state-of-the-soils/
 ├── 2022_sampling
 ├── 2023_sampling
 ├── 2024_sampling
-├── data-management
 ├── data-sharing
 ├── data-sources
 ├── maps
@@ -31,7 +30,7 @@ Y:/NRAS/soil-health-initiative/state-of-the-soils/
 └── sos-impacts.xlsx
 ```
 
-Within each year subfolder, use sub-subfolders for planning, forms, data, and processes to maintain a reproducible workflow each year. See the `2023_sampling` folder tree for an example:
+Within each year-specific folder, subfolders are used to separate planning materials, forms, data, and workflows, supporting consistent and reproducible processes across sampling years. The `2023_sampling` folder below provides an example:
 
 ```         
 Y:/NRAS/soil-health-initiative/state-of-the-soils/2023_sampling/
