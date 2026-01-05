@@ -8,13 +8,11 @@ research and public communities [@whyte2011]. However, data must also be
 **closed** enough to protect grower privacy and to honor agreements with growers
 and other researchers [@czarnecki2022; @korzekwa2023].
 
-The SOS relies on growers' willingness to volunteer their fields for sampling and
-participate in the required management survey. Their willingness depends on
-their trust in WaSHI to protect their privacy. Only aggregated and anonymized
-results will be publicly available or shared. The below data privacy statement
-may be shared with potential participants.
+Our work relies on growers’ willingness to volunteer their time, knowledge, and access to their fields. Their willingness depends on their trust in us to protect their privacy. Only aggregated and anonymized results will be publicly available or shared. 
 
 ### Data privacy statement
+
+The below statement was provided to SOS participants and may be modified/shared with potential participants of other data generating projects.
 
 > All survey responses will be combined across all respondents. Results will not
 > be reported in a way that makes individuals identifiable. Information
@@ -203,12 +201,9 @@ write.csv(
 
 ## Data share agreement
 
-SOS CoPIs created a [Data Sharing and Scope of Work Agreement](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing/sos-data-share-agreement.pdf) detailing the type of data to be shared, the scope of work in which the data
-may be used, and terms for using SOS data.
+SOS CoPIs created a [Data Sharing and Scope of Work Agreement](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing/sos-data-share-agreement.pdf) detailing the type of data to be shared, the scope of work in which the data may be used, and terms for using SOS data.
 
-Once both CoPIs and the "Partnering
-Scientists" sign the agreement, save it in its own subfolder within
-[Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing](Y:/NRAS/soil-health-initiative/state-of-the-soils/data-sharing). If this agreement is part of a grant, place a copy in its corresponding grant subfolder within [Y:/NRAS/soil-health-initiative/contracts-grants/grants](Y:/NRAS/soil-health-initiative/contracts-grants/grants). Include relevant correspondence, code to subset the requested data, and final dataset in the agreement's subfolder in the `data-sharing` folder. This documentation allows us to track publications, attributions, and the broader impact of the SOS dataset.
+Once both CoPIs and the "Partnering Scientists" sign the agreement, save it in its own subfolder within the [`washi-sos/data-sharing` GitHub folder](https://github.com/WA-Department-of-Agriculture/washi-sos/tree/main/data-sharing). Include relevant correspondence, code to subset the requested data, and final dataset in the agreement's subfolder. This documentation allows us to track publications, attributions, and the broader impact of the SOS dataset.
 
 ## Public access
 

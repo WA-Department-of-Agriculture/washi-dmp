@@ -6,11 +6,11 @@ for Data Science (2e)*](https://r4ds.hadley.nz/) (*R4DS*), [*Data Management in
 Large-Scale Education Research*](https://datamgmtinedresearch.com/style.html),
 and other resources.
 
-**All WaSHI staff who code in R should thoroughly read and consistently
+**All staff who code in R should thoroughly read and consistently
 implement this style guide.**
 
 Using consistent project structures, naming conventions, script structures, and
-code style will improve code readability, analysis reproducibility, and ease of
+code style will improve code readability, reproducibility, and ease of
 collaboration.
 
 > Good coding style is like correct punctuation: you can manage without it,
@@ -148,7 +148,7 @@ path will break the code if the folder is moved or renamed
 ✅ Instead, always use relative paths, which are *relative* to the working directory (i.e. the project's home) like `data/processed/data-clean.csv`. When working in an RStudio project, the default working directory is the **root** project directory (i.e., where the `.Rproj` file is).
 
 ![Artwork by [Allison
-Horst](https://allisonhorst.com)](images/ah-project.png){width="4in"
+Horst](https://allisonhorst.com)](images/ah-project.png){width="6in"
 fig-alt="A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing \"setwd\", looks on at a metal riveted cube labeled \"R Proj\" holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled \"here\" doing a trick on a skateboard."}
 
 ### {here} package
@@ -159,7 +159,7 @@ files because the default working directory is where the `.qmd` file lives. Usin
 of the backslashes or forward slashes so the relative path works with any operating system.
 
 ![Artwork by [Allison
-Horst](https://allisonhorst.com)](images/ah-here.png){width="4in"
+Horst](https://allisonhorst.com)](images/ah-here.png){width="6in"
 fig-alt="A cartoon showing two paths side-by-side. On the left is a scary spooky forest, with spiderwebs and gnarled trees, with file paths written on the branches like \"~/mmm/nope.csv\" and \"setwd(\"/haha/good/luck/\")\", with a scared looking cute fuzzy monster running out of it. On the right is a bright, colorful path with flowers, rainbow and sunshine, with signs saying \"here!\" and \"it's all right here!\" A monster facing away from us in a backpack and walking stick is looking toward the right path. Stylized text reads \"here: find your path.\""}
 
 ## Naming conventions
@@ -186,7 +186,7 @@ concise and descriptive. Use kebab-case.
 ### Files
 
 Be concise and descriptive. Avoid using special characters. Use kebab-case with
-underscores to separate different metadata groups (e.g., `date_good-name`).
+underscores to separate different metadata groups (e.g., `year_good-name`).
 
 **Examples**: `2024_producer-report.qmd`, `tables.R`, `create-soils.R`.
 
@@ -375,18 +375,22 @@ Read more about code folding and sections in this [Posit
 article](https://support.posit.co/hc/en-us/articles/200484568-Code-Folding-and-Sections-in-the-RStudio-IDE).
 
 The snippet to create this section template that fills in the rest of the line
-with `=` was adapted from this [stack overflow
+with `=` or `-` was adapted from this [stack overflow
 answer](https://stackoverflow.com/questions/32633920/dynamic-rstudio-code-snippet).
 
 ``` r
-snippet end
-    `r strrep("=", 84 - rstudioapi::primary_selection(rstudioapi::getActiveDocumentContext())$range$start[2])`
+snippet end=
+	`r strrep("=", 85 - rstudioapi::primary_selection(rstudioapi::getActiveDocumentContext())$range$start[2])`
+
+snippet end-
+	`r strrep("-", 85 - rstudioapi::primary_selection(rstudioapi::getActiveDocumentContext())$range$start[2])`
+
 ```
 
 After adding the above code to your snippets, try creating a new section by
-typing "# Tidy data end" then pressing `Shift` + `Tab`.
+typing "# Tidy data end=" then pressing `Shift` + `Tab`.
 
-`# Tidy data end<Shift+Tab>` results in:
+`# Tidy data end=<Shift+Tab>` results in:
 
 ```         
 # Tidy data ====================================================================
@@ -468,3 +472,7 @@ Use the addins menu in RStudio to style code by clicking a button to run the
 command.
 
 ![](images/styler.png){fig-alt="Screenshot of RStudio with the Addins menu open and boxes highlighting the styler functions."}
+
+### Set up and use {air}
+
+{air} is an R formatter that is even faster and more automatic than {styler}. It needs to be installed through the command line interface (see [installation instructions](https://posit-dev.github.io/air/cli.html)) then configured in RStudio (see [configuration instructions](https://posit-dev.github.io/air/editor-rstudio.html). It can be set to reformat documents on save. The downside to {air} over {styler} is that it does not currently work on Quarto (`.qmd`) files.

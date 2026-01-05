@@ -11,7 +11,7 @@ Assessment](https://washingtonsoilhealthinitiative.com/state-of-the-soils/)
 For small edits (e.g., fixing hyperlinks or revising a few sentences), open and
 edit `sos-data-management-plan.docx` in the `washi-dmp` main folder. By editing
 this file directly, you won't need to do all the tedious formatting fixes listed
-in the next section.
+below.
 
 For major edits (e.g., rewriting sections or adding new tables), follow step 1
 below, then skip to [Formatting .docx], and then come back to step 2.

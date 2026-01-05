@@ -2,7 +2,7 @@
 
 ## Data formats
 
-Data generated from or integrated into WaSHI can be non-digital or digital.
+Data generated from or integrated into Climate & Conservation work can be non-digital or digital.
 
 ### Non-digital data
 
@@ -40,8 +40,7 @@ and PowerPoint (docx and pptx), hypertext markup language (HTML), and pdf.
 
 **Notebooks** combine text with executable code to generate written documents
 and presentations in docx, pptx, html, or pdf formats. These notebooks are
-stored in formats depending on the programming language: a few examples include
-R markdown (rmd), Quarto (qmd), and Jupyter notebook (ipynb).
+stored in formats depending on the programming language: a couple examples include Quarto (qmd) and Jupyter notebook (ipynb).
 
 The list below is not exhaustive and will continue to grow as additional data
 sources are discovered.

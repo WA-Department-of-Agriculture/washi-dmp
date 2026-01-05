@@ -15,7 +15,7 @@ lightbox:
 
 book:
   title: Data Management Plan
-  subtitle: "Washington Soil Health Initiative: State of the Soils Assessment"
+  subtitle: "WSDA's Climate & Conservation Team"
   author: [Jadey Ryan, Dani Gelardi]
   date: last-modified
   favicon: images/washi-circle.png
@@ -29,9 +29,9 @@ book:
       - icon: download
         menu:
           - text: PDF
-            url: sos-data-management-plan.pdf
+            url: wsda-cct-data-management-plan.pdf
           - text: MS Word
-            url: sos-data-management-plan.docx
+            url: wsda-cct-data-management-plan.docx
             
   chapters:
     - index.qmd
