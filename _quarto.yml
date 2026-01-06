@@ -18,13 +18,13 @@ book:
   subtitle: "WSDA's Climate & Conservation Team"
   author: [Jadey Ryan, Dani Gelardi]
   date: last-modified
-  favicon: images/washi-circle.png
+  favicon: images/cc-dmp-favicon.png
   repo-url: https://github.com/WA-Department-of-Agriculture/washi-dmp
   repo-actions: [source, edit]
   
   sidebar: 
     search: true
-    logo: images/washi-logo.jpg
+    logo: images/cc-dmp-logo.png
     tools:
       - icon: download
         menu:
