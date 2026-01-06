@@ -125,7 +125,7 @@ district first (right).
 +------------------------------------------+-----------------------------------+
 | 2023-05-01_cowlitz_tracking.pdf          | cowlitz_coc_2023-05-23.pdf        |
 +------------------------------------------+-----------------------------------+
-| 2023-05-09_ferry-cd_tracking.pdf         | c owlitz_tracking_2023-05-01.pdf  |
+| 2023-05-09_ferry-cd_tracking.pdf         | cowlitz_tracking_2023-05-01.pdf   |
 +------------------------------------------+-----------------------------------+
 | 2023-05-10_ferry-cd_coc.pdf              | ferry-cd_coc_2023-05-10.pdf       |
 +------------------------------------------+-----------------------------------+
@@ -133,7 +133,7 @@ district first (right).
 +------------------------------------------+-----------------------------------+
 | 2023-05-23_cowlitz_coc.pdf               | ferry-cd_coc_2023-06-06.pdf       |
 +------------------------------------------+-----------------------------------+
-| 2023-06-06_ferry-cd_coc.pdf              | fe rry-cd_tracking_2023-05-09.pdf |
+| 2023-06-06_ferry-cd_coc.pdf              | ferry-cd_tracking_2023-05-09.pdf  |
 +------------------------------------------+-----------------------------------+
 
 ### Version numbers {#sec-version-numbers}
@@ -215,8 +215,7 @@ See @sec-code-style-guide for more details in the code style guide.
 +-----------------+-----------------+---------------------------------------+
 | **Files**       | kebab-case      | 2023-11-15_survey-perennial.xlsx      |
 |                 |                 |                                       |
-|                 |                 | 2                                     |
-|                 |                 | 024-03_washi-newsletter-wsda-sos.docx |
+|                 |                 | 2024-03_washi-newsletter-wsda-sos.docx|
 |                 |                 |                                       |
 |                 |                 | geisseler-et-al_2019_ace-protein.pdf  |
 |                 |                 |                                       |

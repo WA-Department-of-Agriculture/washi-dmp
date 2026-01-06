@@ -41,7 +41,7 @@ Learn more about projects in the [Workflow: scripts and projects chapter of
 article [*Project-oriented
 workflow*](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/), and
 Shannon Pileggi's [workshop
-slides](https://www.pipinghotdata.com/talks/2023-09-11-project-oriented-workflows/).
+slides](https://www.pipinghotdata.com/workshops/2023-09-11-project-oriented-workflows/).
 
 ### Project folder structure {#sec-project-folder-structure}
 
